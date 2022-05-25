@@ -258,33 +258,411 @@ possible to update parts of a web page, without reloading the whole page.</p>
 <p>Example:</p>
 <ul>
 <li>AJAX was made popular in 2005 by Google, with Google Suggest.</li>
-<li>Google Suggest is using AJAX to create a very dynamic web interface: When you start typing in Google's search box, a JavaScript sends the letters off to a server and the server returns a list of suggestions.</li>
+<li>Google Suggest is using AJAX to create a very dynamic web interface:
+When you start typing in Google's search box, a JavaScript sends the
+letters off to a server and the server returns a list of suggestions.</li>
 </ul>
 </li>
 </ul>
 <p><strong>4. Write a program of your choice that demonstrates use of properties of DOM.
 Also list the limitations of using XML.</strong></p>
+<!-- TODO -->
+<ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
+<li>
+<p>Extensible Markup Language (<strong>XML</strong>) is a markup language and file format for
+storing, transmitting, and reconstructing arbitrary data. It defines a set
+of rules for encoding documents in a format that is both human-readable and
+machine-readable.</p>
+</li>
+<li>
+<p>Limitations of <strong>XML</strong>:</p>
+<ol>
+<li>XML syntax is verbose and redundant compared to other text-based data
+transmission formats such as JSON.</li>
+<li>The redundancy in syntax of XML causes higher storage and transportation
+cost when the volume of data is large.</li>
+<li>XML document is less readable compared to other text-based data
+transmission formats such as JSON.</li>
+<li>XML doesn’t support array.</li>
+<li>XML file sizes are usually very large due to its verbose nature, it is
+totally dependant on who is writing it.</li>
+</ol>
+</li>
+</ul>
 <p><strong>5. How to use interceptors in strut 2? List and describe important
 interceptors provided by strut 2 framework.</strong></p>
+<ul>
+<li>
+<p><strong>Interceptor</strong> is an object that is invoked at the preprocessing and
+postprocessing of a request. In Struts 2, interceptor is used to perform
+operations such as validation, exception handling, internationalization,
+displaying intermediate result etc.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_interceptors.htm#how-to-use-interceptors">Find &quot;How to Use Interceptors?&quot; section on this
+page</a></p>
+</li>
+</ul>
 <p><strong>6. What are the web services? List and explain types and components of web
 services.</strong></p>
+<ul>
+<li>
+<p>A Web service is a method of communication between two electronic devices over
+a network. It is a software function provided at a network address over the
+Web with the service always-on as in the concept of utility computing. Many
+organizations use multiple software systems for management.</p>
+</li>
+<li>
+<p>Components(Types) of Web Services</p>
+<ul>
+<li>
+<p><strong>SOAP (Simple Object Access Protocol):</strong> SOAP stands for “Simple Object
+Access Protocol.” It is a transport-independent messaging protocol. SOAP
+is built on sending XML data in the form of SOAP Messages.</p>
+</li>
+<li>
+<p><strong>UDDI (Universal Description, Discovery, and Integration):</strong> UDDI is a
+standard for specifying, publishing and discovering a service provider’s
+online services.</p>
+</li>
+<li>
+<p><strong>WSDL (Web Services Description Language):</strong> If a web service can’t be
+found, it can’t be used. The client invoking the web service should be
+aware of the location of the web service.</p>
+</li>
+<li>
+<p><strong>REST(Representational State Transfer):</strong>
+Is an architectural style, meaning each unique URL represents an individual
+object of some sort. A REST web service uses HTTP and supports/repurposes
+several HTTP methods: GET, POST, PUT or DELETE. It also offers simple
+CRUD-oriented services. Fun fact: The original RESTful architecture was
+designed by one of the leading authors of HTTP, Roy Fielding.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.cleo.com/blog/knowledge-base-web-services">More Details</a></p>
+</li>
+</ul>
 <p><strong>7. What different configuration files are required to develop any struts
 application?</strong></p>
+<ul>
+<li>
+<p>Configuration files like <strong>web.xml, struts.xml, strutsconfig.xml</strong> and
+<strong>struts.properties</strong> required to develop any struts application:</p>
+<ul>
+<li>The <strong>web.xml</strong> configuration file is a J2EE configuration file that
+determines how elements of the HTTP request are processed by the servlet
+container.</li>
+<li>The <strong>struts.xml</strong> file contains the configuration information that you
+will be modifying as actions are developed.</li>
+<li>The <strong>struts-config.xml</strong> configuration file is a link between the View
+and Model components in the Web Client but you would not have to touch
+these settings for 99.99% of your projects.</li>
+<li>The <strong>struts.properties</strong> configuration file provides a mechanism to
+change the default behavior of the framework.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_configuration.htm">More Details</a></p>
+</li>
+</ul>
 <p><strong>8. What are enterprise java beans? Draw and explain main components of EJB
 architecture.</strong></p>
+<ul>
+<li>
+<p>EJB is a server-side software component that encapsulates business logic of an
+application. An EJB web container provides a runtime environment for web
+related software components, including computer security, Java servlet
+lifecycle management, transaction processing, and other web services.</p>
+<p><img src="pictures/ejb.png" alt="EJB components" /></p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/ejb-architecture-java">Read about EJB components here</a></p>
+</li>
+</ul>
 <p><strong>9. Explain what is Angular Expression? Explain what is the key difference
 between angular expressions and JavaScript expressions?</strong></p>
+<ul>
+<li>
+<p>AngularJS Expressions:</p>
+<ul>
+<li>AngularJS expressions can be written inside double braces: {{ expression
+}}.</li>
+<li>AngularJS expressions can also be written inside a directive:
+ng-bind=&quot;expression&quot;.</li>
+<li>AngularJS will resolve the expression, and return the result exactly where
+the expression is written.</li>
+<li>Example {{ 5 + 5 }} or {{ firstName + &quot; &quot; + lastName }}</li>
+</ul>
+</li>
+<li>
+<p>Key difference: Like JavaScript expressions, AngularJS expressions can contain
+literals, operators, and variables. Unlike JavaScript expressions, AngularJS
+expressions can be written inside HTML. AngularJS expressions do not support
+conditionals, loops, and exceptions, while JavaScript expressions do.</p>
+</li>
+</ul>
 <p><strong>10. Write a PHP script to display the squares and Cubes of 1 to 10 numbers.</strong></p>
+<!-- CODE -->
+<ul>
+<li>
+<p>Code:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+   &lt;head&gt;
+     &lt;title&gt;Square and Cube of Integers 1-10&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;table border=1&gt;
+       &lt;tr&gt;
+        &lt;th&gt;Integers 1 to 10&lt;/th&gt;
+        &lt;th&gt;Square&lt;/th&gt;
+        &lt;th&gt;Cube&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;?php
+      //Square and Cube
+       for ($i = 1; $i &lt;= 10; $i++) {
+         $a = $i*$i;
+         $b = $i*$i*$i;
+         echo &quot;&lt;tr&gt;&quot;;
+         echo &quot;&lt;td&gt;&quot; . $i . &quot;&lt;/td&gt;&quot;;
+         echo &quot;&lt;td&gt;&quot; . $a . &quot;&lt;/td&gt;&quot;;
+         echo &quot;&lt;td&gt;&quot; . $b .&quot;&lt;/td&gt;&quot;;
+         echo &quot;&lt;/tr&gt;&quot;;
+      }
+      ?&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>Output:</p>
+<p><img src="pictures/php.png" alt="Output" /></p>
+</li>
+</ul>
 <p><strong>11. What is an association array in PHP? Explain it with the help of simple
 PHP code.</strong></p>
+<!-- CODE -->
+<ul>
+<li>
+<p>Associative arrays are used to store key value pairs.</p>
+</li>
+<li>
+<p>There are two ways to create an associative array:</p>
+<ul>
+<li>One liner:</li>
+</ul>
+<pre><code class="language-php">$age = array(&quot;Peter&quot;=&gt;&quot;35&quot;, &quot;Ben&quot;=&gt;&quot;37&quot;, &quot;Joe&quot;=&gt;&quot;43&quot;);
+</code></pre>
+<ul>
+<li>Multiple lines:</li>
+</ul>
+<pre><code class="language-php">$age['Peter'] = &quot;35&quot;;
+$age['Ben'] = &quot;37&quot;;
+$age['Joe'] = &quot;43&quot;;
+</code></pre>
+</li>
+<li>
+<p>Example:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;?php
+$age = array(&quot;Peter&quot;=&gt;&quot;35&quot;, &quot;Ben&quot;=&gt;&quot;37&quot;, &quot;Joe&quot;=&gt;&quot;43&quot;);
+echo &quot;Peter is &quot; . $age['Peter'] . &quot; years old.&quot;;
+?&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>Output:</p>
+<pre><code class="language-text">Peter is 35 years old.
+</code></pre>
+</li>
+</ul>
 <p><strong>12. Explain various directives in AngularJS &amp; Create simple angular JS
 application to display, &quot;Hello, Input Name&quot; using proper directive.</strong></p>
+<ul>
+<li>
+<p>AngularJS Directives</p>
+</li>
+<li>
+<p>AngularJS directives are extended HTML attributes with the prefix ng-.</p>
+<ul>
+<li>The ng-app directive initializes an AngularJS application.</li>
+<li>The ng-init directive initializes application data.</li>
+<li>The ng-model directive binds the value of HTML controls (input, select,
+textarea) to application data.</li>
+</ul>
+</li>
+<li>
+<p>Code:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js&quot;&gt;&lt;/script&gt;
+&lt;body&gt;
+
+&lt;div ng-app=&quot;&quot; ng-init=&quot;firstName='John'&quot;&gt;
+
+&lt;p&gt;Input something in the input box:&lt;/p&gt;
+&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Hello, {{ firstName }}&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>Input:</p>
+<p><strong>Input something in the input box:</strong></p>
+<p><strong>Name: <code>John</code></strong></p>
+</li>
+<li>
+<p>Output:</p>
+<pre><code class="language-md">Hello, John
+</code></pre>
+</li>
+</ul>
 <p><strong>13. What is EJB? Explain types of EJB? Also explain uses of Ruby.</strong></p>
+<ul>
+<li>
+<p>Refer question 8 for <strong>EJB</strong></p>
+</li>
+<li>
+<p>The 3 Types of Enterprise Java Beans are:</p>
+<ol>
+<li><strong>Session Bean:</strong> Session bean contains business logic that can be invoked
+by local, remote or webservice client. There are two types of session beans:
+<ol>
+<li>Stateful Session bean : Stateful session bean performs business task
+with the help of a state.</li>
+<li>Stateless Session bean : Stateless session bean implement business
+logic without having a persistent storage mechanism, such as a state or
+database and can used shared data.</li>
+</ol>
+</li>
+<li><strong>Message Driven Bean:</strong> Like Session Bean, it contains the business logic
+but it is invoked by passing message.</li>
+<li><strong>Entity Bean:</strong> It summarizes the state that can be remained in the
+database. It is deprecated. Now, it is replaced with JPA (Java Persistent
+API). There are two types of entity bean:
+<ol>
+<li>Bean Managed Persistence : In a bean managed persistence type of
+entity bean, the programmer has to write the code for database calls. It
+persists across multiple sessions and multiple clients.</li>
+<li>Container Managed Persistence : Container managed persistence are
+enterprise bean that persists across database. In container managed
+persistence the container take care of database calls.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Ruby</strong> is an open-source programming language. It is also referred to as
+scripting language that is dynamic, interpreted and object-oriented as well.</p>
+</li>
+<li>
+<p>Uses of <strong>Ruby</strong>:</p>
+<ul>
+<li>
+<p><strong>Web development:</strong> Web development is one of Ruby's claims to fame
+because of the popular web development framework Ruby on Rails.</p>
+</li>
+<li>
+<p><strong>Static site generation:</strong> Most websites use server-side code that
+generates HTML and serves it to your browser when you visit a page.</p>
+</li>
+<li>
+<p><strong>DevOps and automation:</strong> Vagrant, written in Ruby, is a tool for
+managing virtual machines from command line. It allows developers to
+code and run projects developed for a specific operating system run on
+any operating system.</p>
+</li>
+<li>
+<p><strong>Web servers:</strong> You can also use Ruby to build web servers. Passenger,
+Unicorn, and Puma are web servers written in Ruby.</p>
+</li>
+<li>
+<p><strong>Data processing:</strong> Ruby's built-in map, reduce, and select functions
+are powerful tools used to solve many data processing problems.</p>
+</li>
+<li>
+<p><strong>Web scraping and crawling:</strong> Ruby has a wide variety of packages like
+vessel &amp; nokogiri that make extracting data from web pages a breeze.</p>
+</li>
+</ul>
+</li>
+</ul>
 <p><strong>14. Draw and explain the role of EJB container in enterprise application.</strong></p>
+<p><a href="https://www.javatpoint.com/ejb-container">Read here</a></p>
 <p><strong>15. Explain how Rails implements AJAX? Mention what are the positive aspects
 of Rails.</strong></p>
+<ul>
+<li>
+<p><strong>How Rails Implements Ajax:</strong> Rails has a simple, consistent model for how
+it implements Ajax operations. Once the browser has rendered and displayed
+the initial web page, different user actions cause it to display a new web
+page (like any traditional web application) or trigger an Ajax operation −</p>
+<ul>
+<li><strong>Some trigger fires:</strong> This trigger could be the user clicking on a
+button or link, the user making changes to the data on a form or in a
+field, or just a periodic trigger (based on a timer).</li>
+<li><strong>The web client calls the server:</strong> A JavaScript method,
+XMLHttpRequest, sends data associated with the trigger to an action
+handler on the server. The data might be the ID of a checkbox, the text
+in an entry field, or a whole form.</li>
+<li><strong>The server does processing:</strong> The server-side action handler ( Rails
+controller action )-- does something with the data and returns an HTML
+fragment to the web client.</li>
+<li><strong>The client receives the response:</strong> The client-side JavaScript, which
+Rails creates automatically, receives the HTML fragment and uses it to
+update a specified part of the current page's HTML, often the content of
+a <div> tag.</li>
+</ul>
+</li>
+<li>
+<p>Pros of <strong>Rails:</strong></p>
+<ol>
+<li>Time efficiency</li>
+<li>A great number of helpful tools and libraries</li>
+<li>Huge and active community</li>
+<li>Strong adherence to standards</li>
+</ol>
+</li>
+<li>
+<p><a href="https://sloboda-studio.com/blog/pros-and-cons-of-ruby-on-rails/">More about pros of Ruby</a></p>
+</li>
+</ul>
 <p><strong>16. Explain how you define instance variable, global variable and class
 variable in Ruby? Explain what is rake in Rails.</strong></p>
+<!-- TABLE -->
+<table><thead><tr><th>SYMBOL</th><th>Type of Variable</th></tr></thead><tbody>
+<tr><td>[a-z] or _</td><td>Local Variable</td></tr>
+<tr><td>@</td><td>Instance Variable</td></tr>
+<tr><td>@@</td><td>Class Variable</td></tr>
+<tr><td>$</td><td>Global Variable</td></tr>
+</tbody></table>
+<pre><code class="language-ruby"># Local Variables     
+age = 10
+# Instance Variables     
+ @cust_id = id
+# class variable
+ @@no_of_customers = 0
+# global variable
+$global_variable = 10
+</code></pre>
+<p><strong>Rake</strong> is Ruby Make, a standalone Ruby utility that replaces the Unix utility 'make', and uses a 'Rakefile' and .rake files to build up a list of tasks. In Rails, Rake is used for common administration tasks, especially sophisticated ones that build off of each other.</p>
+<p><a href="https://www.bigbinary.com/learn-rubyonrails-book/setting-up-rake-tasks">More about Rake</a></p>
 
                     </main>
 
