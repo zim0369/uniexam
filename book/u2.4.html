@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,7 +30,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,7 +56,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html" class="active"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li><li class="chapter-item expanded "><a href="ai_prelim.html"><strong aria-hidden="true">1.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html" class="active"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li><li class="chapter-item expanded "><a href="cc_prelim.html"><strong aria-hidden="true">2.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li><li class="chapter-item expanded "><a href="dsbda_prelim.html"><strong aria-hidden="true">3.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li><li class="chapter-item expanded "><a href="wt_prelim.html"><strong aria-hidden="true">4.5.</strong>  Questions </a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -93,8 +93,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -134,7 +134,450 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="predictive-big-data-analytics-with-python"><a class="header" href="#predictive-big-data-analytics-with-python">Predictive Big Data Analytics with Python</a></h1>
+                        <h1 id="unit-vi-advanced-techniques-in-cloud-computing"><a class="header" href="#unit-vi-advanced-techniques-in-cloud-computing">Unit VI Advanced Techniques in Cloud Computing</a></h1>
+<h2 id="future-trends-in-cloud-computing"><a class="header" href="#future-trends-in-cloud-computing">Future Trends in Cloud Computing</a></h2>
+<ol>
+<li>
+<p><strong>Hybrid/ Multi-Cloud Solutions:</strong> Hybrid cloud computing refers to using a
+combination of the private cloud as well as a third-party public cloud
+service. It is primarily used to allow workloads to move between private and
+public clouds, giving users more flexibility with their computing needs.</p>
+</li>
+<li>
+<p><strong>Backup And Disaster Recovery:</strong> Cyber attacks, data outages, and system
+failures are a part and parcel of running a business these days. Most
+businesses have dealt with their servers crashing, leading to loss of
+critical data files. To ensure such issues don’t damage the organization and
+its processes, backup and disaster recovery has become a trending use case
+of the cloud. If Spiceworks reports are to be believed, 15% of the cloud
+budget is allocated to Backup and Disaster Recovery, which is the highest
+budget allocation followed by email hosting and productivity tools.</p>
+</li>
+<li>
+<p><strong>Serverless Architecture:</strong> A serverless architecture removes all barriers
+that a standard IT infrastructure would usually bring. Users don’t have to
+purchase or rent the servers that they run their data on. Instead, a
+third-party will handle it all for you, allowing your organization to tackle
+other tasks.</p>
+</li>
+<li>
+<p><strong>AI Platform:</strong> As technology advances, one of the most common cloud
+computing trends to look forward to is AI. Tech giants are now looking into
+incorporating AI to process big data to improve their business functioning.</p>
+</li>
+<li>
+<p><strong>Cloud Security:</strong> Data theft, leakage, and deletion- security is a big
+challenge even for traditional IT infrastructures. But, with more companies
+moving to cloud platforms, it’s important to ensure that cloud service
+providers can create an airtight security system to guarantee the safety of
+their client’s data.</p>
+</li>
+<li>
+<p><strong>IoT Platform:</strong> With a hyper-connected world, one of the most popular
+cloud computing trends is the rise of IoT platforms. A study by Gartner
+suggests the number of connected things in use will be going up to 25
+billion by 2021 from 14.2 billion as of 2019.</p>
+</li>
+<li>
+<p><strong>Edge Computing:</strong> It is a method of optimizing cloud computing network
+system by performing data processing at the edge of the network, near the
+source of the data. It works real-time on the cloud servers to process less
+time-sensitive data or store data for the long term.</p>
+</li>
+<li>
+<p><strong>DevSecOps:</strong> Cloud computing services provide users with a seamless and
+simple experience in managing their data but there are many security risks
+involved.  The security risk of cloud computing includes network
+eavesdropping, illegal invasion, denial of service attacks, side channel
+attacks, virtualization vulnerabilities, and abuse of cloud services.</p>
+</li>
+<li>
+<p><strong>Service Mesh:</strong> Since cloud platforms are complex, it is critical to
+ensure that the platform has a fast and safe communication environment. With
+a service mesh, users have a dedicated layer for service-to-service
+communication, making their cloud platform highly dynamic and secure.</p>
+</li>
+<li>
+<p><strong>Open Source:</strong> This industry is moving towards a path of innovation and
+collaboration. With this shift in how cloud services are managed, many
+organizations are looking at adopting an Open Source cloud computing service
+for their business.</p>
+</li>
+</ol>
+<h2 id="mobile-cloud"><a class="header" href="#mobile-cloud">Mobile Cloud</a></h2>
+<ul>
+<li>
+<p>Mobile cloud computing uses cloud computing to deliver applications to
+mobile devices. These mobile apps can be deployed remotely using speed and
+flexibility and development tools. Mobile cloud applications can be built or
+revised quickly using cloud services. They can be delivered to many
+different devices with different operating systems, computing tasks, and
+data storage. Thus, users can access applications that could not otherwise
+be supported.</p>
+</li>
+<li>
+<p>Key features:</p>
+<ul>
+<li>Facilitates the quick development, Shared resources of mobile apps.</li>
+<li>Supports a variety of development approaches and devices.</li>
+<li>Improves reliability with information backed up and stored in the cloud.</li>
+<li>Applications use fewer device resources because they are
+cloud-supported.</li>
+<li>Mobile devices are connected to services delivered on an API
+architecture.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.ibm.com/cloud/learn/what-is-mobile-cloud-computing">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="automatic-cloud-computing"><a class="header" href="#automatic-cloud-computing">Automatic Cloud Computing</a></h2>
+<ul>
+<li>
+<p>Cloud automation is a broad term that refers to processes and tools that
+reduce or eliminate manual efforts used to provision and manage cloud
+computing workloads and services. Organizations can apply cloud automation
+to private, public and hybrid cloud environments.</p>
+</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Improved security and resilience</li>
+<li>Improved backup processes</li>
+<li>Improved governance</li>
+</ul>
+</li>
+<li>
+<p><a href="https://cloud.netapp.com/blog/cloud-automation-why-where-and-how-cvo-blg">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="comet-cloud"><a class="header" href="#comet-cloud">Comet Cloud</a></h3>
+<ul>
+<li>
+<p>COMET Cloud is an Internet data storage designed for recording measured
+values from selected COMET measuring instruments. The data is accessible
+after the user's connection to the Internet and is displayed in a web
+browser in the form of a table or graph.</p>
+</li>
+<li>
+<p>Main features of COMETCloud</p>
+<ul>
+<li>display of measured values in the form of a table or graph</li>
+<li>comparison of measured values of several sensors in one time period</li>
+<li>storing GPS coordinates for the device position and displaying all
+devices on a map</li>
+<li>user-friendly display of measured values in an embedded image of a
+building or technology diagram</li>
+<li>user name of each device</li>
+<li>insert a note for each device</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.cometsystem.com/reg-cloud#:%7E:text=COMET%20Cloud%20is%20an%20Internet,of%20a%20table%20or%20graph.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="multimedia-cloud"><a class="header" href="#multimedia-cloud">Multimedia Cloud</a></h2>
+<ul>
+<li>
+<p>Cloud Computing opened the opportunity for media operators who serve content
+providers, IPTV (Internet Protocol Television) operators and multimedia
+players. When we consider multimedia players, adopting cloud computing is
+often one of the important priorities in the coming years. Some media
+players, for example, companies like media post-production, already utilize
+these kinds of cloud computing–based service capabilities for managing the
+digital delivery.</p>
+</li>
+<li>
+<p>In the future, multimedia companies will use cloud computing first, who
+started looking to move their storage requirements into cloud computing. The
+cost and the investment return for these kinds of services have accelerated.</p>
+</li>
+</ul>
+<h3 id="iptv"><a class="header" href="#iptv">IPTV</a></h3>
+<ul>
+<li>
+<p>Internet Protocol television (IPTV) is the delivery of television content
+over Internet Protocol (IP) networks. This is in contrast to delivery
+through traditional terrestrial, satellite, and cable television formats.
+Unlike downloaded media, IPTV offers the ability to stream the source media
+continuously. As a result, a client media player can begin playing the
+content (such as a TV channel) almost immediately. This is known as
+streaming media.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Internet_Protocol_television">More Details</a></p>
+</li>
+</ul>
+<h2 id="energy-aware-cloud-computing"><a class="header" href="#energy-aware-cloud-computing">Energy Aware Cloud Computing</a></h2>
+<ul>
+<li>
+<p>Cloud infrastructures are increasingly becoming essential components for
+providing Internet services. By benefiting from economies of scale, Clouds
+can efficiently manage and offer a virtually unlimited number of resources
+and can minimize the costs incurred by organizations when providing Internet
+services. However, as Cloud providers often rely on large data centres to
+sustain their business and offer the resources that users need, the energy
+consumed by Cloud infrastructures has become a key environmental and
+economical concern.</p>
+</li>
+<li>
+<p>Implementing efficient techniques, frameworks, etc. for better energy
+efficiency in cloud computing is called &quot;Energy Aware Cloud Computing&quot;.</p>
+</li>
+<li>
+<p><a href="https://www.researchgate.net/publication/324029239_Energy-aware_cloud_computing">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="jungle-computing"><a class="header" href="#jungle-computing">Jungle Computing</a></h2>
+<ul>
+<li>
+<p>Jungle computing is a form of high performance computing that distributes
+computational work across cluster, grid and cloud computing.</p>
+</li>
+<li>
+<p>The increasing complexity of the high performance computing environment has
+provided a range of choices beside traditional supercomputers and clusters.
+Scientists can now use grid and cloud infrastructures, in a variety of
+combinations along with traditional supercomputers - all connected via fast
+networks. And the emergence of many-core technologies such as GPUs, as well
+as supercomputers on chip within these environments has added to the
+complexity. Thus, high-performance computing can now use multiple diverse
+platforms and systems simultaneously, giving rise to the term &quot;computing
+jungle&quot;.</p>
+</li>
+</ul>
+<h2 id="distributed-cloud-computing-vs-edge-computing"><a class="header" href="#distributed-cloud-computing-vs-edge-computing">Distributed Cloud Computing Vs Edge Computing</a></h2>
+<ul>
+<li>
+<p>A distributed cloud is an architecture where multiple clouds are used to
+meet compliance needs, performance requirements, or support edge computing
+while being centrally managed from the public cloud provider.</p>
+</li>
+<li>
+<p>In essence, a distributed cloud service is a public cloud that runs in
+multiple locations, including:</p>
+<ul>
+<li>The public cloud provider’s infrastructure</li>
+<li>The public cloud provider’s infrastructure</li>
+<li>In another cloud provider’s data center</li>
+<li>On third party or colocation center hardware</li>
+</ul>
+</li>
+<li>
+<p><strong>Edge vs Distributed Computing:</strong></p>
+<p><img src="pictures/edge_vs_dist.png" alt="Edge vs Distributed Computing" /></p>
+</li>
+</ul>
+<h2 id="containers"><a class="header" href="#containers">Containers</a></h2>
+<ul>
+<li>
+<p>Containers are lightweight packages of your application code together with
+dependencies such as specific versions of programming language runtimes and
+libraries required to run your software services.</p>
+</li>
+<li>
+<p>Containers are packages of software that contain all of the necessary
+elements to run in any environment. In this way, containers virtualize the
+operating system and run anywhere, from a private data center to the public
+cloud or even on a developer’s personal laptop.</p>
+</li>
+<li>
+<p>Containers make it easy to share CPU, memory, storage, and network resources
+at the operating systems level and offer a logical packaging mechanism in
+which applications can be abstracted from the environment in which they
+actually run.</p>
+</li>
+<li>
+<p>Benefits Of Containers:</p>
+<ul>
+<li>
+<p><strong>Separation of responsibility:</strong> Containerization provides a clear
+separation of responsibility, as developers focus on application logic
+and dependencies, while IT operations teams can focus on deployment and
+management instead of application details such as specific software
+versions and configurations.</p>
+</li>
+<li>
+<p><strong>Workload portability:</strong> Containers can run virtually anywhere, greatly
+easing development and deployment: on Linux, Windows, and Mac operating
+systems; on virtual machines or on physical servers; on a developer’s
+machine or in data centers on-premises; and of course, in the public
+cloud.</p>
+</li>
+<li>
+<p><strong>Application isolation:</strong> Containers virtualize CPU, memory, storage,
+and network resources at the operating system level, providing
+developers with a view of the OS logically isolated from other
+applications.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://cloud.google.com/learn/what-are-containers">More Details</a></p>
+</li>
+</ul>
+<h2 id="docker"><a class="header" href="#docker">Docker</a></h2>
+<ul>
+<li>
+<p>Docker is a set of platform as a service products that use OS-level
+virtualization to deliver software in packages called containers. The
+service has both free and premium tiers. The software that hosts the
+containers is called Docker Engine.</p>
+</li>
+<li>
+<p><a href="https://www.docker.com/resources/what-container/">More Details</a></p>
+</li>
+</ul>
+<h2 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h2>
+<ul>
+<li>
+<p>Kubernetes is an open-source container orchestration system for automating
+software deployment, scaling, and management. Google originally designed
+Kubernetes, but the Cloud Native Computing Foundation now maintains the
+project.</p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/">More Details</a></p>
+</li>
+</ul>
+<h2 id="introduction-to-devops"><a class="header" href="#introduction-to-devops">Introduction to DevOps</a></h2>
+<ul>
+<li>
+<p>DevOps is the combination of cultural philosophies, practices, and tools
+that increases an organization's ability to deliver applications and
+services at high velocity: evolving and improving products at a faster pace
+than organizations using traditional software development and infrastructure
+management processes.</p>
+</li>
+<li>
+<p>A DevOps engineer introduces processes, tools, and methodologies to balance
+needs throughout the software development life cycle, from coding and
+deployment, to maintenance and updates.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/devops/what-is-devops/#:%7E:text=DevOps%20is%20the%20combination%20of,development%20and%20infrastructure%20management%20processes.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="iot-and-cloud-convergence"><a class="header" href="#iot-and-cloud-convergence">IoT and Cloud Convergence</a></h2>
+<ul>
+<li>
+<p>The Internet of things describes physical objects with sensors, processing
+ability, software, and other technologies that connect and exchange data
+with other devices and systems over the Internet or other communications
+networks.</p>
+</li>
+<li>
+<p>The field has evolved due to the convergence of multiple technologies,
+including ubiquitous computing, commodity sensors, increasingly powerful
+embedded systems, and machine learning.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Internet_of_things">More Details</a></p>
+</li>
+</ul>
+<h3 id="the-cloud-and-iot-in-your-home"><a class="header" href="#the-cloud-and-iot-in-your-home">The Cloud and IoT in your Home</a></h3>
+<ul>
+<li>
+<p><strong>Home cloud computing</strong> is the process of using a remote server to store,
+manage and access data and applications from home. It allows users to access
+their files, applications, and other digital content from any device with an
+internet connection, whether it be a computer, phone, or tablet. Private
+cloud computing can also be used to back up data and protect the information
+in case of emergencies.</p>
+</li>
+<li>
+<p>A lot of individuals and small businesses use home/private cloud computing
+to browse, search through files and even work on projects from any device.
+It’s a great alternative to setting up a server in your house because it
+eliminates the need for physical storage devices that contain data.</p>
+</li>
+<li>
+<p><a href="https://www.eiresystems.com/importance-of-home-cloud-computing/">More about home cloud
+computing</a></p>
+</li>
+<li>
+<p><strong>IoT home</strong> automation is the ability to control domestic appliances by
+electronically controlled, internet-connected systems. It may include
+setting complex heating and lighting systems in advance and setting alarms
+and home security controls, all connected by a central hub and
+remote-controlled by a mobile app.</p>
+</li>
+<li>
+<p><a href="https://www.toptal.com/designers/interactive/smart-home-domestic-internet-of-things#:%7E:text=IoT%20home%20automation%20is%20the,controlled%20by%20a%20mobile%20app.">More about Home
+IoT</a></p>
+</li>
+</ul>
+<h3 id="the-iot-and-cloud-in-your-automobile"><a class="header" href="#the-iot-and-cloud-in-your-automobile">The IoT and cloud in your Automobile</a></h3>
+<h4 id="iot-in-automobile"><a class="header" href="#iot-in-automobile">IoT in Automobile</a></h4>
+<ul>
+<li>
+<p>“Automotive IoT” refers to the integration of such components as sensors,
+gadgets, clouds, and apps into vehicles and their use as a complex system
+for predictive maintenance, connection of cars, fleet management, etc.</p>
+</li>
+<li>
+<p>Implementation of the Internet of Things for cars’ manufacturing brought the
+following benefits for the producers:</p>
+<ul>
+<li>better data collection and analysis with the following improvement and
+speed up of the whole manufacturing process;</li>
+<li>avoidance of certain risks and financial losses;</li>
+<li>higher industrial safety standards;</li>
+<li>equipment theft monitoring, etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cloud-in-automobile"><a class="header" href="#cloud-in-automobile">Cloud in Automobile</a></h4>
+<ul>
+<li>
+<p>The way we interact with our car changed entirely in a few decades.
+Nowadays, cloud technology in cars is present in several ways. For example,
+most electric cars can exchange information with remote data centers to
+inform the driver about the road and weather conditions.</p>
+</li>
+<li>
+<p>The cloud technology in cars has a lot of possibilities. It is uniquely
+suited to set up, scale, manage and update features and services efficiently
+with a connected unit.</p>
+</li>
+<li>
+<p>Automobile companies develop and adapt their connectivity software
+continuously to allow their customers a better interaction between the
+cloud, the car, and smartphones using infotainment as the primary interface.</p>
+</li>
+</ul>
+<h3 id="personal"><a class="header" href="#personal">PERSONAL</a></h3>
+<ul>
+<li>
+<p>A personal cloud is a collection of digital content and services which are
+accessible from any device. The personal cloud is not a tangible entity. It is
+a place which gives users the ability to store, synchronize, stream and share
+content on a relative core, moving from one platform, screen and location to
+another.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Personal_cloud#:%7E:text=A%20personal%20cloud%20is%20a,screen%20and%20location%20to%20another.">More
+Details</a></p>
+</li>
+</ul>
+<h4 id="iot-in-healthcare"><a class="header" href="#iot-in-healthcare">IoT in Healthcare</a></h4>
+<ul>
+<li>
+<p>IoT explores new dimensions of patient care through real-time health
+monitoring and access to patients' health data. This data is a goldmine for
+healthcare stakeholders to improve patient's health and experiences while
+making revenue opportunities and improving healthcare operations.</p>
+</li>
+<li>
+<p><a href="https://www.wipro.com/business-process/what-can-iot-do-for-healthcare-/#:%7E:text=IoT%20explores%20new%20dimensions%20of,opportunities%20and%20improving%20healthcare%20operations.">More
+Details</a></p>
+</li>
+</ul>
 
                     </main>
 
@@ -143,7 +586,7 @@
                             <a rel="prev" href="u2.3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="dsbda.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="cc_prelim.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -155,13 +598,29 @@
                     <a rel="prev" href="u2.3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="dsbda.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="cc_prelim.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,7 +30,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,7 +56,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html" class="active"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li><li class="chapter-item expanded "><a href="ai_prelim.html"><strong aria-hidden="true">1.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html" class="active"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li><li class="chapter-item expanded "><a href="cc_prelim.html"><strong aria-hidden="true">2.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li><li class="chapter-item expanded "><a href="dsbda_prelim.html"><strong aria-hidden="true">3.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li><li class="chapter-item expanded "><a href="wt_prelim.html"><strong aria-hidden="true">4.5.</strong>  Questions </a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -93,8 +93,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -134,7 +134,368 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="virtualization-in-cloud-computing"><a class="header" href="#virtualization-in-cloud-computing">Virtualization in Cloud Computing</a></h1>
+                        <h1 id="unit-iii-virtualization-in-cloud-computing"><a class="header" href="#unit-iii-virtualization-in-cloud-computing">Unit III: Virtualization in Cloud Computing</a></h1>
+<ul>
+<li>Virtualization is technology that lets you create useful IT services using
+resources that are traditionally bound to hardware. It allows you to use a
+physical machine's full capacity by distributing its capabilities among many
+users or environments.02</li>
+</ul>
+<h2 id="adopting-virtualization"><a class="header" href="#adopting-virtualization">Adopting Virtualization</a></h2>
+<ul>
+<li>
+<p>Some users may confuse virtualization with cloud computing, but they’re not
+entirely the same.</p>
+<ul>
+<li>
+<p>Virtualization is the creation of a virtual resource such as a server,
+desktop, operating system, file, storage space, or network to help
+businesses manage and scale workloads.</p>
+</li>
+<li>
+<p>Cloud computing is the sharing of resources, software, applications and
+data as a service. Together, the two can be used to provide even greater
+advantages.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data virtualization is viable for small businesses.</p>
+</li>
+<li>
+<p>While virtualization was first embraced by enterprise operations, it soon
+became clear that the same value proposition held substantial benefits for
+Small to Medium Businesses (SMBs). Cyberattacks and natural disasters can
+hit businesses of all sizes. For SMBs, backing up a virtualized
+infrastructure can be a more viable option to backing up hardware servers.</p>
+</li>
+<li>
+<p>Reasons to adopt virtualization:</p>
+<ol>
+<li>Increased agility for the business</li>
+<li>Better resource deployment</li>
+<li>Greater operational efficiency</li>
+<li>Enhanced security</li>
+<li>Higher availability</li>
+<li>Stronger disaster recovery</li>
+<li>Improved quality of service</li>
+<li>Reduced energy consumption</li>
+<li>Preparation for the cloud</li>
+</ol>
+</li>
+</ul>
+<h2 id="types-of-virtualization"><a class="header" href="#types-of-virtualization">Types of Virtualization</a></h2>
+<ul>
+<li>The 7 Types of Virtualization
+<ol>
+<li>OS Virtualization—aka Virtual Machines</li>
+<li>Application-Server Virtualization</li>
+<li>Application Virtualization</li>
+<li>Administrative Virtualization</li>
+<li>Network Virtualization</li>
+<li>Hardware Virtualization</li>
+<li>Storage Virtualization</li>
+</ol>
+</li>
+</ul>
+<h2 id="virtualization-architecture--software"><a class="header" href="#virtualization-architecture--software">Virtualization architecture &amp; software</a></h2>
+<h3 id="virtualization-architecture"><a class="header" href="#virtualization-architecture">Virtualization architecture</a></h3>
+<ul>
+<li>
+<p>A virtualization architecture is a conceptual model specifying the
+arrangement and interrelationships of the particular components involved in
+delivering a virtual -- rather than physical -- version of something, such
+as an operating system (OS), a server, a storage device or network
+resources.</p>
+<p><img src="pictures/traditional_vs_virtual.png" alt="Traditional vs Virtual" /></p>
+<p><em>Left: Traditional architecture | Right: Virtual architecture</em></p>
+<p><a href="https://www.techtarget.com/whatis/definition/virtualization-architecture">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="virtualization-software"><a class="header" href="#virtualization-software">Virtualization software</a></h3>
+<ul>
+<li>
+<p>Virtualization software, also called hypervisor, allows a single host
+computer to create and run one or more virtual environments.</p>
+</li>
+<li>
+<p>Virtualization software is most often used to emulate a complete computer
+system in order to allow a guest operating system to be run, for example
+allowing Linux to run as a guest on top of a PC that is natively running a
+Microsoft Windows operating system (or the inverse, running Windows as a
+guest on Linux).</p>
+</li>
+<li>
+<p>Uses of virtualization software:</p>
+<ol>
+<li><strong>Back up</strong>: You can backup your entire operating system or server
+installation as a virtual OS.</li>
+<li><strong>Run a different OS</strong>: Let's say you want to try out Linux without
+having to install it on a physical hard drive.</li>
+<li><strong>Run ancient apps</strong>: Say an application you want to run only works on
+win8 and you're using win10 then instead of reinstalling an outdated OS on
+real hardware why not just install windows 8 in a VM.</li>
+<li><strong>Look at dirty files</strong>: Taking a look at malicious files might put your
+computer and your data at risk so it would be better to check it in a
+sandboxed environment.</li>
+<li><strong>Using sandboxed browsers</strong>: Hackers have successfully exploited all
+four of most popular browsers — Chrome, Internet Explorer, Firefox, and
+Safari. Browser plugins can be malicious too. In this case using a sandboxed
+browser like the TOR browser is safer.</li>
+<li><strong>Try an application</strong>: You just want to check if an application you
+wrote works well on multiple operating systems then using virtual machines
+would be more convenient as compared to installing on real hardware.</li>
+</ol>
+</li>
+</ul>
+<h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
+<ul>
+<li>
+<p>Virtual cluster is a many-to-one virtualization technology, which can form a
+routing system from multiple common devices connected through a switching
+network, while performing the same as a single logical router to all
+external appearances.</p>
+</li>
+<li>
+<p><a href="https://support.huawei.com/enterprise/en/doc/EDOC1100125848/a180e7b5/overview-of-virtual-cluster#:%7E:text=Virtual%20cluster%20is%20a%20many,router%20to%20all%20external%20appearances.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="virtual-applications"><a class="header" href="#virtual-applications">Virtual Applications</a></h2>
+<ul>
+<li>
+<p>Virtual apps are applications that are optimized to run in a virtual
+environment. Simply put, a virtual app simply runs on a computer without
+being installed on it.</p>
+</li>
+<li>
+<p>Remote apps are a popular virtual app delivery solution wherein the virtual
+applications installed on a server are delivered to users’ devices. These
+applications are not installed on the user’s device; instead, software
+called a client is installed on the device that connects to the server, and
+the application is presented as screenshots sent to the device.</p>
+</li>
+<li>
+<p>ThinApp is an example of an agentless application virtualization solution,
+while Microsoft App-V represents an agent-based virtual app solution.
+Parallels Remote Application Server, Citrix, and VMware are the leading
+providers of application virtualization solutions in the market.</p>
+</li>
+</ul>
+<h2 id="pitfalls-of-virtualization"><a class="header" href="#pitfalls-of-virtualization">Pitfalls of Virtualization</a></h2>
+<p><em>Have added both pros and cons</em></p>
+<ul>
+<li>
+<p>Pros</p>
+<ol>
+<li>Cheaper</li>
+<li>Predictable costs</li>
+<li>reduced workload</li>
+<li>Better uptime</li>
+<li>Faster deployment of resources</li>
+<li>Promotes digital entrepreneurship</li>
+<li>Energy savings</li>
+</ol>
+</li>
+<li>
+<p>Cons(pitfalls)</p>
+<ol>
+<li>High implementation cost</li>
+<li>Has limitations</li>
+<li>Security risk</li>
+<li>Availability issue</li>
+<li>Scalability issue</li>
+<li>Requires several links in a chain that must work together cohesively</li>
+<li>Time consuming</li>
+</ol>
+</li>
+</ul>
+<h2 id="grid-cloud--virtualization"><a class="header" href="#grid-cloud--virtualization">Grid, Cloud &amp; Virtualization</a></h2>
+<h3 id="grid-computing"><a class="header" href="#grid-computing">Grid Computing</a></h3>
+<ul>
+<li>
+<p>Grid Computing can be defined as a network of computers working together to
+perform a task that would rather be difficult for a single machine. All
+machines on that network work under the same protocol to act as a virtual
+supercomputer.</p>
+</li>
+<li>
+<p>The task that they work on may include analyzing huge datasets or simulating
+situations that require high computing power.</p>
+</li>
+<li>
+<p>Computers on the network contribute resources like processing power and
+storage capacity to the network.</p>
+</li>
+<li>
+<p>Grid computing is also called as &quot;distributed computing.&quot; It links multiple
+computing resources (PC's, workstations, servers, and storage elements)
+together and provides a mechanism to access them.</p>
+</li>
+<li>
+<p>The main advantages of grid computing are that it increases user
+productivity by providing transparent access to resources, and work can be
+completed more quickly.</p>
+</li>
+</ul>
+<h3 id="cloud"><a class="header" href="#cloud">Cloud</a></h3>
+<!-- TODO: Cloud definition -->
+<h3 id="virtualization"><a class="header" href="#virtualization">Virtualization</a></h3>
+<!-- TODO: Virtualization definition -->
+<h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
+<!-- TODO: Virtualization in grid -->
+<h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
+<ul>
+<li>
+<p>Virtualization plays a very important role in the cloud computing
+technology, normally in the cloud computing, users share the data present in
+the clouds like application etc, but actually with the help of
+virtualization users shares the Infrastructure.</p>
+</li>
+<li>
+<p>The main usage of Virtualization Technology is to provide the applications
+with the standard versions to their cloud users, suppose if the next version
+of that application is released, then cloud provider has to provide the
+latest version to their cloud users and practically it is possible because
+it is more expensive.</p>
+</li>
+<li>
+<p>To overcome this problem we use basically virtualization technology, By
+using virtualization, all severs and the software application which are
+required by other cloud providers are maintained by the third party people,
+and the cloud providers has to pay the money on monthly or annual basis.</p>
+</li>
+<li>
+<p>Types of Virtualization in Cloud Computing</p>
+<ol>
+<li>Operating System Virtualization</li>
+<li>Hardware Virtualization</li>
+<li>Server Virtualization</li>
+<li>Storage Virtualization</li>
+</ol>
+</li>
+</ul>
+<h3 id="virtualization-and-cloud-security"><a class="header" href="#virtualization-and-cloud-security">Virtualization and Cloud Security.</a></h3>
+<ul>
+<li>
+<p>Cloud security, also known as cloud computing security, is a collection of
+security measures designed to protect cloud-based infrastructure,
+applications, and data. These measures ensure user and device
+authentication, data and resource access control, and data privacy
+protection. They also support regulatory data compliance. Cloud security is
+employed in cloud environments to protect a company's data from distributed
+denial of service (DDoS) attacks, malware, hackers, and unauthorized user
+access or use.</p>
+</li>
+<li>
+<p>Types of clouds</p>
+<ol>
+<li>Public</li>
+<li>Private</li>
+<li>Hybrid</li>
+</ol>
+</li>
+<li>
+<p>Cloud security is critical since most organizations are already using cloud
+computing in one form or another. This high rate of adoption of public cloud
+services is reflected in Gartner’s recent prediction that the worldwide
+market for public cloud services will grow 23.1% in 2021.</p>
+</li>
+<li>
+<p>Virtualized security, or security virtualization, refers to security
+solutions that are software-based and designed to work within a virtualized
+IT environment. This differs from traditional, hardware-based network
+security, which is static and runs on devices such as traditional firewalls,
+routers, and switches.</p>
+</li>
+</ul>
+<h2 id="virtualization-and-cloud-computing"><a class="header" href="#virtualization-and-cloud-computing">Virtualization and Cloud Computing</a></h2>
+<h3 id="anatomy-of-cloud-infrastructure"><a class="header" href="#anatomy-of-cloud-infrastructure">Anatomy of Cloud Infrastructure</a></h3>
+<ul>
+<li>
+<p>Anatomy of Cloud Computing</p>
+<ul>
+<li>
+<p><strong>Provisioning and Configuration Module:</strong> It is the lowest level of
+cloud and typically resides on bare hardware (as a firmware) or on the
+top of the hypervisor layer. Its function is to abstract the underlying
+hardware and provide a standard mechanism to spawn instance of virtual
+machine on demand. It also handles the post-configuration of the
+operating systems and applications residing on the VM</p>
+</li>
+<li>
+<p><strong>Monitoring and Optimization:</strong> This layer handles the monitoring of
+all services, storage, networking and applications components in cloud.
+Based on the statistics, it could perform routine functions that
+optimize the behavior of the infrastructure components and provide
+relevant data to the cloud administrator to further optimize the
+configuration for maximum utilization and performance,</p>
+</li>
+<li>
+<p><strong>Metering and Chargeback:</strong> This layer provides functions to measure
+the usage of resources in cloud. The metering module collects all the
+utilization data per domain per use. This module gives the cloud
+administrator enough data to measure ongoing utilization of resources
+and to create invoices based on the usage on a periodic basis.</p>
+</li>
+<li>
+<p><strong>Orchestration:</strong> Orchestration is a central to cloud operations.
+Orchestration converts requests from the service management layer and
+the monitoring, chargeback modules to appropriate action item which are
+then submitted to provisioning and configuration module for final
+closure. Orchestration updates the CMDB in the process.</p>
+</li>
+<li>
+<p><strong>Configuration Management Database (CMDB):</strong> It is a central
+configuration repository wherein all the meta data and configuration of
+different modules, resources are kept and updated in the real-time
+basis. The repository can then be accessed using standards protocols
+like SOAP by third-party software and integration components. All
+updates in CMDB happen in real time as requests get processed in cloud.</p>
+</li>
+<li>
+<p><strong>Cloud Life cycle Management Layer (CLM):</strong> This layer handles the
+coordination of all other layers in cloud. All requests internal and
+external are addressed to the CLM layer first. CLM may internally route
+requests and actions to other layers for further processing.</p>
+</li>
+<li>
+<p><strong>Service Catalog:</strong> It is central to the definition of cloud, SC
+defines what kind of services the cloud is capable of providing and at
+what cost to the end user. SC is the first thing that is drafted before
+a cloud is architecture. The service management layer consults SC before
+it processes any request for a new resource.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-infrastructures"><a class="header" href="#virtual-infrastructures">Virtual infrastructures</a></h3>
+<ul>
+<li>A virtual infrastructure allows you to utilise the IT capabilities of
+physical resources as software that can be used across multiple platforms.
+These resources are shared across multiple virtual machines (VMs) and
+applications for maximum efficiency, creating a virtual infrastructure.</li>
+</ul>
+<!-- TODO: Might add some more? -->
+<h3 id="cpu-virtualization"><a class="header" href="#cpu-virtualization">CPU Virtualization</a></h3>
+<ul>
+<li>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
+CPUs that allows a single processor to act as if it was multiple individual
+CPUs.This allows an operating system to more effectively &amp; efficiently
+utilize the CPU power in the computer so that it runs faster.</li>
+</ul>
+<!-- TODO: need to add some more? -->
+<h3 id="network-and-storage-virtualization"><a class="header" href="#network-and-storage-virtualization">Network and Storage Virtualization.</a></h3>
+<h4 id="network-virtualization"><a class="header" href="#network-virtualization">Network Virtualization</a></h4>
+<p>Network virtualization is a method of combining the available resources in a
+network to consolidate multiple physical networks, divide a network into
+segments or create software networks between virtual machines (VMs).</p>
+<h4 id="storage-virtualization"><a class="header" href="#storage-virtualization">Storage Virtualization</a></h4>
+<p>Storage virtualization in Cloud Computing is nothing but the sharing of physical
+storage into multiple storage devices which further appears to be a single
+storage device. It can be also called as a group of an available storage device
+which simply manages from a central console.</p>
 
                     </main>
 
@@ -162,6 +523,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

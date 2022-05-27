@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,7 +30,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,7 +56,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html" class="active"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li><li class="chapter-item expanded "><a href="ai_prelim.html"><strong aria-hidden="true">1.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html" class="active"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li><li class="chapter-item expanded "><a href="cc_prelim.html"><strong aria-hidden="true">2.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li><li class="chapter-item expanded "><a href="dsbda_prelim.html"><strong aria-hidden="true">3.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li><li class="chapter-item expanded "><a href="wt_prelim.html"><strong aria-hidden="true">4.5.</strong>  Questions </a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -93,8 +93,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -134,7 +134,457 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="big-data-analytics-life-cycle"><a class="header" href="#big-data-analytics-life-cycle">Big Data Analytics Life Cycle</a></h1>
+                        <h2 id="unit-v-security-in-cloud-computing"><a class="header" href="#unit-v-security-in-cloud-computing">Unit V: Security in Cloud Computing</a></h2>
+<h2 id="risks-in-cloud-computing"><a class="header" href="#risks-in-cloud-computing">Risks in Cloud Computing</a></h2>
+<h3 id="risk-management"><a class="header" href="#risk-management">Risk Management</a></h3>
+<ul>
+<li>
+<p>Risk management is one of the cloud computing environment controls which
+aims to assess and manage risks related to cloud computing and to prevent
+those risks from impacting.</p>
+</li>
+<li>
+<p>The risk-based approach of managing information systems is a holistic
+activity that needs to be fully integrated into every aspect of the
+organization, from planning to system development life cycle processes, to
+security controls allocation and continuous monitoring. Therefore, a Risk
+Management Framework (RMF) provides a disciplined and structured process
+that integrates information security and risk management activities into the
+system development life cycle. An RMF operates primarily at tier 3 in the
+risk management hierarchy, but it can also have interactions at tier 1 and
+tier 2.</p>
+</li>
+</ul>
+<!-- TODO: Do I need to add more? -->
+<h3 id="enterprise-wide-risk-management"><a class="header" href="#enterprise-wide-risk-management">Enterprise-Wide Risk Management</a></h3>
+<ul>
+<li>
+<p>Enterprise-wide risk management (ERM) is a process of coordinated risk
+management that places greater emphasis on co-operation among departments to
+manage an organisation's range of risks as a whole. ERM offers a framework
+to effectively manage uncertainty, respond to risk and exploit opportunities
+as they arise.</p>
+</li>
+<li>
+<p>Five steps to ERM are:</p>
+<ol>
+<li>Identify Risk</li>
+<li>Analyze Risk</li>
+<li>Evaluate or Rank Risk</li>
+<li>Treat Risk or Control Risk</li>
+<li>Monitor and Review Risk</li>
+</ol>
+</li>
+<li>
+<p><a href="https://kmrdpartners.com/2018/04/05/enterprise-risk-management-process/">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="types-of-risks-in-cloud-computing"><a class="header" href="#types-of-risks-in-cloud-computing">Types of Risks in Cloud Computing</a></h3>
+<ol>
+<li>
+<p><strong>Data Loss:</strong> Data loss is the most common cloud security risks of cloud
+computing. It is also known as data leakage. Data loss is the process in which
+data is being deleted, corrupted, and unreadable by a user, software, or
+application. In a cloud computing environment, data loss occurs when our
+sensitive data is somebody else's hands, one or more data elements can not be
+utilized by the data owner, hard disk is not working properly, and software is
+not updated.</p>
+</li>
+<li>
+<p><strong>Hacked Interfaces and Insecure APIs:</strong> As we all know, cloud computing is
+completely depends on Internet, so it is compulsory to protect interfaces and
+APIs that are used by external users. APIs are the easiest way to communicate
+with most of the cloud services. In cloud computing, few services are available
+in the public domain. These services can be accessed by third parties, so there
+may be a chance that these services easily harmed and hacked by hackers.</p>
+</li>
+<li>
+<p><strong>Data Breach:</strong> Data Breach is the process in which the confidential data
+is viewed, accessed, or stolen by the third party without any authorization, so
+organization's data is hacked by the hackers.</p>
+</li>
+<li>
+<p><strong>Vendor lock-in:</strong> Vendor lock-in is the of the biggest security risks in
+cloud computing. Organizations may face problems when transferring their
+services from one vendor to another. As different vendors provide different
+platforms, that can cause difficulty moving one cloud to another.</p>
+</li>
+<li>
+<p><strong>Increased complexity strains IT staff:</strong> Migrating, integrating, and
+operating the cloud services is complex for the IT staff. IT staff must require
+the extra capability and skills to manage, integrate, and maintain the data to
+the cloud.</p>
+</li>
+<li>
+<p><strong>Spectre &amp; Meltdown:</strong> Spectre &amp; Meltdown allows programs to view and steal
+data which is currently processed on computer. It can run on personal computers,
+mobile devices, and in the cloud. It can store the password, your personal
+information such as images, emails, and business documents in the memory of
+other running programs.</p>
+</li>
+<li>
+<p><strong>Denial of Service (DoS) attacks:</strong> Denial of service (DoS) attacks occur
+when the system receives too much traffic to buffer the server. Mostly, DoS
+attackers target web servers of large organizations such as banking sectors,
+media companies, and government organizations. To recover the lost data, DoS
+attackers charge a great deal of time and money to handle the data.</p>
+</li>
+<li>
+<p><strong>Account hijacking:</strong> Account hijacking is a serious security risk in cloud
+computing. It is the process in which individual user's or organization's cloud
+account (bank account, e-mail account, and social media account) is stolen by
+hackers. The hackers use the stolen account to perform unauthorized activities.</p>
+</li>
+</ol>
+<h2 id="data-security-in-cloud"><a class="header" href="#data-security-in-cloud">Data Security in Cloud</a></h2>
+<ul>
+<li>The core principles of information security and data governance—data
+confidentiality, integrity, and availability (known as the CIA triad)—also
+apply to the cloud:
+<ul>
+<li><strong>Confidentiality:</strong> protecting the data from unauthorized access and
+disclosure</li>
+<li><strong>Integrity:</strong> safeguard the data from unauthorized modification so it
+can be trusted</li>
+<li><strong>Availability:</strong> ensuring the data is fully available and accessible
+when it’s needed</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-issues"><a class="header" href="#security-issues">Security Issues</a></h3>
+<ol>
+<li>
+<p><strong>Data Loss:</strong> Data Loss is one of the issues faced in Cloud Computing. This
+is also known as Data Leakage. As we know that our sensitive data is in the
+hands of Somebody else, and we don’t have full control over our database. So if
+the security of cloud service is to break by hackers then it may be possible
+that hackers will get access to our sensitive data or personal files.</p>
+</li>
+<li>
+<p><strong>Interference of Hackers and Insecure API’s:</strong> As we know if we are talking
+about the cloud and its services it means we are talking about the Internet.
+Also, we know that the easiest way to communicate with Cloud is using API. So it
+is important to protect the Interface’s and API’s which are used by an external
+user. But also in cloud computing, few services are available in the public
+domain. An is the vulnerable part of Cloud Computing because it may be possible
+that these services are accessed by some third parties. So it may be possible
+that with the help of these services hackers can easily hack or harm our data.</p>
+</li>
+<li>
+<p><strong>User Account Hijacking:</strong> Account Hijacking is the most serious security
+issue in Cloud Computing. If somehow the Account of User or an Organization is
+hijacked by Hacker. Then the hacker has full authority to perform Unauthorized
+Activities.</p>
+</li>
+<li>
+<p><strong>Changing Service Provider:</strong> Vendor lock In is also an important Security
+issue in Cloud Computing. Many organizations will face different problems while
+shifting from one vendor to another. For example, An Organization wants to shift
+from AWS Cloud to Google Cloud Services then they ace various problem’s like
+shifting of all data, also both cloud services have different techniques and
+functions, so they also face problems regarding that. Also, it may be possible
+that the charges of AWS are different from Google Cloud, etc.</p>
+</li>
+<li>
+<p><strong>Lack of Skill:</strong> While working, shifting o another service provider, need
+an extra feature, how to use a feature, etc. are the main problems caused in IT
+Company who doesn’t have skilled Employee. So it requires a skilled person to
+work with cloud Computing.</p>
+</li>
+<li>
+<p><strong>Denial of Service (DoS) attack:</strong> This type of attack occurs when the
+system receives too much traffic. Mostly DoS attacks occur in large
+organizations such as the banking sector, government sector, etc. When a DoS
+attack occurs data is lost. So in order to recover data, it requires a great
+amount of money as well as time to handle it.</p>
+</li>
+</ol>
+<h3 id="challenges"><a class="header" href="#challenges">Challenges</a></h3>
+<ol>
+<li>
+<p><strong>DDoS and Denial-of-Service Attacks:</strong> As more and more businesses and
+operations move to the cloud, cloud providers are becoming a bigger target for
+malicious attacks. Distributed denial of service (DDoS) attacks are more common
+than ever before. Verisign reported IT services, cloud platforms (PaaS) and SaaS
+was the most frequently targeted industry during the first quarter of 2015.</p>
+</li>
+<li>
+<p><strong>Data breaches:</strong> Known data breaches in the U.S. hit a record-high of 738
+in 2014, according to the Identity Theft Research Center, and hacking was (by
+far) the number one cause. That’s an incredible statistic and only emphasizes
+the growing challenge to secure sensitive data.</p>
+</li>
+<li>
+<p><strong>Data loss:</strong> When business critical information is moved into the cloud,
+it’s understandable to be concerned with its security. Losing cloud data, either
+through accidental deletion and human error, malicious tampering including the
+installation of malware (i.e. DDoS), or an act of nature that brings down a
+cloud service provider, could be disastrous for an enterprise business. Often a
+DDoS attack is only a diversion for a greater threat, such as an attempt to
+steal or delete data.</p>
+</li>
+<li>
+<p><strong>Insecure access control points:</strong> One of the great benefits of the cloud
+is it can be accessed from anywhere and from any device. But, what if the
+interfaces and particularly the application programming interfaces (APIs) users
+interact with aren’t secure? Hackers can find and gain access to these types of
+vulnerabilities and exploit authentication via APIs if given enough time.</p>
+</li>
+<li>
+<p><strong>Notifications and alerts:</strong> Awareness and proper communication of security
+threats is a cornerstone of network security and the same goes for cloud
+computing security. Alerting the appropriate website or application managers as
+soon as a threat is identified should be part of a thorough data security and
+access management plan. Speedy mitigation of a threat relies on clear and prompt
+communication so steps can be taken by the proper entities and impact of the
+threat minimized.</p>
+</li>
+</ol>
+<h3 id="advantages"><a class="header" href="#advantages">Advantages</a></h3>
+<ol>
+<li>
+<p><strong>24×7 Visibility:</strong> The best cloud security solutions like AppTrana enable
+24×7 monitoring of the application and cloud-based assets. This helps
+organizations to have continuous visibility into their risk posture and its
+impact on the business.</p>
+</li>
+<li>
+<p><strong>Higher Availability:</strong> Cloud computing security solutions typically have
+built-in redundancies to ensure that the application/ resources are always
+available. The CDNs used have distributed global networks of edge servers that
+deliver content optimally, accelerate application performance, and minimize
+access to the server. Together, they handle traffic surges in a way that
+on-premises/ hardware solutions cannot.</p>
+</li>
+<li>
+<p><strong>Effective protection against DDoS Attacks:</strong> Cloud security solutions
+provide the most effective protection against DDoS attacks, which are increasing
+in numbers, magnitude, sophistication, and severity. Cloud computing security
+helps to continuously monitor, identify, analyze, and mitigate DDoS attacks. The
+built-in redundancies, customizability, flexibility, scalability, and
+intelligence of such solutions can prevent volumetric, low, and slow attacks.</p>
+</li>
+<li>
+<p><strong>Data Security:</strong> The best cloud computing security solutions provide data
+security by design. They have security protocols and policies such as strong
+access controls and data encryption to prevent unauthorized entities from
+accessing confidential information.</p>
+</li>
+<li>
+<p><strong>Pay as you Go Model:</strong> The cloud security model ensures that you pay only
+for what you use and consume as opposed to making any upfront investment.</p>
+</li>
+<li>
+<p><strong>Advanced Threat Detection:</strong> By using end-point scanning and global threat
+intelligence, cloud computing security can detect threats more easily.</p>
+</li>
+<li>
+<p><strong>Regulatory Compliance:</strong> Top-notch cloud application security providers
+help to ensure regulatory standards and industry-specific compliance needs. This
+is done through its enhanced infrastructure and managed security services.</p>
+</li>
+</ol>
+<h3 id="disadvantages"><a class="header" href="#disadvantages">Disadvantages</a></h3>
+<ol>
+<li>
+<p><strong>Risk of data confidentiality:</strong> There is always a risk that user data can
+be accessed by other people. So data and cloud protection must be good because
+if it won’t be dangerous for data confidentiality.</p>
+</li>
+<li>
+<p><strong>Depends on internet connection:</strong> The internet is the only way to cloud
+computing. When there is no internet connection in your place, or the internet
+path to the cloud provider is in trouble, automatically access to your cloud
+computing machine will be disconnected. Now this is where the biggest obstacle
+is happening in developing countries and remote areas that do not have good
+internet access.And the weakness of public cloud is where everyone accesses the
+same server and server and will increase the risk of attack, and down the
+server.</p>
+</li>
+<li>
+<p><strong>The level of security:</strong> Secrecy and security are among the most doubtful
+things in cloud computing. By using a cloud computing system means we are fully
+entrusted with the security and confidentiality of data to companies that
+provide cloud computing servers. When you experience a problem, you cannot sue
+the server for errors in the data. When you experience a problem, you cannot sue
+the server for errors in the data.</p>
+</li>
+<li>
+<p><strong>Compliance:</strong> Which refers to the risk of a level compliance deviation
+from the provider against the regulations applied by the user.</p>
+</li>
+<li>
+<p><strong>Vulnerable in the event of an attack:</strong> There are lots of arguments
+against cloud computing one of which is computing because the Cloud Computing
+work system is online, each component that is on Cloud Computing can be exposed
+to a wide range, this is a wide open opportunity for attacks on data or
+activities stored on the server. When an attack is carried out by hackers, the
+problems that occur are data security, and data privacy.</p>
+</li>
+<li>
+<p><strong>Data Mobility:</strong> which refers to the possibility of sharing data between
+cloud services and how to retrieve data if one day the user makes a process of
+terminating cloud computing services.And there is local storage where the data
+can be used at any time as needed.</p>
+</li>
+<li>
+<p><strong>Technical problem:</strong> Besides that the use of Cloud Computing makes you
+unable to manage it yourself when there is a problem or a problem, you must
+contact customer support who is not necessarily ready 24/7. This is a problem
+because for some support you also have to pay more money.</p>
+</li>
+<li>
+<p><strong>Low Connection:</strong> Does not work well if the connection is slow. The
+quality of cloud computing servers is one of the most important considerations
+before we decide to provide cloud computing server service providers. When the
+server is down or the permorma is not good, we will be harmed because of poor
+server quality.</p>
+</li>
+</ol>
+<h3 id="cloud-digital-persona-and-data-security"><a class="header" href="#cloud-digital-persona-and-data-security">Cloud Digital persona and Data security</a></h3>
+<!-- TODO: Do I need to add RMF? -->
+<h3 id="content-level-security"><a class="header" href="#content-level-security">Content Level Security</a></h3>
+<ul>
+<li>Content Level Security (CLS) is a feature that controls who has access to
+edit or read content. During the process of creating a document, the content
+goes through several stages. Each stage requires input from users with
+different roles.</li>
+</ul>
+<h2 id="cloud-security-services"><a class="header" href="#cloud-security-services">Cloud Security Services</a></h2>
+<ol>
+<li>
+<p><strong>Identity and access:</strong> You are provided with control for secured
+management of identities and access. It includes people, processes and systems
+used for managing access to your enterprise resources. It is managed by making
+sure that the identity of the user is verified and the access rights are
+provided at the correct level.</p>
+</li>
+<li>
+<p><strong>Data loss prevention:</strong> This service offers protection of data by
+providing you with pre-installed data loss prevention software, along with a set
+of rules deployed.</p>
+</li>
+<li>
+<p><strong>Web security:</strong> Web security is provided as an additional protection
+against malware from entering the enterprise through web browsing and other such
+activities. This cloud service is provided either by installing a software or an
+appliance or through the cloud by redirecting your web traffic over to the cloud
+provider.</p>
+</li>
+<li>
+<p><strong>E-mail security:</strong> It provides control over the in-bound and out-bound
+e-mails to protect your organization from malicious attachments and phishing.
+This cloud service helps enforce corporate policies such as acceptable use, spam
+and in providing business continuity options. One of the solution adopted by
+many cloud e-mail security services is digital signatures, which allows
+identification and non-repudiation.</p>
+</li>
+<li>
+<p><strong>Security assessment:</strong> There are various tools implemented for the users
+of the SaaS delivery model, such as variant elasticity, low administration
+overhead, negligible setup time and pay-per use with low investment in the
+initial stage.</p>
+</li>
+<li>
+<p><strong>Intrusion management:</strong> It is the process that uses pattern recognition
+for detection and reaction to events that are statistically unusual and
+unexpected. It may also require reconfiguration of your system components in
+real time so as to prevent an intrusion.</p>
+</li>
+<li>
+<p><strong>Security information and managing events:</strong> Your system gathers
+information related to log and events. This information is used in correlating
+and analyzing, to provide you with real time reporting and alerts on events that
+require intervention.</p>
+</li>
+<li>
+<p><strong>Encryption:</strong> There are typical algorithms that are computationally
+difficult or nearly impossible to break.</p>
+</li>
+<li>
+<p><strong>Disaster management:</strong> This cloud service helps in continuing your
+business and managing disasters by providing flexibility and reliable failover
+for services that are required in case of service interruptions.</p>
+</li>
+<li>
+<p><strong>Network security:</strong> The network security services provides you with
+address security controls, which in a cloud environment is generally provided
+through virtual devices.</p>
+</li>
+</ol>
+<h3 id="confidentiality"><a class="header" href="#confidentiality">Confidentiality</a></h3>
+<ul>
+<li>Data confidentiality is the process of protecting data from illegal access
+and disclosure from the outsourced server and unauthorized users. This is
+done by encrypting the data so that only the authorized users can decrypt
+it.</li>
+</ul>
+<!-- TODO: More? -->
+<h3 id="integrity-and-availability"><a class="header" href="#integrity-and-availability">Integrity and Availability</a></h3>
+<ul>
+<li>
+<p><strong>Integrity:</strong> Protect the data from the unauthorized insert, update, or
+delete. The data owner and authorized users should be able to recognize if
+the data is corrupted or incomplete, and receive the most recent updated
+version of the data, which guarantees accuracy and consistency of data.</p>
+</li>
+<li>
+<p><strong>Availability:</strong> The data in the cloud servers should be accessible to its
+users. Major threats to availability are denial of service (DOS) attacks,
+natural disasters, and equipment failures at the service provider’s end.</p>
+</li>
+</ul>
+<h3 id="security-authorization-challenges-in-the-cloud"><a class="header" href="#security-authorization-challenges-in-the-cloud">Security Authorization Challenges in the Cloud</a></h3>
+<!-- TODO -->
+<h3 id="secure-cloud-software-requirements"><a class="header" href="#secure-cloud-software-requirements">Secure Cloud Software Requirements</a></h3>
+<ol>
+<li>
+<p><strong>Top-of-the-Line Perimeter Firewall:</strong> Most firewalls are very simple—they
+typically inspect a packet’s source and destination and that’s all. Some more
+advanced firewalls feature stable packet inspection, which checks the integrity
+of the file packets for stability issues prior to approving or rejecting the
+packet.</p>
+</li>
+<li>
+<p><strong>Intrusion Detection Systems with Event Logging:</strong> Numerous IT security
+compliance standards require businesses to have a means of tracking and
+recording intrusion attempts. So, for any business that wants to meet compliance
+standards such as PCI or HIPAA, using IDS event logging solutions is a must.</p>
+</li>
+<li>
+<p><strong>Internal Firewalls for Individual Applications, and Databases:</strong> While
+having a strong perimeter firewall can block external attacks, internal attacks
+are still a major threat. Infrastructures that lack internal firewalls to
+restrict access to sensitive data and applications cannot be considered secure.</p>
+</li>
+<li>
+<p><strong>Data-at-Rest Encryption:</strong> Encrypting the data that is stored on your
+cloud infrastructure can be an effective way to keep your most sensitive
+information from being accessed by the wrong party.</p>
+</li>
+<li>
+<p><strong>Tier IV Data Centers with Strong Physical Security:</strong> The physical
+hardware used to run a cloud environment represents one last opportunity for
+hackers and industrial spies to steal your most important data. When allowed
+direct access to the hardware that runs the cloud, hackers have free reign to
+steal data or upload malware directly to your systems.</p>
+</li>
+</ol>
+<h3 id="secure-cloud-software-testing"><a class="header" href="#secure-cloud-software-testing">Secure Cloud Software Testing</a></h3>
+<ul>
+<li>
+<p>Cloud penetration testing is designed to assess the strengths and weaknesses
+of a cloud system to improve its overall security posture. Cloud penetration
+testing helps to: Identify risks, vulnerabilities, and gaps. Impact of
+exploitable vulnerabilities. Determine how to leverage any access obtained
+via exploitation.</p>
+</li>
+<li>
+<p><a href="https://www.guidepointsecurity.com/education-center/cloud-penetration-testing/">More
+Details</a></p>
+</li>
+</ul>
 
                     </main>
 
@@ -162,6 +612,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

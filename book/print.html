@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -31,7 +31,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -57,7 +57,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li><li class="chapter-item expanded "><a href="ai_prelim.html"><strong aria-hidden="true">1.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li><li class="chapter-item expanded "><a href="cc_prelim.html"><strong aria-hidden="true">2.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li><li class="chapter-item expanded "><a href="dsbda_prelim.html"><strong aria-hidden="true">3.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li><li class="chapter-item expanded "><a href="wt_prelim.html"><strong aria-hidden="true">4.5.</strong>  Questions </a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -94,8 +94,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -136,8 +136,105 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>Brief notes of all the units from all the subjects for sem 6.</p>
-<p><img src="pictures/zimlogo.jpeg" alt="zim logo" /></p>
+<p><strong>Notes for computer engg. sem 6 SPPU university exam</strong></p>
+<h2 id="progress"><a class="header" href="#progress">PROGRESS</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Artificial Intelligence
+<ul>
+<li><input disabled="" type="checkbox"/>
+Unit III <strong>Adversarial Search and Games</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit IV <strong>Knowledge</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit V <strong>Reasoning</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit VI <strong>Planning</strong></li>
+<li><input disabled="" type="checkbox"/>
+Prelim Questions</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Cloud Computing
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Unit III <strong>Virtualization in Cloud Computing</strong></li>
+<li><input disabled="" type="checkbox" checked=""/>
+Unit IV <strong>Cloud Platforms and Cloud Applications</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit V <strong>Security in Cloud Computing</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit VI <strong>Advanced Techniques in Cloud Computing</strong></li>
+<li><input disabled="" type="checkbox"/>
+Prelim Questions</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Data Science and Big Data
+<ul>
+<li><input disabled="" type="checkbox"/>
+Unit III <strong>Big Data Analytics Life Cycle</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit IV <strong>Predictive Big Data Analytics with Python</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit V <strong>Big Data Analytics and Model Evaluation</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit VI <strong>Data Visualization and Hadoop</strong></li>
+<li><input disabled="" type="checkbox"/>
+Prelim Questions</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+Web technologies
+<ul>
+<li><input disabled="" type="checkbox"/>
+Unit III <strong>Java Servlets and XML</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit IV <strong>JSP and Web Services</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit V <strong>Server Side Scripting Languages</strong></li>
+<li><input disabled="" type="checkbox"/>
+Unit VI <strong>Ruby and Rails</strong></li>
+<li><input disabled="" type="checkbox"/>
+Prelim Questions</li>
+</ul>
+</li>
+</ul>
+<h2 id="btw"><a class="header" href="#btw">BTW,</a></h2>
+<ul>
+<li>
+<p>I have tried to keep notes as short as possible</p>
+</li>
+<li>
+<p>Navigating through notes is pretty easy:</p>
+<ul>
+<li>
+<p>Sidebar can be toggled with the help of the hamburger menu in the top
+left corner.</p>
+</li>
+<li>
+<p>Use the paint brush button to change the theme.</p>
+</li>
+<li>
+<p>Search button for fast fuzzy search through the entire book.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Entire theory was based on google searches</p>
+</li>
+<li>
+<p>If a topic seems like it needed more theory then a link to the resource was
+added. Look for &quot;More Details&quot; whenever necessary.</p>
+</li>
+<li>
+<p>Improvements are welcome. Email me at: <a href="mailto:zim@onionmail.org">zim@onionmail.org</a></p>
+</li>
+<li>
+<p>Source code for this book can be found at:
+<a href="https://github.com/zim0369/uniexam">https://github.com/zim0369/uniexam</a>.</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="syllabi"><a class="header" href="#syllabi">SYLLABI</a></h1>
 <h2 id="artificial-intelligence"><a class="header" href="#artificial-intelligence">Artificial Intelligence</a></h2>
 <ul>
@@ -427,21 +524,1641 @@ potentially those of the dealer.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="knowledge"><a class="header" href="#knowledge">Knowledge</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="adversarial-search-and-games-1"><a class="header" href="#adversarial-search-and-games-1">Adversarial Search and Games</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="knowledge-1"><a class="header" href="#knowledge-1">Knowledge</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="questions"><a class="header" href="#questions">Questions</a></h1>
+<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-computing-1"><a class="header" href="#cloud-computing-1">Cloud Computing</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="virtualization-in-cloud-computing"><a class="header" href="#virtualization-in-cloud-computing">Virtualization in Cloud Computing</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-platforms-and-cloud-applications"><a class="header" href="#cloud-platforms-and-cloud-applications">Cloud Platforms and Cloud Applications</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-virtualization-in-cloud-computing"><a class="header" href="#unit-iii-virtualization-in-cloud-computing">Unit III: Virtualization in Cloud Computing</a></h1>
+<ul>
+<li>Virtualization is technology that lets you create useful IT services using
+resources that are traditionally bound to hardware. It allows you to use a
+physical machine's full capacity by distributing its capabilities among many
+users or environments.02</li>
+</ul>
+<h2 id="adopting-virtualization"><a class="header" href="#adopting-virtualization">Adopting Virtualization</a></h2>
+<ul>
+<li>
+<p>Some users may confuse virtualization with cloud computing, but they’re not
+entirely the same.</p>
+<ul>
+<li>
+<p>Virtualization is the creation of a virtual resource such as a server,
+desktop, operating system, file, storage space, or network to help
+businesses manage and scale workloads.</p>
+</li>
+<li>
+<p>Cloud computing is the sharing of resources, software, applications and
+data as a service. Together, the two can be used to provide even greater
+advantages.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data virtualization is viable for small businesses.</p>
+</li>
+<li>
+<p>While virtualization was first embraced by enterprise operations, it soon
+became clear that the same value proposition held substantial benefits for
+Small to Medium Businesses (SMBs). Cyberattacks and natural disasters can
+hit businesses of all sizes. For SMBs, backing up a virtualized
+infrastructure can be a more viable option to backing up hardware servers.</p>
+</li>
+<li>
+<p>Reasons to adopt virtualization:</p>
+<ol>
+<li>Increased agility for the business</li>
+<li>Better resource deployment</li>
+<li>Greater operational efficiency</li>
+<li>Enhanced security</li>
+<li>Higher availability</li>
+<li>Stronger disaster recovery</li>
+<li>Improved quality of service</li>
+<li>Reduced energy consumption</li>
+<li>Preparation for the cloud</li>
+</ol>
+</li>
+</ul>
+<h2 id="types-of-virtualization"><a class="header" href="#types-of-virtualization">Types of Virtualization</a></h2>
+<ul>
+<li>The 7 Types of Virtualization
+<ol>
+<li>OS Virtualization—aka Virtual Machines</li>
+<li>Application-Server Virtualization</li>
+<li>Application Virtualization</li>
+<li>Administrative Virtualization</li>
+<li>Network Virtualization</li>
+<li>Hardware Virtualization</li>
+<li>Storage Virtualization</li>
+</ol>
+</li>
+</ul>
+<h2 id="virtualization-architecture--software"><a class="header" href="#virtualization-architecture--software">Virtualization architecture &amp; software</a></h2>
+<h3 id="virtualization-architecture"><a class="header" href="#virtualization-architecture">Virtualization architecture</a></h3>
+<ul>
+<li>
+<p>A virtualization architecture is a conceptual model specifying the
+arrangement and interrelationships of the particular components involved in
+delivering a virtual -- rather than physical -- version of something, such
+as an operating system (OS), a server, a storage device or network
+resources.</p>
+<p><img src="pictures/traditional_vs_virtual.png" alt="Traditional vs Virtual" /></p>
+<p><em>Left: Traditional architecture | Right: Virtual architecture</em></p>
+<p><a href="https://www.techtarget.com/whatis/definition/virtualization-architecture">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="virtualization-software"><a class="header" href="#virtualization-software">Virtualization software</a></h3>
+<ul>
+<li>
+<p>Virtualization software, also called hypervisor, allows a single host
+computer to create and run one or more virtual environments.</p>
+</li>
+<li>
+<p>Virtualization software is most often used to emulate a complete computer
+system in order to allow a guest operating system to be run, for example
+allowing Linux to run as a guest on top of a PC that is natively running a
+Microsoft Windows operating system (or the inverse, running Windows as a
+guest on Linux).</p>
+</li>
+<li>
+<p>Uses of virtualization software:</p>
+<ol>
+<li><strong>Back up</strong>: You can backup your entire operating system or server
+installation as a virtual OS.</li>
+<li><strong>Run a different OS</strong>: Let's say you want to try out Linux without
+having to install it on a physical hard drive.</li>
+<li><strong>Run ancient apps</strong>: Say an application you want to run only works on
+win8 and you're using win10 then instead of reinstalling an outdated OS on
+real hardware why not just install windows 8 in a VM.</li>
+<li><strong>Look at dirty files</strong>: Taking a look at malicious files might put your
+computer and your data at risk so it would be better to check it in a
+sandboxed environment.</li>
+<li><strong>Using sandboxed browsers</strong>: Hackers have successfully exploited all
+four of most popular browsers — Chrome, Internet Explorer, Firefox, and
+Safari. Browser plugins can be malicious too. In this case using a sandboxed
+browser like the TOR browser is safer.</li>
+<li><strong>Try an application</strong>: You just want to check if an application you
+wrote works well on multiple operating systems then using virtual machines
+would be more convenient as compared to installing on real hardware.</li>
+</ol>
+</li>
+</ul>
+<h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
+<ul>
+<li>
+<p>Virtual cluster is a many-to-one virtualization technology, which can form a
+routing system from multiple common devices connected through a switching
+network, while performing the same as a single logical router to all
+external appearances.</p>
+</li>
+<li>
+<p><a href="https://support.huawei.com/enterprise/en/doc/EDOC1100125848/a180e7b5/overview-of-virtual-cluster#:%7E:text=Virtual%20cluster%20is%20a%20many,router%20to%20all%20external%20appearances.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="virtual-applications"><a class="header" href="#virtual-applications">Virtual Applications</a></h2>
+<ul>
+<li>
+<p>Virtual apps are applications that are optimized to run in a virtual
+environment. Simply put, a virtual app simply runs on a computer without
+being installed on it.</p>
+</li>
+<li>
+<p>Remote apps are a popular virtual app delivery solution wherein the virtual
+applications installed on a server are delivered to users’ devices. These
+applications are not installed on the user’s device; instead, software
+called a client is installed on the device that connects to the server, and
+the application is presented as screenshots sent to the device.</p>
+</li>
+<li>
+<p>ThinApp is an example of an agentless application virtualization solution,
+while Microsoft App-V represents an agent-based virtual app solution.
+Parallels Remote Application Server, Citrix, and VMware are the leading
+providers of application virtualization solutions in the market.</p>
+</li>
+</ul>
+<h2 id="pitfalls-of-virtualization"><a class="header" href="#pitfalls-of-virtualization">Pitfalls of Virtualization</a></h2>
+<p><em>Have added both pros and cons</em></p>
+<ul>
+<li>
+<p>Pros</p>
+<ol>
+<li>Cheaper</li>
+<li>Predictable costs</li>
+<li>reduced workload</li>
+<li>Better uptime</li>
+<li>Faster deployment of resources</li>
+<li>Promotes digital entrepreneurship</li>
+<li>Energy savings</li>
+</ol>
+</li>
+<li>
+<p>Cons(pitfalls)</p>
+<ol>
+<li>High implementation cost</li>
+<li>Has limitations</li>
+<li>Security risk</li>
+<li>Availability issue</li>
+<li>Scalability issue</li>
+<li>Requires several links in a chain that must work together cohesively</li>
+<li>Time consuming</li>
+</ol>
+</li>
+</ul>
+<h2 id="grid-cloud--virtualization"><a class="header" href="#grid-cloud--virtualization">Grid, Cloud &amp; Virtualization</a></h2>
+<h3 id="grid-computing"><a class="header" href="#grid-computing">Grid Computing</a></h3>
+<ul>
+<li>
+<p>Grid Computing can be defined as a network of computers working together to
+perform a task that would rather be difficult for a single machine. All
+machines on that network work under the same protocol to act as a virtual
+supercomputer.</p>
+</li>
+<li>
+<p>The task that they work on may include analyzing huge datasets or simulating
+situations that require high computing power.</p>
+</li>
+<li>
+<p>Computers on the network contribute resources like processing power and
+storage capacity to the network.</p>
+</li>
+<li>
+<p>Grid computing is also called as &quot;distributed computing.&quot; It links multiple
+computing resources (PC's, workstations, servers, and storage elements)
+together and provides a mechanism to access them.</p>
+</li>
+<li>
+<p>The main advantages of grid computing are that it increases user
+productivity by providing transparent access to resources, and work can be
+completed more quickly.</p>
+</li>
+</ul>
+<h3 id="cloud"><a class="header" href="#cloud">Cloud</a></h3>
+<!-- TODO: Cloud definition -->
+<h3 id="virtualization"><a class="header" href="#virtualization">Virtualization</a></h3>
+<!-- TODO: Virtualization definition -->
+<h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
+<!-- TODO: Virtualization in grid -->
+<h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
+<ul>
+<li>
+<p>Virtualization plays a very important role in the cloud computing
+technology, normally in the cloud computing, users share the data present in
+the clouds like application etc, but actually with the help of
+virtualization users shares the Infrastructure.</p>
+</li>
+<li>
+<p>The main usage of Virtualization Technology is to provide the applications
+with the standard versions to their cloud users, suppose if the next version
+of that application is released, then cloud provider has to provide the
+latest version to their cloud users and practically it is possible because
+it is more expensive.</p>
+</li>
+<li>
+<p>To overcome this problem we use basically virtualization technology, By
+using virtualization, all severs and the software application which are
+required by other cloud providers are maintained by the third party people,
+and the cloud providers has to pay the money on monthly or annual basis.</p>
+</li>
+<li>
+<p>Types of Virtualization in Cloud Computing</p>
+<ol>
+<li>Operating System Virtualization</li>
+<li>Hardware Virtualization</li>
+<li>Server Virtualization</li>
+<li>Storage Virtualization</li>
+</ol>
+</li>
+</ul>
+<h3 id="virtualization-and-cloud-security"><a class="header" href="#virtualization-and-cloud-security">Virtualization and Cloud Security.</a></h3>
+<ul>
+<li>
+<p>Cloud security, also known as cloud computing security, is a collection of
+security measures designed to protect cloud-based infrastructure,
+applications, and data. These measures ensure user and device
+authentication, data and resource access control, and data privacy
+protection. They also support regulatory data compliance. Cloud security is
+employed in cloud environments to protect a company's data from distributed
+denial of service (DDoS) attacks, malware, hackers, and unauthorized user
+access or use.</p>
+</li>
+<li>
+<p>Types of clouds</p>
+<ol>
+<li>Public</li>
+<li>Private</li>
+<li>Hybrid</li>
+</ol>
+</li>
+<li>
+<p>Cloud security is critical since most organizations are already using cloud
+computing in one form or another. This high rate of adoption of public cloud
+services is reflected in Gartner’s recent prediction that the worldwide
+market for public cloud services will grow 23.1% in 2021.</p>
+</li>
+<li>
+<p>Virtualized security, or security virtualization, refers to security
+solutions that are software-based and designed to work within a virtualized
+IT environment. This differs from traditional, hardware-based network
+security, which is static and runs on devices such as traditional firewalls,
+routers, and switches.</p>
+</li>
+</ul>
+<h2 id="virtualization-and-cloud-computing"><a class="header" href="#virtualization-and-cloud-computing">Virtualization and Cloud Computing</a></h2>
+<h3 id="anatomy-of-cloud-infrastructure"><a class="header" href="#anatomy-of-cloud-infrastructure">Anatomy of Cloud Infrastructure</a></h3>
+<ul>
+<li>
+<p>Anatomy of Cloud Computing</p>
+<ul>
+<li>
+<p><strong>Provisioning and Configuration Module:</strong> It is the lowest level of
+cloud and typically resides on bare hardware (as a firmware) or on the
+top of the hypervisor layer. Its function is to abstract the underlying
+hardware and provide a standard mechanism to spawn instance of virtual
+machine on demand. It also handles the post-configuration of the
+operating systems and applications residing on the VM</p>
+</li>
+<li>
+<p><strong>Monitoring and Optimization:</strong> This layer handles the monitoring of
+all services, storage, networking and applications components in cloud.
+Based on the statistics, it could perform routine functions that
+optimize the behavior of the infrastructure components and provide
+relevant data to the cloud administrator to further optimize the
+configuration for maximum utilization and performance,</p>
+</li>
+<li>
+<p><strong>Metering and Chargeback:</strong> This layer provides functions to measure
+the usage of resources in cloud. The metering module collects all the
+utilization data per domain per use. This module gives the cloud
+administrator enough data to measure ongoing utilization of resources
+and to create invoices based on the usage on a periodic basis.</p>
+</li>
+<li>
+<p><strong>Orchestration:</strong> Orchestration is a central to cloud operations.
+Orchestration converts requests from the service management layer and
+the monitoring, chargeback modules to appropriate action item which are
+then submitted to provisioning and configuration module for final
+closure. Orchestration updates the CMDB in the process.</p>
+</li>
+<li>
+<p><strong>Configuration Management Database (CMDB):</strong> It is a central
+configuration repository wherein all the meta data and configuration of
+different modules, resources are kept and updated in the real-time
+basis. The repository can then be accessed using standards protocols
+like SOAP by third-party software and integration components. All
+updates in CMDB happen in real time as requests get processed in cloud.</p>
+</li>
+<li>
+<p><strong>Cloud Life cycle Management Layer (CLM):</strong> This layer handles the
+coordination of all other layers in cloud. All requests internal and
+external are addressed to the CLM layer first. CLM may internally route
+requests and actions to other layers for further processing.</p>
+</li>
+<li>
+<p><strong>Service Catalog:</strong> It is central to the definition of cloud, SC
+defines what kind of services the cloud is capable of providing and at
+what cost to the end user. SC is the first thing that is drafted before
+a cloud is architecture. The service management layer consults SC before
+it processes any request for a new resource.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-infrastructures"><a class="header" href="#virtual-infrastructures">Virtual infrastructures</a></h3>
+<ul>
+<li>A virtual infrastructure allows you to utilise the IT capabilities of
+physical resources as software that can be used across multiple platforms.
+These resources are shared across multiple virtual machines (VMs) and
+applications for maximum efficiency, creating a virtual infrastructure.</li>
+</ul>
+<!-- TODO: Might add some more? -->
+<h3 id="cpu-virtualization"><a class="header" href="#cpu-virtualization">CPU Virtualization</a></h3>
+<ul>
+<li>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
+CPUs that allows a single processor to act as if it was multiple individual
+CPUs.This allows an operating system to more effectively &amp; efficiently
+utilize the CPU power in the computer so that it runs faster.</li>
+</ul>
+<!-- TODO: need to add some more? -->
+<h3 id="network-and-storage-virtualization"><a class="header" href="#network-and-storage-virtualization">Network and Storage Virtualization.</a></h3>
+<h4 id="network-virtualization"><a class="header" href="#network-virtualization">Network Virtualization</a></h4>
+<p>Network virtualization is a method of combining the available resources in a
+network to consolidate multiple physical networks, divide a network into
+segments or create software networks between virtual machines (VMs).</p>
+<h4 id="storage-virtualization"><a class="header" href="#storage-virtualization">Storage Virtualization</a></h4>
+<p>Storage virtualization in Cloud Computing is nothing but the sharing of physical
+storage into multiple storage devices which further appears to be a single
+storage device. It can be also called as a group of an available storage device
+which simply manages from a central console.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>Unit IV: Cloud Platforms and Cloud Applications</p>
+<h2 id="amazon-web-services-aws-amazon-web-services-and-components"><a class="header" href="#amazon-web-services-aws-amazon-web-services-and-components">Amazon Web Services (AWS): Amazon Web Services and Components</a></h2>
+<ul>
+<li>Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand
+cloud computing platforms and APIs to individuals, companies, and
+governments, on a metered pay-as-you-go basis. These cloud computing web
+services provide distributed computing processing capacity and software
+tools via AWS server farms.</li>
+</ul>
+<h3 id="aws-services"><a class="header" href="#aws-services">AWS Services</a></h3>
+<p><img src="pictures/aws_services.png" alt="AWS Services" /></p>
+<ul>
+<li>Amazon Web Services offer the following services for various computing
+purposes:
+<ol>
+<li>Hosting a web site</li>
+<li>Social networking</li>
+<li>Academic computing</li>
+<li>Sharing media</li>
+<li>Hosting applications</li>
+<li>Backup, storage, and disaster recovery</li>
+<li>Media distribution and content delivery</li>
+<li>Developing and testing environments</li>
+<li>Search engines</li>
+</ol>
+</li>
+</ul>
+<h3 id="aws-components"><a class="header" href="#aws-components">AWS Components</a></h3>
+<ol>
+<li>
+<p><strong>Data Management and Data Transfer:</strong> To run HPC applications in the AWS
+cloud, you need to move the required data into the cloud. There are several data
+transport solutions designed to securely transfer huge amounts of data. This
+overcomes issues like a long time for transfer, high network costs, and security
+concerns. Also, you can automate the movement of data between the AWS cloud and
+on-premises storage. There are options for establishing a private connection to
+the AWS from your premises. This increases bandwidth to provide more throughput,
+reduces the cost of the network, and provides a consistent network experience.</p>
+</li>
+<li>
+<p><strong>Compute &amp; Networking:</strong> There are several compute instances types that can
+be customized according to your needs. It also handles monitoring your
+application and adjusting its capacity for maintaining a steady and predictable
+performance at an affordable cost. Also, setting up application scaling across
+multiple services for multiple resources takes a few minutes. Enhanced
+networking options from AWS allow achieving lower inter-instance latency and
+higher bandwidth.</p>
+</li>
+<li>
+<p><strong>Storage:</strong> When looking for an HPC solution, you need to consider the
+storage options and cost. There are several flexible blocks, object, and file
+storage options in AWS services that allow permanent and transient data storage.
+It allows allocating storage volumes according to the size you need. You can
+store and access and data type over the cloud without doing a data migration
+project. Also, with AWS services, you can transfer your workload to the cloud
+from on-premises.</p>
+</li>
+<li>
+<p><strong>Automation and Orchestration:</strong> For using the infrastructure efficiently,
+you need to automate scheduling submitted jobs and the job submission process.
+AWS services allow you to run thousands of batch computing jobs through the
+dynamic provision of the computer resources on the basis of the requirements.</p>
+</li>
+<li>
+<p><strong>Operations and Management:</strong> As a system administrator, you are
+responsible for avoiding cost overruns and monitoring the infrastructure. There
+are several management and monitoring services that allow you to optimize
+utilization of resources, monitor the application, get a complete view of
+operational health, and respond to the performance changes.</p>
+</li>
+<li>
+<p><strong>Visualization:</strong> With the AWS services, you can easily visualize the
+engineering simulations’ results without moving huge amounts of data. Now, you
+can access the interactive applications remotely over a standard network and
+deliver application sessions to any workstation.</p>
+</li>
+<li>
+<p><strong>Security and Compliance:</strong> For running applications on the cloud, you need
+to have an understanding of regulatory compliance and security management. There
+are several quick-launch templates and security related services offered by AWS
+that helps in protecting data and customer privacy by putting strong safeguards
+in the AWS infrastructure.</p>
+</li>
+</ol>
+<h3 id="amazon-simple-db"><a class="header" href="#amazon-simple-db">Amazon Simple DB</a></h3>
+<ul>
+<li>
+<p>Amazon SimpleDB is a distributed database written in Erlang by Amazon.com.
+It is used as a web service in concert with Amazon Elastic Compute Cloud and
+Amazon S3 and is part of Amazon Web Services.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/simpledb/">More Details</a></p>
+</li>
+</ul>
+<h3 id="elastic-cloud-computing-ec2"><a class="header" href="#elastic-cloud-computing-ec2">Elastic Cloud Computing (EC2)</a></h3>
+<ul>
+<li>
+<p>Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing
+platform, Amazon Web Services, that allows users to rent virtual computers
+on which to run their own computer applications.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/ec2/">More Details</a></p>
+</li>
+</ul>
+<h3 id="amazon-storage-system"><a class="header" href="#amazon-storage-system">Amazon Storage System</a></h3>
+<ul>
+<li>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service that
+offers industry-leading scalability, data availability, security, and
+performance.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/products/storage/">More Details</a></p>
+</li>
+</ul>
+<h3 id="amazon-database-services-dynamo-db"><a class="header" href="#amazon-database-services-dynamo-db">Amazon Database services (Dynamo DB).</a></h3>
+<ul>
+<li>
+<p>Amazon DynamoDB is a fully managed proprietary NoSQL database service that
+supports key–value and document data structures and is offered by Amazon.com
+as part of the Amazon Web Services portfolio. DynamoDB exposes a similar
+data model to and derives its name from Dynamo, but has a different
+underlying implementation.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/dynamodb/">More Details</a></p>
+</li>
+</ul>
+<h2 id="microsoft-cloud-services"><a class="header" href="#microsoft-cloud-services">Microsoft Cloud Services</a></h2>
+<ul>
+<li>Microsoft Azure, often referred to as Azure, is a cloud computing service
+operated by Microsoft for application management via Microsoft-managed data
+centers.</li>
+</ul>
+<h3 id="azure-core-concepts"><a class="header" href="#azure-core-concepts">Azure core concepts</a></h3>
+<table><thead><tr><th>Concept Name</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Regions</strong></td><td>Azure is a global cloud platform which is available across various regions around the world. When you request a service, application, or VM in Azure, you are first asked to specify a region. The selected region represents datacenter where your application runs.</td></tr>
+<tr><td><strong>Datacenter</strong></td><td>In Azure, you can deploy your applications into a variety of data centers around the globe. So, it is advisable to select a region which is closer to most of your customers. It helps you to reduce latency in network requests.</td></tr>
+<tr><td><strong>Azure portal</strong></td><td>The Azure portal is a web-based application which can be used to create, manage and remove Azure resource and services. It is located at https://portal.azure.com.</td></tr>
+<tr><td><strong>Resources</strong></td><td>Azure resource is an individual computer, networking data or app hosting services which charged individually. Some common resources are virtual machines( VM), storage account, or SQL databases.</td></tr>
+<tr><td><strong>Resource groups</strong></td><td>An Azure resource group is a container which holds related resource for an Azure solution. It may include every resource or just resource which you wants to manage.</td></tr>
+<tr><td><strong>Resource Manager templates</strong></td><td>It is a JSON which defines one or more resource to deploy to a resource group. It also establishes dependencies between deployed resources.</td></tr>
+<tr><td><strong>Automation:</strong></td><td>Azure allows you to automate the process of creating, managing and deleting resource by using PowerShell or the Azure command-line Interface(CLI).</td></tr>
+<tr><td><strong>Azure PowerShell</strong></td><td>PowerShell is a set of modules that offer cmdlets to manage Azure. In most cases, you are allowed to use, the cmdlets command for the same tasks which you are performing in the Azure portal.</td></tr>
+<tr><td><strong>Azure command-line interface(CLI)</strong></td><td>The Azure CLI is a tool that you can use to create, manage, and remove Azure resources from the command line.</td></tr>
+<tr><td><strong>REST APIs</strong></td><td>Azure is built on a set of REST APIs help you perform the same operation that you do in Azure portal Ul. It allows your Azure resources and apps to be manipulated via any third party software application.</td></tr>
+</tbody></table>
+<h3 id="sql-azure"><a class="header" href="#sql-azure">SQL Azure</a></h3>
+<ul>
+<li>
+<p>Microsoft Azure SQL Database is a managed cloud database provided as part of
+Microsoft Azure. A cloud database is a database that runs on a cloud
+computing platform, and access to it is provided as a service. Managed
+database services take care of scalability, backup, and high availability of
+the database.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="windows-azure-platform-appliance"><a class="header" href="#windows-azure-platform-appliance">Windows Azure Platform Appliance.</a></h3>
+<ul>
+<li>
+<p>The Windows Azure Platform Appliance consists of Windows Azure, SQL Azure
+and a Microsoft-specified configuration of network, storage and server
+hardware. Service providers, governments and large enterprises who would,
+for example, invest in a 1000 servers at a time, will be able to deploy the
+Windows Azure platform on their own hardware in their datacenter.
+Microsoft Windows Azure Platform Appliance is optimized for scale out
+applications - such as eBay- and datacenter efficiency across hundreds to
+thousands to tens-of-thousands servers.</p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-in/blog/just-announced-at-wpc-the-windows-azure-platform-appliance/">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="cloud-computing-applications"><a class="header" href="#cloud-computing-applications">Cloud Computing Applications:</a></h2>
+<ul>
+<li>
+<p>Cloud service providers provide various applications in the field of art,
+business, data storage and backup services, education, entertainment,
+management, social networking, etc.</p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/cloud-computing-applications">More Details</a></p>
+</li>
+</ul>
+<h3 id="healthcare"><a class="header" href="#healthcare">Healthcare</a></h3>
+<h4 id="ecg-analysis-in-the-cloud"><a class="header" href="#ecg-analysis-in-the-cloud">ECG Analysis in the Cloud</a></h4>
+<ul>
+<li><strong>ECG analysis in cloud computing</strong>: cloud computing technologies allows the
+remote monitoring of a patient's heart beat data. Through this way the
+patient at risk can be constantly monitored without going to the hospital
+for ECG analysis. At the same time the Doctor's can instantly be notified
+with cases that need's their attention.</li>
+</ul>
+<h3 id="biology"><a class="header" href="#biology">Biology</a></h3>
+<h4 id="protein-structure-prediction"><a class="header" href="#protein-structure-prediction">Protein Structure Prediction</a></h4>
+<ul>
+<li>
+<p>Cloud computing is an emerging technology that provides various computing
+services on demand. It provides convenient access to a shared pool of
+higher-level services and other system resources. Nowadays, cloud computing
+has a great significance in the fields of geology, biology, and other
+scientific research areas.</p>
+</li>
+<li>
+<p>Protein structure prediction is the best example in research area that makes
+use of cloud applications for its computation and storage.</p>
+</li>
+<li>
+<p>A protein is composed of long chains of amino acids joined together by
+peptide bonds. The various structures of protein help in the designing of
+new drugs and the various sequences of proteins from its three-dimensional
+structure in predictive form is known as a Protein structure prediction.</p>
+</li>
+<li>
+<p>Firstly primary structures of proteins are formed and then prediction of the
+secondary, tertiary and quaternary structures are done from the primary one.
+In this way predictions of protein structures are done. Protein structure
+prediction also makes use of various other technologies like artificial
+neural networks, artificial intelligence, machine learning and probabilistic
+techniques, also holds great importance in fields like theoretical chemistry
+and bioinformatics.</p>
+</li>
+<li>
+<p>There are various algorithms and tools that exists for protein structure
+prediction. CASP (Critical Assessment of Protein Structure Prediction) is a
+well-known tool that provides methods for automated web servers and the
+results of research work are placed on clouds like CAMEO (Continuous
+Automated Model Evaluation) server. These servers can be accessed by anyone
+as per their requirements from any place. Some of the tools or servers used
+in protein structure prediction are Phobius, FoldX, LOMETS, Prime, Predict
+protein, SignalP, BBSP, EVfold, Biskit, HHpred, Phre, ESyired3D. Using these
+tools new structures are predicted and the results are placed on the
+cloud-based servers.</p>
+</li>
+</ul>
+<h3 id="geosciences"><a class="header" href="#geosciences">Geosciences</a></h3>
+<ul>
+<li>Earth science or geoscience includes all fields of natural science related
+to the planet Earth.</li>
+</ul>
+<h4 id="satellite-image-processing"><a class="header" href="#satellite-image-processing">Satellite Image Processing,</a></h4>
+<ul>
+<li>
+<p>Satellite Image Processing is an important field in research and development
+and consists of the images of earth and satellites taken by the means of
+artificial satellites. Firstly, the photographs are taken in digital form
+and later are processed by the computers to extract the information.
+Statistical methods are applied to the digital images and after processing
+the various discrete surfaces are identified by analyzing the pixel values.</p>
+</li>
+<li>
+<p>Majorly there are four kinds of resolutions associated with satellite
+imagery. These are:</p>
+<ul>
+<li><strong>Spatial resolution:</strong> It is determined by the sensors Instantaneous
+Field of View(IFoV) and is defined as the pixel size of an image that is
+visible to the human eye being measured on the ground. Since it has high
+resolving power or the ability to separate and hence is termed as
+Spatial Resolution.</li>
+<li><strong>Spectral resolution:</strong> This resolution measures the wavelength
+internal size and determines the number of wavelength intervals that the
+sensor measures.</li>
+<li><strong>Temporal resolution:</strong> The word temporal is associated with time or
+days and is defined as the time that passes between various imagery
+cloud periods.</li>
+<li><strong>Radiometric resolution:</strong> This resolution provides the actual
+characteristics of the image and is generally expressed in bits size. It
+gives the effective bit depth and records the various levels of
+brightness of imaging system.</li>
+</ul>
+</li>
+</ul>
+<h3 id="business-and-consumer-applications"><a class="header" href="#business-and-consumer-applications">Business and Consumer Applications</a></h3>
+<h4 id="crm-and-erp"><a class="header" href="#crm-and-erp">CRM and ERP</a></h4>
+<ul>
+<li>
+<p>CRM (Customer Relationship Management) and ERP (Enterprise Resource
+Planning) software are powerful tools for a business or enterprise to use.
+CRM handles the sales, marketing, and customer service information.</p>
+</li>
+<li>
+<p><a href="https://www.netsuite.com/portal/resource/articles/erp/erp-vs-crm.shtml">More
+Details</a></p>
+</li>
+</ul>
+<h4 id="social-networking"><a class="header" href="#social-networking">Social Networking</a></h4>
+<ul>
+<li>
+<p>Social networks help boost internet usability by storing heavy multimedia
+content in cloud storage systems. Videos and photographs are the most
+popular content on social media, which essentially use up the maximum space
+allocated to them. They have the capacity to slow down applications and
+servers with all of their resource demands. Cloud computing vendors such as
+Salesforce and Amazon nowadays provide varied services including Customer
+Relationship Management (CRM) and Enterprise Resource Planning (ERP). As
+they deliver these things through cloud servers, clients can use the
+flexibility and scalability of the system without purchasing standalone
+software or hardware.</p>
+</li>
+<li>
+<p>Apart from data storage, the social networks are now also using clouds for
+various other tasks. For example, this can be ideal for big data analytics.
+One of the benefits of using cloud systems is that users can access vast
+amount of structured and even non-structured data easily. Just take a look
+at the much-improved analytics provided by sites like Facebook, especially
+for its business users.</p>
+</li>
+<li>
+<p>Another way cloud computing becomes helpful is by reducing the cost of data
+backup and recovery in case of a disaster. If the data is only stored in one
+central location, it becomes much riskier. If something happens there, it is
+almost impossible to recover the data. But through cloud they remain
+accessible through shared resources across the globe. This is especially
+useful for social networks as the store personal data of its users, and so
+cannot afford to lose even one part of it.</p>
+</li>
+</ul>
+<h3 id="google-cloud-application"><a class="header" href="#google-cloud-application">Google Cloud Application</a></h3>
+<ul>
+<li>Google Cloud Platform, offered by Google, is a suite of cloud computing
+services that runs on the same infrastructure that Google uses internally
+for its end-user products, such as Google Search, Gmail, Google Drive, and
+YouTube.</li>
+</ul>
+<h4 id="google-app-engine"><a class="header" href="#google-app-engine">Google App Engine.</a></h4>
+<ul>
+<li>
+<p>Google App Engine is a cloud computing platform as a service for developing
+and hosting web applications in Google-managed data centers. Applications
+are sandboxed and run across multiple servers.</p>
+</li>
+<li>
+<p><a href="https://www.techtarget.com/searchaws/definition/Google-App-Engine">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="overview-of-openstack-architecture"><a class="header" href="#overview-of-openstack-architecture">Overview of OpenStack architecture.</a></h2>
+<ul>
+<li>
+<p>OpenStack is a free, open standard cloud computing platform. It is mostly
+deployed as infrastructure-as-a-service in both public and private clouds
+where virtual servers and other resources are made available to users.</p>
+</li>
+<li>
+<p>OpenStack contains a modular architecture along with several code names for
+the components.</p>
+</li>
+</ul>
+<p><img src="pictures/openstack.png" alt="openstack architecture" /></p>
+<ul>
+<li><a href="https://www.javatpoint.com/openstack-architecture">More Details</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="unit-v-security-in-cloud-computing"><a class="header" href="#unit-v-security-in-cloud-computing">Unit V: Security in Cloud Computing</a></h2>
+<h2 id="risks-in-cloud-computing"><a class="header" href="#risks-in-cloud-computing">Risks in Cloud Computing</a></h2>
+<h3 id="risk-management"><a class="header" href="#risk-management">Risk Management</a></h3>
+<ul>
+<li>
+<p>Risk management is one of the cloud computing environment controls which
+aims to assess and manage risks related to cloud computing and to prevent
+those risks from impacting.</p>
+</li>
+<li>
+<p>The risk-based approach of managing information systems is a holistic
+activity that needs to be fully integrated into every aspect of the
+organization, from planning to system development life cycle processes, to
+security controls allocation and continuous monitoring. Therefore, a Risk
+Management Framework (RMF) provides a disciplined and structured process
+that integrates information security and risk management activities into the
+system development life cycle. An RMF operates primarily at tier 3 in the
+risk management hierarchy, but it can also have interactions at tier 1 and
+tier 2.</p>
+</li>
+</ul>
+<!-- TODO: Do I need to add more? -->
+<h3 id="enterprise-wide-risk-management"><a class="header" href="#enterprise-wide-risk-management">Enterprise-Wide Risk Management</a></h3>
+<ul>
+<li>
+<p>Enterprise-wide risk management (ERM) is a process of coordinated risk
+management that places greater emphasis on co-operation among departments to
+manage an organisation's range of risks as a whole. ERM offers a framework
+to effectively manage uncertainty, respond to risk and exploit opportunities
+as they arise.</p>
+</li>
+<li>
+<p>Five steps to ERM are:</p>
+<ol>
+<li>Identify Risk</li>
+<li>Analyze Risk</li>
+<li>Evaluate or Rank Risk</li>
+<li>Treat Risk or Control Risk</li>
+<li>Monitor and Review Risk</li>
+</ol>
+</li>
+<li>
+<p><a href="https://kmrdpartners.com/2018/04/05/enterprise-risk-management-process/">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="types-of-risks-in-cloud-computing"><a class="header" href="#types-of-risks-in-cloud-computing">Types of Risks in Cloud Computing</a></h3>
+<ol>
+<li>
+<p><strong>Data Loss:</strong> Data loss is the most common cloud security risks of cloud
+computing. It is also known as data leakage. Data loss is the process in which
+data is being deleted, corrupted, and unreadable by a user, software, or
+application. In a cloud computing environment, data loss occurs when our
+sensitive data is somebody else's hands, one or more data elements can not be
+utilized by the data owner, hard disk is not working properly, and software is
+not updated.</p>
+</li>
+<li>
+<p><strong>Hacked Interfaces and Insecure APIs:</strong> As we all know, cloud computing is
+completely depends on Internet, so it is compulsory to protect interfaces and
+APIs that are used by external users. APIs are the easiest way to communicate
+with most of the cloud services. In cloud computing, few services are available
+in the public domain. These services can be accessed by third parties, so there
+may be a chance that these services easily harmed and hacked by hackers.</p>
+</li>
+<li>
+<p><strong>Data Breach:</strong> Data Breach is the process in which the confidential data
+is viewed, accessed, or stolen by the third party without any authorization, so
+organization's data is hacked by the hackers.</p>
+</li>
+<li>
+<p><strong>Vendor lock-in:</strong> Vendor lock-in is the of the biggest security risks in
+cloud computing. Organizations may face problems when transferring their
+services from one vendor to another. As different vendors provide different
+platforms, that can cause difficulty moving one cloud to another.</p>
+</li>
+<li>
+<p><strong>Increased complexity strains IT staff:</strong> Migrating, integrating, and
+operating the cloud services is complex for the IT staff. IT staff must require
+the extra capability and skills to manage, integrate, and maintain the data to
+the cloud.</p>
+</li>
+<li>
+<p><strong>Spectre &amp; Meltdown:</strong> Spectre &amp; Meltdown allows programs to view and steal
+data which is currently processed on computer. It can run on personal computers,
+mobile devices, and in the cloud. It can store the password, your personal
+information such as images, emails, and business documents in the memory of
+other running programs.</p>
+</li>
+<li>
+<p><strong>Denial of Service (DoS) attacks:</strong> Denial of service (DoS) attacks occur
+when the system receives too much traffic to buffer the server. Mostly, DoS
+attackers target web servers of large organizations such as banking sectors,
+media companies, and government organizations. To recover the lost data, DoS
+attackers charge a great deal of time and money to handle the data.</p>
+</li>
+<li>
+<p><strong>Account hijacking:</strong> Account hijacking is a serious security risk in cloud
+computing. It is the process in which individual user's or organization's cloud
+account (bank account, e-mail account, and social media account) is stolen by
+hackers. The hackers use the stolen account to perform unauthorized activities.</p>
+</li>
+</ol>
+<h2 id="data-security-in-cloud"><a class="header" href="#data-security-in-cloud">Data Security in Cloud</a></h2>
+<ul>
+<li>The core principles of information security and data governance—data
+confidentiality, integrity, and availability (known as the CIA triad)—also
+apply to the cloud:
+<ul>
+<li><strong>Confidentiality:</strong> protecting the data from unauthorized access and
+disclosure</li>
+<li><strong>Integrity:</strong> safeguard the data from unauthorized modification so it
+can be trusted</li>
+<li><strong>Availability:</strong> ensuring the data is fully available and accessible
+when it’s needed</li>
+</ul>
+</li>
+</ul>
+<h3 id="security-issues"><a class="header" href="#security-issues">Security Issues</a></h3>
+<ol>
+<li>
+<p><strong>Data Loss:</strong> Data Loss is one of the issues faced in Cloud Computing. This
+is also known as Data Leakage. As we know that our sensitive data is in the
+hands of Somebody else, and we don’t have full control over our database. So if
+the security of cloud service is to break by hackers then it may be possible
+that hackers will get access to our sensitive data or personal files.</p>
+</li>
+<li>
+<p><strong>Interference of Hackers and Insecure API’s:</strong> As we know if we are talking
+about the cloud and its services it means we are talking about the Internet.
+Also, we know that the easiest way to communicate with Cloud is using API. So it
+is important to protect the Interface’s and API’s which are used by an external
+user. But also in cloud computing, few services are available in the public
+domain. An is the vulnerable part of Cloud Computing because it may be possible
+that these services are accessed by some third parties. So it may be possible
+that with the help of these services hackers can easily hack or harm our data.</p>
+</li>
+<li>
+<p><strong>User Account Hijacking:</strong> Account Hijacking is the most serious security
+issue in Cloud Computing. If somehow the Account of User or an Organization is
+hijacked by Hacker. Then the hacker has full authority to perform Unauthorized
+Activities.</p>
+</li>
+<li>
+<p><strong>Changing Service Provider:</strong> Vendor lock In is also an important Security
+issue in Cloud Computing. Many organizations will face different problems while
+shifting from one vendor to another. For example, An Organization wants to shift
+from AWS Cloud to Google Cloud Services then they ace various problem’s like
+shifting of all data, also both cloud services have different techniques and
+functions, so they also face problems regarding that. Also, it may be possible
+that the charges of AWS are different from Google Cloud, etc.</p>
+</li>
+<li>
+<p><strong>Lack of Skill:</strong> While working, shifting o another service provider, need
+an extra feature, how to use a feature, etc. are the main problems caused in IT
+Company who doesn’t have skilled Employee. So it requires a skilled person to
+work with cloud Computing.</p>
+</li>
+<li>
+<p><strong>Denial of Service (DoS) attack:</strong> This type of attack occurs when the
+system receives too much traffic. Mostly DoS attacks occur in large
+organizations such as the banking sector, government sector, etc. When a DoS
+attack occurs data is lost. So in order to recover data, it requires a great
+amount of money as well as time to handle it.</p>
+</li>
+</ol>
+<h3 id="challenges"><a class="header" href="#challenges">Challenges</a></h3>
+<ol>
+<li>
+<p><strong>DDoS and Denial-of-Service Attacks:</strong> As more and more businesses and
+operations move to the cloud, cloud providers are becoming a bigger target for
+malicious attacks. Distributed denial of service (DDoS) attacks are more common
+than ever before. Verisign reported IT services, cloud platforms (PaaS) and SaaS
+was the most frequently targeted industry during the first quarter of 2015.</p>
+</li>
+<li>
+<p><strong>Data breaches:</strong> Known data breaches in the U.S. hit a record-high of 738
+in 2014, according to the Identity Theft Research Center, and hacking was (by
+far) the number one cause. That’s an incredible statistic and only emphasizes
+the growing challenge to secure sensitive data.</p>
+</li>
+<li>
+<p><strong>Data loss:</strong> When business critical information is moved into the cloud,
+it’s understandable to be concerned with its security. Losing cloud data, either
+through accidental deletion and human error, malicious tampering including the
+installation of malware (i.e. DDoS), or an act of nature that brings down a
+cloud service provider, could be disastrous for an enterprise business. Often a
+DDoS attack is only a diversion for a greater threat, such as an attempt to
+steal or delete data.</p>
+</li>
+<li>
+<p><strong>Insecure access control points:</strong> One of the great benefits of the cloud
+is it can be accessed from anywhere and from any device. But, what if the
+interfaces and particularly the application programming interfaces (APIs) users
+interact with aren’t secure? Hackers can find and gain access to these types of
+vulnerabilities and exploit authentication via APIs if given enough time.</p>
+</li>
+<li>
+<p><strong>Notifications and alerts:</strong> Awareness and proper communication of security
+threats is a cornerstone of network security and the same goes for cloud
+computing security. Alerting the appropriate website or application managers as
+soon as a threat is identified should be part of a thorough data security and
+access management plan. Speedy mitigation of a threat relies on clear and prompt
+communication so steps can be taken by the proper entities and impact of the
+threat minimized.</p>
+</li>
+</ol>
+<h3 id="advantages"><a class="header" href="#advantages">Advantages</a></h3>
+<ol>
+<li>
+<p><strong>24×7 Visibility:</strong> The best cloud security solutions like AppTrana enable
+24×7 monitoring of the application and cloud-based assets. This helps
+organizations to have continuous visibility into their risk posture and its
+impact on the business.</p>
+</li>
+<li>
+<p><strong>Higher Availability:</strong> Cloud computing security solutions typically have
+built-in redundancies to ensure that the application/ resources are always
+available. The CDNs used have distributed global networks of edge servers that
+deliver content optimally, accelerate application performance, and minimize
+access to the server. Together, they handle traffic surges in a way that
+on-premises/ hardware solutions cannot.</p>
+</li>
+<li>
+<p><strong>Effective protection against DDoS Attacks:</strong> Cloud security solutions
+provide the most effective protection against DDoS attacks, which are increasing
+in numbers, magnitude, sophistication, and severity. Cloud computing security
+helps to continuously monitor, identify, analyze, and mitigate DDoS attacks. The
+built-in redundancies, customizability, flexibility, scalability, and
+intelligence of such solutions can prevent volumetric, low, and slow attacks.</p>
+</li>
+<li>
+<p><strong>Data Security:</strong> The best cloud computing security solutions provide data
+security by design. They have security protocols and policies such as strong
+access controls and data encryption to prevent unauthorized entities from
+accessing confidential information.</p>
+</li>
+<li>
+<p><strong>Pay as you Go Model:</strong> The cloud security model ensures that you pay only
+for what you use and consume as opposed to making any upfront investment.</p>
+</li>
+<li>
+<p><strong>Advanced Threat Detection:</strong> By using end-point scanning and global threat
+intelligence, cloud computing security can detect threats more easily.</p>
+</li>
+<li>
+<p><strong>Regulatory Compliance:</strong> Top-notch cloud application security providers
+help to ensure regulatory standards and industry-specific compliance needs. This
+is done through its enhanced infrastructure and managed security services.</p>
+</li>
+</ol>
+<h3 id="disadvantages"><a class="header" href="#disadvantages">Disadvantages</a></h3>
+<ol>
+<li>
+<p><strong>Risk of data confidentiality:</strong> There is always a risk that user data can
+be accessed by other people. So data and cloud protection must be good because
+if it won’t be dangerous for data confidentiality.</p>
+</li>
+<li>
+<p><strong>Depends on internet connection:</strong> The internet is the only way to cloud
+computing. When there is no internet connection in your place, or the internet
+path to the cloud provider is in trouble, automatically access to your cloud
+computing machine will be disconnected. Now this is where the biggest obstacle
+is happening in developing countries and remote areas that do not have good
+internet access.And the weakness of public cloud is where everyone accesses the
+same server and server and will increase the risk of attack, and down the
+server.</p>
+</li>
+<li>
+<p><strong>The level of security:</strong> Secrecy and security are among the most doubtful
+things in cloud computing. By using a cloud computing system means we are fully
+entrusted with the security and confidentiality of data to companies that
+provide cloud computing servers. When you experience a problem, you cannot sue
+the server for errors in the data. When you experience a problem, you cannot sue
+the server for errors in the data.</p>
+</li>
+<li>
+<p><strong>Compliance:</strong> Which refers to the risk of a level compliance deviation
+from the provider against the regulations applied by the user.</p>
+</li>
+<li>
+<p><strong>Vulnerable in the event of an attack:</strong> There are lots of arguments
+against cloud computing one of which is computing because the Cloud Computing
+work system is online, each component that is on Cloud Computing can be exposed
+to a wide range, this is a wide open opportunity for attacks on data or
+activities stored on the server. When an attack is carried out by hackers, the
+problems that occur are data security, and data privacy.</p>
+</li>
+<li>
+<p><strong>Data Mobility:</strong> which refers to the possibility of sharing data between
+cloud services and how to retrieve data if one day the user makes a process of
+terminating cloud computing services.And there is local storage where the data
+can be used at any time as needed.</p>
+</li>
+<li>
+<p><strong>Technical problem:</strong> Besides that the use of Cloud Computing makes you
+unable to manage it yourself when there is a problem or a problem, you must
+contact customer support who is not necessarily ready 24/7. This is a problem
+because for some support you also have to pay more money.</p>
+</li>
+<li>
+<p><strong>Low Connection:</strong> Does not work well if the connection is slow. The
+quality of cloud computing servers is one of the most important considerations
+before we decide to provide cloud computing server service providers. When the
+server is down or the permorma is not good, we will be harmed because of poor
+server quality.</p>
+</li>
+</ol>
+<h3 id="cloud-digital-persona-and-data-security"><a class="header" href="#cloud-digital-persona-and-data-security">Cloud Digital persona and Data security</a></h3>
+<!-- TODO: Do I need to add RMF? -->
+<h3 id="content-level-security"><a class="header" href="#content-level-security">Content Level Security</a></h3>
+<ul>
+<li>Content Level Security (CLS) is a feature that controls who has access to
+edit or read content. During the process of creating a document, the content
+goes through several stages. Each stage requires input from users with
+different roles.</li>
+</ul>
+<h2 id="cloud-security-services"><a class="header" href="#cloud-security-services">Cloud Security Services</a></h2>
+<ol>
+<li>
+<p><strong>Identity and access:</strong> You are provided with control for secured
+management of identities and access. It includes people, processes and systems
+used for managing access to your enterprise resources. It is managed by making
+sure that the identity of the user is verified and the access rights are
+provided at the correct level.</p>
+</li>
+<li>
+<p><strong>Data loss prevention:</strong> This service offers protection of data by
+providing you with pre-installed data loss prevention software, along with a set
+of rules deployed.</p>
+</li>
+<li>
+<p><strong>Web security:</strong> Web security is provided as an additional protection
+against malware from entering the enterprise through web browsing and other such
+activities. This cloud service is provided either by installing a software or an
+appliance or through the cloud by redirecting your web traffic over to the cloud
+provider.</p>
+</li>
+<li>
+<p><strong>E-mail security:</strong> It provides control over the in-bound and out-bound
+e-mails to protect your organization from malicious attachments and phishing.
+This cloud service helps enforce corporate policies such as acceptable use, spam
+and in providing business continuity options. One of the solution adopted by
+many cloud e-mail security services is digital signatures, which allows
+identification and non-repudiation.</p>
+</li>
+<li>
+<p><strong>Security assessment:</strong> There are various tools implemented for the users
+of the SaaS delivery model, such as variant elasticity, low administration
+overhead, negligible setup time and pay-per use with low investment in the
+initial stage.</p>
+</li>
+<li>
+<p><strong>Intrusion management:</strong> It is the process that uses pattern recognition
+for detection and reaction to events that are statistically unusual and
+unexpected. It may also require reconfiguration of your system components in
+real time so as to prevent an intrusion.</p>
+</li>
+<li>
+<p><strong>Security information and managing events:</strong> Your system gathers
+information related to log and events. This information is used in correlating
+and analyzing, to provide you with real time reporting and alerts on events that
+require intervention.</p>
+</li>
+<li>
+<p><strong>Encryption:</strong> There are typical algorithms that are computationally
+difficult or nearly impossible to break.</p>
+</li>
+<li>
+<p><strong>Disaster management:</strong> This cloud service helps in continuing your
+business and managing disasters by providing flexibility and reliable failover
+for services that are required in case of service interruptions.</p>
+</li>
+<li>
+<p><strong>Network security:</strong> The network security services provides you with
+address security controls, which in a cloud environment is generally provided
+through virtual devices.</p>
+</li>
+</ol>
+<h3 id="confidentiality"><a class="header" href="#confidentiality">Confidentiality</a></h3>
+<ul>
+<li>Data confidentiality is the process of protecting data from illegal access
+and disclosure from the outsourced server and unauthorized users. This is
+done by encrypting the data so that only the authorized users can decrypt
+it.</li>
+</ul>
+<!-- TODO: More? -->
+<h3 id="integrity-and-availability"><a class="header" href="#integrity-and-availability">Integrity and Availability</a></h3>
+<ul>
+<li>
+<p><strong>Integrity:</strong> Protect the data from the unauthorized insert, update, or
+delete. The data owner and authorized users should be able to recognize if
+the data is corrupted or incomplete, and receive the most recent updated
+version of the data, which guarantees accuracy and consistency of data.</p>
+</li>
+<li>
+<p><strong>Availability:</strong> The data in the cloud servers should be accessible to its
+users. Major threats to availability are denial of service (DOS) attacks,
+natural disasters, and equipment failures at the service provider’s end.</p>
+</li>
+</ul>
+<h3 id="security-authorization-challenges-in-the-cloud"><a class="header" href="#security-authorization-challenges-in-the-cloud">Security Authorization Challenges in the Cloud</a></h3>
+<!-- TODO -->
+<h3 id="secure-cloud-software-requirements"><a class="header" href="#secure-cloud-software-requirements">Secure Cloud Software Requirements</a></h3>
+<ol>
+<li>
+<p><strong>Top-of-the-Line Perimeter Firewall:</strong> Most firewalls are very simple—they
+typically inspect a packet’s source and destination and that’s all. Some more
+advanced firewalls feature stable packet inspection, which checks the integrity
+of the file packets for stability issues prior to approving or rejecting the
+packet.</p>
+</li>
+<li>
+<p><strong>Intrusion Detection Systems with Event Logging:</strong> Numerous IT security
+compliance standards require businesses to have a means of tracking and
+recording intrusion attempts. So, for any business that wants to meet compliance
+standards such as PCI or HIPAA, using IDS event logging solutions is a must.</p>
+</li>
+<li>
+<p><strong>Internal Firewalls for Individual Applications, and Databases:</strong> While
+having a strong perimeter firewall can block external attacks, internal attacks
+are still a major threat. Infrastructures that lack internal firewalls to
+restrict access to sensitive data and applications cannot be considered secure.</p>
+</li>
+<li>
+<p><strong>Data-at-Rest Encryption:</strong> Encrypting the data that is stored on your
+cloud infrastructure can be an effective way to keep your most sensitive
+information from being accessed by the wrong party.</p>
+</li>
+<li>
+<p><strong>Tier IV Data Centers with Strong Physical Security:</strong> The physical
+hardware used to run a cloud environment represents one last opportunity for
+hackers and industrial spies to steal your most important data. When allowed
+direct access to the hardware that runs the cloud, hackers have free reign to
+steal data or upload malware directly to your systems.</p>
+</li>
+</ol>
+<h3 id="secure-cloud-software-testing"><a class="header" href="#secure-cloud-software-testing">Secure Cloud Software Testing</a></h3>
+<ul>
+<li>
+<p>Cloud penetration testing is designed to assess the strengths and weaknesses
+of a cloud system to improve its overall security posture. Cloud penetration
+testing helps to: Identify risks, vulnerabilities, and gaps. Impact of
+exploitable vulnerabilities. Determine how to leverage any access obtained
+via exploitation.</p>
+</li>
+<li>
+<p><a href="https://www.guidepointsecurity.com/education-center/cloud-penetration-testing/">More
+Details</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-vi-advanced-techniques-in-cloud-computing"><a class="header" href="#unit-vi-advanced-techniques-in-cloud-computing">Unit VI Advanced Techniques in Cloud Computing</a></h1>
+<h2 id="future-trends-in-cloud-computing"><a class="header" href="#future-trends-in-cloud-computing">Future Trends in Cloud Computing</a></h2>
+<ol>
+<li>
+<p><strong>Hybrid/ Multi-Cloud Solutions:</strong> Hybrid cloud computing refers to using a
+combination of the private cloud as well as a third-party public cloud
+service. It is primarily used to allow workloads to move between private and
+public clouds, giving users more flexibility with their computing needs.</p>
+</li>
+<li>
+<p><strong>Backup And Disaster Recovery:</strong> Cyber attacks, data outages, and system
+failures are a part and parcel of running a business these days. Most
+businesses have dealt with their servers crashing, leading to loss of
+critical data files. To ensure such issues don’t damage the organization and
+its processes, backup and disaster recovery has become a trending use case
+of the cloud. If Spiceworks reports are to be believed, 15% of the cloud
+budget is allocated to Backup and Disaster Recovery, which is the highest
+budget allocation followed by email hosting and productivity tools.</p>
+</li>
+<li>
+<p><strong>Serverless Architecture:</strong> A serverless architecture removes all barriers
+that a standard IT infrastructure would usually bring. Users don’t have to
+purchase or rent the servers that they run their data on. Instead, a
+third-party will handle it all for you, allowing your organization to tackle
+other tasks.</p>
+</li>
+<li>
+<p><strong>AI Platform:</strong> As technology advances, one of the most common cloud
+computing trends to look forward to is AI. Tech giants are now looking into
+incorporating AI to process big data to improve their business functioning.</p>
+</li>
+<li>
+<p><strong>Cloud Security:</strong> Data theft, leakage, and deletion- security is a big
+challenge even for traditional IT infrastructures. But, with more companies
+moving to cloud platforms, it’s important to ensure that cloud service
+providers can create an airtight security system to guarantee the safety of
+their client’s data.</p>
+</li>
+<li>
+<p><strong>IoT Platform:</strong> With a hyper-connected world, one of the most popular
+cloud computing trends is the rise of IoT platforms. A study by Gartner
+suggests the number of connected things in use will be going up to 25
+billion by 2021 from 14.2 billion as of 2019.</p>
+</li>
+<li>
+<p><strong>Edge Computing:</strong> It is a method of optimizing cloud computing network
+system by performing data processing at the edge of the network, near the
+source of the data. It works real-time on the cloud servers to process less
+time-sensitive data or store data for the long term.</p>
+</li>
+<li>
+<p><strong>DevSecOps:</strong> Cloud computing services provide users with a seamless and
+simple experience in managing their data but there are many security risks
+involved.  The security risk of cloud computing includes network
+eavesdropping, illegal invasion, denial of service attacks, side channel
+attacks, virtualization vulnerabilities, and abuse of cloud services.</p>
+</li>
+<li>
+<p><strong>Service Mesh:</strong> Since cloud platforms are complex, it is critical to
+ensure that the platform has a fast and safe communication environment. With
+a service mesh, users have a dedicated layer for service-to-service
+communication, making their cloud platform highly dynamic and secure.</p>
+</li>
+<li>
+<p><strong>Open Source:</strong> This industry is moving towards a path of innovation and
+collaboration. With this shift in how cloud services are managed, many
+organizations are looking at adopting an Open Source cloud computing service
+for their business.</p>
+</li>
+</ol>
+<h2 id="mobile-cloud"><a class="header" href="#mobile-cloud">Mobile Cloud</a></h2>
+<ul>
+<li>
+<p>Mobile cloud computing uses cloud computing to deliver applications to
+mobile devices. These mobile apps can be deployed remotely using speed and
+flexibility and development tools. Mobile cloud applications can be built or
+revised quickly using cloud services. They can be delivered to many
+different devices with different operating systems, computing tasks, and
+data storage. Thus, users can access applications that could not otherwise
+be supported.</p>
+</li>
+<li>
+<p>Key features:</p>
+<ul>
+<li>Facilitates the quick development, Shared resources of mobile apps.</li>
+<li>Supports a variety of development approaches and devices.</li>
+<li>Improves reliability with information backed up and stored in the cloud.</li>
+<li>Applications use fewer device resources because they are
+cloud-supported.</li>
+<li>Mobile devices are connected to services delivered on an API
+architecture.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.ibm.com/cloud/learn/what-is-mobile-cloud-computing">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="automatic-cloud-computing"><a class="header" href="#automatic-cloud-computing">Automatic Cloud Computing</a></h2>
+<ul>
+<li>
+<p>Cloud automation is a broad term that refers to processes and tools that
+reduce or eliminate manual efforts used to provision and manage cloud
+computing workloads and services. Organizations can apply cloud automation
+to private, public and hybrid cloud environments.</p>
+</li>
+<li>
+<p>Benefits:</p>
+<ul>
+<li>Improved security and resilience</li>
+<li>Improved backup processes</li>
+<li>Improved governance</li>
+</ul>
+</li>
+<li>
+<p><a href="https://cloud.netapp.com/blog/cloud-automation-why-where-and-how-cvo-blg">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="comet-cloud"><a class="header" href="#comet-cloud">Comet Cloud</a></h3>
+<ul>
+<li>
+<p>COMET Cloud is an Internet data storage designed for recording measured
+values from selected COMET measuring instruments. The data is accessible
+after the user's connection to the Internet and is displayed in a web
+browser in the form of a table or graph.</p>
+</li>
+<li>
+<p>Main features of COMETCloud</p>
+<ul>
+<li>display of measured values in the form of a table or graph</li>
+<li>comparison of measured values of several sensors in one time period</li>
+<li>storing GPS coordinates for the device position and displaying all
+devices on a map</li>
+<li>user-friendly display of measured values in an embedded image of a
+building or technology diagram</li>
+<li>user name of each device</li>
+<li>insert a note for each device</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.cometsystem.com/reg-cloud#:%7E:text=COMET%20Cloud%20is%20an%20Internet,of%20a%20table%20or%20graph.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="multimedia-cloud"><a class="header" href="#multimedia-cloud">Multimedia Cloud</a></h2>
+<ul>
+<li>
+<p>Cloud Computing opened the opportunity for media operators who serve content
+providers, IPTV (Internet Protocol Television) operators and multimedia
+players. When we consider multimedia players, adopting cloud computing is
+often one of the important priorities in the coming years. Some media
+players, for example, companies like media post-production, already utilize
+these kinds of cloud computing–based service capabilities for managing the
+digital delivery.</p>
+</li>
+<li>
+<p>In the future, multimedia companies will use cloud computing first, who
+started looking to move their storage requirements into cloud computing. The
+cost and the investment return for these kinds of services have accelerated.</p>
+</li>
+</ul>
+<h3 id="iptv"><a class="header" href="#iptv">IPTV</a></h3>
+<ul>
+<li>
+<p>Internet Protocol television (IPTV) is the delivery of television content
+over Internet Protocol (IP) networks. This is in contrast to delivery
+through traditional terrestrial, satellite, and cable television formats.
+Unlike downloaded media, IPTV offers the ability to stream the source media
+continuously. As a result, a client media player can begin playing the
+content (such as a TV channel) almost immediately. This is known as
+streaming media.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Internet_Protocol_television">More Details</a></p>
+</li>
+</ul>
+<h2 id="energy-aware-cloud-computing"><a class="header" href="#energy-aware-cloud-computing">Energy Aware Cloud Computing</a></h2>
+<ul>
+<li>
+<p>Cloud infrastructures are increasingly becoming essential components for
+providing Internet services. By benefiting from economies of scale, Clouds
+can efficiently manage and offer a virtually unlimited number of resources
+and can minimize the costs incurred by organizations when providing Internet
+services. However, as Cloud providers often rely on large data centres to
+sustain their business and offer the resources that users need, the energy
+consumed by Cloud infrastructures has become a key environmental and
+economical concern.</p>
+</li>
+<li>
+<p>Implementing efficient techniques, frameworks, etc. for better energy
+efficiency in cloud computing is called &quot;Energy Aware Cloud Computing&quot;.</p>
+</li>
+<li>
+<p><a href="https://www.researchgate.net/publication/324029239_Energy-aware_cloud_computing">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="jungle-computing"><a class="header" href="#jungle-computing">Jungle Computing</a></h2>
+<ul>
+<li>
+<p>Jungle computing is a form of high performance computing that distributes
+computational work across cluster, grid and cloud computing.</p>
+</li>
+<li>
+<p>The increasing complexity of the high performance computing environment has
+provided a range of choices beside traditional supercomputers and clusters.
+Scientists can now use grid and cloud infrastructures, in a variety of
+combinations along with traditional supercomputers - all connected via fast
+networks. And the emergence of many-core technologies such as GPUs, as well
+as supercomputers on chip within these environments has added to the
+complexity. Thus, high-performance computing can now use multiple diverse
+platforms and systems simultaneously, giving rise to the term &quot;computing
+jungle&quot;.</p>
+</li>
+</ul>
+<h2 id="distributed-cloud-computing-vs-edge-computing"><a class="header" href="#distributed-cloud-computing-vs-edge-computing">Distributed Cloud Computing Vs Edge Computing</a></h2>
+<ul>
+<li>
+<p>A distributed cloud is an architecture where multiple clouds are used to
+meet compliance needs, performance requirements, or support edge computing
+while being centrally managed from the public cloud provider.</p>
+</li>
+<li>
+<p>In essence, a distributed cloud service is a public cloud that runs in
+multiple locations, including:</p>
+<ul>
+<li>The public cloud provider’s infrastructure</li>
+<li>The public cloud provider’s infrastructure</li>
+<li>In another cloud provider’s data center</li>
+<li>On third party or colocation center hardware</li>
+</ul>
+</li>
+<li>
+<p><strong>Edge vs Distributed Computing:</strong></p>
+<p><img src="pictures/edge_vs_dist.png" alt="Edge vs Distributed Computing" /></p>
+</li>
+</ul>
+<h2 id="containers"><a class="header" href="#containers">Containers</a></h2>
+<ul>
+<li>
+<p>Containers are lightweight packages of your application code together with
+dependencies such as specific versions of programming language runtimes and
+libraries required to run your software services.</p>
+</li>
+<li>
+<p>Containers are packages of software that contain all of the necessary
+elements to run in any environment. In this way, containers virtualize the
+operating system and run anywhere, from a private data center to the public
+cloud or even on a developer’s personal laptop.</p>
+</li>
+<li>
+<p>Containers make it easy to share CPU, memory, storage, and network resources
+at the operating systems level and offer a logical packaging mechanism in
+which applications can be abstracted from the environment in which they
+actually run.</p>
+</li>
+<li>
+<p>Benefits Of Containers:</p>
+<ul>
+<li>
+<p><strong>Separation of responsibility:</strong> Containerization provides a clear
+separation of responsibility, as developers focus on application logic
+and dependencies, while IT operations teams can focus on deployment and
+management instead of application details such as specific software
+versions and configurations.</p>
+</li>
+<li>
+<p><strong>Workload portability:</strong> Containers can run virtually anywhere, greatly
+easing development and deployment: on Linux, Windows, and Mac operating
+systems; on virtual machines or on physical servers; on a developer’s
+machine or in data centers on-premises; and of course, in the public
+cloud.</p>
+</li>
+<li>
+<p><strong>Application isolation:</strong> Containers virtualize CPU, memory, storage,
+and network resources at the operating system level, providing
+developers with a view of the OS logically isolated from other
+applications.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://cloud.google.com/learn/what-are-containers">More Details</a></p>
+</li>
+</ul>
+<h2 id="docker"><a class="header" href="#docker">Docker</a></h2>
+<ul>
+<li>
+<p>Docker is a set of platform as a service products that use OS-level
+virtualization to deliver software in packages called containers. The
+service has both free and premium tiers. The software that hosts the
+containers is called Docker Engine.</p>
+</li>
+<li>
+<p><a href="https://www.docker.com/resources/what-container/">More Details</a></p>
+</li>
+</ul>
+<h2 id="kubernetes"><a class="header" href="#kubernetes">Kubernetes</a></h2>
+<ul>
+<li>
+<p>Kubernetes is an open-source container orchestration system for automating
+software deployment, scaling, and management. Google originally designed
+Kubernetes, but the Cloud Native Computing Foundation now maintains the
+project.</p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/">More Details</a></p>
+</li>
+</ul>
+<h2 id="introduction-to-devops"><a class="header" href="#introduction-to-devops">Introduction to DevOps</a></h2>
+<ul>
+<li>
+<p>DevOps is the combination of cultural philosophies, practices, and tools
+that increases an organization's ability to deliver applications and
+services at high velocity: evolving and improving products at a faster pace
+than organizations using traditional software development and infrastructure
+management processes.</p>
+</li>
+<li>
+<p>A DevOps engineer introduces processes, tools, and methodologies to balance
+needs throughout the software development life cycle, from coding and
+deployment, to maintenance and updates.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/devops/what-is-devops/#:%7E:text=DevOps%20is%20the%20combination%20of,development%20and%20infrastructure%20management%20processes.">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="iot-and-cloud-convergence"><a class="header" href="#iot-and-cloud-convergence">IoT and Cloud Convergence</a></h2>
+<ul>
+<li>
+<p>The Internet of things describes physical objects with sensors, processing
+ability, software, and other technologies that connect and exchange data
+with other devices and systems over the Internet or other communications
+networks.</p>
+</li>
+<li>
+<p>The field has evolved due to the convergence of multiple technologies,
+including ubiquitous computing, commodity sensors, increasingly powerful
+embedded systems, and machine learning.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Internet_of_things">More Details</a></p>
+</li>
+</ul>
+<h3 id="the-cloud-and-iot-in-your-home"><a class="header" href="#the-cloud-and-iot-in-your-home">The Cloud and IoT in your Home</a></h3>
+<ul>
+<li>
+<p><strong>Home cloud computing</strong> is the process of using a remote server to store,
+manage and access data and applications from home. It allows users to access
+their files, applications, and other digital content from any device with an
+internet connection, whether it be a computer, phone, or tablet. Private
+cloud computing can also be used to back up data and protect the information
+in case of emergencies.</p>
+</li>
+<li>
+<p>A lot of individuals and small businesses use home/private cloud computing
+to browse, search through files and even work on projects from any device.
+It’s a great alternative to setting up a server in your house because it
+eliminates the need for physical storage devices that contain data.</p>
+</li>
+<li>
+<p><a href="https://www.eiresystems.com/importance-of-home-cloud-computing/">More about home cloud
+computing</a></p>
+</li>
+<li>
+<p><strong>IoT home</strong> automation is the ability to control domestic appliances by
+electronically controlled, internet-connected systems. It may include
+setting complex heating and lighting systems in advance and setting alarms
+and home security controls, all connected by a central hub and
+remote-controlled by a mobile app.</p>
+</li>
+<li>
+<p><a href="https://www.toptal.com/designers/interactive/smart-home-domestic-internet-of-things#:%7E:text=IoT%20home%20automation%20is%20the,controlled%20by%20a%20mobile%20app.">More about Home
+IoT</a></p>
+</li>
+</ul>
+<h3 id="the-iot-and-cloud-in-your-automobile"><a class="header" href="#the-iot-and-cloud-in-your-automobile">The IoT and cloud in your Automobile</a></h3>
+<h4 id="iot-in-automobile"><a class="header" href="#iot-in-automobile">IoT in Automobile</a></h4>
+<ul>
+<li>
+<p>“Automotive IoT” refers to the integration of such components as sensors,
+gadgets, clouds, and apps into vehicles and their use as a complex system
+for predictive maintenance, connection of cars, fleet management, etc.</p>
+</li>
+<li>
+<p>Implementation of the Internet of Things for cars’ manufacturing brought the
+following benefits for the producers:</p>
+<ul>
+<li>better data collection and analysis with the following improvement and
+speed up of the whole manufacturing process;</li>
+<li>avoidance of certain risks and financial losses;</li>
+<li>higher industrial safety standards;</li>
+<li>equipment theft monitoring, etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cloud-in-automobile"><a class="header" href="#cloud-in-automobile">Cloud in Automobile</a></h4>
+<ul>
+<li>
+<p>The way we interact with our car changed entirely in a few decades.
+Nowadays, cloud technology in cars is present in several ways. For example,
+most electric cars can exchange information with remote data centers to
+inform the driver about the road and weather conditions.</p>
+</li>
+<li>
+<p>The cloud technology in cars has a lot of possibilities. It is uniquely
+suited to set up, scale, manage and update features and services efficiently
+with a connected unit.</p>
+</li>
+<li>
+<p>Automobile companies develop and adapt their connectivity software
+continuously to allow their customers a better interaction between the
+cloud, the car, and smartphones using infotainment as the primary interface.</p>
+</li>
+</ul>
+<h3 id="personal"><a class="header" href="#personal">PERSONAL</a></h3>
+<ul>
+<li>
+<p>A personal cloud is a collection of digital content and services which are
+accessible from any device. The personal cloud is not a tangible entity. It is
+a place which gives users the ability to store, synchronize, stream and share
+content on a relative core, moving from one platform, screen and location to
+another.</p>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Personal_cloud#:%7E:text=A%20personal%20cloud%20is%20a,screen%20and%20location%20to%20another.">More
+Details</a></p>
+</li>
+</ul>
+<h4 id="iot-in-healthcare"><a class="header" href="#iot-in-healthcare">IoT in Healthcare</a></h4>
+<ul>
+<li>
+<p>IoT explores new dimensions of patient care through real-time health
+monitoring and access to patients' health data. This data is a goldmine for
+healthcare stakeholders to improve patient's health and experiences while
+making revenue opportunities and improving healthcare operations.</p>
+</li>
+<li>
+<p><a href="https://www.wipro.com/business-process/what-can-iot-do-for-healthcare-/#:%7E:text=IoT%20explores%20new%20dimensions%20of,opportunities%20and%20improving%20healthcare%20operations.">More
+Details</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="questions-1"><a class="header" href="#questions-1">Questions</a></h1>
+<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="data-science-and-big-data-1"><a class="header" href="#data-science-and-big-data-1">Data Science and Big Data</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="big-data-analytics-life-cycle"><a class="header" href="#big-data-analytics-life-cycle">Big Data Analytics Life Cycle</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="predictive-big-data-analytics-with-python"><a class="header" href="#predictive-big-data-analytics-with-python">Predictive Big Data Analytics with Python</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="data-science-and-big-data-1"><a class="header" href="#data-science-and-big-data-1">Data Science and Big Data</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="big-data-analytics-life-cycle-1"><a class="header" href="#big-data-analytics-life-cycle-1">Big Data Analytics Life Cycle</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="predictive-big-data-analytics-with-python-1"><a class="header" href="#predictive-big-data-analytics-with-python-1">Predictive Big Data Analytics with Python</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="big-data-analytics-and-model-evaluation"><a class="header" href="#big-data-analytics-and-model-evaluation">Big Data Analytics and Model Evaluation</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="data-visualization-and-hadoop"><a class="header" href="#data-visualization-and-hadoop">Data Visualization and Hadoop</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="questions-2"><a class="header" href="#questions-2">Questions</a></h1>
+<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="web-technologies-1"><a class="header" href="#web-technologies-1">Web Technologies</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="java-servlets-and-xml"><a class="header" href="#java-servlets-and-xml">Java Servlets and XML</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="jsp-and-web-services"><a class="header" href="#jsp-and-web-services">JSP and Web Services</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="server-side-scripting-languages"><a class="header" href="#server-side-scripting-languages">Server Side Scripting Languages</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ruby-and-rails"><a class="header" href="#ruby-and-rails">Ruby and Rails</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="questions-3"><a class="header" href="#questions-3">Questions</a></h1>
+<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
 
                     </main>
 
@@ -457,6 +2174,22 @@ potentially those of the dealer.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

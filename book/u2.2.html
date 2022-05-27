@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js rust">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -30,7 +30,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,7 +56,7 @@
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
             html.classList.remove('no-js')
-            html.classList.remove('light')
+            html.classList.remove('rust')
             html.classList.add(theme);
             html.classList.add('js');
         </script>
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html" class="active"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="syllabi.html">Syllabi</a></li><li class="chapter-item expanded "><a href="ai.html"><strong aria-hidden="true">1.</strong> Artificial Intelligence</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u1.1.html"><strong aria-hidden="true">1.1.</strong>  Adversarial Search and Games </a></li><li class="chapter-item expanded "><a href="u1.2.html"><strong aria-hidden="true">1.2.</strong>  Knowledge </a></li><li class="chapter-item expanded "><a href="u1.3.html"><strong aria-hidden="true">1.3.</strong>  Reasoning </a></li><li class="chapter-item expanded "><a href="u1.4.html"><strong aria-hidden="true">1.4.</strong>  Planning </a></li><li class="chapter-item expanded "><a href="ai_prelim.html"><strong aria-hidden="true">1.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="cc.html"><strong aria-hidden="true">2.</strong> Cloud Computing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u2.1.html"><strong aria-hidden="true">2.1.</strong> Virtualization in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.2.html" class="active"><strong aria-hidden="true">2.2.</strong> Cloud Platforms and Cloud Applications</a></li><li class="chapter-item expanded "><a href="u2.3.html"><strong aria-hidden="true">2.3.</strong> Security in Cloud Computing</a></li><li class="chapter-item expanded "><a href="u2.4.html"><strong aria-hidden="true">2.4.</strong> Advanced Techniques in Cloud Computing</a></li><li class="chapter-item expanded "><a href="cc_prelim.html"><strong aria-hidden="true">2.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="dsbda.html"><strong aria-hidden="true">3.</strong> Data Science and Big Data</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u3.1.html"><strong aria-hidden="true">3.1.</strong> Big Data Analytics Life Cycle</a></li><li class="chapter-item expanded "><a href="u3.2.html"><strong aria-hidden="true">3.2.</strong> Predictive Big Data Analytics with Python</a></li><li class="chapter-item expanded "><a href="u3.3.html"><strong aria-hidden="true">3.3.</strong> Big Data Analytics and Model Evaluation</a></li><li class="chapter-item expanded "><a href="u3.4.html"><strong aria-hidden="true">3.4.</strong> Data Visualization and Hadoop</a></li><li class="chapter-item expanded "><a href="dsbda_prelim.html"><strong aria-hidden="true">3.5.</strong>  Questions </a></li></ol></li><li class="chapter-item expanded "><a href="wt.html"><strong aria-hidden="true">4.</strong> Web Technologies</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="u4.1.html"><strong aria-hidden="true">4.1.</strong> Java Servlets and XML</a></li><li class="chapter-item expanded "><a href="u4.2.html"><strong aria-hidden="true">4.2.</strong> JSP and Web Services</a></li><li class="chapter-item expanded "><a href="u4.3.html"><strong aria-hidden="true">4.3.</strong> Server Side Scripting Languages</a></li><li class="chapter-item expanded "><a href="u4.4.html"><strong aria-hidden="true">4.4.</strong> Ruby and Rails</a></li><li class="chapter-item expanded "><a href="wt_prelim.html"><strong aria-hidden="true">4.5.</strong>  Questions </a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -93,8 +93,8 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -134,7 +134,365 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="cloud-platforms-and-cloud-applications"><a class="header" href="#cloud-platforms-and-cloud-applications">Cloud Platforms and Cloud Applications</a></h1>
+                        <p>Unit IV: Cloud Platforms and Cloud Applications</p>
+<h2 id="amazon-web-services-aws-amazon-web-services-and-components"><a class="header" href="#amazon-web-services-aws-amazon-web-services-and-components">Amazon Web Services (AWS): Amazon Web Services and Components</a></h2>
+<ul>
+<li>Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand
+cloud computing platforms and APIs to individuals, companies, and
+governments, on a metered pay-as-you-go basis. These cloud computing web
+services provide distributed computing processing capacity and software
+tools via AWS server farms.</li>
+</ul>
+<h3 id="aws-services"><a class="header" href="#aws-services">AWS Services</a></h3>
+<p><img src="pictures/aws_services.png" alt="AWS Services" /></p>
+<ul>
+<li>Amazon Web Services offer the following services for various computing
+purposes:
+<ol>
+<li>Hosting a web site</li>
+<li>Social networking</li>
+<li>Academic computing</li>
+<li>Sharing media</li>
+<li>Hosting applications</li>
+<li>Backup, storage, and disaster recovery</li>
+<li>Media distribution and content delivery</li>
+<li>Developing and testing environments</li>
+<li>Search engines</li>
+</ol>
+</li>
+</ul>
+<h3 id="aws-components"><a class="header" href="#aws-components">AWS Components</a></h3>
+<ol>
+<li>
+<p><strong>Data Management and Data Transfer:</strong> To run HPC applications in the AWS
+cloud, you need to move the required data into the cloud. There are several data
+transport solutions designed to securely transfer huge amounts of data. This
+overcomes issues like a long time for transfer, high network costs, and security
+concerns. Also, you can automate the movement of data between the AWS cloud and
+on-premises storage. There are options for establishing a private connection to
+the AWS from your premises. This increases bandwidth to provide more throughput,
+reduces the cost of the network, and provides a consistent network experience.</p>
+</li>
+<li>
+<p><strong>Compute &amp; Networking:</strong> There are several compute instances types that can
+be customized according to your needs. It also handles monitoring your
+application and adjusting its capacity for maintaining a steady and predictable
+performance at an affordable cost. Also, setting up application scaling across
+multiple services for multiple resources takes a few minutes. Enhanced
+networking options from AWS allow achieving lower inter-instance latency and
+higher bandwidth.</p>
+</li>
+<li>
+<p><strong>Storage:</strong> When looking for an HPC solution, you need to consider the
+storage options and cost. There are several flexible blocks, object, and file
+storage options in AWS services that allow permanent and transient data storage.
+It allows allocating storage volumes according to the size you need. You can
+store and access and data type over the cloud without doing a data migration
+project. Also, with AWS services, you can transfer your workload to the cloud
+from on-premises.</p>
+</li>
+<li>
+<p><strong>Automation and Orchestration:</strong> For using the infrastructure efficiently,
+you need to automate scheduling submitted jobs and the job submission process.
+AWS services allow you to run thousands of batch computing jobs through the
+dynamic provision of the computer resources on the basis of the requirements.</p>
+</li>
+<li>
+<p><strong>Operations and Management:</strong> As a system administrator, you are
+responsible for avoiding cost overruns and monitoring the infrastructure. There
+are several management and monitoring services that allow you to optimize
+utilization of resources, monitor the application, get a complete view of
+operational health, and respond to the performance changes.</p>
+</li>
+<li>
+<p><strong>Visualization:</strong> With the AWS services, you can easily visualize the
+engineering simulations’ results without moving huge amounts of data. Now, you
+can access the interactive applications remotely over a standard network and
+deliver application sessions to any workstation.</p>
+</li>
+<li>
+<p><strong>Security and Compliance:</strong> For running applications on the cloud, you need
+to have an understanding of regulatory compliance and security management. There
+are several quick-launch templates and security related services offered by AWS
+that helps in protecting data and customer privacy by putting strong safeguards
+in the AWS infrastructure.</p>
+</li>
+</ol>
+<h3 id="amazon-simple-db"><a class="header" href="#amazon-simple-db">Amazon Simple DB</a></h3>
+<ul>
+<li>
+<p>Amazon SimpleDB is a distributed database written in Erlang by Amazon.com.
+It is used as a web service in concert with Amazon Elastic Compute Cloud and
+Amazon S3 and is part of Amazon Web Services.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/simpledb/">More Details</a></p>
+</li>
+</ul>
+<h3 id="elastic-cloud-computing-ec2"><a class="header" href="#elastic-cloud-computing-ec2">Elastic Cloud Computing (EC2)</a></h3>
+<ul>
+<li>
+<p>Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing
+platform, Amazon Web Services, that allows users to rent virtual computers
+on which to run their own computer applications.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/ec2/">More Details</a></p>
+</li>
+</ul>
+<h3 id="amazon-storage-system"><a class="header" href="#amazon-storage-system">Amazon Storage System</a></h3>
+<ul>
+<li>
+<p>Amazon Simple Storage Service (Amazon S3) is an object storage service that
+offers industry-leading scalability, data availability, security, and
+performance.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/products/storage/">More Details</a></p>
+</li>
+</ul>
+<h3 id="amazon-database-services-dynamo-db"><a class="header" href="#amazon-database-services-dynamo-db">Amazon Database services (Dynamo DB).</a></h3>
+<ul>
+<li>
+<p>Amazon DynamoDB is a fully managed proprietary NoSQL database service that
+supports key–value and document data structures and is offered by Amazon.com
+as part of the Amazon Web Services portfolio. DynamoDB exposes a similar
+data model to and derives its name from Dynamo, but has a different
+underlying implementation.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/dynamodb/">More Details</a></p>
+</li>
+</ul>
+<h2 id="microsoft-cloud-services"><a class="header" href="#microsoft-cloud-services">Microsoft Cloud Services</a></h2>
+<ul>
+<li>Microsoft Azure, often referred to as Azure, is a cloud computing service
+operated by Microsoft for application management via Microsoft-managed data
+centers.</li>
+</ul>
+<h3 id="azure-core-concepts"><a class="header" href="#azure-core-concepts">Azure core concepts</a></h3>
+<table><thead><tr><th>Concept Name</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Regions</strong></td><td>Azure is a global cloud platform which is available across various regions around the world. When you request a service, application, or VM in Azure, you are first asked to specify a region. The selected region represents datacenter where your application runs.</td></tr>
+<tr><td><strong>Datacenter</strong></td><td>In Azure, you can deploy your applications into a variety of data centers around the globe. So, it is advisable to select a region which is closer to most of your customers. It helps you to reduce latency in network requests.</td></tr>
+<tr><td><strong>Azure portal</strong></td><td>The Azure portal is a web-based application which can be used to create, manage and remove Azure resource and services. It is located at https://portal.azure.com.</td></tr>
+<tr><td><strong>Resources</strong></td><td>Azure resource is an individual computer, networking data or app hosting services which charged individually. Some common resources are virtual machines( VM), storage account, or SQL databases.</td></tr>
+<tr><td><strong>Resource groups</strong></td><td>An Azure resource group is a container which holds related resource for an Azure solution. It may include every resource or just resource which you wants to manage.</td></tr>
+<tr><td><strong>Resource Manager templates</strong></td><td>It is a JSON which defines one or more resource to deploy to a resource group. It also establishes dependencies between deployed resources.</td></tr>
+<tr><td><strong>Automation:</strong></td><td>Azure allows you to automate the process of creating, managing and deleting resource by using PowerShell or the Azure command-line Interface(CLI).</td></tr>
+<tr><td><strong>Azure PowerShell</strong></td><td>PowerShell is a set of modules that offer cmdlets to manage Azure. In most cases, you are allowed to use, the cmdlets command for the same tasks which you are performing in the Azure portal.</td></tr>
+<tr><td><strong>Azure command-line interface(CLI)</strong></td><td>The Azure CLI is a tool that you can use to create, manage, and remove Azure resources from the command line.</td></tr>
+<tr><td><strong>REST APIs</strong></td><td>Azure is built on a set of REST APIs help you perform the same operation that you do in Azure portal Ul. It allows your Azure resources and apps to be manipulated via any third party software application.</td></tr>
+</tbody></table>
+<h3 id="sql-azure"><a class="header" href="#sql-azure">SQL Azure</a></h3>
+<ul>
+<li>
+<p>Microsoft Azure SQL Database is a managed cloud database provided as part of
+Microsoft Azure. A cloud database is a database that runs on a cloud
+computing platform, and access to it is provided as a service. Managed
+database services take care of scalability, backup, and high availability of
+the database.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-sql/database/sql-database-paas-overview?view=azuresql">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="windows-azure-platform-appliance"><a class="header" href="#windows-azure-platform-appliance">Windows Azure Platform Appliance.</a></h3>
+<ul>
+<li>
+<p>The Windows Azure Platform Appliance consists of Windows Azure, SQL Azure
+and a Microsoft-specified configuration of network, storage and server
+hardware. Service providers, governments and large enterprises who would,
+for example, invest in a 1000 servers at a time, will be able to deploy the
+Windows Azure platform on their own hardware in their datacenter.
+Microsoft Windows Azure Platform Appliance is optimized for scale out
+applications - such as eBay- and datacenter efficiency across hundreds to
+thousands to tens-of-thousands servers.</p>
+</li>
+<li>
+<p><a href="https://azure.microsoft.com/en-in/blog/just-announced-at-wpc-the-windows-azure-platform-appliance/">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="cloud-computing-applications"><a class="header" href="#cloud-computing-applications">Cloud Computing Applications:</a></h2>
+<ul>
+<li>
+<p>Cloud service providers provide various applications in the field of art,
+business, data storage and backup services, education, entertainment,
+management, social networking, etc.</p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/cloud-computing-applications">More Details</a></p>
+</li>
+</ul>
+<h3 id="healthcare"><a class="header" href="#healthcare">Healthcare</a></h3>
+<h4 id="ecg-analysis-in-the-cloud"><a class="header" href="#ecg-analysis-in-the-cloud">ECG Analysis in the Cloud</a></h4>
+<ul>
+<li><strong>ECG analysis in cloud computing</strong>: cloud computing technologies allows the
+remote monitoring of a patient's heart beat data. Through this way the
+patient at risk can be constantly monitored without going to the hospital
+for ECG analysis. At the same time the Doctor's can instantly be notified
+with cases that need's their attention.</li>
+</ul>
+<h3 id="biology"><a class="header" href="#biology">Biology</a></h3>
+<h4 id="protein-structure-prediction"><a class="header" href="#protein-structure-prediction">Protein Structure Prediction</a></h4>
+<ul>
+<li>
+<p>Cloud computing is an emerging technology that provides various computing
+services on demand. It provides convenient access to a shared pool of
+higher-level services and other system resources. Nowadays, cloud computing
+has a great significance in the fields of geology, biology, and other
+scientific research areas.</p>
+</li>
+<li>
+<p>Protein structure prediction is the best example in research area that makes
+use of cloud applications for its computation and storage.</p>
+</li>
+<li>
+<p>A protein is composed of long chains of amino acids joined together by
+peptide bonds. The various structures of protein help in the designing of
+new drugs and the various sequences of proteins from its three-dimensional
+structure in predictive form is known as a Protein structure prediction.</p>
+</li>
+<li>
+<p>Firstly primary structures of proteins are formed and then prediction of the
+secondary, tertiary and quaternary structures are done from the primary one.
+In this way predictions of protein structures are done. Protein structure
+prediction also makes use of various other technologies like artificial
+neural networks, artificial intelligence, machine learning and probabilistic
+techniques, also holds great importance in fields like theoretical chemistry
+and bioinformatics.</p>
+</li>
+<li>
+<p>There are various algorithms and tools that exists for protein structure
+prediction. CASP (Critical Assessment of Protein Structure Prediction) is a
+well-known tool that provides methods for automated web servers and the
+results of research work are placed on clouds like CAMEO (Continuous
+Automated Model Evaluation) server. These servers can be accessed by anyone
+as per their requirements from any place. Some of the tools or servers used
+in protein structure prediction are Phobius, FoldX, LOMETS, Prime, Predict
+protein, SignalP, BBSP, EVfold, Biskit, HHpred, Phre, ESyired3D. Using these
+tools new structures are predicted and the results are placed on the
+cloud-based servers.</p>
+</li>
+</ul>
+<h3 id="geosciences"><a class="header" href="#geosciences">Geosciences</a></h3>
+<ul>
+<li>Earth science or geoscience includes all fields of natural science related
+to the planet Earth.</li>
+</ul>
+<h4 id="satellite-image-processing"><a class="header" href="#satellite-image-processing">Satellite Image Processing,</a></h4>
+<ul>
+<li>
+<p>Satellite Image Processing is an important field in research and development
+and consists of the images of earth and satellites taken by the means of
+artificial satellites. Firstly, the photographs are taken in digital form
+and later are processed by the computers to extract the information.
+Statistical methods are applied to the digital images and after processing
+the various discrete surfaces are identified by analyzing the pixel values.</p>
+</li>
+<li>
+<p>Majorly there are four kinds of resolutions associated with satellite
+imagery. These are:</p>
+<ul>
+<li><strong>Spatial resolution:</strong> It is determined by the sensors Instantaneous
+Field of View(IFoV) and is defined as the pixel size of an image that is
+visible to the human eye being measured on the ground. Since it has high
+resolving power or the ability to separate and hence is termed as
+Spatial Resolution.</li>
+<li><strong>Spectral resolution:</strong> This resolution measures the wavelength
+internal size and determines the number of wavelength intervals that the
+sensor measures.</li>
+<li><strong>Temporal resolution:</strong> The word temporal is associated with time or
+days and is defined as the time that passes between various imagery
+cloud periods.</li>
+<li><strong>Radiometric resolution:</strong> This resolution provides the actual
+characteristics of the image and is generally expressed in bits size. It
+gives the effective bit depth and records the various levels of
+brightness of imaging system.</li>
+</ul>
+</li>
+</ul>
+<h3 id="business-and-consumer-applications"><a class="header" href="#business-and-consumer-applications">Business and Consumer Applications</a></h3>
+<h4 id="crm-and-erp"><a class="header" href="#crm-and-erp">CRM and ERP</a></h4>
+<ul>
+<li>
+<p>CRM (Customer Relationship Management) and ERP (Enterprise Resource
+Planning) software are powerful tools for a business or enterprise to use.
+CRM handles the sales, marketing, and customer service information.</p>
+</li>
+<li>
+<p><a href="https://www.netsuite.com/portal/resource/articles/erp/erp-vs-crm.shtml">More
+Details</a></p>
+</li>
+</ul>
+<h4 id="social-networking"><a class="header" href="#social-networking">Social Networking</a></h4>
+<ul>
+<li>
+<p>Social networks help boost internet usability by storing heavy multimedia
+content in cloud storage systems. Videos and photographs are the most
+popular content on social media, which essentially use up the maximum space
+allocated to them. They have the capacity to slow down applications and
+servers with all of their resource demands. Cloud computing vendors such as
+Salesforce and Amazon nowadays provide varied services including Customer
+Relationship Management (CRM) and Enterprise Resource Planning (ERP). As
+they deliver these things through cloud servers, clients can use the
+flexibility and scalability of the system without purchasing standalone
+software or hardware.</p>
+</li>
+<li>
+<p>Apart from data storage, the social networks are now also using clouds for
+various other tasks. For example, this can be ideal for big data analytics.
+One of the benefits of using cloud systems is that users can access vast
+amount of structured and even non-structured data easily. Just take a look
+at the much-improved analytics provided by sites like Facebook, especially
+for its business users.</p>
+</li>
+<li>
+<p>Another way cloud computing becomes helpful is by reducing the cost of data
+backup and recovery in case of a disaster. If the data is only stored in one
+central location, it becomes much riskier. If something happens there, it is
+almost impossible to recover the data. But through cloud they remain
+accessible through shared resources across the globe. This is especially
+useful for social networks as the store personal data of its users, and so
+cannot afford to lose even one part of it.</p>
+</li>
+</ul>
+<h3 id="google-cloud-application"><a class="header" href="#google-cloud-application">Google Cloud Application</a></h3>
+<ul>
+<li>Google Cloud Platform, offered by Google, is a suite of cloud computing
+services that runs on the same infrastructure that Google uses internally
+for its end-user products, such as Google Search, Gmail, Google Drive, and
+YouTube.</li>
+</ul>
+<h4 id="google-app-engine"><a class="header" href="#google-app-engine">Google App Engine.</a></h4>
+<ul>
+<li>
+<p>Google App Engine is a cloud computing platform as a service for developing
+and hosting web applications in Google-managed data centers. Applications
+are sandboxed and run across multiple servers.</p>
+</li>
+<li>
+<p><a href="https://www.techtarget.com/searchaws/definition/Google-App-Engine">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="overview-of-openstack-architecture"><a class="header" href="#overview-of-openstack-architecture">Overview of OpenStack architecture.</a></h2>
+<ul>
+<li>
+<p>OpenStack is a free, open standard cloud computing platform. It is mostly
+deployed as infrastructure-as-a-service in both public and private clouds
+where virtual servers and other resources are made available to users.</p>
+</li>
+<li>
+<p>OpenStack contains a modular architecture along with several code names for
+the components.</p>
+</li>
+</ul>
+<p><img src="pictures/openstack.png" alt="openstack architecture" /></p>
+<ul>
+<li><a href="https://www.javatpoint.com/openstack-architecture">More Details</a></li>
+</ul>
 
                     </main>
 
@@ -162,6 +520,22 @@
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
