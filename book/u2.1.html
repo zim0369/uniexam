@@ -136,10 +136,10 @@
                     <main>
                         <h1 id="unit-iii-virtualization-in-cloud-computing"><a class="header" href="#unit-iii-virtualization-in-cloud-computing">Unit III: Virtualization in Cloud Computing</a></h1>
 <ul>
-<li>Virtualization is technology that lets you create useful IT services using
-resources that are traditionally bound to hardware. It allows you to use a
-physical machine's full capacity by distributing its capabilities among many
-users or environments.02</li>
+<li>Virtualization in cloud computing allows a provider to virtualize servers,
+storage, or other physical hardware or data center resources, which can
+then, in turn, allow them to provide numerous services such as
+infrastructure, software, and platforms.</li>
 </ul>
 <h2 id="adopting-virtualization"><a class="header" href="#adopting-virtualization">Adopting Virtualization</a></h2>
 <ul>
@@ -250,7 +250,11 @@ would be more convenient as compared to installing on real hardware.</li>
 </li>
 </ul>
 <h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
+<!-- TODO: Check if resource is correct -->
 <ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
 <li>
 <p>Virtual cluster is a many-to-one virtualization technology, which can form a
 routing system from multiple common devices connected through a switching
@@ -343,8 +347,144 @@ completed more quickly.</p>
 <!-- TODO: Cloud definition -->
 <h3 id="virtualization"><a class="header" href="#virtualization">Virtualization</a></h3>
 <!-- TODO: Virtualization definition -->
+<ul>
+<li>
+<p>Virtualization in cloud computing allows a provider to virtualize servers,
+storage, or other physical hardware or data center resources, which can
+then, in turn, allow them to provide numerous services such as
+infrastructure, software, and platforms.</p>
+</li>
+<li>
+<p>Virtualization is a technique, which allows to share a single physical
+instance of a resource or an application among multiple customers and
+organizations. It does by assigning a logical name to a physical storage and
+providing a pointer to that physical resource when demanded.</p>
+</li>
+<li>
+<p>Types of Virtualization:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Hardware Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+directly installed on the hardware system is known as hardware
+virtualization.</p>
+</li>
+<li>
+<p>The main job of hypervisor is to control and monitoring the processor,
+memory and other hardware resources.</p>
+</li>
+<li>
+<p>After virtualization of hardware system we can install different
+operating system on it and run different applications on those OS.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Hardware virtualization is mainly done for the server
+platforms, because controlling virtual machines is much easier than
+controlling a physical server.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Operating System Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+installed on the Host operating system instead of directly on the
+hardware system is known as operating system virtualization.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Operating System Virtualization is mainly used for testing
+the applications on different platforms of OS.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Server Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+directly installed on the Server system is known as server
+virtualization.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Server virtualization is done because a single physical
+server can be divided into multiple servers on the demand basis and for
+balancing the load.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Storage Virtualization:</strong></p>
+<ul>
+<li>
+<p>Storage virtualization is the process of grouping the physical storage
+from multiple network storage devices so that it looks like a single
+storage device.</p>
+</li>
+<li>
+<p>Storage virtualization is also implemented by using software
+applications.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Storage virtualization is mainly done for back-up and
+recovery purposes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Network virtualization:</strong></p>
+<ul>
+<li>
+<p>Network Virtualization is a process of logically grouping physical
+networks and making them operate as single or multiple independent
+networks called Virtual Networks.</p>
+</li>
+<li>
+<p>Tools for Network Virtualization :</p>
+<ol>
+<li><strong>Physical switch OS:</strong> It is where the OS must have the
+functionality of network virtualization.</li>
+<li><strong>Hypervisor:</strong> It is which uses third-party software or built-in
+networking and the functionalities of network virtualization.</li>
+</ol>
+</li>
+<li>
+<p>Advantages of Network Virtualization :</p>
+<ol>
+<li>Improves manageability</li>
+<li>Improves utilization</li>
+<li>Enhances performance</li>
+<li>Enhances security</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<!-- * Types of storage virtualization: -->
+<!--     1. Hardware Assisted Virtualization -->
+<!--     1. Kernel Level Virtualization -->
+<!--     1. Hypervisor Virtualization -->
+<!--     1. Para-Virtualization -->
+<!--     1. Full Virtualization -->
 <h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
 <!-- TODO: Virtualization in grid -->
+<ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
+<li>
+<p>Virtualization allows addressing multiple problems in Grid systems, such as
+coping with the heterogeneity of Grid resources, the difference in software
+stacks, and enhanced features in resource management such as more general
+check pointing or migration models. Adopting virtualization in smart ways
+gets us closer to real Grid computing with more ﬂexibility in the type of
+applications and the resources to use.</p>
+</li>
+</ul>
 <h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
 <ul>
 <li>
@@ -389,11 +529,33 @@ denial of service (DDoS) attacks, malware, hackers, and unauthorized user
 access or use.</p>
 </li>
 <li>
-<p>Types of clouds</p>
+<p>Types of clouds:</p>
 <ol>
-<li>Public</li>
-<li>Private</li>
-<li>Hybrid</li>
+<li>
+<p><strong>Public clouds:</strong> Public cloud services are hosted by third-party cloud
+service providers. A company doesn't have to set up anything to use the
+cloud, since the provider handles it all. Usually, clients can access a
+provider's web services via web browsers. Security features, such as access
+control, identity management, and authentication, are crucial to public
+clouds.</p>
+</li>
+<li>
+<p><strong>Private clouds:</strong> Private clouds are typically more secure than public
+clouds, as they're usually dedicated to a single group or user and rely on
+that group or user's firewall. The isolated nature of these clouds helps them
+stay secure from outside attacks since they're only accessible by one
+organization. However, they still face security challenges from some threats,
+such as social engineering and breaches. These clouds can also be difficult
+to scale as your company's needs expand.</p>
+</li>
+<li>
+<p><strong>Hybrid clouds:</strong> Hybrid clouds combine the scalability of public clouds
+with the greater control over resources that private clouds offer. These
+clouds connect multiple environments, such as a private cloud and a public
+cloud, that can scale more easily based on demand. Successful hybrid clouds
+allow users to access all their environments in a single integrated content
+management platform.</p>
+</li>
 </ol>
 </li>
 <li>
@@ -480,10 +642,62 @@ applications for maximum efficiency, creating a virtual infrastructure.</li>
 <!-- TODO: Might add some more? -->
 <h3 id="cpu-virtualization"><a class="header" href="#cpu-virtualization">CPU Virtualization</a></h3>
 <ul>
-<li>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
+<li>
+<p>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
 CPUs that allows a single processor to act as if it was multiple individual
 CPUs.This allows an operating system to more effectively &amp; efficiently
-utilize the CPU power in the computer so that it runs faster.</li>
+utilize the CPU power in the computer so that it runs faster.</p>
+</li>
+<li>
+<p>CPU Virtualization emphasizes performance, running apps/programs, and runs
+directly on the processor whenever possible. All operations are controlled
+by an emulator that controls software to run accordingly, CPU Virtualisation
+is not the same as emulation. The emulator works the same as a normal
+computer machine does, it makes a copy of data and generates the same output
+as a physical machine does. The emulation function gives a feeling of
+working on multiple platforms while being on a single platform.</p>
+</li>
+<li>
+<p>CPU Virtualization helps all the virtual machines to behave like physical
+machines and distribute their physical resources like virtual machines
+sharing their physical memories.</p>
+</li>
+<li>
+<p>CPU Virtualization improves performance and efficiency to a greater extent
+because virtual machines work on a single CPU, sharing resources is actually
+like using multiple processors at the same time. This saves Cost and Money.</p>
+</li>
+<li>
+<p>Types of CPU Virtualization:</p>
+<ol>
+<li>
+<p><strong>Hardware-assisted CPU Virtualization :</strong> Hardware supports CPU
+Virtualization through certain processors like Guest User. This Uses
+different versions of code and the mode is known as a Guest mode. The best
+part of hardware-assisted CPU Virtualization is, it doesn’t need any
+translation while we use it for Hardware assistance. In short, it uplifts
+system calls and makes them run faster than expected.</p>
+</li>
+<li>
+<p><strong>Software-based CPU Virtualization :</strong> This type of CPU Virtualization
+is software-based and it helps application code to get executed on a
+processor. First, the privileged code gets translated, and then translated
+code is directly executed on the processor. This translation process is
+known as Binary Translation. The translated code is slow in execution and is
+very large at the same time. Guest programs that are programmed in
+privileged coding run very smoothly and fast. Applications with privileged
+coding would run slower comparatively in a virtual environment.</p>
+</li>
+<li>
+<p><strong>Virtualization and Processor-Specific behavior:</strong> Although this
+software virtualizes the CPU, the virtual machine can detect the model of a
+processor on which it is running, processor models may differ in CPU
+features they offer and applications running on these CPUs may use these
+features. Therefore it is not possible to use v motion to transfer virtual
+machines running on processors with different feature sets.</p>
+</li>
+</ol>
+</li>
 </ul>
 <!-- TODO: need to add some more? -->
 <h3 id="network-and-storage-virtualization"><a class="header" href="#network-and-storage-virtualization">Network and Storage Virtualization.</a></h3>
@@ -491,11 +705,13 @@ utilize the CPU power in the computer so that it runs faster.</li>
 <p>Network virtualization is a method of combining the available resources in a
 network to consolidate multiple physical networks, divide a network into
 segments or create software networks between virtual machines (VMs).</p>
+<p><a href="#virtualization">Refer virtualization section for more</a></p>
 <h4 id="storage-virtualization"><a class="header" href="#storage-virtualization">Storage Virtualization</a></h4>
 <p>Storage virtualization in Cloud Computing is nothing but the sharing of physical
 storage into multiple storage devices which further appears to be a single
 storage device. It can be also called as a group of an available storage device
 which simply manages from a central console.</p>
+<p><a href="#virtualization">Refer virtualization section for more</a></p>
 
                     </main>
 

@@ -2,6 +2,9 @@
 
 **Notes for computer engg. sem 6 SPPU university exam**
 
+_You may notice **NEEDS REFACTORING** bullets which mean that the topic might
+be incomplete._
+
 ## PROGRESS
 
 - [ ] Artificial Intelligence
@@ -10,12 +13,12 @@
   - [ ] Unit V **Reasoning**
   - [ ] Unit VI **Planning**
   - [ ] Prelim Questions
-- [ ] Cloud Computing
+- [x] Cloud Computing
   - [x] Unit III **Virtualization in Cloud Computing**
   - [x] Unit IV **Cloud Platforms and Cloud Applications**
-  - [ ] Unit V **Security in Cloud Computing**
-  - [ ] Unit VI **Advanced Techniques in Cloud Computing**
-  - [ ] Prelim Questions
+  - [x] Unit V **Security in Cloud Computing**
+  - [x] Unit VI **Advanced Techniques in Cloud Computing**
+  - [x] Prelim Questions
 - [ ] Data Science and Big Data
   - [ ] Unit III **Big Data Analytics Life Cycle**
   - [ ] Unit IV **Predictive Big Data Analytics with Python**
@@ -31,12 +34,12 @@
 
 ## BTW,
 
-- I have tried to keep notes as short as possible
+- Tried to add adequate information.
 
-- Navigating through notes is pretty easy:
+- Navigating through the notes is pretty easy:
 
-  - Sidebar can be toggled with the help of the hamburger menu in the top
-    left corner.
+  - Sidebar can be toggled with the help of the hamburger menu in the top left
+    corner.
 
   - Use the paint brush button to change the theme.
 
@@ -44,8 +47,8 @@
 
 - Entire theory was based on google searches
 
-- If a topic seems like it needed more theory then a link to the resource was
-  added. Look for "More Details" whenever necessary.
+- To read more information about a topic, look for "More Details" whenever
+  necessary. They are a link to the topic's resource.
 
 - Improvements are welcome. Email me at: <zim@onionmail.org>
 

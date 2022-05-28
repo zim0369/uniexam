@@ -137,6 +137,8 @@
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p><strong>Notes for computer engg. sem 6 SPPU university exam</strong></p>
+<p><em>You may notice <strong>NEEDS REFACTORING</strong> bullets which mean that the topic might
+be incomplete.</em></p>
 <h2 id="progress"><a class="header" href="#progress">PROGRESS</a></h2>
 <ul>
 <li><input disabled="" type="checkbox"/>
@@ -154,18 +156,18 @@ Unit VI <strong>Planning</strong></li>
 Prelim Questions</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Cloud Computing
 <ul>
 <li><input disabled="" type="checkbox" checked=""/>
 Unit III <strong>Virtualization in Cloud Computing</strong></li>
 <li><input disabled="" type="checkbox" checked=""/>
 Unit IV <strong>Cloud Platforms and Cloud Applications</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit V <strong>Security in Cloud Computing</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit VI <strong>Advanced Techniques in Cloud Computing</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Prelim Questions</li>
 </ul>
 </li>
@@ -203,14 +205,14 @@ Prelim Questions</li>
 <h2 id="btw"><a class="header" href="#btw">BTW,</a></h2>
 <ul>
 <li>
-<p>I have tried to keep notes as short as possible</p>
+<p>Tried to add adequate information.</p>
 </li>
 <li>
-<p>Navigating through notes is pretty easy:</p>
+<p>Navigating through the notes is pretty easy:</p>
 <ul>
 <li>
-<p>Sidebar can be toggled with the help of the hamburger menu in the top
-left corner.</p>
+<p>Sidebar can be toggled with the help of the hamburger menu in the top left
+corner.</p>
 </li>
 <li>
 <p>Use the paint brush button to change the theme.</p>
@@ -224,8 +226,8 @@ left corner.</p>
 <p>Entire theory was based on google searches</p>
 </li>
 <li>
-<p>If a topic seems like it needed more theory then a link to the resource was
-added. Look for &quot;More Details&quot; whenever necessary.</p>
+<p>To read more information about a topic, look for &quot;More Details&quot; whenever
+necessary. They are a link to the topic's resource.</p>
 </li>
 <li>
 <p>Improvements are welcome. Email me at: <a href="mailto:zim@onionmail.org">zim@onionmail.org</a></p>
@@ -378,149 +380,95 @@ EJB.</p>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="artificial-intelligence-1"><a class="header" href="#artificial-intelligence-1">Artificial Intelligence</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="adversarial-search-and-games"><a class="header" href="#adversarial-search-and-games">Adversarial Search and Games</a></h1>
-<h2 id="adversarial-search"><a class="header" href="#adversarial-search">Adversarial Search</a></h2>
-<p><strong>Adversarial search is a search, where we examine the problem which arises when
-we try to plan ahead of the world and other agents are planning against us.</strong></p>
-<p>The environment with more than one agent is termed as multi-agent environment,
-in which each agent is an opponent of other agent and playing against each
-other. Each agent needs to consider the action of other agent and effect of that
-action on their performance.</p>
-<p>Searches in which two or more players with conflicting goals are trying to
-explore the same search space for the solution, are called adversarial searches,
-often known as Games.</p>
-<p>Games are modeled as a Search problem and heuristic evaluation function, and
-these are the two main factors which help to model and solve games in AI.</p>
-<h2 id="game-theory"><a class="header" href="#game-theory">Game Theory</a></h2>
-<p><strong>Game theory is the study of mathematical models of strategic interactions
-among rational agents. It has applications in all fields of social science, as
-well as in logic, systems science and computer science.</strong></p>
-<ul>
-<li>
-<p>Types of Games:</p>
-<ol>
-<li>Zero-Sum and Non-Zero Sum Games</li>
-<li>Simultaneous and Sequential Games</li>
-<li>Imperfect Information and Perfect Information Games</li>
-<li>Asymmetric and Symmetric Games</li>
-<li>Co-operative and Non-Co-operative Games</li>
-</ol>
-</li>
-</ul>
-<h2 id="optimal-decisions-in-games"><a class="header" href="#optimal-decisions-in-games">Optimal Decisions in Games</a></h2>
-<p><strong>Games are usually intriguing because they are difficult to solve. Chess, for
-example, has an average branching factor of around 35, and games frequently
-stretch to 50 moves per player, therefore the search tree has roughly 35100 or
-10154 nodes (despite the search graph having “only” about 1040 unique nodes). As
-a result, games, like the real world, necessitate the ability to make some sort
-of decision even when calculating the best option is impossible.</strong></p>
-<ul>
-<li>
-<p>The optimal strategy can be found from the minimax value of each node, which
-we express as MINIMAX, given a game tree (n). Assuming that both players
-play optimally from there through the finish of the game, the utility (for
-MAX) of being in the corresponding state is the node's minimax value.</p>
-</li>
-<li>
-<p><a href="https://www.geeksforgeeks.org/optimal-decision-making-in-games/">Optimal Decision in Gaming
-example</a></p>
-</li>
-</ul>
-<h2 id="heuristic-alphabeta-tree-search"><a class="header" href="#heuristic-alphabeta-tree-search">Heuristic Alpha–Beta Tree Search</a></h2>
-<p><strong>Alpha-beta pruning is a modified version of the minimax algorithm. It is an
-optimization technique for the minimax algorithm.</strong></p>
-<ul>
-<li>
-<p>The two-parameter can be defined as:</p>
-<ul>
-<li><strong>Alpha</strong>: The best (highest-value) choice we have found so far at any
-point along the path of Maximizer. The initial value of alpha is <strong>-∞</strong>.</li>
-<li><strong>Beta</strong>: The best (lowest-value) choice we have found so far at any
-point along the path of Minimizer. The initial value of beta is <strong>+∞</strong>.</li>
-</ul>
-</li>
-<li>
-<p>The Alpha-beta pruning to a standard minimax algorithm returns the same move
-as the standard algorithm does, but it removes all the nodes which are not
-really affecting the final decision but making algorithm slow. Hence by
-pruning these nodes, it makes the algorithm fas</p>
-</li>
-<li>
-<p>The main condition which required for alpha-beta pruning is: <strong>α&gt;=β</strong></p>
-</li>
-<li>
-<p><a href="https://www.javatpoint.com/ai-alpha-beta-pruning">Pseudo-code &amp; Working</a></p>
-</li>
-</ul>
-<h2 id="monte-carlo-tree-search"><a class="header" href="#monte-carlo-tree-search">Monte Carlo Tree Search</a></h2>
-<p><strong>Monte Carlo tree search is a heuristic search algorithm for some kinds of
-decision processes, most notably those employed in software that plays board
-games. In that context MCTS is used to solve the game tree.</strong></p>
-<ul>
-<li>
-<p>MCTS can be broken down into 4 steps:</p>
-<ol>
-<li>
-<p><strong>Selection</strong>: In this process, the MCTS algorithm traverses the current
-tree from the root node using a specific strategy. The strategy uses an
-evaluation function to optimally select nodes with the highest estimated
-value.</p>
-<p><img src="pictures/mcts_formula.png" alt="MCTS formula" /></p>
-<p>where:</p>
-<ul>
-<li>Si = value of a node i</li>
-<li>xi = empirical mean of a node i</li>
-<li>C = a constant</li>
-<li>t = total number of simulations</li>
-</ul>
-</li>
-<li>
-<p><strong>Expansion</strong>: In this process, a new child node is added to the tree to
-that node which was optimally reached during the selection process.</p>
-</li>
-<li>
-<p><strong>Simulation</strong>: In this process, a simulation is performed by choosing
-moves or strategies until a result or predefined state is achieved.</p>
-</li>
-<li>
-<p><strong>Backpropagation</strong>: After determining the value of the newly added
-node, the remaining tree must be updated. During the process, the number of
-simulation stored in each node is incremented. Also, if the new node’s
-simulation results in a win, then the number of wins is also incremented.</p>
-</li>
-</ol>
-</li>
-<li>
-<p><a href="https://www.geeksforgeeks.org/ml-monte-carlo-tree-search-mcts/">More
-Details</a></p>
-</li>
-</ul>
-<h2 id="stochastic-game"><a class="header" href="#stochastic-game">Stochastic Game</a></h2>
-<ul>
-<li>
-<p><strong>In game theory, a stochastic game, is a repeated game with probabilistic
-transitions played by one or more players. The game is played in a sequence
-of stages. At the beginning of each stage the game is in some state.</strong></p>
-</li>
-<li>
-<p><a href="https://www.geeksforgeeks.org/stochastic-games-in-artificial-intelligence/">Example with backgammon
-game</a></p>
-</li>
-</ul>
-<h2 id="partially-observable-games"><a class="header" href="#partially-observable-games">Partially Observable Games,</a></h2>
-<ul>
-<li>
-<p><strong>A partially observable system is one in which the entire state of the
-system is not fully visible to an external sensor. In a partially observable
-system the observer may utilise a memory system in order to add information
-to the observer's understanding of the system.</strong></p>
-</li>
-<li>
-<p>Example: A card game in which some of the cards are discarded into a pile face
-down. In this case the observer is only able to view their own cards and
-potentially those of the dealer.</p>
-</li>
-</ul>
-<h2 id="limitations-of-game-search-algorithms"><a class="header" href="#limitations-of-game-search-algorithms">Limitations of Game Search Algorithms,</a></h2>
+<!-- ## Adversarial Search -->
+<!-- **Adversarial search is a search, where we examine the problem which arises when -->
+<!-- we try to plan ahead of the world and other agents are planning against us.** -->
+<!-- The environment with more than one agent is termed as multi-agent environment, -->
+<!-- in which each agent is an opponent of other agent and playing against each -->
+<!-- other. Each agent needs to consider the action of other agent and effect of that -->
+<!-- action on their performance. -->
+<!-- Searches in which two or more players with conflicting goals are trying to -->
+<!-- explore the same search space for the solution, are called adversarial searches, -->
+<!-- often known as Games. -->
+<!-- Games are modeled as a Search problem and heuristic evaluation function, and -->
+<!-- these are the two main factors which help to model and solve games in AI. -->
+<!-- ## Game Theory -->
+<!-- **Game theory is the study of mathematical models of strategic interactions -->
+<!-- among rational agents. It has applications in all fields of social science, as -->
+<!-- well as in logic, systems science and computer science.** -->
+<!-- *   Types of Games: -->
+<!--     1.  Zero-Sum and Non-Zero Sum Games -->
+<!--     2.  Simultaneous and Sequential Games -->
+<!--     3.  Imperfect Information and Perfect Information Games -->
+<!--     4.  Asymmetric and Symmetric Games -->
+<!--     5.  Co-operative and Non-Co-operative Games -->
+<!-- ## Optimal Decisions in Games -->
+<!-- **Games are usually intriguing because they are difficult to solve. Chess, for -->
+<!-- example, has an average branching factor of around 35, and games frequently -->
+<!-- stretch to 50 moves per player, therefore the search tree has roughly 35100 or -->
+<!-- 10154 nodes (despite the search graph having “only” about 1040 unique nodes). As -->
+<!-- a result, games, like the real world, necessitate the ability to make some sort -->
+<!-- of decision even when calculating the best option is impossible.** -->
+<!-- *   The optimal strategy can be found from the minimax value of each node, which -->
+<!--     we express as MINIMAX, given a game tree (n). Assuming that both players -->
+<!--     play optimally from there through the finish of the game, the utility (for -->
+<!--     MAX) of being in the corresponding state is the node's minimax value. -->
+<!-- *   [Optimal Decision in Gaming -->
+<!--     example](https://www.geeksforgeeks.org/optimal-decision-making-in-games/) -->
+<!-- ## Heuristic Alpha–Beta Tree Search -->
+<!-- **Alpha-beta pruning is a modified version of the minimax algorithm. It is an -->
+<!-- optimization technique for the minimax algorithm.** -->
+<!-- *   The two-parameter can be defined as: -->
+<!--     *   **Alpha**: The best (highest-value) choice we have found so far at any -->
+<!--         point along the path of Maximizer. The initial value of alpha is **-∞**. -->
+<!--     *   **Beta**: The best (lowest-value) choice we have found so far at any -->
+<!--         point along the path of Minimizer. The initial value of beta is **+∞**. -->
+<!-- *   The Alpha-beta pruning to a standard minimax algorithm returns the same move -->
+<!--     as the standard algorithm does, but it removes all the nodes which are not -->
+<!--     really affecting the final decision but making algorithm slow. Hence by -->
+<!--     pruning these nodes, it makes the algorithm fas -->
+<!-- *   The main condition which required for alpha-beta pruning is: **α>=β** -->
+<!-- *   [Pseudo-code & Working](https://www.javatpoint.com/ai-alpha-beta-pruning) -->
+<!-- ## Monte Carlo Tree Search -->
+<!-- **Monte Carlo tree search is a heuristic search algorithm for some kinds of -->
+<!-- decision processes, most notably those employed in software that plays board -->
+<!-- games. In that context MCTS is used to solve the game tree.** -->
+<!-- *   MCTS can be broken down into 4 steps: -->
+<!--     1.  **Selection**: In this process, the MCTS algorithm traverses the current -->
+<!--         tree from the root node using a specific strategy. The strategy uses an -->
+<!--         evaluation function to optimally select nodes with the highest estimated -->
+<!--         value. -->
+<!--         ![MCTS formula](pictures/mcts_formula.png) -->
+<!--         where: -->
+<!--         *   Si = value of a node i -->
+<!--         *   xi = empirical mean of a node i -->
+<!--         *   C = a constant -->
+<!--         *   t = total number of simulations -->
+<!--     2.  **Expansion**: In this process, a new child node is added to the tree to -->
+<!--         that node which was optimally reached during the selection process. -->
+<!--     3.  **Simulation**: In this process, a simulation is performed by choosing -->
+<!--         moves or strategies until a result or predefined state is achieved. -->
+<!--     4.  **Backpropagation**: After determining the value of the newly added -->
+<!--         node, the remaining tree must be updated. During the process, the number of -->
+<!--         simulation stored in each node is incremented. Also, if the new node’s -->
+<!--         simulation results in a win, then the number of wins is also incremented. -->
+<!-- *   [More -->
+<!--     Details](https://www.geeksforgeeks.org/ml-monte-carlo-tree-search-mcts/) -->
+<!-- ## Stochastic Game -->
+<!-- *   **In game theory, a stochastic game, is a repeated game with probabilistic -->
+<!--     transitions played by one or more players. The game is played in a sequence -->
+<!--     of stages. At the beginning of each stage the game is in some state.** -->
+<!-- *   [Example with backgammon -->
+<!--     game](https://www.geeksforgeeks.org/stochastic-games-in-artificial-intelligence/) -->
+<!-- ## Partially Observable Games, -->
+<!-- *   **A partially observable system is one in which the entire state of the -->
+<!--     system is not fully visible to an external sensor. In a partially observable -->
+<!--     system the observer may utilise a memory system in order to add information -->
+<!--     to the observer's understanding of the system.** -->
+<!-- *   Example: A card game in which some of the cards are discarded into a pile face -->
+<!--     down. In this case the observer is only able to view their own cards and -->
+<!--     potentially those of the dealer. -->
+<!-- ## Limitations of Game Search Algorithms, -->
 <div style="break-before: page; page-break-before: always;"></div><h1 id="knowledge"><a class="header" href="#knowledge">Knowledge</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="adversarial-search-and-games-1"><a class="header" href="#adversarial-search-and-games-1">Adversarial Search and Games</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="knowledge-1"><a class="header" href="#knowledge-1">Knowledge</a></h1>
@@ -529,10 +477,10 @@ potentially those of the dealer.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-computing-1"><a class="header" href="#cloud-computing-1">Cloud Computing</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-virtualization-in-cloud-computing"><a class="header" href="#unit-iii-virtualization-in-cloud-computing">Unit III: Virtualization in Cloud Computing</a></h1>
 <ul>
-<li>Virtualization is technology that lets you create useful IT services using
-resources that are traditionally bound to hardware. It allows you to use a
-physical machine's full capacity by distributing its capabilities among many
-users or environments.02</li>
+<li>Virtualization in cloud computing allows a provider to virtualize servers,
+storage, or other physical hardware or data center resources, which can
+then, in turn, allow them to provide numerous services such as
+infrastructure, software, and platforms.</li>
 </ul>
 <h2 id="adopting-virtualization"><a class="header" href="#adopting-virtualization">Adopting Virtualization</a></h2>
 <ul>
@@ -643,7 +591,11 @@ would be more convenient as compared to installing on real hardware.</li>
 </li>
 </ul>
 <h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
+<!-- TODO: Check if resource is correct -->
 <ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
 <li>
 <p>Virtual cluster is a many-to-one virtualization technology, which can form a
 routing system from multiple common devices connected through a switching
@@ -736,8 +688,144 @@ completed more quickly.</p>
 <!-- TODO: Cloud definition -->
 <h3 id="virtualization"><a class="header" href="#virtualization">Virtualization</a></h3>
 <!-- TODO: Virtualization definition -->
+<ul>
+<li>
+<p>Virtualization in cloud computing allows a provider to virtualize servers,
+storage, or other physical hardware or data center resources, which can
+then, in turn, allow them to provide numerous services such as
+infrastructure, software, and platforms.</p>
+</li>
+<li>
+<p>Virtualization is a technique, which allows to share a single physical
+instance of a resource or an application among multiple customers and
+organizations. It does by assigning a logical name to a physical storage and
+providing a pointer to that physical resource when demanded.</p>
+</li>
+<li>
+<p>Types of Virtualization:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Hardware Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+directly installed on the hardware system is known as hardware
+virtualization.</p>
+</li>
+<li>
+<p>The main job of hypervisor is to control and monitoring the processor,
+memory and other hardware resources.</p>
+</li>
+<li>
+<p>After virtualization of hardware system we can install different
+operating system on it and run different applications on those OS.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Hardware virtualization is mainly done for the server
+platforms, because controlling virtual machines is much easier than
+controlling a physical server.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Operating System Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+installed on the Host operating system instead of directly on the
+hardware system is known as operating system virtualization.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Operating System Virtualization is mainly used for testing
+the applications on different platforms of OS.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Server Virtualization:</strong></p>
+<ul>
+<li>
+<p>When the virtual machine software or virtual machine manager (VMM) is
+directly installed on the Server system is known as server
+virtualization.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Server virtualization is done because a single physical
+server can be divided into multiple servers on the demand basis and for
+balancing the load.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Storage Virtualization:</strong></p>
+<ul>
+<li>
+<p>Storage virtualization is the process of grouping the physical storage
+from multiple network storage devices so that it looks like a single
+storage device.</p>
+</li>
+<li>
+<p>Storage virtualization is also implemented by using software
+applications.</p>
+</li>
+<li>
+<p><strong>Usage:</strong> Storage virtualization is mainly done for back-up and
+recovery purposes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Network virtualization:</strong></p>
+<ul>
+<li>
+<p>Network Virtualization is a process of logically grouping physical
+networks and making them operate as single or multiple independent
+networks called Virtual Networks.</p>
+</li>
+<li>
+<p>Tools for Network Virtualization :</p>
+<ol>
+<li><strong>Physical switch OS:</strong> It is where the OS must have the
+functionality of network virtualization.</li>
+<li><strong>Hypervisor:</strong> It is which uses third-party software or built-in
+networking and the functionalities of network virtualization.</li>
+</ol>
+</li>
+<li>
+<p>Advantages of Network Virtualization :</p>
+<ol>
+<li>Improves manageability</li>
+<li>Improves utilization</li>
+<li>Enhances performance</li>
+<li>Enhances security</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<!-- * Types of storage virtualization: -->
+<!--     1. Hardware Assisted Virtualization -->
+<!--     1. Kernel Level Virtualization -->
+<!--     1. Hypervisor Virtualization -->
+<!--     1. Para-Virtualization -->
+<!--     1. Full Virtualization -->
 <h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
 <!-- TODO: Virtualization in grid -->
+<ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
+<li>
+<p>Virtualization allows addressing multiple problems in Grid systems, such as
+coping with the heterogeneity of Grid resources, the difference in software
+stacks, and enhanced features in resource management such as more general
+check pointing or migration models. Adopting virtualization in smart ways
+gets us closer to real Grid computing with more ﬂexibility in the type of
+applications and the resources to use.</p>
+</li>
+</ul>
 <h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
 <ul>
 <li>
@@ -782,11 +870,33 @@ denial of service (DDoS) attacks, malware, hackers, and unauthorized user
 access or use.</p>
 </li>
 <li>
-<p>Types of clouds</p>
+<p>Types of clouds:</p>
 <ol>
-<li>Public</li>
-<li>Private</li>
-<li>Hybrid</li>
+<li>
+<p><strong>Public clouds:</strong> Public cloud services are hosted by third-party cloud
+service providers. A company doesn't have to set up anything to use the
+cloud, since the provider handles it all. Usually, clients can access a
+provider's web services via web browsers. Security features, such as access
+control, identity management, and authentication, are crucial to public
+clouds.</p>
+</li>
+<li>
+<p><strong>Private clouds:</strong> Private clouds are typically more secure than public
+clouds, as they're usually dedicated to a single group or user and rely on
+that group or user's firewall. The isolated nature of these clouds helps them
+stay secure from outside attacks since they're only accessible by one
+organization. However, they still face security challenges from some threats,
+such as social engineering and breaches. These clouds can also be difficult
+to scale as your company's needs expand.</p>
+</li>
+<li>
+<p><strong>Hybrid clouds:</strong> Hybrid clouds combine the scalability of public clouds
+with the greater control over resources that private clouds offer. These
+clouds connect multiple environments, such as a private cloud and a public
+cloud, that can scale more easily based on demand. Successful hybrid clouds
+allow users to access all their environments in a single integrated content
+management platform.</p>
+</li>
 </ol>
 </li>
 <li>
@@ -873,10 +983,62 @@ applications for maximum efficiency, creating a virtual infrastructure.</li>
 <!-- TODO: Might add some more? -->
 <h3 id="cpu-virtualization"><a class="header" href="#cpu-virtualization">CPU Virtualization</a></h3>
 <ul>
-<li>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
+<li>
+<p>CPU Virtualization is a hardware feature found in all current AMD &amp; Intel
 CPUs that allows a single processor to act as if it was multiple individual
 CPUs.This allows an operating system to more effectively &amp; efficiently
-utilize the CPU power in the computer so that it runs faster.</li>
+utilize the CPU power in the computer so that it runs faster.</p>
+</li>
+<li>
+<p>CPU Virtualization emphasizes performance, running apps/programs, and runs
+directly on the processor whenever possible. All operations are controlled
+by an emulator that controls software to run accordingly, CPU Virtualisation
+is not the same as emulation. The emulator works the same as a normal
+computer machine does, it makes a copy of data and generates the same output
+as a physical machine does. The emulation function gives a feeling of
+working on multiple platforms while being on a single platform.</p>
+</li>
+<li>
+<p>CPU Virtualization helps all the virtual machines to behave like physical
+machines and distribute their physical resources like virtual machines
+sharing their physical memories.</p>
+</li>
+<li>
+<p>CPU Virtualization improves performance and efficiency to a greater extent
+because virtual machines work on a single CPU, sharing resources is actually
+like using multiple processors at the same time. This saves Cost and Money.</p>
+</li>
+<li>
+<p>Types of CPU Virtualization:</p>
+<ol>
+<li>
+<p><strong>Hardware-assisted CPU Virtualization :</strong> Hardware supports CPU
+Virtualization through certain processors like Guest User. This Uses
+different versions of code and the mode is known as a Guest mode. The best
+part of hardware-assisted CPU Virtualization is, it doesn’t need any
+translation while we use it for Hardware assistance. In short, it uplifts
+system calls and makes them run faster than expected.</p>
+</li>
+<li>
+<p><strong>Software-based CPU Virtualization :</strong> This type of CPU Virtualization
+is software-based and it helps application code to get executed on a
+processor. First, the privileged code gets translated, and then translated
+code is directly executed on the processor. This translation process is
+known as Binary Translation. The translated code is slow in execution and is
+very large at the same time. Guest programs that are programmed in
+privileged coding run very smoothly and fast. Applications with privileged
+coding would run slower comparatively in a virtual environment.</p>
+</li>
+<li>
+<p><strong>Virtualization and Processor-Specific behavior:</strong> Although this
+software virtualizes the CPU, the virtual machine can detect the model of a
+processor on which it is running, processor models may differ in CPU
+features they offer and applications running on these CPUs may use these
+features. Therefore it is not possible to use v motion to transfer virtual
+machines running on processors with different feature sets.</p>
+</li>
+</ol>
+</li>
 </ul>
 <!-- TODO: need to add some more? -->
 <h3 id="network-and-storage-virtualization"><a class="header" href="#network-and-storage-virtualization">Network and Storage Virtualization.</a></h3>
@@ -884,11 +1046,13 @@ utilize the CPU power in the computer so that it runs faster.</li>
 <p>Network virtualization is a method of combining the available resources in a
 network to consolidate multiple physical networks, divide a network into
 segments or create software networks between virtual machines (VMs).</p>
+<p><a href="u2.1.html#virtualization">Refer virtualization section for more</a></p>
 <h4 id="storage-virtualization"><a class="header" href="#storage-virtualization">Storage Virtualization</a></h4>
 <p>Storage virtualization in Cloud Computing is nothing but the sharing of physical
 storage into multiple storage devices which further appears to be a single
 storage device. It can be also called as a group of an available storage device
 which simply manages from a central console.</p>
+<p><a href="u2.1.html#virtualization">Refer virtualization section for more</a></p>
 <div style="break-before: page; page-break-before: always;"></div><p>Unit IV: Cloud Platforms and Cloud Applications</p>
 <h2 id="amazon-web-services-aws-amazon-web-services-and-components"><a class="header" href="#amazon-web-services-aws-amazon-web-services-and-components">Amazon Web Services (AWS): Amazon Web Services and Components</a></h2>
 <ul>
@@ -987,12 +1151,69 @@ Amazon S3 and is part of Amazon Web Services.</p>
 <h3 id="elastic-cloud-computing-ec2"><a class="header" href="#elastic-cloud-computing-ec2">Elastic Cloud Computing (EC2)</a></h3>
 <ul>
 <li>
-<p>Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing
+<p><strong>Amazon Elastic Compute Cloud</strong> is a part of Amazon.com's cloud-computing
 platform, Amazon Web Services, that allows users to rent virtual computers
 on which to run their own computer applications.</p>
 </li>
 <li>
-<p><a href="https://aws.amazon.com/ec2/">More Details</a></p>
+<p>EC2 refers to an on-demand computing service on the AWS cloud platform.
+Under computing, it includes all the services a computing device can offer
+to you along with the flexibility of a virtual environment. It also allows
+the user to configure their instances as per their requirements i.e.
+allocate the RAM, ROM, and storage according to the need of the current
+task. Even the user can dismantle the virtual device once its task is
+completed and it is no more required. For providing, all these scalable
+resources AWS charges some bill amount at the end of every month, bill
+amount is entirely dependent on your usage.</p>
+</li>
+<li>
+<p>Features of Amazon EC2:</p>
+<ul>
+<li><strong>Functionality:</strong> EC2 provides its users a true virtual computing
+platform, where they can various operations and even launch another EC2
+instance from this virtually created environment. This will increase the
+security of these virtual devices. Not only creating but also EC2 allows
+us to customize our environment as per our requirements, at any point of
+time during the life span of this virtual machine. Amazon EC2 itself
+comes with a set of default AMI(Amazon Machine Image) options supporting
+various operating systems along with some pre-configured resources like
+RAM, ROM, storage, etc. Besides these AMI options, we can also create an
+AMI curated with the combination of default and user-defined
+configurations. And for future purposes, we can store this user-defined
+AMI, so that next time, the user won’t have to re-configure a new AMI
+from scratch. Rather than this whole process, the user can simply use
+the older reference while creating a new EC2 machine.</li>
+<li><strong>Operating Systems:</strong> Amazon EC2 includes a wide range of operating
+systems to choose from while selecting your AMI. Not only these selected
+options, but users are also even given the privileges to upload their
+own operating systems and opt for that while selecting AMI during
+launching an EC2 instance. Currently, AWS has the following most
+preferred set of operating systems available on the EC2 console.
+<ul>
+<li>Amazon Linux</li>
+<li>Windows Server</li>
+<li>Ubuntu Server</li>
+<li>SUSE Linux</li>
+<li>Red Hat Linux</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Software:</strong> Amazon is single-handedly ruling the cloud computing market,
+because of the variety of options available on it for its users. It allows
+its users to choose from various software present to run on their EC2
+machines. This whole service is allocated to AWS Marketplace on the AWS
+platform. Numerous software like SAP, LAMP and Drupal, etc are available on
+AWS to use.</p>
+</li>
+<li>
+<p><strong>Scalability and Reliability:</strong> EC2 provides us the facility to scale up or
+scale down as per the needs. All dynamic scenarios can easily be tackled by
+EC2 with the help of this feature. And because of the flexibility of volumes
+and snapshots, it is highly reliable for its users. Due to the scalable
+nature of the machine, many organizations like Flipkart, Amazon rely on days
+whenever humongous traffic occurs on their portals.</p>
 </li>
 </ul>
 <h3 id="amazon-storage-system"><a class="header" href="#amazon-storage-system">Amazon Storage System</a></h3>
@@ -1026,6 +1247,7 @@ operated by Microsoft for application management via Microsoft-managed data
 centers.</li>
 </ul>
 <h3 id="azure-core-concepts"><a class="header" href="#azure-core-concepts">Azure core concepts</a></h3>
+<!-- TABLE -->
 <table><thead><tr><th>Concept Name</th><th>Description</th></tr></thead><tbody>
 <tr><td><strong>Regions</strong></td><td>Azure is a global cloud platform which is available across various regions around the world. When you request a service, application, or VM in Azure, you are first asked to specify a region. The selected region represents datacenter where your application runs.</td></tr>
 <tr><td><strong>Datacenter</strong></td><td>In Azure, you can deploy your applications into a variety of data centers around the globe. So, it is advisable to select a region which is closer to most of your customers. It helps you to reduce latency in network requests.</td></tr>
@@ -1081,24 +1303,100 @@ management, social networking, etc.</p>
 </li>
 </ul>
 <h3 id="healthcare"><a class="header" href="#healthcare">Healthcare</a></h3>
-<h4 id="ecg-analysis-in-the-cloud"><a class="header" href="#ecg-analysis-in-the-cloud">ECG Analysis in the Cloud</a></h4>
 <ul>
-<li><strong>ECG analysis in cloud computing</strong>: cloud computing technologies allows the
+<li>Cloud computing in healthcare describes the practice of implementing remote
+servers accessed via the internet to store, manage and process
+healthcare-related data. This is in contrast to establishing an on-site data
+center with servers, or hosting the data on a personal computer.</li>
+</ul>
+<ol>
+<li>
+<p><strong>Collaboration:</strong> Sharing facilitates collaboration. As healthcare
+information is meant to stay confidential, with the cloud, the data can be
+securely shared among all the relevant healthcare stakeholders like doctors,
+nurses, and care-givers that, too, in real-time.</p>
+</li>
+<li>
+<p><strong>Security:</strong> Healthcare data needs to stay confidential. The abundant data
+held by this domain makes it a focal point of attraction to the malicious
+actors, resulting in security and data breaches.</p>
+</li>
+<li>
+<p><strong>Cost:</strong> Cloud can hold an enormous amount of information at a very minimal
+cost. Cloud computing works on the pay-as-you-go and subscription model,
+which indicates you only have to pay for those services which you are
+availing.</p>
+</li>
+<li>
+<p><strong>Speed:</strong> Cloud-based tools can update and upgrade their features at a
+commendable pace with minimal intervention, and you can get real-time updates
+as well on all the relevant information.</p>
+</li>
+<li>
+<p><strong>Scalability and Flexibility:</strong> Cloud facilitates technologies that are used
+in healthcare like electronic medical records, mobile apps, patient portals,
+devices with IoT, big data analytics.</p>
+</li>
+</ol>
+<h4 id="ecgelectrocardiogram-analysis-in-the-cloud"><a class="header" href="#ecgelectrocardiogram-analysis-in-the-cloud">ECG(Electrocardiogram) Analysis in the Cloud</a></h4>
+<ul>
+<li>
+<p><strong>ECG analysis in cloud computing</strong>: cloud computing technologies allows the
 remote monitoring of a patient's heart beat data. Through this way the
 patient at risk can be constantly monitored without going to the hospital
 for ECG analysis. At the same time the Doctor's can instantly be notified
-with cases that need's their attention.</li>
-</ul>
-<h3 id="biology"><a class="header" href="#biology">Biology</a></h3>
-<h4 id="protein-structure-prediction"><a class="header" href="#protein-structure-prediction">Protein Structure Prediction</a></h4>
+with cases that need's their attention.</p>
+</li>
+<li>
+<p>An ECG is just a visual image of a record of the electrical activity of the
+heart muscle as it varies over time, typically printed on paper for easier
+study. Similarly, like other muscles, the heart contracts in response to
+electrical depolarization caused in the muscle cells. When it's the time of
+day, it's the amount of the electrical activity, when amplified and registered
+for just a few seconds that we call a heart rhythm.</p>
+</li>
+<li>
+<p>With ECG data collection and tracking, it's possible to test for chest pain,
+low-grade heart rhythm disturbances, arrhythmias, and more. An E-G
+(electrocardiogram) is the electrical expression of the contractile movement
+of the myocardium.</p>
+</li>
+<li>
+<p>Advantages:</p>
 <ul>
 <li>
-<p>Cloud computing is an emerging technology that provides various computing
+<p>Since cloud computing systems are now readily available and deliver the
+services in less time, it's got the promise to be a massive disruptor to
+how the technology is distributed.</p>
+</li>
+<li>
+<p>As a consequence, the doctor doesn't need to put a huge effort into
+computing, since there is a lot of software on which to run.</p>
+</li>
+<li>
+<p>Cloud infrastructure is highly scalable; it can be maximized and
+minimized according to the needs of each user.</p>
+</li>
+<li>
+<p>Cloud computing (or cloud computing) systems are now available and aim
+to provide reliable services to consumers with less time.</p>
+</li>
+<li>
+<p>The doctor's office would not need to invest in a broad computer system.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="biology"><a class="header" href="#biology">Biology</a></h3>
+<ul>
+<li>Cloud computing is an emerging technology that provides various computing
 services on demand. It provides convenient access to a shared pool of
 higher-level services and other system resources. Nowadays, cloud computing
 has a great significance in the fields of geology, biology, and other
-scientific research areas.</p>
-</li>
+scientific research areas.</li>
+</ul>
+<h4 id="protein-structure-prediction"><a class="header" href="#protein-structure-prediction">Protein Structure Prediction</a></h4>
+<ul>
 <li>
 <p>Protein structure prediction is the best example in research area that makes
 use of cloud applications for its computation and storage.</p>
@@ -1353,9 +1651,16 @@ hackers. The hackers use the stolen account to perform unauthorized activities.<
 </ol>
 <h2 id="data-security-in-cloud"><a class="header" href="#data-security-in-cloud">Data Security in Cloud</a></h2>
 <ul>
-<li>The core principles of information security and data governance—data
+<li>
+<p>The three letters in &quot;CIA triad&quot; stand for Confidentiality, Integrity, and
+Availability. The CIA triad is a common model that forms the basis for the
+development of security systems. They are used for finding vulnerabilities
+and methods for creating solutions.</p>
+</li>
+<li>
+<p>The core principles of information security and data governance—data
 confidentiality, integrity, and availability (known as the CIA triad)—also
-apply to the cloud:
+apply to the cloud:</p>
 <ul>
 <li><strong>Confidentiality:</strong> protecting the data from unauthorized access and
 disclosure</li>
@@ -1364,6 +1669,54 @@ can be trusted</li>
 <li><strong>Availability:</strong> ensuring the data is fully available and accessible
 when it’s needed</li>
 </ul>
+</li>
+</ul>
+<p><strong>MORE DETAILED</strong></p>
+<ul>
+<li>
+<p><strong>Confidentiality:</strong> Confidentiality involves the efforts of an organization
+to make sure data is kept secret or private. To accomplish this, access to
+information must be controlled to prevent the unauthorized sharing of
+data—whether intentional or accidental. A key component of maintaining
+confidentiality is making sure that people without proper authorization are
+prevented from accessing assets important to your business. Conversely, an
+effective system also ensures that those who need to have access have the
+necessary privileges.</p>
+<p>For example, those who work with an organization’s finances should be able
+to access the spreadsheets, bank accounts, and other information related to
+the flow of money. However, the vast majority of other employees—and perhaps
+even certain executives—may not be granted access. To ensure these policies
+are followed, stringent restrictions have to be in place to limit who can
+see what.</p>
+</li>
+<li>
+<p><strong>Integrity:</strong> Integrity involves making sure your data is trustworthy and
+free from tampering. The integrity of your data is maintained only if the
+data is authentic, accurate, and reliable.</p>
+<p>For example, if your company provides information about senior managers on
+your website, this information needs to have integrity. If it is inaccurate,
+those visiting the website for information may feel your organization is not
+trustworthy. Someone with a vested interest in damaging the reputation of
+your organization may try to hack your website and alter the descriptions,
+photographs, or titles of the executives to hurt their reputation or that of
+the company as a whole.</p>
+</li>
+<li>
+<p><strong>Availability:</strong> Even if data is kept confidential and its integrity
+maintained, it is often useless unless it is available to those in the
+organization and the customers they serve. This means that systems,
+networks, and applications must be functioning as they should and when they
+should. Also, individuals with access to specific information must be able
+to consume it when they need to, and getting to the data should not take an
+inordinate amount of time.</p>
+<p>If, for example, there is a power outage and there is no disaster recovery
+system in place to help users regain access to critical systems,
+availability will be compromised. Also, a natural disaster like a flood or
+even a severe snowstorm may prevent users from getting to the office, which
+can interrupt the availability of their workstations and other devices that
+provide business-critical information or applications. Availability can also
+be compromised through deliberate acts of sabotage, such as the use of
+denial-of-service (DoS) attacks or ransomware.</p>
 </li>
 </ul>
 <h3 id="security-issues"><a class="header" href="#security-issues">Security Issues</a></h3>
@@ -2006,7 +2359,7 @@ Kubernetes, but the Cloud Native Computing Foundation now maintains the
 project.</p>
 </li>
 <li>
-<p><a href="https://kubernetes.io/docs/concepts/">More Details</a></p>
+<p><a href="https://kubernetes.io/docs/concepts/overview/">More Details</a></p>
 </li>
 </ul>
 <h2 id="introduction-to-devops"><a class="header" href="#introduction-to-devops">Introduction to DevOps</a></h2>
@@ -2144,7 +2497,692 @@ Details</a></p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="questions-1"><a class="header" href="#questions-1">Questions</a></h1>
-<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<p><strong>These are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<ol>
+<li>
+<p><strong>Define virtualization and write down different types of virtualization.</strong>
+<strong>Explain Network and Storage Virtualization in detail.</strong></p>
+<ul>
+<li>
+<p>Virtualization in cloud computing allows a provider to virtualize
+servers, storage, or other physical hardware or data center resources,
+which can then, in turn, allow them to provide numerous services such as
+infrastructure, software, and platforms.</p>
+</li>
+<li>
+<p>The 7 Types of Virtualization</p>
+<ol>
+<li>OS Virtualization—aka Virtual Machines</li>
+<li>Application-Server Virtualization</li>
+<li>Application Virtualization</li>
+<li>Administrative Virtualization</li>
+<li>Network Virtualization</li>
+<li>Hardware Virtualization</li>
+<li>Storage Virtualization</li>
+</ol>
+</li>
+<li>
+<p><strong>Storage Virtualization:</strong></p>
+<ul>
+<li>
+<p>Storage virtualization in Cloud Computing is nothing but the sharing
+of physical storage into multiple storage devices which further
+appears to be a single storage device. It can be also called as a
+group of an available storage device which simply manages from a
+central console.</p>
+</li>
+<li>
+<p>This virtualization provides numerous benefits such as easy backup,
+achieving, and recovery of the data.</p>
+</li>
+<li>
+<p>This whole process requires very less time and works in an efficient
+manner. Storage virtualization in Cloud Computing does not show the
+actual complexity of the Storage Area Network (SAN). This
+virtualization is applicable to all levels of SAN.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Network Virtualization:</strong></p>
+<ul>
+<li>
+<p>Network Virtualization is a process of logically grouping physical
+networks and making them operate as single or multiple independent
+networks called Virtual Networks.</p>
+</li>
+<li>
+<p>Tools for Network Virtualization :</p>
+<ol>
+<li><strong>Physical switch OS:</strong> It is where the OS must have the
+functionality of network virtualization.</li>
+<li><strong>Hypervisor:</strong> It is which uses third-party software or
+built-in networking and the functionalities of network
+virtualization.</li>
+</ol>
+</li>
+<li>
+<p>Advantages of Network Virtualization :</p>
+<ol>
+<li>Improves manageability</li>
+<li>Improves utilization</li>
+<li>Enhances performance</li>
+<li>Enhances security</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain virtualization in grid.</strong></p>
+<ul>
+<li>
+<p><strong>NEEDS REFACTORING</strong></p>
+</li>
+<li>
+<p>Virtualization allows addressing multiple problems in Grid systems, such
+as coping with the heterogeneity of Grid resources, the difference in
+software stacks, and enhanced features in resource management such as
+more general check pointing or migration models. Adopting virtualization
+in smart ways gets us closer to real Grid computing with more ﬂexibility
+in the type of applications and the resources to use.</p>
+</li>
+</ul>
+</li>
+</ol>
+<!-- TODO: Virtualization in grid -->
+<ol start="3">
+<li>
+<p><strong>Explain Virtual Clustering in detail.</strong></p>
+<ul>
+<li><strong>NEEDS REFACTORING</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Explain CPU virtualization in detail.</strong></p>
+<ul>
+<li>
+<p>CPU Virtualization is a hardware feature found in all current AMD &amp;
+Intel CPUs that allows a single processor to act as if it was multiple
+individual CPUs.This allows an operating system to more effectively &amp;
+efficiently utilize the CPU power in the computer so that it runs
+faster.</p>
+</li>
+<li>
+<p>CPU Virtualization improves performance and efficiency to a greater
+extent because virtual machines work on a single CPU, sharing resources
+is actually like using multiple processors at the same time. This saves
+Cost and Money.</p>
+</li>
+<li>
+<p>Types of CPU Virtualization</p>
+<ol>
+<li>
+<p><strong>Hardware-assisted CPU Virtualization :</strong> Hardware supports CPU
+Virtualization through certain processors like Guest User. This Uses
+different versions of code and the mode is known as a Guest mode.</p>
+</li>
+<li>
+<p><strong>Software-based CPU Virtualization :</strong> This type of CPU
+Virtualization is software-based and it helps application code to get
+executed on a processor.</p>
+</li>
+<li>
+<p><strong>Virtualization and Processor-Specific behavior:</strong> Although this
+software virtualizes the CPU, the virtual machine can detect the model
+of a processor on which it is running, processor models may differ in
+CPU features they offer and applications running on these CPUs may use
+these features.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><a href="u2.1.html#cpu-virtualization">Need more info?</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain in detail Amazon Web Services &amp; its components.</strong></p>
+<ul>
+<li>
+<p>Amazon Web Services, Inc. is a subsidiary of Amazon that provides
+on-demand cloud computing platforms and APIs to individuals, companies,
+and governments, on a metered pay-as-you-go basis. These cloud computing
+web services provide distributed computing processing capacity and
+software tools via AWS server farms.</p>
+</li>
+<li>
+<p>Amazon Web Services (AWS) is the world’s most comprehensive and broadly
+adopted cloud platform, offering over 200 fully featured services from
+data centers globally. Millions of customers—including the
+fastest-growing startups, largest enterprises, and leading government
+agencies—are using AWS to lower costs, become more agile, and innovate
+faster.</p>
+</li>
+<li>
+<p>AWS Components:</p>
+<ol>
+<li>
+<p><strong>Data Management and Data Transfer:</strong> To run HPC applications in
+the AWS cloud, you need to move the required data into the cloud. There
+are several data transport solutions designed to securely transfer huge
+amounts of data. This overcomes issues like a long time for transfer,
+high network costs, and security concerns. Also, you can automate the
+movement of data between the AWS cloud and on-premises storage. There
+are options for establishing a private connection to the AWS from your
+premises. This increases bandwidth to provide more throughput, reduces
+the cost of the network, and provides a consistent network experience.</p>
+</li>
+<li>
+<p><strong>Compute &amp; Networking:</strong> There are several compute instances types
+that can be customized according to your needs. It also handles
+monitoring your application and adjusting its capacity for maintaining a
+steady and predictable performance at an affordable cost. Also, setting
+up application scaling across multiple services for multiple resources
+takes a few minutes. Enhanced networking options from AWS allow
+achieving lower inter-instance latency and higher bandwidth.</p>
+</li>
+<li>
+<p><strong>Storage:</strong> When looking for an HPC solution, you need to consider
+the storage options and cost. There are several flexible blocks, object,
+and file storage options in AWS services that allow permanent and
+transient data storage. It allows allocating storage volumes according
+to the size you need. You can store and access and data type over the
+cloud without doing a data migration project. Also, with AWS services,
+you can transfer your workload to the cloud from on-premises.</p>
+</li>
+<li>
+<p><strong>Automation and Orchestration:</strong> For using the infrastructure
+efficiently, you need to automate scheduling submitted jobs and the job
+submission process. AWS services allow you to run thousands of batch
+computing jobs through the dynamic provision of the computer resources
+on the basis of the requirements.</p>
+</li>
+<li>
+<p><strong>Operations and Management:</strong> As a system administrator, you are
+responsible for avoiding cost overruns and monitoring the
+infrastructure. There are several management and monitoring services
+that allow you to optimize utilization of resources, monitor the
+application, get a complete view of operational health, and respond to
+the performance changes.</p>
+</li>
+<li>
+<p><strong>Visualization:</strong> With the AWS services, you can easily visualize
+the engineering simulations’ results without moving huge amounts of
+data. Now, you can access the interactive applications remotely over a
+standard network and deliver application sessions to any workstation.</p>
+</li>
+<li>
+<p><strong>Security and Compliance:</strong> For running applications on the cloud,
+you need to have an understanding of regulatory compliance and security
+management. There are several quick-launch templates and security
+related services offered by AWS that helps in protecting data and
+customer privacy by putting strong safeguards in the AWS
+infrastructure.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain in detail Elastic Cloud Computing(EC2).</strong></p>
+<ul>
+<li>
+<p><strong>Amazon Elastic Compute Cloud</strong> is a part of Amazon.com's cloud-computing
+platform, Amazon Web Services, that allows users to rent virtual computers
+on which to run their own computer applications.</p>
+</li>
+<li>
+<p>Features of Amazon EC2:</p>
+<ul>
+<li><strong>Functionality:</strong> EC2 provides its users a true virtual computing
+platform, where they can various operations and even launch another
+EC2 instance from this virtually created environment. This will
+increase the security of these virtual devices. Not only creating
+but also EC2 allows us to customize our environment as per our
+requirements, at any point of time during the life span of this
+virtual machine. Amazon EC2 itself comes with a set of default
+AMI(Amazon Machine Image) options supporting various operating
+systems along with some pre-configured resources like RAM, ROM,
+storage, etc. Besides these AMI options, we can also create an AMI
+curated with the combination of default and user-defined
+configurations. And for future purposes, we can store this
+user-defined AMI, so that next time, the user won’t have to
+re-configure a new AMI from scratch. Rather than this whole process,
+the user can simply use the older reference while creating a new EC2
+machine.</li>
+<li><strong>Operating Systems:</strong> Amazon EC2 includes a wide range of operating
+systems to choose from while selecting your AMI. Not only these
+selected options, but users are also even given the privileges to
+upload their own operating systems and opt for that while selecting
+AMI during launching an EC2 instance. Currently, AWS has the
+following most preferred set of operating systems available on the
+EC2 console.
+<ul>
+<li>Amazon Linux</li>
+<li>Windows Server</li>
+<li>Ubuntu Server</li>
+<li>SUSE Linux</li>
+<li>Red Hat Linux</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain in detail Azure core concepts.</strong></p>
+<ul>
+<li>
+<p>Microsoft Azure, often referred to as Azure, is a cloud computing service
+operated by Microsoft for application management via Microsoft-managed data
+centers.</p>
+</li>
+<li>
+<p>Azure core concepts:</p>
+</li>
+</ul>
+</li>
+</ol>
+<!-- TABLE -->
+<table><thead><tr><th>Concept Name</th><th>Description</th></tr></thead><tbody>
+<tr><td><strong>Regions</strong></td><td>Azure is a global cloud platform which is available across various regions around the world. When you request a service, application, or VM in Azure, you are first asked to specify a region. The selected region represents datacenter where your application runs.</td></tr>
+<tr><td><strong>Datacenter</strong></td><td>In Azure, you can deploy your applications into a variety of data centers around the globe. So, it is advisable to select a region which is closer to most of your customers. It helps you to reduce latency in network requests.</td></tr>
+<tr><td><strong>Azure portal</strong></td><td>The Azure portal is a web-based application which can be used to create, manage and remove Azure resource and services. It is located at https://portal.azure.com.</td></tr>
+<tr><td><strong>Resources</strong></td><td>Azure resource is an individual computer, networking data or app hosting services which charged individually. Some common resources are virtual machines( VM), storage account, or SQL databases.</td></tr>
+<tr><td><strong>Resource groups</strong></td><td>An Azure resource group is a container which holds related resource for an Azure solution. It may include every resource or just resource which you wants to manage.</td></tr>
+<tr><td><strong>Resource Manager templates</strong></td><td>It is a JSON which defines one or more resource to deploy to a resource group. It also establishes dependencies between deployed resources.</td></tr>
+<tr><td><strong>Automation:</strong></td><td>Azure allows you to automate the process of creating, managing and deleting resource by using PowerShell or the Azure command-line Interface(CLI).</td></tr>
+<tr><td><strong>Azure PowerShell</strong></td><td>PowerShell is a set of modules that offer cmdlets to manage Azure. In most cases, you are allowed to use, the cmdlets command for the same tasks which you are performing in the Azure portal.</td></tr>
+<tr><td><strong>Azure command-line interface(CLI)</strong></td><td>The Azure CLI is a tool that you can use to create, manage, and remove Azure resources from the command line.</td></tr>
+<tr><td><strong>REST APIs</strong></td><td>Azure is built on a set of REST APIs help you perform the same operation that you do in Azure portal Ul. It allows your Azure resources and apps to be manipulated via any third party software application.</td></tr>
+</tbody></table>
+<ol start="8">
+<li>
+<p><strong>Explain in detail cloud computing applications:</strong></p>
+<ul>
+<li>
+<p><strong>Healthcare:</strong> Cloud computing in healthcare describes the practice of
+implementing remote servers accessed via the internet to store, manage
+and process healthcare-related data. This is in contrast to establishing
+an on-site data center with servers, or hosting the data on a personal
+computer.</p>
+<ul>
+<li>
+<p><strong>ECG Analysis in the cloud:</strong></p>
+<ul>
+<li>
+<p><strong>ECG analysis in cloud computing</strong>: cloud computing
+technologies allows the remote monitoring of a patient's heart
+beat data. Through this way the patient at risk can be
+constantly monitored without going to the hospital for ECG
+analysis. At the same time the Doctor's can instantly be
+notified with cases that need's their attention.</p>
+</li>
+<li>
+<p>An ECG is just a visual image of a record of the electrical
+activity of the heart muscle as it varies over time, typically
+printed on paper for easier study. Similarly, like other
+muscles, the heart contracts in response to electrical
+depolarization caused in the muscle cells. When it's the time of
+day, it's the amount of the electrical activity, when amplified
+and registered for just a few seconds that we call a heart
+rhythm.</p>
+</li>
+<li>
+<p>With ECG data collection and tracking, it's possible to test for
+chest pain, low-grade heart rhythm disturbances, arrhythmias,
+and more. An E-G (electrocardiogram) is the electrical
+expression of the contractile movement of the myocardium.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Biology:</strong> Cloud computing is an emerging technology that provides
+various computing services on demand. It provides convenient access to a
+shared pool of higher-level services and other system resources.
+Nowadays, cloud computing has a great significance in the fields of
+geology, biology, and other scientific research areas.</p>
+<ul>
+<li>
+<p><strong>Protein Structure Prediction:</strong></p>
+<ul>
+<li>
+<p>Protein structure prediction is the best example in research
+area that makes use of cloud applications for its computation
+and storage.</p>
+</li>
+<li>
+<p>A protein is composed of long chains of amino acids joined
+together by peptide bonds. The various structures of protein
+help in the designing of new drugs and the various sequences of
+proteins from its three-dimensional structure in predictive form
+is known as a Protein structure prediction.</p>
+</li>
+<li>
+<p>Firstly primary structures of proteins are formed and then
+prediction of the secondary, tertiary and quaternary structures
+are done from the primary one. In this way predictions of
+protein structures are done. Protein structure prediction also
+makes use of various other technologies like artificial neural
+networks, artificial intelligence, machine learning and
+probabilistic techniques, also holds great importance in fields
+like theoretical chemistry and bioinformatics.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain different types of risks in cloud computing.</strong></p>
+<ul>
+<li>
+<p>In many ways, the security threats facing today’s traditional data
+center environments overlap with those of a cloud computing environment.
+On both sides, cybercriminals aim to take advantage of vulnerabilities
+found in software.</p>
+</li>
+<li>
+<p>There are several security risks to consider when making the switch to
+cloud computing. Here are 5 of the top security risks your organization
+should be aware of:</p>
+</li>
+</ul>
+<ol>
+<li>
+<p><strong>Data Loss:</strong> Data loss is the most common cloud security risks of
+cloud computing. It is also known as data leakage. Data loss is the process
+in which data is being deleted, corrupted, and unreadable by a user,
+software, or application. In a cloud computing environment, data loss occurs
+when our sensitive data is somebody else's hands, one or more data elements
+can not be utilized by the data owner, hard disk is not working properly,
+and software is not updated.</p>
+</li>
+<li>
+<p><strong>Hacked Interfaces and Insecure APIs:</strong> As we all know, cloud computing
+is completely depends on Internet, so it is compulsory to protect interfaces
+and APIs that are used by external users. APIs are the easiest way to
+communicate with most of the cloud services. In cloud computing, few
+services are available in the public domain. These services can be accessed
+by third parties, so there may be a chance that these services easily harmed
+and hacked by hackers.</p>
+</li>
+<li>
+<p><strong>Data Breach:</strong> Data Breach is the process in which the confidential
+data is viewed, accessed, or stolen by the third party without any
+authorization, so organization's data is hacked by the hackers.</p>
+</li>
+<li>
+<p><strong>Vendor lock-in:</strong> Vendor lock-in is the of the biggest security risks
+in cloud computing. Organizations may face problems when transferring their
+services from one vendor to another. As different vendors provide different
+platforms, that can cause difficulty moving one cloud to another.</p>
+</li>
+<li>
+<p><strong>Increased complexity strains IT staff:</strong> Migrating, integrating, and
+operating the cloud services is complex for the IT staff. IT staff must
+require the extra capability and skills to manage, integrate, and maintain
+the data to the cloud.</p>
+</li>
+<li>
+<p><strong>Spectre &amp; Meltdown:</strong> Spectre &amp; Meltdown allows programs to view and
+steal data which is currently processed on computer. It can run on personal
+computers, mobile devices, and in the cloud. It can store the password, your
+personal information such as images, emails, and business documents in the
+memory of other running programs.</p>
+</li>
+<li>
+<p><strong>Denial of Service (DoS) attacks:</strong> Denial of service (DoS) attacks
+occur when the system receives too much traffic to buffer the server.
+Mostly, DoS attackers target web servers of large organizations such as
+banking sectors, media companies, and government organizations. To recover
+the lost data, DoS attackers charge a great deal of time and money to handle
+the data.</p>
+</li>
+<li>
+<p><strong>Account hijacking:</strong> Account hijacking is a serious security risk in
+cloud computing. It is the process in which individual user's or
+organization's cloud account (bank account, e-mail account, and social media
+account) is stolen by hackers. The hackers use the stolen account to perform
+unauthorized activities.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Explain in detail cloud security services:</strong> <em>Confidentiality,</em>
+<em>Integrity, &amp;</em> <em>Availability</em></p>
+<ul>
+<li>
+<p>The three letters in &quot;CIA triad&quot; stand for Confidentiality, Integrity,
+and Availability. The CIA triad is a common model that forms the basis
+for the development of security systems. They are used for finding
+vulnerabilities and methods for creating solutions.</p>
+</li>
+<li>
+<p>The core principles of information security and data governance—data
+confidentiality, integrity, and availability (known as the CIA
+triad)—also apply to the cloud:</p>
+<ul>
+<li><strong>Confidentiality:</strong> protecting the data from unauthorized access
+and disclosure</li>
+<li><strong>Integrity:</strong> safeguard the data from unauthorized modification so
+it can be trusted</li>
+<li><strong>Availability:</strong> ensuring the data is fully available and
+accessible when it’s needed</li>
+</ul>
+</li>
+<li>
+<p><a href="u2.3.html#data-security-in-cloud">More details about CIA</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain in detail different types of risks in Cloud Computing.</strong></p>
+<ul>
+<li>Refer question 9</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain need of secure cloud software requirements.</strong></p>
+<ul>
+<li>You need a secure way to immediately access your data. Cloud security
+ensures your data and applications are readily available to authorized
+users. You'll always have a reliable method to access your cloud
+applications and information, helping you quickly take action on any
+potential security issues.</li>
+</ul>
+<ol>
+<li>
+<p><strong>Top-of-the-Line Perimeter Firewall:</strong> Most firewalls are very
+simple—they typically inspect a packet’s source and destination and that’s
+all. Some more advanced firewalls feature stable packet inspection, which
+checks the integrity of the file packets for stability issues prior to
+approving or rejecting the packet.</p>
+</li>
+<li>
+<p><strong>Intrusion Detection Systems with Event Logging:</strong> Numerous IT security
+compliance standards require businesses to have a means of tracking and
+recording intrusion attempts. So, for any business that wants to meet
+compliance standards such as PCI or HIPAA, using IDS event logging solutions
+is a must.</p>
+</li>
+<li>
+<p><strong>Internal Firewalls for Individual Applications, and Databases:</strong> While
+having a strong perimeter firewall can block external attacks, internal
+attacks are still a major threat. Infrastructures that lack internal
+firewalls to restrict access to sensitive data and applications cannot be
+considered secure.</p>
+</li>
+<li>
+<p><strong>Data-at-Rest Encryption:</strong> Encrypting the data that is stored on your
+cloud infrastructure can be an effective way to keep your most sensitive
+information from being accessed by the wrong party.</p>
+</li>
+<li>
+<p><strong>Tier IV Data Centers with Strong Physical Security:</strong> The physical
+hardware used to run a cloud environment represents one last opportunity for
+hackers and industrial spies to steal your most important data. When allowed
+direct access to the hardware that runs the cloud, hackers have free reign
+to steal data or upload malware directly to your systems.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Explain future trends in cloud computing.</strong></p>
+<ul>
+<li>
+<p>Future Trends in Cloud Computing</p>
+<ol>
+<li>
+<p><strong>Hybrid/ Multi-Cloud Solutions:</strong> Hybrid cloud computing refers to
+using a combination of the private cloud as well as a third-party public
+cloud service. It is primarily used to allow workloads to move between
+private and public clouds, giving users more flexibility with their
+computing needs.</p>
+</li>
+<li>
+<p><strong>Backup And Disaster Recovery:</strong> Cyber attacks, data outages, and
+system failures are a part and parcel of running a business these days.
+Most businesses have dealt with their servers crashing, leading to loss
+of critical data files. To ensure such issues don’t damage the
+organization and its processes, backup and disaster recovery has become
+a trending use case of the cloud. If Spiceworks reports are to be
+believed, 15% of the cloud budget is allocated to Backup and Disaster
+Recovery, which is the highest budget allocation followed by email
+hosting and productivity tools.</p>
+</li>
+<li>
+<p><strong>Serverless Architecture:</strong> A serverless architecture removes all
+barriers that a standard IT infrastructure would usually bring. Users
+don’t have to purchase or rent the servers that they run their data on.
+Instead, a third-party will handle it all for you, allowing your
+organization to tackle other tasks.</p>
+</li>
+<li>
+<p><strong>AI Platform:</strong> As technology advances, one of the most common
+cloud computing trends to look forward to is AI. Tech giants are now
+looking into incorporating AI to process big data to improve their
+business functioning.</p>
+</li>
+<li>
+<p><strong>Cloud Security:</strong> Data theft, leakage, and deletion- security is a
+big challenge even for traditional IT infrastructures. But, with more
+companies moving to cloud platforms, it’s important to ensure that cloud
+service providers can create an airtight security system to guarantee
+the safety of their client’s data.</p>
+</li>
+<li>
+<p><strong>IoT Platform:</strong> With a hyper-connected world, one of the most
+popular cloud computing trends is the rise of IoT platforms. A study by
+Gartner suggests the number of connected things in use will be going up
+to 25 billion by 2021 from 14.2 billion as of 2019.</p>
+</li>
+<li>
+<p><strong>Edge Computing:</strong> It is a method of optimizing cloud computing
+network system by performing data processing at the edge of the network,
+near the source of the data. It works real-time on the cloud servers to
+process less time-sensitive data or store data for the long term.</p>
+</li>
+<li>
+<p><strong>DevSecOps:</strong> Cloud computing services provide users with a
+seamless and simple experience in managing their data but there are many
+security risks involved.  The security risk of cloud computing includes
+network eavesdropping, illegal invasion, denial of service attacks, side
+channel attacks, virtualization vulnerabilities, and abuse of cloud
+services.</p>
+</li>
+<li>
+<p><strong>Service Mesh:</strong> Since cloud platforms are complex, it is critical
+to ensure that the platform has a fast and safe communication
+environment. With a service mesh, users have a dedicated layer for
+service-to-service communication, making their cloud platform highly
+dynamic and secure.</p>
+</li>
+<li>
+<p><strong>Open Source:</strong> This industry is moving towards a path of
+innovation and collaboration. With this shift in how cloud services are
+managed, many organizations are looking at adopting an Open Source
+cloud computing service for their business.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain Docker and Kubernetes in detail.</strong></p>
+<ul>
+<li>
+<p>Docker is a set of platform as a service products that use OS-level
+virtualization to deliver software in packages called containers. The
+service has both free and premium tiers. The software that hosts the
+containers is called Docker Engine.</p>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/introduction-to-docker/">More Details</a></p>
+</li>
+<li>
+<p>Kubernetes is an open-source container orchestration system for
+automating software deployment, scaling, and management. Google
+originally designed Kubernetes, but the Cloud Native Computing
+Foundation now maintains the project.</p>
+</li>
+<li>
+<p><a href="https://kubernetes.io/docs/concepts/overview/">More Details</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain Mobile Cloud in detail:</strong> <em>Key requirements,</em> <em>Automatic cloud
+computing, &amp;</em> <em>Comet cloud</em></p>
+<ul>
+<li>
+<p>Key requirements:</p>
+<ul>
+<li>
+<p>Cloud infrastructure: Cloud infrastructure is a specific form of
+information architecture that is used to store data.</p>
+</li>
+<li>
+<p>Data cache: In this, the data can be locally cached.</p>
+</li>
+<li>
+<p>User Accommodation: Scope of accommodating different user
+requirements in cloud app development is available in mobile Cloud
+Computing.</p>
+</li>
+<li>
+<p>Easy Access: It is easily accessed from desktop or mobile devices
+alike.</p>
+</li>
+<li>
+<p>Cloud Apps facilitate to provide access to a whole new range of
+services.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="u2.4.html#mobile-cloud">Refer for Mobile Cloud</a></p>
+</li>
+<li>
+<p><a href="u2.4.html#automatic-cloud-computing">Refer for Automatic Cloud Computing</a></p>
+</li>
+<li>
+<p><a href="u2.4.html#comet-cloud">Refer for Comet Cloud</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Explain the IoT and cloud in automobile.</strong></p>
+<ul>
+<li><a href="u2.4.html#the-iot-and-cloud-in-your-automobile">Refer for IoT and cloud in your automobile</a></li>
+</ul>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="data-science-and-big-data-1"><a class="header" href="#data-science-and-big-data-1">Data Science and Big Data</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="big-data-analytics-life-cycle"><a class="header" href="#big-data-analytics-life-cycle">Big Data Analytics Life Cycle</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="predictive-big-data-analytics-with-python"><a class="header" href="#predictive-big-data-analytics-with-python">Predictive Big Data Analytics with Python</a></h1>
