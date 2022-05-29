@@ -20,10 +20,10 @@ be incomplete._
   - [x] Unit VI **Advanced Techniques in Cloud Computing**
   - [x] Prelim Questions
 - [ ] Data Science and Big Data
-  - [ ] Unit III **Big Data Analytics Life Cycle**
+  - [x] Unit III **Big Data Analytics Life Cycle**
   - [ ] Unit IV **Predictive Big Data Analytics with Python**
-  - [ ] Unit V **Big Data Analytics and Model Evaluation**
-  - [ ] Unit VI **Data Visualization and Hadoop**
+  - [x] Unit V **Big Data Analytics and Model Evaluation**
+  - [x] Unit VI **Data Visualization and Hadoop**
   - [ ] Prelim Questions
 - [ ] Web technologies
   - [ ] Unit III **Java Servlets and XML**
