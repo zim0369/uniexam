@@ -375,6 +375,8 @@
         applications and information, helping you quickly take action on any
         potential security issues.
 
+    *   Secure cloud software requirements:
+
     1.  **Top-of-the-Line Perimeter Firewall:** Most firewalls are very
         simple—they typically inspect a packet’s source and destination and that’s
         all. Some more advanced firewalls feature stable packet inspection, which
