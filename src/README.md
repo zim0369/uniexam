@@ -34,7 +34,9 @@ be incomplete._
 
 ## BTW,
 
-- Tried to add adequate information.
+- Entire theory was based on google searches
+
+- Tried to keep the notes short but failed in some areas.
 
 - Navigating through the notes is pretty easy:
 
@@ -44,8 +46,6 @@ be incomplete._
   - Use the paint brush button to change the theme.
 
   - Search button for fast fuzzy search through the entire book.
-
-- Entire theory was based on google searches
 
 - To read more information about a topic, look for "More Details" whenever
   necessary. They are a link to the topic's resource.

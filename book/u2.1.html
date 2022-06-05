@@ -160,16 +160,6 @@ advantages.</p>
 </ul>
 </li>
 <li>
-<p>Data virtualization is viable for small businesses.</p>
-</li>
-<li>
-<p>While virtualization was first embraced by enterprise operations, it soon
-became clear that the same value proposition held substantial benefits for
-Small to Medium Businesses (SMBs). Cyberattacks and natural disasters can
-hit businesses of all sizes. For SMBs, backing up a virtualized
-infrastructure can be a more viable option to backing up hardware servers.</p>
-</li>
-<li>
 <p>Reasons to adopt virtualization:</p>
 <ol>
 <li>Increased agility for the business</li>
@@ -186,16 +176,19 @@ infrastructure can be a more viable option to backing up hardware servers.</p>
 </ul>
 <h2 id="types-of-virtualization"><a class="header" href="#types-of-virtualization">Types of Virtualization</a></h2>
 <ul>
-<li>The 7 Types of Virtualization
+<li>
+<p>Types of Virtualization</p>
 <ol>
-<li>OS Virtualization—aka Virtual Machines</li>
-<li>Application-Server Virtualization</li>
-<li>Application Virtualization</li>
-<li>Administrative Virtualization</li>
-<li>Network Virtualization</li>
-<li>Hardware Virtualization</li>
-<li>Storage Virtualization</li>
+<li>Application Virtualization.</li>
+<li>Network Virtualization.</li>
+<li>Desktop Virtualization.</li>
+<li>Storage Virtualization.</li>
+<li>Server Virtualization.</li>
+<li>Data virtualization.</li>
 </ol>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/virtualization-cloud-computing-types/">More Details</a></p>
 </li>
 </ul>
 <h2 id="virtualization-architecture--software"><a class="header" href="#virtualization-architecture--software">Virtualization architecture &amp; software</a></h2>
@@ -250,10 +243,21 @@ would be more convenient as compared to installing on real hardware.</li>
 </li>
 </ul>
 <h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
-<!-- TODO: Check if "virtual clustering" resource is correct -->
-<!-- <https://support.huawei.com/enterprise/en/doc/EDOC1100125848/a180e7b5/overview-of-virtual-cluster> -->
 <ul>
-<li><strong>NEEDS REFACTORING</strong></li>
+<li>
+<p>Virtual clusters are built with VMs installed at distributed servers from one or more physical clus-ters. The VMs in a virtual cluster are interconnected logically by a virtual network across several physical networks. Figure 3.18 illustrates the concepts of virtual clusters and physical clusters. Each virtual cluster is formed with physical machines or a VM hosted by multiple physical clusters. The virtual cluster boundaries are shown as distinct boundaries.</p>
+</li>
+<li>
+<p>The provisioning of VMs to a virtual cluster is done dynamically to have the following interest-ing properties:</p>
+<ul>
+<li>The virtual cluster nodes can be either physical or virtual machines. Multiple VMs running with different OSes can be deployed on the same physical node.</li>
+<li>A VM runs with a guest OS, which is often different from the host OS, that manages the resources in the physical machine, where the VM is implemented.</li>
+<li>The purpose of using VMs is to consolidate multiple functionalities on the same server. This will greatly enhance server utilization and application flexibility.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.brainkart.com/article/Virtual-Clusters-and-Resource-Management_11343/">More Details</a></p>
+</li>
 </ul>
 <h2 id="virtual-applications"><a class="header" href="#virtual-applications">Virtual Applications</a></h2>
 <ul>
@@ -373,122 +377,13 @@ providing a pointer to that physical resource when demanded.</p>
 </li>
 <li>
 <p>Types of Virtualization:</p>
+<p><a href="#types-of-virtualization">Refer Types of Virtualization section above</a></p>
 </li>
 </ul>
-<ol>
-<li>
-<p><strong>Hardware Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-directly installed on the hardware system is known as hardware
-virtualization.</p>
-</li>
-<li>
-<p>The main job of hypervisor is to control and monitoring the processor,
-memory and other hardware resources.</p>
-</li>
-<li>
-<p>After virtualization of hardware system we can install different
-operating system on it and run different applications on those OS.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Hardware virtualization is mainly done for the server
-platforms, because controlling virtual machines is much easier than
-controlling a physical server.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Operating System Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-installed on the Host operating system instead of directly on the
-hardware system is known as operating system virtualization.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Operating System Virtualization is mainly used for testing
-the applications on different platforms of OS.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Server Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-directly installed on the Server system is known as server
-virtualization.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Server virtualization is done because a single physical
-server can be divided into multiple servers on the demand basis and for
-balancing the load.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Storage Virtualization:</strong></p>
-<ul>
-<li>
-<p>Storage virtualization is the process of grouping the physical storage
-from multiple network storage devices so that it looks like a single
-storage device.</p>
-</li>
-<li>
-<p>Storage virtualization is also implemented by using software
-applications.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Storage virtualization is mainly done for back-up and
-recovery purposes.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Network virtualization:</strong></p>
-<ul>
-<li>
-<p>Network Virtualization is a process of logically grouping physical
-networks and making them operate as single or multiple independent
-networks called Virtual Networks.</p>
-</li>
-<li>
-<p>Tools for Network Virtualization :</p>
-<ol>
-<li><strong>Physical switch OS:</strong> It is where the OS must have the
-functionality of network virtualization.</li>
-<li><strong>Hypervisor:</strong> It is which uses third-party software or built-in
-networking and the functionalities of network virtualization.</li>
-</ol>
-</li>
-<li>
-<p>Advantages of Network Virtualization :</p>
-<ol>
-<li>Improves manageability</li>
-<li>Improves utilization</li>
-<li>Enhances performance</li>
-<li>Enhances security</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<!-- * Types of storage virtualization: -->
-<!--     1. Hardware Assisted Virtualization -->
-<!--     1. Kernel Level Virtualization -->
-<!--     1. Hypervisor Virtualization -->
-<!--     1. Para-Virtualization -->
-<!--     1. Full Virtualization -->
 <h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
-<!-- TODO: Refactoring virtualization in grid -->
 <ul>
 <li>
-<p>Operating System virtualizations are just a use of software which allows the
-hardware of a system to run multiple operating systems concurrently. This
-further provides the benefit to run multiple applications requiring a
-different operating system on a single computer.</p>
+<p>Whereas a grid has many systems in a network and hence multiple people can have ownership. Virtualization helps in providing cloud better security. Grid computing is more economical. It splits the work and distributes it over the network on computers increasing the efficiency as well.</p>
 </li>
 <li>
 <p>Virtualization allows addressing multiple problems in Grid systems, such as
@@ -497,6 +392,9 @@ stacks, and enhanced features in resource management such as more general
 check pointing or migration models. Adopting virtualization in smart ways
 gets us closer to real Grid computing with more ﬂexibility in the type of
 applications and the resources to use.</p>
+</li>
+<li>
+<p>Grid computing enables the virtualization of distributed computing resources suchas processing, network bandwidth,and storage capacity to create a single system image, granting users and applications seamless access to vast IT capabilities.</p>
 </li>
 </ul>
 <h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
@@ -521,12 +419,14 @@ required by other cloud providers are maintained by the third party people,
 and the cloud providers has to pay the money on monthly or annual basis.</p>
 </li>
 <li>
-<p>Types of Virtualization in Cloud Computing</p>
+<p>Types of Virtualization in Cloud Computing:</p>
 <ol>
-<li>Operating System Virtualization</li>
-<li>Hardware Virtualization</li>
-<li>Server Virtualization</li>
+<li>Application Virtualization</li>
+<li>Network Virtualization</li>
+<li>Desktop Virtualization</li>
 <li>Storage Virtualization</li>
+<li>Server Virtualization</li>
+<li>Data virtualization</li>
 </ol>
 </li>
 </ul>

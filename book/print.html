@@ -205,7 +205,10 @@ Prelim Questions</li>
 <h2 id="btw"><a class="header" href="#btw">BTW,</a></h2>
 <ul>
 <li>
-<p>Tried to add adequate information.</p>
+<p>Entire theory was based on google searches</p>
+</li>
+<li>
+<p>Tried to keep the notes short but failed in some areas.</p>
 </li>
 <li>
 <p>Navigating through the notes is pretty easy:</p>
@@ -221,9 +224,6 @@ corner.</p>
 <p>Search button for fast fuzzy search through the entire book.</p>
 </li>
 </ul>
-</li>
-<li>
-<p>Entire theory was based on google searches</p>
 </li>
 <li>
 <p>To read more information about a topic, look for &quot;More Details&quot; whenever
@@ -568,16 +568,6 @@ advantages.</p>
 </ul>
 </li>
 <li>
-<p>Data virtualization is viable for small businesses.</p>
-</li>
-<li>
-<p>While virtualization was first embraced by enterprise operations, it soon
-became clear that the same value proposition held substantial benefits for
-Small to Medium Businesses (SMBs). Cyberattacks and natural disasters can
-hit businesses of all sizes. For SMBs, backing up a virtualized
-infrastructure can be a more viable option to backing up hardware servers.</p>
-</li>
-<li>
 <p>Reasons to adopt virtualization:</p>
 <ol>
 <li>Increased agility for the business</li>
@@ -594,16 +584,19 @@ infrastructure can be a more viable option to backing up hardware servers.</p>
 </ul>
 <h2 id="types-of-virtualization"><a class="header" href="#types-of-virtualization">Types of Virtualization</a></h2>
 <ul>
-<li>The 7 Types of Virtualization
+<li>
+<p>Types of Virtualization</p>
 <ol>
-<li>OS Virtualization—aka Virtual Machines</li>
-<li>Application-Server Virtualization</li>
-<li>Application Virtualization</li>
-<li>Administrative Virtualization</li>
-<li>Network Virtualization</li>
-<li>Hardware Virtualization</li>
-<li>Storage Virtualization</li>
+<li>Application Virtualization.</li>
+<li>Network Virtualization.</li>
+<li>Desktop Virtualization.</li>
+<li>Storage Virtualization.</li>
+<li>Server Virtualization.</li>
+<li>Data virtualization.</li>
 </ol>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/virtualization-cloud-computing-types/">More Details</a></p>
 </li>
 </ul>
 <h2 id="virtualization-architecture--software"><a class="header" href="#virtualization-architecture--software">Virtualization architecture &amp; software</a></h2>
@@ -658,10 +651,21 @@ would be more convenient as compared to installing on real hardware.</li>
 </li>
 </ul>
 <h2 id="virtual-clustering"><a class="header" href="#virtual-clustering">Virtual Clustering</a></h2>
-<!-- TODO: Check if "virtual clustering" resource is correct -->
-<!-- <https://support.huawei.com/enterprise/en/doc/EDOC1100125848/a180e7b5/overview-of-virtual-cluster> -->
 <ul>
-<li><strong>NEEDS REFACTORING</strong></li>
+<li>
+<p>Virtual clusters are built with VMs installed at distributed servers from one or more physical clus-ters. The VMs in a virtual cluster are interconnected logically by a virtual network across several physical networks. Figure 3.18 illustrates the concepts of virtual clusters and physical clusters. Each virtual cluster is formed with physical machines or a VM hosted by multiple physical clusters. The virtual cluster boundaries are shown as distinct boundaries.</p>
+</li>
+<li>
+<p>The provisioning of VMs to a virtual cluster is done dynamically to have the following interest-ing properties:</p>
+<ul>
+<li>The virtual cluster nodes can be either physical or virtual machines. Multiple VMs running with different OSes can be deployed on the same physical node.</li>
+<li>A VM runs with a guest OS, which is often different from the host OS, that manages the resources in the physical machine, where the VM is implemented.</li>
+<li>The purpose of using VMs is to consolidate multiple functionalities on the same server. This will greatly enhance server utilization and application flexibility.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.brainkart.com/article/Virtual-Clusters-and-Resource-Management_11343/">More Details</a></p>
+</li>
 </ul>
 <h2 id="virtual-applications"><a class="header" href="#virtual-applications">Virtual Applications</a></h2>
 <ul>
@@ -781,122 +785,13 @@ providing a pointer to that physical resource when demanded.</p>
 </li>
 <li>
 <p>Types of Virtualization:</p>
+<p><a href="u2.1.html#types-of-virtualization">Refer Types of Virtualization section above</a></p>
 </li>
 </ul>
-<ol>
-<li>
-<p><strong>Hardware Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-directly installed on the hardware system is known as hardware
-virtualization.</p>
-</li>
-<li>
-<p>The main job of hypervisor is to control and monitoring the processor,
-memory and other hardware resources.</p>
-</li>
-<li>
-<p>After virtualization of hardware system we can install different
-operating system on it and run different applications on those OS.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Hardware virtualization is mainly done for the server
-platforms, because controlling virtual machines is much easier than
-controlling a physical server.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Operating System Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-installed on the Host operating system instead of directly on the
-hardware system is known as operating system virtualization.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Operating System Virtualization is mainly used for testing
-the applications on different platforms of OS.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Server Virtualization:</strong></p>
-<ul>
-<li>
-<p>When the virtual machine software or virtual machine manager (VMM) is
-directly installed on the Server system is known as server
-virtualization.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Server virtualization is done because a single physical
-server can be divided into multiple servers on the demand basis and for
-balancing the load.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Storage Virtualization:</strong></p>
-<ul>
-<li>
-<p>Storage virtualization is the process of grouping the physical storage
-from multiple network storage devices so that it looks like a single
-storage device.</p>
-</li>
-<li>
-<p>Storage virtualization is also implemented by using software
-applications.</p>
-</li>
-<li>
-<p><strong>Usage:</strong> Storage virtualization is mainly done for back-up and
-recovery purposes.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Network virtualization:</strong></p>
-<ul>
-<li>
-<p>Network Virtualization is a process of logically grouping physical
-networks and making them operate as single or multiple independent
-networks called Virtual Networks.</p>
-</li>
-<li>
-<p>Tools for Network Virtualization :</p>
-<ol>
-<li><strong>Physical switch OS:</strong> It is where the OS must have the
-functionality of network virtualization.</li>
-<li><strong>Hypervisor:</strong> It is which uses third-party software or built-in
-networking and the functionalities of network virtualization.</li>
-</ol>
-</li>
-<li>
-<p>Advantages of Network Virtualization :</p>
-<ol>
-<li>Improves manageability</li>
-<li>Improves utilization</li>
-<li>Enhances performance</li>
-<li>Enhances security</li>
-</ol>
-</li>
-</ul>
-</li>
-</ol>
-<!-- * Types of storage virtualization: -->
-<!--     1. Hardware Assisted Virtualization -->
-<!--     1. Kernel Level Virtualization -->
-<!--     1. Hypervisor Virtualization -->
-<!--     1. Para-Virtualization -->
-<!--     1. Full Virtualization -->
 <h3 id="virtualization-in-grid"><a class="header" href="#virtualization-in-grid">Virtualization in Grid</a></h3>
-<!-- TODO: Refactoring virtualization in grid -->
 <ul>
 <li>
-<p>Operating System virtualizations are just a use of software which allows the
-hardware of a system to run multiple operating systems concurrently. This
-further provides the benefit to run multiple applications requiring a
-different operating system on a single computer.</p>
+<p>Whereas a grid has many systems in a network and hence multiple people can have ownership. Virtualization helps in providing cloud better security. Grid computing is more economical. It splits the work and distributes it over the network on computers increasing the efficiency as well.</p>
 </li>
 <li>
 <p>Virtualization allows addressing multiple problems in Grid systems, such as
@@ -905,6 +800,9 @@ stacks, and enhanced features in resource management such as more general
 check pointing or migration models. Adopting virtualization in smart ways
 gets us closer to real Grid computing with more ﬂexibility in the type of
 applications and the resources to use.</p>
+</li>
+<li>
+<p>Grid computing enables the virtualization of distributed computing resources suchas processing, network bandwidth,and storage capacity to create a single system image, granting users and applications seamless access to vast IT capabilities.</p>
 </li>
 </ul>
 <h3 id="virtualization-in-cloud"><a class="header" href="#virtualization-in-cloud">Virtualization in Cloud</a></h3>
@@ -929,12 +827,14 @@ required by other cloud providers are maintained by the third party people,
 and the cloud providers has to pay the money on monthly or annual basis.</p>
 </li>
 <li>
-<p>Types of Virtualization in Cloud Computing</p>
+<p>Types of Virtualization in Cloud Computing:</p>
 <ol>
-<li>Operating System Virtualization</li>
-<li>Hardware Virtualization</li>
-<li>Server Virtualization</li>
+<li>Application Virtualization</li>
+<li>Network Virtualization</li>
+<li>Desktop Virtualization</li>
 <li>Storage Virtualization</li>
+<li>Server Virtualization</li>
+<li>Data virtualization</li>
 </ol>
 </li>
 </ul>
@@ -2014,7 +1914,17 @@ server quality.</p>
 </li>
 </ol>
 <h3 id="cloud-digital-persona-and-data-security"><a class="header" href="#cloud-digital-persona-and-data-security">Cloud Digital persona and Data security</a></h3>
-<!-- TODO: Do I need to add RMF(risk management framework)? -->
+<ul>
+<li>
+<p><strong>Digital Persona</strong>: The digital representation of someone's personal information that is purposely created by the user or collected without the user's knowledge. For security purposes, people might create a digital persona with a Google Voice phone number that forwards to their private number. However, almost everyone who uses the Internet has a digital persona that is created by third parties and derived from their Web surfing history and social media posts.</p>
+</li>
+<li>
+<p><a href="https://dokumen.pub/cloud-computing-a-practical-approach-for-learning-and-implementation-1e-9788131776513-9789332537255-8131776514.html">For more details find digital persona section on this web page</a></p>
+</li>
+<li>
+<p><strong>Data Security</strong>: <a href="u2.3.html#data-security-in-cloud">Refer Data Security section above</a></p>
+</li>
+</ul>
 <h3 id="content-level-security"><a class="header" href="#content-level-security">Content Level Security</a></h3>
 <ul>
 <li>Content Level Security (CLS) is a feature that controls who has access to
@@ -4596,7 +4506,156 @@ EJB.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="server-side-scripting-languages"><a class="header" href="#server-side-scripting-languages">Server Side Scripting Languages</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ruby-and-rails"><a class="header" href="#ruby-and-rails">Ruby and Rails</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="questions-3"><a class="header" href="#questions-3">Questions</a></h1>
-<p><strong>These questions are the questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<p><strong>Questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<p><strong>1. Write benefits of using PHP and mysql. Explain PHP module to insert a
+record in MySQL database.</strong></p>
+<ul>
+<li>
+<p>Major Advantages of PHP and MySQL Development:</p>
+<ul>
+<li>
+<p>Cost-effective personalized PHP applications solutions;</p>
+</li>
+<li>
+<p>A complete open-source platform;</p>
+</li>
+<li>
+<p>Frequently updated (these updates are also available for free);</p>
+</li>
+<li>
+<p>Availability of various add-ons and plugins;</p>
+</li>
+<li>
+<p>Superior website performance;</p>
+</li>
+<li>
+<p>Vast amount of database interfaces;</p>
+</li>
+<li>
+<p>PHP checks various levels of security;</p>
+</li>
+<li>
+<p>Integration facility with various other open-source platforms;</p>
+</li>
+<li>
+<p>Integrates other software languages such as C, C++, JAVA/AJAX, etc;</p>
+</li>
+<li>
+<p>Supports Joomla, Drupal and WordPress CMS, and osCommerce and Zen Cart
+shopping carts;</p>
+</li>
+<li>
+<p>HTML Code can be embedded within PHP Code;</p>
+</li>
+<li>
+<p>Cross-platform ability;</p>
+</li>
+<li>
+<p>Server-side web programming language;</p>
+</li>
+<li>
+<p>Large user community.</p>
+</li>
+<li>
+<p>PHP uses <strong>mysqli_query</strong> function to insert records in table. This
+function takes three parameters and returns TRUE on success or FALSE on
+failure.</p>
+</li>
+<li>
+<p>The mysqli_query() function accepts a string value representing a query
+as one of the parameters and, executes/performs the given query on the
+database.</p>
+</li>
+<li>
+<p>Syntax:</p>
+</li>
+</ul>
+<!---->
+<pre><code>mysqli_query($con, query)
+</code></pre>
+</li>
+</ul>
+<p><strong>2. What is the use of the XmlHttpRequest object? Explain its use with the help
+of simple javascript code.</strong></p>
+<ul>
+<li>
+<p>XMLHttpRequest (XHR) objects are used to interact with servers. You can
+retrieve data from a URL without having to do a full page refresh. This
+enables a Web page to update just part of a page without disrupting what the
+user is doing. XMLHttpRequest is used heavily in AJAX programming.</p>
+</li>
+<li>
+<p>XMLHttpRequest Example: When you type a character in the input field below,
+an XMLHttpRequest is sent to the server, and some name suggestions are
+returned (from the server):</p>
+<p><img src="pictures/xhr_example.png" alt="xhr example" /></p>
+</li>
+<li>
+<p>Code:</p>
+<pre><code class="language-js">    // Create an xhr object
+  var xhttp = new XMLHttpRequest();
+    // specify the function to execute when xhr object's status changes
+  xhttp.onreadystatechange = function() {
+    // When readyState is 4 and status is 200 then response is ready
+      if (this.readyState == 4 &amp;&amp; this.status == 200) {
+    // The responseText property returns the server response as a text string
+         document.getElementById(&quot;demo&quot;).innerHTML = xhttp.responseText;
+      }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;filename&quot;, true);
+  xhttp.send();
+</code></pre>
+</li>
+</ul>
+<!-- CODE -->
+<p><strong>3. Draw and explain how AJAX works with the help of suitable examples.</strong></p>
+<ul>
+<li>
+<p>AJAX = Asynchronous JavaScript and XML.</p>
+</li>
+<li>
+<p>AJAX is a technique for creating fast and dynamic web pages.</p>
+</li>
+<li>
+<p>AJAX allows web pages to be updated asynchronously by exchanging small
+amounts of data with the server behind the scenes. This means that it is
+possible to update parts of a web page, without reloading the whole page.</p>
+</li>
+<li>
+<p>How AJAX works:</p>
+<p><img src="pictures/ajax_working.gif" alt="ajax working" /></p>
+</li>
+<li>
+<p>Example:</p>
+<ul>
+<li>AJAX was made popular in 2005 by Google, with Google Suggest.</li>
+<li>Google Suggest is using AJAX to create a very dynamic web interface: When you start typing in Google's search box, a JavaScript sends the letters off to a server and the server returns a list of suggestions.</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Write a program of your choice that demonstrates use of properties of DOM.
+Also list the limitations of using XML.</strong></p>
+<p><strong>5. How to use interceptors in strut 2? List and describe important
+interceptors provided by strut 2 framework.</strong></p>
+<p><strong>6. What are the web services? List and explain types and components of web
+services.</strong></p>
+<p><strong>7. What different configuration files are required to develop any struts
+application?</strong></p>
+<p><strong>8. What are enterprise java beans? Draw and explain main components of EJB
+architecture.</strong></p>
+<p><strong>9. Explain what is Angular Expression? Explain what is the key difference
+between angular expressions and JavaScript expressions?</strong></p>
+<p><strong>10. Write a PHP script to display the squares and Cubes of 1 to 10 numbers.</strong></p>
+<p><strong>11. What is an association array in PHP? Explain it with the help of simple
+PHP code.</strong></p>
+<p><strong>12. Explain various directives in AngularJS &amp; Create simple angular JS
+application to display, &quot;Hello, Input Name&quot; using proper directive.</strong></p>
+<p><strong>13. What is EJB? Explain types of EJB? Also explain uses of Ruby.</strong></p>
+<p><strong>14. Draw and explain the role of EJB container in enterprise application.</strong></p>
+<p><strong>15. Explain how Rails implements AJAX? Mention what are the positive aspects
+of Rails.</strong></p>
+<p><strong>16. Explain how you define instance variable, global variable and class
+variable in Ruby? Explain what is rake in Rails.</strong></p>
 
                     </main>
 
