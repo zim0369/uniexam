@@ -134,7 +134,138 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="adversarial-search-and-games"><a class="header" href="#adversarial-search-and-games">Adversarial Search and Games</a></h1>
+                        <h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: <strong>Reasoning</strong></a></h1>
+<!-- Inference in First-Order Logic, Propositional vs. First-Order Inference, -->
+<!-- Knowledge Representation, Ontological Engineering, Categories and Objects, -->
+<!-- Events, Mental Objects, and Modal Logic, Reasoning Systems for Categories, -->
+<!-- Reasoning with Default Information -->
+<h2 id="unification-and-first-order-inference"><a class="header" href="#unification-and-first-order-inference">Unification and first order inference</a></h2>
+<ul>
+<li>
+<p>It is the key component of First-order inference algorithms. Unification is
+the process used by the lifted inference rules to find substituents that
+could give identical but different logical expressions. It means the meaning
+of the sentence should not be changed, but it should be expressed in
+multiple ways. The <strong>UNIFY</strong> algorithm in unification takes two sentences as
+input and</p>
+<p>then returns a unifier if one exists:</p>
+</li>
+</ul>
+<!-- CODE -->
+<pre><code>UNIFY(p,q)= ? where SUBST( ? , p) = SUBST( ?, ).
+</code></pre>
+<p>Let see how UNIFY works with the help of the below example:</p>
+<p><strong>Given:</strong></p>
+<pre><code>Knows(Ram,x). The question is- Whom does Ram knows?
+</code></pre>
+<p>The UNIFY algorithm will search all the related sentences in the knowledge base,
+which could unify with Knows(Ram,x).</p>
+<pre><code>UNIFY (Knows(Ram, x), Knows(Ram, Shyam))?{x/Shyam}
+
+UNIFY (Knows{Ram,x}, Knows{y, Aakash})?{x/Aakash, y/Ram}
+
+UNIFY (Knows{Ram,x}, Knows{x, Raman})?fails.
+</code></pre>
+<p>The last one failed because we have used the same variable for two persons at
+the same time.</p>
+<p><strong>Unification Algorithm</strong></p>
+<p>Earlier, we have studied <strong>TELL</strong> and <strong>ASK</strong> functions which are used to inform
+and interrogate a knowledge base. These are the primitive functions</p>
+<p>of <strong>STORE</strong> and <strong>FETCH</strong> functions**. STORE** function is used to store a</p>
+<p>sentence <strong>s</strong> into the knowledge base and <strong>FETCH</strong> function is used to return
+all the unifiers with some sentences.</p>
+<p>A simple scheme called predicate indexing puts all the</p>
+<p>facts in one bucket and all the brother facts in another. The buckets can be
+stored in a hash table for efficient access.</p>
+<p>Predicate indexing is useful when there are many predicate symbols but only a
+few clauses for each symbol</p>
+<h2 id="forward-chaining"><a class="header" href="#forward-chaining">Forward Chaining</a></h2>
+<p>First-order definite clauses are disjunctions of literals of which exactly one
+is positive. definite clause is either atomic, or is an implication whose
+antecedent is a</p>
+<p>conjunction of positive literals and whose consequent is a single positive
+literal.</p>
+<p>A typical first-order definite</p>
+<p>clause looks like this:</p>
+<p>King(x) ^ Greedy(x)  =&gt; Evil(x) ,</p>
+<p>but the literals king(john) and greedy (john) also count as definite clauses.
+First-order literals can include variables, so Greedy(y) is interpreted as
+“everyone is greedy” (the universal quantifier is implicit).</p>
+<p>In forward chaining, we start with the atomic sentences in the knowledge base
+and apply Modus Ponen in forward direction. Also adding new sentences until any
+inference is not made.</p>
+<p>Starting from the known</p>
+<p>facts, it triggers all the rules whose premises are satisfied, adding their
+conclusions to the</p>
+<p>known facts. The process repeats until the query is answered (assuming that just
+one</p>
+<p>answer is required) or no new facts are added.</p>
+<p><strong>Consider the below axioms:</strong></p>
+<ol>
+<li>Gita loves all types of clothes.</li>
+<li>Suits are clothes.</li>
+<li>Jackets are clothes.</li>
+<li>Anything any wear and isn’t bad is clothes.</li>
+<li>Sita wears skirt and is good.</li>
+<li>Renu wears anything Sita wears.</li>
+</ol>
+<p><strong>Apply forward chaining and prove that Gita loves Kurtis.</strong></p>
+<p><img src="pics/018.png" alt="" /></p>
+<h2 id="backward-chaining"><a class="header" href="#backward-chaining">Backward Chaining</a></h2>
+<p>These algorithms work backward from the goal, chaining through rules to</p>
+<p>find known facts that support the proof. Backward chaining, is clearly a
+depth-first search algorithm. is clearly a depth- first search algorithm suffers
+from problems with repeated states and incompleteness.</p>
+<p>Example:</p>
+<p><strong>Consider the below axioms:</strong></p>
+<ol>
+<li>
+<p>Gita loves all types of clothes.</p>
+</li>
+<li>
+<p>Suits are clothes.</p>
+</li>
+<li>
+<p>Jackets are clothes.</p>
+</li>
+<li>
+<p>Anything any wear and isn’t bad is clothes.</p>
+</li>
+<li>
+<p>Sita wears skirt and is good.</p>
+</li>
+<li>
+<p>Renu wears anything Sita wears.</p>
+</li>
+</ol>
+<p><strong>Apply backward chaining and prove that Gita loves Kurtis.</strong></p>
+<p><img src="pics/019.png" alt="" /></p>
+<p>NOTE:</p>
+<p>the graph of forward and backward chaining is same. It means that forward
+chaining follows the<strong>bottom-up approach</strong> and backward chaining follows
+the<strong>top-down approach.</strong></p>
+<h2 id="resolution"><a class="header" href="#resolution">Resolution</a></h2>
+<p>Resolution works for any knowledge base.</p>
+<p>This method is basically used for proving the satisfiability of a sentence. In
+resolution method, we use <strong>Proof by Refutation</strong> technique to prove the given
+statement.</p>
+<p>The key idea for the resolution method is to use the knowledge base and negated
+goal to obtain null clause (which indicates contradiction). Resolution method is
+also called <strong>Proof by Refutation</strong>. Since the knowledge base itself is
+consistent, the contradiction must be introduced by a negated goal. As a result,
+we have to conclude that the original goal is true.</p>
+<p><strong>In FOPL, the process to apply the resolution method is as follows:</strong></p>
+<ul>
+<li>Convert the given axiom into CNF, i.e., a conjunction of clauses. Each
+clause should be dis-junction of literals.</li>
+<li>Apply negation on the goal given.</li>
+<li>Use literals which are required and prove it.</li>
+<li>Unlike propositional logic, FOPL literals are complementary if one unifies
+with the negation of other literal.</li>
+</ul>
+<p>Note:</p>
+<p>Skolemization is the process of removing existential quantifiers by elimination.</p>
+<h2 id="ontological-engineering"><a class="header" href="#ontological-engineering">Ontological Engineering</a></h2>
 
                     </main>
 
@@ -162,22 +293,6 @@
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

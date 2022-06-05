@@ -144,11 +144,11 @@ be incomplete.</em></p>
 <li><input disabled="" type="checkbox"/>
 Artificial Intelligence
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit III <strong>Adversarial Search and Games</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit IV <strong>Knowledge</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit V <strong>Reasoning</strong></li>
 <li><input disabled="" type="checkbox" checked=""/>
 Unit VI <strong>Planning</strong></li>
@@ -415,126 +415,836 @@ AI, AI Components, AI Architectures.</p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-adversarial-search-and-games"><a class="header" href="#unit-iii-adversarial-search-and-games">Unit III: <strong>Adversarial Search and Games</strong></a></h1>
-<h2 id="adversarial-search"><a class="header" href="#adversarial-search">Adversarial Search</a></h2>
-<p>Adversarial search is a search, where we examine the problem which arises when
-we try to plan ahead of the world and other agents are planning against us.**
-The environment with more than one agent is termed as multi-agent environment,
-in which each agent is an opponent of other agent and playing against each
-other. Each agent needs to consider the action of other agent and effect of that
-action on their performance.
-Searches in which two or more players with conflicting goals are trying to
-explore the same search space for the solution, are called adversarial searches,
-often known as Games.
-Games are modeled as a Search problem and heuristic evaluation function, and
-these are the two main factors which help to model and solve games in AI.</p>
+<!-- Stochastic Games -->
 <h2 id="game-theory"><a class="header" href="#game-theory">Game Theory</a></h2>
-<p>Game theory is the study of mathematical models of strategic interactions
-among rational agents. It has applications in all fields of social science, as
-well as in logic, systems science and computer science.**</p>
-<ul>
-<li>Types of Games:
-<ol>
-<li>Zero-Sum and Non-Zero Sum Games</li>
-<li>Simultaneous and Sequential Games</li>
-<li>Imperfect Information and Perfect Information Games</li>
-<li>Asymmetric and Symmetric Games</li>
-<li>Co-operative and Non-Co-operative Games</li>
-</ol>
-</li>
-</ul>
+<p>For MCQs:</p>
+<p>States where the game has ended are called <strong>terminal states.</strong></p>
+<p>&quot;zero-sum” means that what is good for one player is just as bad for the other:
+there is <strong>no “win-win”</strong> outcome. A <strong>utility function</strong> is also called an
+<strong>objective function or payoff function.</strong></p>
+<p>Chess is considered a “zero-sum” game,</p>
+<p>Game tree is also known as Search tree or space graph</p>
+<p>Notes:</p>
+<p>Definition</p>
+<p>Game Theory tries to understand the strategic moves of the players and deicide
+the optimal move from the set of all possible moves. To achieve this it makes
+use of game tree. A game tree is a recursive search function that examines all
+possible moves and their results and then decide the optimal move.</p>
+<p>Working:</p>
+<p>Start at the current board position,</p>
+<p>Check all the possible moves the player can make</p>
+<p>From each possible move predict which move the opponent will play</p>
+<p>Decide the optimal move based on opponents move and results.</p>
+<p>The two players and usually named as MAX and MIN.</p>
+<p>MAX moves first, and then the players take turns moving until the game is over</p>
+<p>At the end of the game, points are awarded to the winning player and penalties
+are given to the loser</p>
+<p>A game can be formally defined with the following elements:</p>
+<p><strong>Initial state</strong>, which specifies how the game is set up at the start.</p>
+<p><strong>TO-MOVE</strong> : The player whose turn it is to move in state</p>
+<p><strong>ACTIONS</strong> : The set of legal moves in state</p>
+<p><strong>RESULT</strong> : The transition model, which defines the state resulting from taking
+action</p>
+<p>in state .</p>
+<p><strong>TERMINAL</strong> : States where the game has ended are called terminal states.</p>
+<p><strong>UTILITY FUNCTION</strong> : A utility function defines the final numeric value to
+player when the game ends in terminal state</p>
+<p>MCQs to solve:</p>
+<p><a href="https://engineeringinterviewquestions.com/mcqs-on-game-theory-and-answers/">https://engineeringinterviewquestions.com/mcqs-on-game-theory-and-answers/
+</a><a href="https://www.sanfoundry.com/artificial-intelligence-mcqs-game-theory-1/">https://www.sanfoundry.com/artificial-intelligence-mcqs-game-theory-1/</a></p>
+<p>Videos to watch :</p>
+<p><a href="https://www.youtube.com/watch?v=FFzdXJ49KAI">Introduction to Game Playing in Artificial Intelligence | Learn Game Playing
+Algorithms with Example</a></p>
 <h2 id="optimal-decisions-in-games"><a class="header" href="#optimal-decisions-in-games">Optimal Decisions in Games</a></h2>
-<p>Games are usually intriguing because they are difficult to solve. Chess, for
-example, has an average branching factor of around 35, and games frequently
-stretch to 50 moves per player, therefore the search tree has roughly 35100 or
-10154 nodes (despite the search graph having “only” about 1040 unique nodes). As
-a result, games, like the real world, necessitate the ability to make some sort
-of decision even when calculating the best option is impossible.**</p>
+<p>MIN MAX ALGO</p>
+<p>In artificial intelligence, minimax is a<strong>decision-making</strong> strategy under<strong>game
+theory,</strong> which is used to minimize the losing chances in a game and to maximize
+the winning chances. This strategy is also known as ‘<strong>Minmax,’ ’MM,’ or ‘Saddle
+point.’</strong></p>
+<p>We can easily understand this strategy via <strong>game tree</strong>- where the <em>nodes
+represent the states of the game and edges represent the moves made by the
+players in the game</em>. Players will be two namely:</p>
 <ul>
-<li>The optimal strategy can be found from the minimax value of each node, which
-we express as MINIMAX, given a game tree (n). Assuming that both players
-play optimally from there through the finish of the game, the utility (for
-MAX) of being in the corresponding state is the node's minimax value.</li>
-<li><a href="https://www.geeksforgeeks.org/optimal-decision-making-in-games/">Optimal Decision in Gaming
-example</a></li>
+<li><strong>MIN:</strong> Decrease the chances of <strong>MAX</strong> to win the game.</li>
+<li><strong>MAX:</strong> Increases his chances of winning the game.</li>
 </ul>
-<h2 id="heuristic-alphabeta-tree-search"><a class="header" href="#heuristic-alphabeta-tree-search">Heuristic Alpha–Beta Tree Search</a></h2>
-<p>Alpha-beta pruning is a modified version of the minimax algorithm. It is an
-optimization technique for the minimax algorithm.**</p>
+<p>They both play the game alternatively, i.e., turn by turn and following the
+above strategy, i.e., if one wins, the other will definitely lose it.</p>
+<p>In minimax strategy, the result of the game or the utility value is generated by
+a<strong>heuristic function</strong> by propagating from the initial node to the root node.
+It follows the<strong>backtracking technique</strong> and backtracks to find the best choice.
+MAX will choose that path which will increase its utility value and MIN will
+choose the opposite path which could help it to minimize MAX’s utility value.</p>
+<p>MINIMAX algorithm is a backtracking algorithm where it backtracks to pick the
+best move out of several choices. MINIMAX strategy follows the <strong>DFS (Depth-
+first search)</strong> concept. Here, we have two players <strong>MIN and MAX,</strong> and the game
+is played alternatively between them, i.e., when <strong>MAX</strong> made a move, then the
+next turn is of <strong>MIN.</strong> It means the move made by MAX is fixed and, he cannot
+change it. The same concept is followed in DFS strategy, i.e., we follow the
+same path and cannot change in the middle. That’s why in MINIMAX algorithm,
+instead of BFS, we follow DFS.</p>
 <ul>
-<li>The two-parameter can be defined as:
+<li>Keep on generating the game tree/ search tree till a limit <strong>d.</strong></li>
+<li>Compute the move using a heuristic function.</li>
+<li>Propagate the values from the leaf node till the current position following
+the minimax strategy.</li>
+<li>Make the best move from the choices.</li>
+</ul>
+<p>For example, in the above figure, the two players <strong>MAX</strong> and <strong>MIN</strong> are</p>
+<p>there. <strong>MAX</strong> starts the game by choosing one path and propagating all the
+nodes of that path. Now, <strong>MAX</strong> will backtrack to the initial node and choose
+the best path where his utility value will be the maximum. After this,</p>
+<p>its <strong>MIN</strong> chance. <strong>MIN</strong> will also propagate through a path and again will
+backtrack, but <strong>MIN</strong> will choose the path which could minimize <strong>MAX</strong> winning
+chances or the utility value.</p>
+<p><em><strong>So, if the level is minimizing, the node will accept the minimum value from
+the successor nodes. If the level is maximizing, the node will accept the
+maximum value from the successor.</strong></em></p>
+<p><strong>Note</strong>: The time complexity of MINIMAX algorithm is <strong>O(bd)</strong> where b is the
+branching factor and d is the depth of the search tree.</p>
+<p><img src="pics/004.png" alt="" /></p>
+<p>For example, in the above figure, the two players <strong>MAX</strong> and <strong>MIN</strong> are</p>
+<p>there. <strong>MAX</strong> starts the game by choosing one path and propagating all the
+nodes of that path. Now, <strong>MAX</strong> will backtrack to the initial node and choose
+the best path where his utility value will be the maximum. After this,</p>
+<p>its <strong>MIN</strong> chance. <strong>MIN</strong> will also propagate through a path and again will
+backtrack, but <strong>MIN</strong> will choose the path which could minimize <strong>MAX</strong> winning
+chances or the utility value.</p>
+<p><em><strong>So, if the level is minimizing, the node will accept the minimum value from
+the successor nodes. If the level is maximizing, the node will accept the
+maximum value from the successor.</strong></em></p>
+<p><strong>Note</strong>: The time complexity of MINIMAX algorithm is <strong>O(bd)</strong> where b is the
+branching factor and d is the depth of the search tree.</p>
+<p><img src="pics/005.jpeg" alt="" /></p>
+<h2 id="heuristic-alpha-beta-tree-search"><a class="header" href="#heuristic-alpha-beta-tree-search">Heuristic Alpha Beta Tree Search</a></h2>
+<p>Alpha-beta pruning is an advance version of MINIMAX algorithm. The drawback of
+minimax strategy is that it explores each node in the tree deeply to provide the
+best path among all the paths. This increases its time complexity. But as we
+know, the performance measure is the first consideration for any optimal
+algorithm. Therefore, alpha-beta pruning reduces this drawback of minimax
+strategy by less exploring the nodes of the search tree.</p>
+<p>The method used in alpha-beta pruning is that it <strong>cutoff the search</strong> by
+exploring less number of nodes. It makes the same moves as a minimax algorithm
+does, but it prunes the unwanted branches using the pruning technique</p>
+<p><strong>Working of Alpha-beta Pruning</strong></p>
+<p>Consider the below example of a game tree where <strong>P</strong> and <strong>Q</strong> are two players.
+The game will be played alternatively, i.e., chance by chance. Let, <strong>P</strong> be the
+player who will try to win the game by maximizing its winning chances.  <strong>Q</strong> is
+the player who will try to minimize **P’**s winning chances. Here, <strong>?</strong>
+will represent the maximum value of the nodes, which will be the value for <strong>P</strong>
+as well. <strong>?</strong> will represent the minimum value of the nodes, which will be the
+value of <strong>Q</strong>.</p>
+<p><img src="pics/006.jpeg" alt="" /></p>
 <ul>
-<li><strong>Alpha</strong>: The best (highest-value) choice we have found so far at any
-point along the path of Maximizer. The initial value of alpha is <strong>-∞</strong>.</li>
-<li><strong>Beta</strong>: The best (lowest-value) choice we have found so far at any
-point along the path of Minimizer. The initial value of beta is <strong>+∞</strong>.</li>
+<li>Any one player will start the game. Following the DFS order, the player will
+choose one path and will reach to its depth, i.e., where he will find</li>
 </ul>
-</li>
-<li>The Alpha-beta pruning to a standard minimax algorithm returns the same move
-as the standard algorithm does, but it removes all the nodes which are not
-really affecting the final decision but making algorithm slow. Hence by
-pruning these nodes, it makes the algorithm fas</li>
-<li>The main condition which required for alpha-beta pruning is: <strong>α&gt;=β</strong></li>
-<li><a href="https://www.javatpoint.com/ai-alpha-beta-pruning">Pseudo-code &amp; Working</a></li>
+<p>the <strong>TERMINAL</strong> value.</p>
+<ul>
+<li>If the game is started by player P, he will choose the maximum value in
+order to increase its winning chances with maximum utility value.</li>
+<li>If the game is started by player Q, he will choose the minimum value in
+order to decrease the winning chances of A with the best possible minimum
+utility value.</li>
+<li>Both will play the game alternatively.</li>
+<li>The game will be started from the last level of the game tree, and the value
+will be chosen accordingly.</li>
+<li>Like in the below figure, the game is started by player Q. He will pick the
+leftmost value of the TERMINAL and fix it for beta (?). Now, the next
+TERMINAL value will be compared with the ?-value. If the value will be
+smaller than or equal to the ?-value, replace it with the current ?-value
+otherwise no need to replace the value.</li>
+<li>After completing one part, move the achieved ?-value to its upper node and
+fix it for the other threshold value, i.e., ?.</li>
+<li>Now, its P turn, he will pick the best maximum value. P will move to explore
+the next part only after comparing the values with the current ?-value. If
+the value is equal or greater than the current ?-value, then only it will be
+replaced otherwise we will prune the values.</li>
+<li>The steps will be repeated unless the result is not obtained.</li>
+<li>So, number of pruned nodes in the above example are <strong>four</strong> and MAX wins
+the</li>
 </ul>
+<p>game with the maximum <strong>UTILITY</strong> value, i.e.,<strong>3</strong></p>
+<p>The rule which will be followed is: <strong>“Explore nodes if necessary otherwise
+prune the unnecessary nodes.”</strong></p>
+<p><strong>Note:</strong> It is obvious that the result will have the same <strong>UTILITY</strong> value
+that we may get from the MINIMAX strategy.</p>
 <h2 id="monte-carlo-tree-search"><a class="header" href="#monte-carlo-tree-search">Monte Carlo Tree Search</a></h2>
-<p>Monte Carlo tree search is a heuristic search algorithm for some kinds of
-decision processes, most notably those employed in software that plays board
-games. In that context MCTS is used to solve the game tree.**</p>
-<ul>
-<li>MCTS can be broken down into 4 steps:
+<p>It is a probabilistic and heuristic driven search algorithm</p>
+<p>The basic MCTS strategy does not use a heuristic evaluation function. Instead,
+the value of a state is estimated as the average utility over a number of
+simulations of complete games starting from the state. A simulation (also called
+a playout or rollout) chooses moves first</p>
+<p>for one player, than for the other, repeating until a terminal position is
+reached. At that point the rules of the game (not fallible heuristics)
+determine who has won or lost, and by what score. For games in which the only
+outcomes are a win or a loss, “average utility” is the same as “win
+percentage.”</p>
+<p>pure Monte Carlo search, is to do N simulations starting from the current state
+of the game, and track which of the possible moves from the current position has
+the highest win percentage.</p>
+<p>It balances two factors:</p>
+<p>exploration of states that have had few playouts, and exploitation of states
+that have done well in past playouts, to get a more accurate estimate of their
+value.</p>
+<p>Monte Carlo tree search does that by</p>
+<p>maintaining a search tree and growing it on each iteration of the following four
+steps:</p>
+<p>SELECTION: Starting at the root of the search tree, we choose a move (guided by
+the selection policy), leading to a successor node, and repeat that process,
+moving down the tree to a leaf.</p>
+<p>EXPANSION: We grow the search tree by generating a new child of the selected
+node; SIMULATION: We perform a playout from the newly generated child node,
+choosing moves for both players according to the playout policy. These moves are
+not recorded in the search tree.</p>
+<p>BACK-PROPAGATION: We now use the result of the simulation to update all the</p>
+<p>search tree nodes going up to the root.</p>
+<p><img src="pics/007.jpeg" alt="" /></p>
+<p><strong>Advantages of Monte Carlo Tree Search:</strong></p>
 <ol>
-<li><strong>Selection</strong>: In this process, the MCTS algorithm traverses the current
-tree from the root node using a specific strategy. The strategy uses an
-evaluation function to optimally select nodes with the highest estimated
-value.
-<img src="pictures/mcts_formula.png" alt="MCTS formula" />
-where:
-<ul>
-<li>Si = value of a node i</li>
-<li>xi = empirical mean of a node i</li>
-<li>C = a constant</li>
-<li>t = total number of simulations</li>
-</ul>
-</li>
-<li><strong>Expansion</strong>: In this process, a new child node is added to the tree to
-that node which was optimally reached during the selection process.</li>
-<li><strong>Simulation</strong>: In this process, a simulation is performed by choosing
-moves or strategies until a result or predefined state is achieved.</li>
-<li><strong>Backpropagation</strong>: After determining the value of the newly added
-node, the remaining tree must be updated. During the process, the number of
-simulation stored in each node is incremented. Also, if the new node’s
-simulation results in a win, then the number of wins is also incremented.</li>
+<li>MCTS is a simple algorithm to implement.</li>
+<li>Monte Carlo Tree Search is a heuristic algorithm. MCTS can operate
+effectively without any knowledge in the particular domain, apart from the rules
+and end conditions, and can can find its own moves and learn from them by
+playing random playouts.</li>
+<li>The MCTS can be saved in any intermediate state and that state can be used
+in future use cases whenever required.</li>
+<li>MCTS supports asymmetric expansion of the search tree based on the
+circumstances in which it is operating.</li>
 </ol>
-</li>
-<li><a href="https://www.geeksforgeeks.org/ml-monte-carlo-tree-search-mcts/">More
-Details</a></li>
-</ul>
-<h2 id="stochastic-game"><a class="header" href="#stochastic-game">Stochastic Game</a></h2>
-<ul>
-<li>In game theory, a stochastic game, is a repeated game with probabilistic
-transitions played by one or more players. The game is played in a sequence
-of stages. At the beginning of each stage the game is in some state.**</li>
-<li><a href="https://www.geeksforgeeks.org/stochastic-games-in-artificial-intelligence/">Example with backgammon
-game</a></li>
-</ul>
-<h2 id="partially-observable-games"><a class="header" href="#partially-observable-games">Partially Observable Games,</a></h2>
-<ul>
-<li>A partially observable system is one in which the entire state of the
-system is not fully visible to an external sensor. In a partially observable
-system the observer may utilise a memory system in order to add information
-to the observer's understanding of the system.**</li>
-<li>Example: A card game in which some of the cards are discarded into a pile face
-down. In this case the observer is only able to view their own cards and
-potentially those of the dealer.</li>
-</ul>
-<h2 id="limitations-of-game-search-algorithms"><a class="header" href="#limitations-of-game-search-algorithms">Limitations of Game Search Algorithms,</a></h2>
-<h2 id="limitations-of-game-search-algorithms-1"><a class="header" href="#limitations-of-game-search-algorithms-1">Limitations of Game Search Algorithms</a></h2>
-<h2 id="constraint-satisfaction-problems-csp"><a class="header" href="#constraint-satisfaction-problems-csp">Constraint Satisfaction Problems (CSP)</a></h2>
-<h2 id="constraint-propagation"><a class="header" href="#constraint-propagation">Constraint Propagation</a></h2>
+<p><strong>Disadvantages of Monte Carlo Tree Search:</strong></p>
+<ol start="5">
+<li>As the tree growth becomes rapid after a few iterations, it requires a huge
+amount of memory.</li>
+<li>There is a bit of a reliability issue with Monte Carlo Tree Search. In
+certain scenarios, there might be a single branch or path, that might lead to
+loss against the opposition when implemented for those turn-based games. This is
+mainly due to the vast amount of combinations and each of the nodes might not be
+visited enough number of times to understand its result or outcome in the long
+run.</li>
+<li>MCTS algorithm needs a huge number of iterations to be able to effectively
+decide the most efficient path. So, there is a bit of a speed issue there.</li>
+</ol>
+<h2 id="stochastic-games"><a class="header" href="#stochastic-games">Stochastic Games</a></h2>
+<p>Can be skipped</p>
+<h2 id="partially-observable-games"><a class="header" href="#partially-observable-games">Partially Observable Games</a></h2>
+<p>In deterministic partially observable games, uncertainty about the state of the
+board arises entirely from lack of access to the choices made by the opponent.</p>
+<p>For a partially observable</p>
+<p>game, the notion of a strategy is altered; instead of specifying a move to make
+for each possible move the opponent might make, we need a move for every
+possible percept sequence that might be received.</p>
+<p>Card games such as bridge, whist, hearts, and poker feature stochastic partial
+observability, where the missing information is generated by the random dealing
+of cards.</p>
+<p>treat the start of the game as a chance node with every possible deal as an</p>
+<p>outcome, and then use the EXPECTIMINIMAX formula to pick the best move.</p>
+<h2 id="limitations-in-game-search-algorithm"><a class="header" href="#limitations-in-game-search-algorithm">Limitations in game search algorithm</a></h2>
+<p>Alpha–beta search uses the heuristic</p>
+<p>evaluation function as an approximation</p>
+<p>Monte Carlo search computes an approximate</p>
+<p>average over a random selection of playouts.</p>
+<p>when the branching factor is high or it is difficult to</p>
+<p>define an evaluation function, Monte Carlo search is preferred</p>
+<p>One limitation of alpha–beta search is its vulnerability to errors in the
+heuristic function.</p>
+<p>A second limitation of both alpha–beta and Monte Carlo is that they are designed
+to calculate (bounds on) the values of legal moves. But sometimes there is one
+move that is obviously best (for example when there is only one legal move), and
+in that case, there is no point wasting computation time to figure out the value
+of the move</p>
+<p>A third limitation is that both alpha-beta and Monte Carlo do all their
+reasoning at the level of individual moves.</p>
+<h2 id="constraint-satisfaction-problems"><a class="header" href="#constraint-satisfaction-problems">Constraint satisfaction problems</a></h2>
+<p>Constraint satisfaction is a technique where a problem is solved when its values
+satisfy certain constraints or rules of the problem.</p>
+<p>The main idea is to eliminate large portions of the search space all at once by
+identifying variable/value combinations that violate the constraints.</p>
+<p>A constraint satisfaction problem consists of three components, and : X is a set
+of variables, {X1,….Xn}</p>
+<p>D is a set of domains, , {D1,.......Dn}, one for each variable.</p>
+<p>C is a set of constraints that specify allowable combinations of values.</p>
+<p>Where,</p>
+<p>X is a set of variables.</p>
+<p>D consists of a set of allowable values for each variable</p>
+<p>For example, a Boolean variable would have the domain {true, false} .</p>
+<p>C is constraint</p>
+<p>Each constraint consists of a pair ,<em>(scope, rel)</em> where <em>scope</em> is a tuple of
+variables that participate in the constraint and <em>rel</em> is a relation that
+defines the values that those variables can take on.</p>
+<p>An assignment of values to a variable can be done in three ways:</p>
+<p><strong>Consistent or Legal Assignment:</strong></p>
+<p>An assignment which does not violate any constraint or rule is called Consistent
+or legal assignment.</p>
+<p><strong>Complete Assignment:</strong></p>
+<p>An assignment where every variable is assigned with a value, and the solution to
+the CSP remains consistent. Such assignment is known as Complete assignment.</p>
+<p><strong>Partial Assignment:</strong></p>
+<p>An assignment which assigns values to some of the variables only. Such type of
+assignments are called Partial assignments.</p>
+<p><strong>Partial Solution is a partial assignment that is consistent.</strong></p>
+<p><strong>Why formulate a problem as a CSP?</strong></p>
+<ol>
+<li>CSPs yield a natural representation for a wide variety of problems; it is
+often easy to formulate a problem as a CSP.</li>
+<li>Years of development work have gone into making CSP solvers fast and
+efficient.</li>
+<li>a CSP solver can quickly prune large swathes of the search space that an
+atomic state-space searcher cannot</li>
+</ol>
+<p>MCQs</p>
+<p>MCQs</p>
+<p>The 8-queens problem can also be viewed as a finite-domain CSP. Constraint Types
+in CSP</p>
+<p>Unary Constraint :</p>
+<p>restricts the value of a single variable. For example, in the map-coloring
+problem it could be the case that South Australians won’t tolerate the color
+green; we can express that with the unary Constraint.</p>
+<p>Binary Constraint :</p>
+<p>A binary constraint relates two variables. For example, is a binary constraint.
+A binary CSP is one with only unary and binary constraints; it can be
+represented as a constraint graph.</p>
+<p>Global Constraints:</p>
+<p>It is the constraint type which involves an arbitrary number of variables.</p>
 <h2 id="inference-in-csps"><a class="header" href="#inference-in-csps">Inference in CSPs</a></h2>
-<h2 id="backtracking-search-for-csps"><a class="header" href="#backtracking-search-for-csps">Backtracking Search for CSPs.</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="knowledge"><a class="header" href="#knowledge">Knowledge</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="adversarial-search-and-games"><a class="header" href="#adversarial-search-and-games">Adversarial Search and Games</a></h1>
+<p>Inference is nothing but reaching conclusion or achieving result on the basis of
+evidence and reasoning.</p>
+<p>In local state-spaces, the choice is only one, i.e., to search for a solution.
+But in CSP, we have two choices either:</p>
+<p>We can search for a solution or</p>
+<p>We can perform a special type of inference called constraint propagation.</p>
+<p>Constraint propagation is a special type of inference which helps in reducing
+the legal number of values for the variables. The idea behind constraint
+propagation is local consistency.</p>
+<p>If we treat each variable as a node in a graph  and each binary constraint as an
+edge, then the process of enforcing local consistency in each part of the graph
+causes inconsistent values to be eliminated throughout the graph. There are
+different types of local consistency Namely</p>
+<p>Node Consistency:</p>
+<p>A single variable (corresponding to a node in the CSP graph) is node-consistent
+if all the values in the variable’s domain satisfy the variable’s unary
+constraints.</p>
+<p>It is easy to eliminate all the unary constraints in a CSP by reducing the
+domain of variables with unary constraints at the start of the solving process.</p>
+<p>Arc Consistency:</p>
+<p>A variable in a CSP is arc-consistent if every value in its domain satisfies the
+variable’s binary constraints</p>
+<p>The most popular algorithm for enforcing arc consistency is called AC-3 (see
+Figure 6.3 ). To make every variable arc-consistent, the AC-3 algorithm
+maintains a queue of arcs to consider.</p>
+<p>Path Consistency:</p>
+<p>When the evaluation of a set of two variable with respect to a third variable
+can be extended over another variable, satisfying all the binary constraints. It
+is similar to arc consistency.</p>
+<p>k-consistency:</p>
+<p>Stronger forms of propagation can be defined with the notion of -consistency. A
+CSP is - consistent if, for any set of variables and for any consistent
+assignment to those variables, a consistent value can always be assigned to any
+th variable</p>
+<h2 id="backtracking-search-for-csps"><a class="header" href="#backtracking-search-for-csps">Backtracking search for CSPs</a></h2>
+<p>The minimum-remaining-values and degree heuristics are domain-independent</p>
+<p>methods for deciding which variable to choose next in a backtracking search. The
+least constraining- value heuristic helps in deciding which value to try first
+for a given</p>
+<p>variable. Backtracking occurs when no legal assignment can be found for a
+variable. Conflict-directed backjumping backtracks directly to the source of the
+problem.</p>
+<p>Constraint learning records the conflicts as they are encountered during search
+in order</p>
+<p>to avoid the same conflict later in the search.</p>
+<p>The complexity of solving a CSP is strongly related to the structure of its
+constraint</p>
+<p>graph. Tree-structured problems can be solved in linear time.</p>
+<p>Cutset conditioning can reduce a general CSP to a tree-structured one and is
+quite efficient (requiring only linear</p>
+<p>memory) if a small cutset can be found.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iv-knowledge"><a class="header" href="#unit-iv-knowledge">Unit IV: <strong>Knowledge</strong></a></h1>
+<!-- Logical Agents,  Logic, Propositional Logic: A Very Simple Logic, -->
+<!-- Representation Revisited, Syntax and Knowledge Engineering in First-Order -->
+<!-- Logic. -->
+<h2 id="knowledge-based-agents"><a class="header" href="#knowledge-based-agents">Knowledge Based Agents</a></h2>
+<p>knowledge-based agents use a process of reasoning over an internal
+representation of</p>
+<p>knowledge to decide what actions to take. Knowledge-based agent uses some
+task-specific knowledge to solve a problem efficiently.</p>
+<p>Knowledge-based agents can accept</p>
+<p>new tasks in the form of explicitly described goals; they can achieve competence
+quickly by</p>
+<p>being told or learning new knowledge about the environment; and they can adapt
+to</p>
+<p>changes in the environment by updating the relevant knowledge.</p>
+<p>the representation of knowledge is done via logics.</p>
+<p>There are three main components of logic, which are as follows:</p>
+<p>Syntax: It is the sequence of a specific language which should be followed in
+order to form a sentence. Syntax is the representation of a  language. Every
+language has its own syntax.</p>
+<p>For example, ax2+bx+c is a well-formed syntax of a quadratic equation.</p>
+<p>Semantics: The sentence or the syntax which a logic follows should be
+meaningful. Semantics defines the sense of the sentence which relates to the
+real world.</p>
+<p>For example, Indian people celebrate Diwali every year. This sentence represents
+the true fact about the country and its people who are Indians.</p>
+<p>Each sentence is expressed in a language called a knowledge representation
+language and</p>
+<p>represents some assertion about the world.</p>
+<p>When the sentence is taken as being given</p>
+<p>without being derived from other sentences, we call it an axiom.</p>
+<p>A knowledge-based system comprises of two distinguishable features which are:</p>
+<p>A Knowledge base</p>
+<p>An Inference Engine</p>
+<p>Knowledge base: A Knowledge base represents the actual facts which exist in the
+real world. It is the central component of a knowledge-based agent. It is a set
+of sentences which describes the information related to the world.</p>
+<p>Note: Here, a sentence is not an English language sentence, but it is
+represented in a language known as Knowledge representation language.</p>
+<p>Inference Engine: It is the engine of a knowledge-based system which allows to
+infer new knowledge in the system.</p>
+<p>There must be a way to add new sentences to the knowledge base and a way to
+query what is known. The standard names for these operations are TELL and ASK,
+respectively.</p>
+<p>When the agent solves a problem, it calls the agent program each time. The agent
+program performs three things:</p>
+<p>It TELLS the knowledge base what it has perceived from the environment.</p>
+<p>It ASKS the knowledge base about the actions it should take?</p>
+<p>It TELLS the action which is chosen, and finally, the agent executes that
+action.</p>
+<p><img src="pics/008.png" alt="" /></p>
+<p><img src="pics/009.png" alt="" /></p>
+<p>These functions create an interface between the two main components of an
+intelligent agent, i.e., sensors and actuators.</p>
+<p><img src="pics/010.png" alt="" /></p>
+<p>The functions are discussed below:</p>
+<p>MAKE-PERCEPT-SENTENCE()</p>
+<p>This function returns a sentence which tells the perceived information by the
+agent at a given time.</p>
+<p>MAKE-ACTION-QUERY()</p>
+<p>This function returns a sentence which tells what action the agent must take at
+the current time.</p>
+<p>MAKE-ACTION-SENTENCE()</p>
+<p>This function returns a sentence which tells an action is selected as well as
+executed.</p>
+<h2 id="wumpus-word"><a class="header" href="#wumpus-word">Wumpus Word</a></h2>
+<p>The Wumpus world is a game playing which provides an environment to the
+knowledge-based agent to showcase its stored knowledge. It was developed by
+<strong>Gregory Yob</strong> in 1973.</p>
+<p>About the game:</p>
+<ul>
+<li>It is a single-player game.</li>
+<li>It is a cave consisting of rooms which are connected with one-another via
+passways.</li>
+<li>There is a beast or monster in the game named <strong>Wumpus,</strong> lurking somewhere
+the cave.</li>
+<li>Wumpus eats everyone who tries to enter the cave.</li>
+<li>The player needs to kill the Wumpus.</li>
+<li>The player has only one arrow to shoot out the monster.</li>
+<li>There are some rooms containing <strong>bottomless pits</strong> which may trap anyone
+whoever wanders in the room.</li>
+<li>The goal of the game is <strong>to search for a heap of gold</strong>.</li>
+</ul>
+<p><img src="pics/011.png" alt="" /></p>
+<p>PEAS Description of the Wumpus World</p>
+<ul>
+<li><strong>Performance Measure:</strong> The player is awarded with the following utilities:</li>
+<li><strong>(+1000):</strong> It is for coming out of the cave safely with the gold.</li>
+<li><strong>(-1000):</strong> It is for falling into the pit or if eaten by the Wumpus.</li>
+<li><strong>(-1):</strong> It is for each action taken by the player.</li>
+<li><strong>(-10):</strong> It is for raising the arrow up.</li>
+</ul>
+<p>The game ends if the player comes out of the cave safely or dies.</p>
+<ol>
+<li><strong>Environment:</strong> The environment provided in the Wumpus world is as follows:</li>
+</ol>
+<ul>
+<li>It is a 4X4 grid of rooms.</li>
+<li>The player always starts in the square labeled [1,1] and facing towards the
+right.</li>
+<li>Location of the monster and the gold is choosen randomly in a uniform
+distribution.</li>
+<li>Remember, the location chosen will never be the starting point.</li>
+<li>Each square room other than the starting one can be a pit with 0.2</li>
+</ul>
+<p>probability.</p>
+<ol start="2">
+<li><strong>Actuators:</strong> The player performs the following actions:</li>
+</ol>
+<ul>
+<li>The agent can move forward or TurnLeft by 900 and TurnRight by 900.</li>
+<li>The player dies if he enters a room having a pit or alive monster. It is
+safe to enter the room if the Wumpus is dead.</li>
+<li>If the player will try to move forward and bumps into the wall, then the
+player will not move.</li>
+<li>Using the action <em><strong>Grab</strong></em>, the player can pick up the gold in the same
+room.</li>
+<li>Using the action <em><strong>Shoot</strong></em>, the player can shoot the monster with the
+arrow. Either the arrow will shoot the monster or will hit on the wall.</li>
+<li>The action <em><strong>Climb</strong></em> is used to come out of the cave but only from the
+square</li>
+</ul>
+<p>[1,1].</p>
+<ol start="3">
+<li><strong>Sensors:</strong> The player is provided with five sensors, which gives a single
+bit of information:</li>
+</ol>
+<ul>
+<li>The player will perceive a <em><strong>Stench</strong></em>, if Wumpus is present in the room
+which is directly adjacent to the player.</li>
+<li>The player will perceive a <em><strong>Breeze</strong></em>, if in the square is directly
+adjacent to the pit.</li>
+<li>The player will perceive a <em><strong>Glitter</strong></em>, if in the square gold is present.</li>
+<li>The player will perceive a <em><strong>Bump</strong></em>, when the player walks into the wall.</li>
+</ul>
+<p>When the player will shoot out the monster, it will emit a scary <em><strong>Scream</strong></em>
+which can be heard/perceived from anywhere in the cave.</p>
+<p>in each case for which the agent draws a conclusion from the available</p>
+<p>information, that conclusion is guaranteed to be correct if the available
+information is correct. This is a fundamental property of logical reasoning</p>
+<h2 id="propositional-logic"><a class="header" href="#propositional-logic">Propositional Logic</a></h2>
+<p><strong>Syntax:</strong> The statements given in a problem are represented via propositional
+symbols. Each sentence consists of a single propositional symbol. The
+propositional symbol begins with an uppercase letter and may be followed by some
+other subscripts or letters. We have two fixed propositional symbols, i.e., True
+and False.</p>
+<p>Complex sentences are constructed from simpler sentences, using parentheses and</p>
+<p>operators called logical connectives. There are five connectives in common use:</p>
+<ul>
+<li><strong>not(¬):</strong> It is known as the <strong>negation</strong> of a sentence. A literal can be
+a positive literal or a negative literal.</li>
+<li><strong>and(^):</strong> When a sentence is having <strong>(^)</strong> as the main connective. It is
+known</li>
+</ul>
+<p>as <strong>Conjunction,</strong> and its parts are known as <strong>Conjuncts</strong>. For example, <strong>(Y1
+^ Y2) ? (Y3 ^ Y4) ? …(Yn ^ Ym),</strong> such type of sentences are known as
+<strong>Conjunctive sentences</strong>.</p>
+<ul>
+<li><strong>or(V):</strong> When a sentence is having <strong>(V)</strong> as the main connective. It is
+known as <strong>Disjunction,</strong> and its parts are known as <strong>Disjuncts</strong>. For
+example, <strong>(Y1 ? Y2) V (Y3 ? Y4) V …(Yn ? Ym),</strong> such type of sentences are
+known as <strong>Disjunctive sentences</strong>.</li>
+<li><strong>implies(=&gt;):</strong> When <strong>(Y1 V Y2) =&gt; Y3</strong> is given, it is known as the
+<strong>Implication of a sentence</strong>. It is like <strong>if-&gt;then</strong> clause, where if this
+implies then it will happen. Implication is sometimes referred to as <strong>Rules
+or if-then</strong> statement. It can also be d<strong>eno</strong>ted as (      ) or (       ).</li>
+<li><strong>if and only if (<strong>ó</strong>):</strong> It represents implication at both sides where
+the expression is <strong>(a1 V a2)</strong>?<strong>a3</strong>,. Such type of connective is called
+<strong>biconditional implication</strong>. It returns true if both sides satisfy one
+another, else returns false.This can also be denoted as (?).</li>
+</ul>
+<p><strong>Precedence Order of the Connectives</strong></p>
+<p><img src="pics/012.png" alt="" /></p>
+<p><strong>There are following five rules regarding the semantics of the complex
+sentences P and Q in a given model m :</strong></p>
+<p><strong>¬P:</strong> Its value will be false, iff it is true in the model m.</p>
+<p><strong>(P ? Q):</strong> Its value is true, iff both P and Q are true in m.</p>
+<p><strong>(P v Q):</strong> Its value is true, iff either P is true, or Q is true in m.</p>
+<p><strong>(P=&gt; Q):</strong> Its value is true, iff the value of P is false, and that of Q is
+true in m.</p>
+<p><strong>(P ? Q):</strong> The value will be true, iff P and Q value is either true or false
+in the given <strong>(P ? Q):</strong> The value will be true, iff P and Q value is either
+true or false in the given model m.</p>
+<p><strong>Note:</strong> Here, iff means if and only if.</p>
+<p><img src="pics/013.jpeg" alt="" /></p>
+<h2 id="propositional-theorem-proving"><a class="header" href="#propositional-theorem-proving">Propositional Theorem Proving</a></h2>
+<p>theorem proving—applying rules of inference directly to the</p>
+<p>sentences in our knowledge base to construct a proof of the desired sentence
+without consulting models.</p>
+<p>logical equivalence means two sentences and are logically equivalent if they are
+true in the same set of models.</p>
+<p><img src="pics/014.jpeg" alt="" /></p>
+<p>A sentence is valid if it is true in all models. For</p>
+<p>example, the sentence P ∨ ¬P is valid. Valid sentences are also known as
+tautologies—they are necessarily true.</p>
+<p>A sentence is satisfiable if it is true in, or  satisfied by, some model.</p>
+<p><img src="pics/015.jpeg" alt="" /></p>
+<h2 id="effective-propositional-model-checking"><a class="header" href="#effective-propositional-model-checking">Effective Propositional Model Checking</a></h2>
+<p>Not so important topic according to me. Choosing to ignore this one.</p>
+<h2 id="agents-based-on-propositional-logic"><a class="header" href="#agents-based-on-propositional-logic">Agents Based on Propositional Logic</a></h2>
+<p>Even this can be skipped. Wont ask in exam. Cuz in this section the wumpus world
+is explained again in detail with use of propositional logic.</p>
+<h2 id="first-order-logic"><a class="header" href="#first-order-logic">First Order Logic</a></h2>
+<p>First-order logic is also called first-order predicate calculus; it may be
+abbreviated as FOL or FOPC.</p>
+<p>In predicate logic, the input is taken as an entity, and the output it gives is
+either true or false.</p>
+<p><strong>Elements and their symbols in Predicate Logic</strong></p>
+<ul>
+<li><strong>Objects:</strong> It refers to an entity that exists in the real world. <strong>For
+example,</strong> Ram, John, etc. are referred to as Objects.</li>
+<li><strong>Functions:</strong> Any function performed by the object/on the object. <strong>For</strong></li>
+</ul>
+<p><strong>example,</strong> LeftLeg, writes, eats, etc. are some of the functions.</p>
+<ul>
+<li><strong>Relations:</strong> The relation of an object with the other object defines its
+relation**. For example,** brother, mother, king, etc. are some types of
+relations which exist in the real world.</li>
+</ul>
+<p><strong>The symbols used to represent these elements. They are as follows:</strong></p>
+<ul>
+<li><strong>Constant Symbols:</strong> These symbols are used to represent the objects.</li>
+<li><strong>Predicate Symbols:</strong> These symbols are used to represent relations.</li>
+<li><strong>Function Symbols:</strong> These symbols are used to represent the functions
+performed by the object.</li>
+</ul>
+<p>Some examples follow:</p>
+<p>“One plus two equals three.” Objects: one, two, three, one plus two; Relation:
+equals; Function: plus. (“One plus two” is a name for the object that is
+obtained by applying the function “plus” to the objects “one” and “two.” “Three”
+is another name for this object.) “Squares neighboring the wumpus are smelly.”
+Objects: wumpus, squares; Property: smelly; Relation: neighboring.</p>
+<p>“Evil King John ruled England in 1200.” Objects: John, England, 1200; Relation:
+ruled during; Properties: evil, king.</p>
+<p>The primary difference between propositional and first-order logic</p>
+<p>Propositional logic assumes</p>
+<p>that there are facts that either hold or do not hold in the world. Each fact can
+be in one of two states—true or false—and each model assigns true or false to
+each proposition symbol. First-order logic assumes more; namely, that the world
+consists of</p>
+<p>objects with certain relations among them that do or do not hold.</p>
+<h2 id="syntax-and-semantics-of-first-order"><a class="header" href="#syntax-and-semantics-of-first-order">Syntax and Semantics of First Order</a></h2>
+<p><strong>Syntax:</strong> It defines the way of representing the given predicates. As these
+predicates are represented via quantifiers, there are different types of
+quantifiers used:</p>
+<ul>
+<li><strong>Universal Quantifier(For all/every):</strong> When the predicate is indicating
+about all/everything, we use <strong>for all</strong> quantifier. It is denoted as <strong>&quot; ?
+&quot;</strong></li>
+<li><strong>Existential Quantifier(For some):</strong> When the predicate is indicating about
+some quantity, we use <strong>for some</strong> quantifier. It is denoted as <strong>“?”</strong></li>
+<li><strong>Nested Quantifiers:</strong> It is the nesting of the same type of quantifier.
+One predicate is nested under the other predicate.</li>
+<li><strong>Atomic Sentences:</strong> These sentences are formed via predicate symbols</li>
+</ul>
+<p>may or may not be followed by a list of terms.</p>
+<p><strong>Example:</strong> Parents(Ram, Sita) where Ram and Sita are the parents.</p>
+<ul>
+<li><strong>Complex Sentences:</strong> These sentences make use of logical connectives to
+construct more complex sentences.</li>
+<li><strong>Equality:</strong> We use the equality symbol to express that two terms refer to
+the same object**. For example,** Eleveenth_President(India)= Dr. APJ
+Abdul Kalam. Here, both LHS is equal to RHS. It means that both terms refer
+to the same entity/ person.</li>
+</ul>
+<p><strong>Semantics:</strong> It defines the sense of the given predicate. It allows to make
+more logical expression by devising its semantics. Semantics allow us to
+understand the sentence meaning.</p>
+<p><strong>Let’s understand Predicate logic with the help of below examples: Example 1:</strong>
+Lipton is a tea.</p>
+<p><strong>Solution:</strong> Here, the object is Lipton.</p>
+<p>It will be represented as <strong>Tea(Lipton).</strong></p>
+<p><strong>Note:</strong> In this example, there is no requirement of quantifiers because the
+quantity is not specified in the given predicate. <strong>Let’s see more.</strong></p>
+<p><strong>Example 2:</strong> Every man is mortal.</p>
+<p><strong>Solution:</strong> Here, the quantifier is the universal identifier, and the object
+is man. Let x be the man.</p>
+<p>Thus, it will be represented as <strong>x: man(x)  ? mortal(x).</strong></p>
+<p><strong>Example 3:</strong> All girls are beautiful.</p>
+<p><strong>Solution:</strong> Here, we are talking about all girls. It means universal
+quantifier will be used. The object is girls. Let, y be the girls.</p>
+<p>Therefore, it will be represented as <strong>girls(y) ? beautiful(y).</strong></p>
+<p><strong>Example 4:</strong> All that glitters is not gold.</p>
+<p><strong>Solution:</strong> Here, we will represent gold as x.</p>
+<p>Therefore, it will be represented as <strong>glitters(x) ? ¬gold(x).</strong></p>
+<h2 id="using-first-order-logic"><a class="header" href="#using-first-order-logic">Using First Order Logic</a></h2>
+<p>Again not an important topic</p>
+<h2 id="knowledge-engineering"><a class="header" href="#knowledge-engineering">Knowledge Engineering</a></h2>
+<p>Process of knowledge base construction in called knowledge engineering.</p>
+<p>a knowledge engineer investigates a specific domain, learn the important
+concepts regarding that domain, and creates the formal representation of the
+objects and relations in that domain.</p>
+<p>There are 7 steps in knowledge engineering:</p>
+<p><img src="pics/016.png" alt="" /></p>
+<ol>
+<li>IDENTIFY THE QUESTIONS</li>
+</ol>
+<ul>
+<li>A knowledge engineer should be able to identify the task by asking a few
+questions like:</li>
+<li>Do the knowledge base will support?</li>
+<li>What kinds of facts will be available for each specific problem?</li>
+</ul>
+<p>The task will identify the knowledge requirement needed to connect the problem
+instance with the answers.</p>
+<p>instance with the answers.</p>
+<ol start="2">
+<li>ASSEMBLE THE RELEVANT KNOWLEDGE</li>
+</ol>
+<ul>
+<li>A knowledge engineer should be an expert in the domain. If not, he should
+work with the real experts to extract their knowledge. This concept is</li>
+</ul>
+<p>known as <strong>Knowledge Acquisition</strong>.</p>
+<p><strong>Note:</strong> Here, we do not represent the knowledge formally. But to understand
+the scope of the knowledge base and also to understand the working of the
+domain.</p>
+<p>For the wumpus world, which is defined by an artificial set of rules, the
+relevant</p>
+<p>knowledge is easy to identify.</p>
+<ol start="3">
+<li>DECIDE ON A VOCABULARY OF PREDICATES, FUNCTIONS, AND CONSTANTS.</li>
+</ol>
+<ul>
+<li>Translating important domain-level concepts into logical level concepts.
+<strong>Here, the knowledge engineer asks questions like:</strong></li>
+<li>What are the elements which should be represented as objects?</li>
+<li>What functions should be chosen?</li>
+</ul>
+<p>After satisfying all the choices, the vocabulary is decided.</p>
+<ol start="4">
+<li>ENCODE GENERAL KNOWLEDGE ABOUT THE DOMAIN</li>
+</ol>
+<ul>
+<li>In this step, the knowledge engineer pen down the axioms for all the chosen</li>
+</ul>
+<p>vocabulary terms.</p>
+<p><strong>Note:</strong> Here, misconceptions occur between the vocabulary terms.</p>
+<p>•</p>
+<ul>
+<li><strong>Encode description of the specific problem instance:</strong> We write the simple
+atomic sentences for the selected vocabulary terms. We encode the chosen
+problem instances.</li>
+<li><strong>Raise queries to the inference procedure and get answers:</strong> It is the
+testing step. We apply the inference procedure on those axioms and
+problem-specific facts which we want to know.</li>
+<li><strong>Debug the knowledge base:</strong> It is the last step of the knowledge
+engineering process where the knowledge engineer debugs all the errors.</li>
+</ul>
+<h2 id="propositional-vs-first-order-inference"><a class="header" href="#propositional-vs-first-order-inference">Propositional vs First order Inference</a></h2>
+<p>One way to do first-order inference is to convert the first-order knowledge base
+to propositional logic and use propositional inference. first step is
+eliminating universal quantifiers.</p>
+<p><img src="pics/017.png" alt="" /></p>
+<p>Can be skipped i feel.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: <strong>Reasoning</strong></a></h1>
+<!-- Inference in First-Order Logic, Propositional vs. First-Order Inference, -->
+<!-- Knowledge Representation, Ontological Engineering, Categories and Objects, -->
+<!-- Events, Mental Objects, and Modal Logic, Reasoning Systems for Categories, -->
+<!-- Reasoning with Default Information -->
+<h2 id="unification-and-first-order-inference"><a class="header" href="#unification-and-first-order-inference">Unification and first order inference</a></h2>
+<ul>
+<li>
+<p>It is the key component of First-order inference algorithms. Unification is
+the process used by the lifted inference rules to find substituents that
+could give identical but different logical expressions. It means the meaning
+of the sentence should not be changed, but it should be expressed in
+multiple ways. The <strong>UNIFY</strong> algorithm in unification takes two sentences as
+input and</p>
+<p>then returns a unifier if one exists:</p>
+</li>
+</ul>
+<!-- CODE -->
+<pre><code>UNIFY(p,q)= ? where SUBST( ? , p) = SUBST( ?, ).
+</code></pre>
+<p>Let see how UNIFY works with the help of the below example:</p>
+<p><strong>Given:</strong></p>
+<pre><code>Knows(Ram,x). The question is- Whom does Ram knows?
+</code></pre>
+<p>The UNIFY algorithm will search all the related sentences in the knowledge base,
+which could unify with Knows(Ram,x).</p>
+<pre><code>UNIFY (Knows(Ram, x), Knows(Ram, Shyam))?{x/Shyam}
+
+UNIFY (Knows{Ram,x}, Knows{y, Aakash})?{x/Aakash, y/Ram}
+
+UNIFY (Knows{Ram,x}, Knows{x, Raman})?fails.
+</code></pre>
+<p>The last one failed because we have used the same variable for two persons at
+the same time.</p>
+<p><strong>Unification Algorithm</strong></p>
+<p>Earlier, we have studied <strong>TELL</strong> and <strong>ASK</strong> functions which are used to inform
+and interrogate a knowledge base. These are the primitive functions</p>
+<p>of <strong>STORE</strong> and <strong>FETCH</strong> functions**. STORE** function is used to store a</p>
+<p>sentence <strong>s</strong> into the knowledge base and <strong>FETCH</strong> function is used to return
+all the unifiers with some sentences.</p>
+<p>A simple scheme called predicate indexing puts all the</p>
+<p>facts in one bucket and all the brother facts in another. The buckets can be
+stored in a hash table for efficient access.</p>
+<p>Predicate indexing is useful when there are many predicate symbols but only a
+few clauses for each symbol</p>
+<h2 id="forward-chaining"><a class="header" href="#forward-chaining">Forward Chaining</a></h2>
+<p>First-order definite clauses are disjunctions of literals of which exactly one
+is positive. definite clause is either atomic, or is an implication whose
+antecedent is a</p>
+<p>conjunction of positive literals and whose consequent is a single positive
+literal.</p>
+<p>A typical first-order definite</p>
+<p>clause looks like this:</p>
+<p>King(x) ^ Greedy(x)  =&gt; Evil(x) ,</p>
+<p>but the literals king(john) and greedy (john) also count as definite clauses.
+First-order literals can include variables, so Greedy(y) is interpreted as
+“everyone is greedy” (the universal quantifier is implicit).</p>
+<p>In forward chaining, we start with the atomic sentences in the knowledge base
+and apply Modus Ponen in forward direction. Also adding new sentences until any
+inference is not made.</p>
+<p>Starting from the known</p>
+<p>facts, it triggers all the rules whose premises are satisfied, adding their
+conclusions to the</p>
+<p>known facts. The process repeats until the query is answered (assuming that just
+one</p>
+<p>answer is required) or no new facts are added.</p>
+<p><strong>Consider the below axioms:</strong></p>
+<ol>
+<li>Gita loves all types of clothes.</li>
+<li>Suits are clothes.</li>
+<li>Jackets are clothes.</li>
+<li>Anything any wear and isn’t bad is clothes.</li>
+<li>Sita wears skirt and is good.</li>
+<li>Renu wears anything Sita wears.</li>
+</ol>
+<p><strong>Apply forward chaining and prove that Gita loves Kurtis.</strong></p>
+<p><img src="pics/018.png" alt="" /></p>
+<h2 id="backward-chaining"><a class="header" href="#backward-chaining">Backward Chaining</a></h2>
+<p>These algorithms work backward from the goal, chaining through rules to</p>
+<p>find known facts that support the proof. Backward chaining, is clearly a
+depth-first search algorithm. is clearly a depth- first search algorithm suffers
+from problems with repeated states and incompleteness.</p>
+<p>Example:</p>
+<p><strong>Consider the below axioms:</strong></p>
+<ol>
+<li>
+<p>Gita loves all types of clothes.</p>
+</li>
+<li>
+<p>Suits are clothes.</p>
+</li>
+<li>
+<p>Jackets are clothes.</p>
+</li>
+<li>
+<p>Anything any wear and isn’t bad is clothes.</p>
+</li>
+<li>
+<p>Sita wears skirt and is good.</p>
+</li>
+<li>
+<p>Renu wears anything Sita wears.</p>
+</li>
+</ol>
+<p><strong>Apply backward chaining and prove that Gita loves Kurtis.</strong></p>
+<p><img src="pics/019.png" alt="" /></p>
+<p>NOTE:</p>
+<p>the graph of forward and backward chaining is same. It means that forward
+chaining follows the<strong>bottom-up approach</strong> and backward chaining follows
+the<strong>top-down approach.</strong></p>
+<h2 id="resolution"><a class="header" href="#resolution">Resolution</a></h2>
+<p>Resolution works for any knowledge base.</p>
+<p>This method is basically used for proving the satisfiability of a sentence. In
+resolution method, we use <strong>Proof by Refutation</strong> technique to prove the given
+statement.</p>
+<p>The key idea for the resolution method is to use the knowledge base and negated
+goal to obtain null clause (which indicates contradiction). Resolution method is
+also called <strong>Proof by Refutation</strong>. Since the knowledge base itself is
+consistent, the contradiction must be introduced by a negated goal. As a result,
+we have to conclude that the original goal is true.</p>
+<p><strong>In FOPL, the process to apply the resolution method is as follows:</strong></p>
+<ul>
+<li>Convert the given axiom into CNF, i.e., a conjunction of clauses. Each
+clause should be dis-junction of literals.</li>
+<li>Apply negation on the goal given.</li>
+<li>Use literals which are required and prove it.</li>
+<li>Unlike propositional logic, FOPL literals are complementary if one unifies
+with the negation of other literal.</li>
+</ul>
+<p>Note:</p>
+<p>Skolemization is the process of removing existential quantifiers by elimination.</p>
+<h2 id="ontological-engineering"><a class="header" href="#ontological-engineering">Ontological Engineering</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unit-vi-planning"><a class="header" href="#unit-vi-planning">Unit VI: <strong>Planning</strong></a></h1>
 <h2 id="automated-planning"><a class="header" href="#automated-planning">Automated Planning</a></h2>
 <p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning
@@ -8869,22 +9579,6 @@ $global_variable = 10
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

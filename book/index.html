@@ -143,11 +143,11 @@ be incomplete.</em></p>
 <li><input disabled="" type="checkbox"/>
 Artificial Intelligence
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit III <strong>Adversarial Search and Games</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit IV <strong>Knowledge</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit V <strong>Reasoning</strong></li>
 <li><input disabled="" type="checkbox" checked=""/>
 Unit VI <strong>Planning</strong></li>
@@ -261,22 +261,6 @@ sections but quick reference just in case.</p>
 
         </div>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

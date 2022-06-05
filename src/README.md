@@ -8,9 +8,9 @@ be incomplete._
 ## PROGRESS
 
 - [ ] Artificial Intelligence
-  - [ ] Unit III **Adversarial Search and Games**
-  - [ ] Unit IV **Knowledge**
-  - [ ] Unit V **Reasoning**
+  - [x] Unit III **Adversarial Search and Games**
+  - [x] Unit IV **Knowledge**
+  - [x] Unit V **Reasoning**
   - [x] Unit VI **Planning**
   - [ ] Prelim Questions
 - [x] Cloud Computing
