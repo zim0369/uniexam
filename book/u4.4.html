@@ -134,7 +134,683 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ruby-and-rails"><a class="header" href="#ruby-and-rails">Ruby and Rails</a></h1>
+                        <h1 id="unit-vi-ruby-and-rails"><a class="header" href="#unit-vi-ruby-and-rails">Unit VI: <strong>Ruby and Rails</strong></a></h1>
+<h2 id="introduction-to-ruby"><a class="header" href="#introduction-to-ruby">Introduction to Ruby</a></h2>
+<ul>
+<li>
+<p><strong>Ruby</strong> is an open-source programming language. It is also referred to as
+scripting language that is dynamic, interpreted and object-oriented as well.</p>
+</li>
+<li>
+<p>Ruby is dynamically typed and uses garbage collection and just-in-time
+compilation. It supports multiple programming paradigms, including procedural,
+object-oriented, and functional programming. According to the creator, Ruby
+was influenced by Perl, Smalltalk, Eiffel, Ada, BASIC, and Lisp.</p>
+</li>
+</ul>
+<h3 id="origins--uses-of-ruby"><a class="header" href="#origins--uses-of-ruby">Origins &amp; uses of Ruby</a></h3>
+<ul>
+<li>
+<p>Ruby is an interpreted, high-level, general-purpose programming language which
+supports multiple programming paradigms. It was designed with an emphasis on
+programming productivity and simplicity. In Ruby, everything is an object,
+including primitive data types. It was developed in the mid-1990s by Yukihiro
+&quot;Matz&quot; Matsumoto in Japan.</p>
+</li>
+<li>
+<p>Matsumoto describes the design of Ruby as being like a simple Lisp language at
+its core, with an object system like that of Smalltalk, blocks inspired by
+higher-order functions, and practical utility like that of Perl.</p>
+</li>
+<li>
+<p>Uses of <strong>Ruby</strong>:</p>
+<ul>
+<li>
+<p><strong>Web development:</strong> Web development is one of Ruby's claims to fame
+because of the popular web development framework Ruby on Rails.</p>
+</li>
+<li>
+<p><strong>Static site generation:</strong> Most websites use server-side code that
+generates HTML and serves it to your browser when you visit a page.</p>
+</li>
+<li>
+<p><strong>DevOps and automation:</strong> Vagrant, written in Ruby, is a tool for
+managing virtual machines from command line. It allows developers to
+code and run projects developed for a specific operating system run on
+any operating system.</p>
+</li>
+<li>
+<p><strong>Web servers:</strong> You can also use Ruby to build web servers. Passenger,
+Unicorn, and Puma are web servers written in Ruby.</p>
+</li>
+<li>
+<p><strong>Data processing:</strong> Ruby's built-in map, reduce, and select functions
+are powerful tools used to solve many data processing problems.</p>
+</li>
+<li>
+<p><strong>Web scraping and crawling:</strong> Ruby has a wide variety of packages like
+vessel &amp; nokogiri that make extracting data from web pages a breeze.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="scalar-types-and-their-operations"><a class="header" href="#scalar-types-and-their-operations">Scalar types and their operations</a></h3>
+<ul>
+<li>
+<p>Scalar types in Ruby:</p>
+<ul>
+<li>
+<p><strong>Strings:</strong> A string is made up of multiple characters. They are defined
+by enclosing a set of characters within single (‘x’) or double (“x”)
+quotes.</p>
+</li>
+<li>
+<p><strong>Numbers:</strong> A number is a series of digits that use a dot as a decimal
+mark (where one is required). Integers and floats are the two main kinds
+of numbers; Ruby can handle them both.</p>
+</li>
+<li>
+<p><strong>Booleans:</strong> The Boolean data type represents only one bit of information
+that says whether the value is true or false. A value of this data type is
+returned when two values are compared.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="simple-input-and-output"><a class="header" href="#simple-input-and-output">Simple input and output</a></h3>
+<ul>
+<li>
+<p><strong>Ruby writing to console:</strong>
+Ruby has several methods for printing output on the console. These methods are
+part of the Kernel module. Methods of the Kernel are available to all objects
+in Ruby.</p>
+<!-- CODE -->
+<pre><code class="language-ruby">print &quot;Apple &quot;
+print &quot;Apple\n&quot;
+
+puts &quot;Orange&quot;
+puts &quot;Orange&quot;
+</code></pre>
+<ul>
+<li>
+<p>The <strong>print</strong> and <strong>puts</strong> methods produce textual output on the console. The difference
+between the two is that the latter(puts) adds a new line character, whereas in
+you have to explicitly add a newline(&quot;\n&quot;) character to print a newline.</p>
+</li>
+<li>
+<p>Ruby has 3 more methods to print outptut:</p>
+<!-- CODE -->
+<pre><code class="language-ruby">p &quot;Lemon&quot;
+p &quot;Lemon&quot;
+
+printf &quot;There are %d apples\n&quot;, 3
+
+putc 'K'
+putc 0xA
+</code></pre>
+<ul>
+<li>The <strong>p</strong> calls the inspect method upon the object being printed. The method
+is useful for debugging.</li>
+<li>The <strong>printf</strong> method is well known from the C programming language. It
+enables string formatting.</li>
+<li>The <strong>putc</strong> method prints one character to the console. The second line
+prints a newline. The 0xA is a hexadecimal code for the newline
+character.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Ruby reading input from console</p>
+<ul>
+<li>The $stdin is a global variable that holds a stream for the standard
+input. It can be used to read input from the console.<!-- CODE -->
+<pre><code class="language-ruby">inp = $stdin.read
+puts inp
+</code></pre>
+</li>
+<li>We use the read method to read input from the console: <code>inp = $stdin.read</code></li>
+<li>The read method reads data from the standard input until it reaches the
+EOF(end of the file).</li>
+</ul>
+</li>
+</ul>
+<h3 id="control-statements"><a class="header" href="#control-statements">Control statements</a></h3>
+<!-- CODE -->
+<p><em>Only example snippets and outputs attached. Check the link at the end of the
+section for theoretical explanation</em></p>
+<ul>
+<li>
+<p>Ruby <strong>if...else Statement:</strong></p>
+<pre><code class="language-ruby">x = 1
+if x &gt; 2
+   puts &quot;x is greater than 2&quot;
+elsif x &lt;= 2 and x!=0
+   puts &quot;x is 1&quot;
+else
+   puts &quot;I can't guess the number&quot;
+end
+</code></pre>
+<p>Output: <code>x is 1</code></p>
+</li>
+<li>
+<p>Ruby <strong>if modifier:</strong></p>
+<pre><code class="language-ruby">$debug = 1
+print &quot;debug\n&quot; if $debug
+</code></pre>
+<p>Output: <code>debug</code></p>
+</li>
+<li>
+<p>Ruby <strong>unless Statement:</strong></p>
+<pre><code class="language-ruby">x = 1 
+unless x&gt;=2
+   puts &quot;x is less than 2&quot;
+ else
+   puts &quot;x is greater than 2&quot;
+end
+</code></pre>
+<p>Output: <code>x is less than 2</code></p>
+</li>
+<li>
+<p>Ruby <strong>unless modifier:</strong></p>
+<pre><code class="language-ruby">$var =  1
+print &quot;1 -- Value is set\n&quot; if $var
+print &quot;2 -- Value is set\n&quot; unless $var
+
+$var = false
+print &quot;3 -- Value is set\n&quot; unless $var
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">1 -- Value is set
+3 -- Value is set
+</code></pre>
+</li>
+<li>
+<p>Ruby <strong>case</strong> Statement:</p>
+<pre><code class="language-ruby">$age =  5
+case $age
+when 0 .. 2
+   puts &quot;baby&quot;
+when 3 .. 6
+   puts &quot;little child&quot;
+when 7 .. 12
+   puts &quot;child&quot;
+when 13 .. 18
+   puts &quot;youth&quot;
+else
+   puts &quot;adult&quot;
+end
+</code></pre>
+<p>Output: <code>little child</code></p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/ruby/ruby_if_else.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="fundamentals-of-arrays"><a class="header" href="#fundamentals-of-arrays">Fundamentals of arrays</a></h3>
+<!-- CODE -->
+<ul>
+<li>
+<p>Creating arrays:</p>
+<pre><code class="language-ruby">ary = [1, &quot;two&quot;, 3.0] # Arrays in ruby are heterogenous
+
+# Explicitly making a new array with **new** method
+ary = Array.new    #=&gt; []
+Array.new(3)       #=&gt; [nil, nil, nil]
+Array.new(3, true) #=&gt; [true, true, true]
+</code></pre>
+</li>
+<li>
+<p>Accessing Elements:</p>
+<pre><code class="language-ruby">arr = [1, 2, 3, 4, 5, 6]
+
+# Accessing elements by indices
+arr[2]    #=&gt; 3
+arr[100]  #=&gt; nil
+arr[-3]   #=&gt; 4
+arr[2, 3] #=&gt; [3, 4, 5]
+arr[1..4] #=&gt; [2, 3, 4, 5]
+arr[1..-3] #=&gt; [2, 3, 4]
+
+# or using the &quot;at()&quot; method
+arr.at(0) #=&gt; 1
+
+# Returns first element of the array
+arr.first #=&gt; 1
+
+# Returns last element of the array
+arr.last  #=&gt; 6
+
+# To return the first n elements of an array, use take
+arr.take(3) #=&gt; [1, 2, 3]
+
+# Returns array length
+arr.length #=&gt; 6
+
+# Checks if array is empty
+arr.empty? #=&gt; false
+
+# Checks if array has the specified element
+arr.include?('3') #=&gt; true
+</code></pre>
+</li>
+<li>
+<p>Adding elements:</p>
+<pre><code class="language-ruby">arr = [1, 2, 3, 4]
+arr.push(5) #=&gt; [1, 2, 3, 4, 5]
+arr &lt;&lt; 6    #=&gt; [1, 2, 3, 4, 5, 6]
+
+# unshift will add a new item to the beginning of an array.
+arr.unshift(0) #=&gt; [0, 1, 2, 3, 4, 5, 6]
+
+# Insert multiple values at once at given position using insert():
+arr.insert(3, 'orange', 'pear', 'grapefruit')
+#=&gt; [0, 1, 2, &quot;orange&quot;, &quot;pear&quot;, &quot;grapefruit&quot;, &quot;apple&quot;, 3, 4, 5, 6]
+</code></pre>
+</li>
+<li>
+<p>Removing Items:</p>
+<pre><code class="language-ruby"># The method pop removes the last element in an array and returns it:
+arr =  [1, 2, 3, 4, 5, 6]
+arr.pop #=&gt; 6
+arr #=&gt; [1, 2, 3, 4, 5]
+
+# To retrieve and at the same time remove the first item, use shift:
+arr.shift #=&gt; 1
+arr #=&gt; [2, 3, 4, 5]
+
+# To delete an element at a particular index:
+arr.delete_at(2) #=&gt; 4
+arr #=&gt; [2, 3, 5]
+</code></pre>
+</li>
+<li>
+<p>Iterating over arrays:</p>
+<pre><code class="language-ruby">arr = [1, 2, 3, 4, 5]
+arr.each {|a| print a -= 10, &quot; &quot;}
+# prints: -9 -8 -7 -6 -5
+#=&gt; [1, 2, 3, 4, 5]
+</code></pre>
+</li>
+<li>
+<p><a href="https://ruby-doc.org/core-3.0.0/Array.html">More Details</a></p>
+</li>
+</ul>
+<h3 id="hashes"><a class="header" href="#hashes">Hashes</a></h3>
+<!-- CODE -->
+<ul>
+<li>
+<p>Creating hashes:</p>
+<pre><code class="language-ruby">months = Hash.new
+
+# or with default value
+months = Hash.new(&quot;month&quot;)
+
+# or
+months = Hash.new &quot;month&quot;
+</code></pre>
+<p>If the key or value doesn't exist, accessing the hash will return the
+default value:</p>
+<pre><code class="language-ruby">months = Hash.new( &quot;month&quot; )
+
+puts &quot;#{months[0]}&quot;
+puts &quot;#{months[72]}&quot;
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">month
+month
+</code></pre>
+<p>Here, the queried keys &amp; values exist</p>
+<pre><code class="language-ruby">H = Hash[&quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200]
+
+puts &quot;#{H['a']}&quot;
+puts &quot;#{H['b']}&quot;
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">100
+200
+</code></pre>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/ruby/ruby_hashes.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="methods"><a class="header" href="#methods">Methods</a></h3>
+<ul>
+<li>
+<p>Syntax:</p>
+<pre><code class="language-ruby">def method_name [( [arg [= default]]...[, * arg [, &amp;expr ]])]
+expr..
+end
+</code></pre>
+<p>Example:</p>
+<pre><code class="language-ruby">def test(a1 = &quot;Ruby&quot;, a2 = &quot;Perl&quot;)
+   puts &quot;The programming language is #{a1}&quot;
+   puts &quot;The programming language is #{a2}&quot;
+end
+test &quot;C&quot;, &quot;C++&quot;
+test
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">The programming language is C
+The programming language is C++
+The programming language is Ruby
+The programming language is Perl
+</code></pre>
+</li>
+<li>
+<p>Class method's syntax:</p>
+<pre><code class="language-ruby">class Accounts
+   def reading_charge
+   end
+   def Accounts.return_date
+   end
+end
+</code></pre>
+</li>
+<li>
+<p>Variable number of parameters: The method signature should look like:</p>
+<p><code>def sample (*test)</code></p>
+</li>
+<li>
+<p>Ruby <strong>alias</strong> Statement:
+This gives alias to methods or global variables.</p>
+<p><code>alias method-name method-alias</code></p>
+</li>
+<li>
+<p>Undefine a method: <code>undef method-name</code></p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/ruby/ruby_methods.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="classes"><a class="header" href="#classes">Classes</a></h3>
+<ul>
+<li>
+<p>Example:</p>
+<pre><code class="language-ruby">class Sample
+   def hello
+      puts &quot;Hello Ruby!&quot;
+   end
+end
+
+# now using above class to create objects
+object = Sample. new
+object.hello
+</code></pre>
+<p>Output: <code>Hello Ruby!</code></p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/ruby/ruby_classes.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="code-blocks-and-iterators"><a class="header" href="#code-blocks-and-iterators">Code blocks and iterators</a></h3>
+<p>Ruby has a concept of Block:</p>
+<ul>
+<li>
+<p>A block consists of chunks of code.</p>
+</li>
+<li>
+<p>You assign a name to a block.</p>
+</li>
+<li>
+<p>The code in the block is always enclosed within braces ({}).</p>
+</li>
+<li>
+<p>A block is always invoked from a function with the same name as that of the
+block.</p>
+</li>
+<li>
+<p>You invoke a block by using the yield statement.</p>
+</li>
+<li>
+<p>Syntax:</p>
+<pre><code class="language-ruby">block_name {
+statement1
+statement2
+..........
+}
+</code></pre>
+</li>
+<li>
+<p>Example:</p>
+<pre><code class="language-ruby">def test
+   puts &quot;You are in the method&quot;
+   yield
+   puts &quot;You are again back to the method&quot;
+   yield
+end
+
+test {puts &quot;You are in the block&quot;}
+</code></pre>
+<p>Output:</p>
+<pre><code class="language-text">You are in the method
+You are in the block
+You are again back to the method
+You are in the block
+</code></pre>
+</li>
+<li>
+<p><strong>Iterators</strong> are the methods which are supported by collections(Arrays, Hashes etc.).</p>
+</li>
+<li>
+<p><strong>Iterators</strong> return all the elements of a collection one after another.</p>
+</li>
+<li>
+<p><strong>Iterators</strong> are chainable</p>
+</li>
+<li>
+<p>There are many iterators in Ruby as follows:</p>
+<ol>
+<li>Each Iterator</li>
+<li>Collect Iterator</li>
+<li>Times Iterator</li>
+<li>Upto Iterator</li>
+<li>Downto Iterator</li>
+<li>Step Iterator</li>
+<li>Each_Line Iterator</li>
+</ol>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/ruby-types-of-iterators/">More Details</a></p>
+</li>
+</ul>
+<h3 id="pattern-matching"><a class="header" href="#pattern-matching">Pattern matching</a></h3>
+<ul>
+<li>
+<p>Patterns are a special syntax for matching against the structure of types, both complex and simple(Not to be confused with regex)</p>
+</li>
+<li>
+<p>Diverse topic: <a href="https://ruby-doc.org/core-3.0.0/doc/syntax/pattern_matching_rdoc.html">Read here</a></p>
+</li>
+</ul>
+<h2 id="introduction-to-rails"><a class="header" href="#introduction-to-rails">Introduction to Rails</a></h2>
+<ul>
+<li>About Rails:
+<ul>
+<li>An extremely productive web-application framework.</li>
+<li>Written in Ruby by David Heinemeier Hansson.</li>
+<li>You could develop a web application at least ten times faster with Rails
+than you could with a typical Java framework.</li>
+<li>An open source Ruby framework for developing database-backed web
+applications.</li>
+<li>Configure your code with Database Schema.</li>
+<li>No compilation phase required.</li>
+<li>Full Stack Framework
+<ul>
+<li>Includes everything needed to create a database-driven web application,
+using the Model-View-Controller pattern.</li>
+<li>Being a full-stack framework means all the layers are built to work
+seamlessly together with less code.</li>
+<li>Requires fewer lines of code than other frameworks.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="overview-of-rails"><a class="header" href="#overview-of-rails">Overview of Rails</a></h3>
+<ul>
+<li>Rails is packed with features that make you more productive, with many of
+the following features building on one other.
+<ul>
+<li><strong>Metaprogramming:</strong>
+Where other frameworks use extensive code generation from scratch, Rail
+framework uses Metaprogramming techniques to write programs. Ruby is one
+of the best languages for Metaprogramming, and Rails uses this capability
+well. Rails also uses code generation but relies much more on
+Metaprogramming for the heavy lifting.</li>
+<li><strong>Active Record:</strong>
+Rails introduces the Active Record framework, which saves objects into the
+database. The Rails version of the Active Record discovers the columns in
+a database schema and automatically attaches them to your domain objects
+using metaprogramming.</li>
+<li><strong>Convention over configuration:</strong>
+Most web development frameworks for .NET or Java force you to write pages
+of configuration code. If you follow the suggested naming conventions,
+Rails doesn't need much configuration.</li>
+<li><strong>Scaffolding:</strong>
+You often create temporary code in the early stages of development to help
+get an application up quickly and see how major components work together.
+Rails automatically creates much of the scaffolding you'll need.</li>
+<li><strong>Built-in testing:</strong>
+Rails creates simple automated tests you can then extend. Rails also
+provides supporting code called harnesses and fixtures that make test
+cases easier to write and run. Ruby can then execute all your automated
+tests with the rake utility.</li>
+<li><strong>Three environments:</strong>
+Rails gives you three default environments: development, testing, and
+production. Each behaves slightly differently, making your entire software
+development cycle easier. For example, Rails creates a fresh copy of the
+Test database for each test run.</li>
+</ul>
+</li>
+</ul>
+<!-- TODO: A lot of refactoring below -->
+<p><em>Section Below</em> <strong>NEEDS REFACTORING</strong></p>
+<h3 id="document-requests"><a class="header" href="#document-requests">Document Requests</a></h3>
+<p><a href="https://www.twilio.com/blog/5-ways-make-http-requests-ruby">Read here</a></p>
+<h3 id="processing-forms"><a class="header" href="#processing-forms">Processing Forms</a></h3>
+<p><a href="https://codecabulary.launchacademy.com/learn-rails/writing-forms">Read here</a></p>
+<h3 id="rails-applications-and-databases"><a class="header" href="#rails-applications-and-databases">Rails Applications and Databases</a></h3>
+<p><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-database-setup.htm">Read here</a></p>
+<h3 id="layouts"><a class="header" href="#layouts">Layouts</a></h3>
+<p><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-layouts.htm">Read here</a></p>
+<h3 id="rails-with-ajax"><a class="header" href="#rails-with-ajax">Rails with Ajax</a></h3>
+<p>How Rails Implements Ajax</p>
+<ul>
+<li>
+<p>Rails has a simple, consistent model for how it implements Ajax operations.
+Once the browser has rendered and displayed the initial web page, different
+user actions cause it to display a new web page (like any traditional web
+application) or trigger an Ajax operation −</p>
+</li>
+<li>
+<p>Some trigger fires − This trigger could be the user clicking on a button or
+link, the user making changes to the data on a form or in a field, or just a
+periodic trigger (based on a timer).</p>
+</li>
+<li>
+<p>The web client calls the server − A JavaScript method, XMLHttpRequest, sends
+data associated with the trigger to an action handler on the server. The
+data might be the ID of a checkbox, the text in an entry field, or a whole
+form.</p>
+</li>
+<li>
+<p>The server does processing − The server-side action handler ( Rails
+controller action )-- does something with the data and returns an HTML
+fragment to the web client.</p>
+</li>
+<li>
+<p>The client receives the response − The client-side JavaScript, which Rails
+creates automatically, receives the HTML fragment and uses it to update a
+specified part of the current page's HTML, often the content of a <div> tag.</p>
+</li>
+<li>
+<p>These steps are the simplest way to use Ajax in a Rails application, but
+with a little extra work, you can have the server return any kind of data in
+response to an Ajax request, and you can create custom JavaScript in the
+browser to perform more involved interactions.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-and-ajax.htm">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="introduction-to-ejb"><a class="header" href="#introduction-to-ejb">Introduction to EJB</a></h2>
+<ul>
+<li>
+<p><strong>EJB</strong> is a server-side software component that encapsulates business logic
+of an application. An EJB web container provides a runtime environment for
+web related software components, including computer security, Java servlet
+lifecycle management, transaction processing, and other web services.</p>
+</li>
+<li>
+<p>When to use Enterprise Java Beans?</p>
+<ol>
+<li>Application needs Remote Access. In other words, it is distributed.</li>
+<li>Application needs to be scalable. EJB applications supports load
+balancing, clustering and fail-over.</li>
+<li>Application needs encapsulated business logic. EJB application is
+differentiated from demonstration and persistent layer.</li>
+</ol>
+</li>
+<li>
+<p>Advantages of Enterprise Java Beans</p>
+<ol>
+<li>EJB repository yields system-level services to enterprise beans, the
+bean developer can focus on solving business problems.</li>
+<li>The beans rather than the clients contain the application’s business
+logic, the client developer can focus on the presentation of the client. The
+client developer does not have to code the pattern that execute business
+rules or access databases.</li>
+<li>Enterprise Java Beans are portable elements, the application assembler
+can build new applications from the beans that already exists.</li>
+</ol>
+</li>
+<li>
+<p>Disadvantages of Enterprise Java Beans</p>
+<ol>
+<li>Requires application server</li>
+<li>Requires only java client. For other language client, you need to go for
+webservice.</li>
+<li>Complex to understand and develop EJB applications.</li>
+</ol>
+</li>
+<li>
+<p>The 3 Types of Enterprise Java Beans are:</p>
+<ol>
+<li><strong>Session Bean:</strong> Session bean contains business logic that can be
+invoked by local, remote or webservice client. There are two types of
+session beans:
+<ol>
+<li>Stateful Session bean : Stateful session bean performs business task
+with the help of a state.</li>
+<li>Stateless Session bean : Stateless session bean implement business
+logic without having a persistent storage mechanism, such as a state or
+database and can used shared data.</li>
+</ol>
+</li>
+<li><strong>Message Driven Bean:</strong> Like Session Bean, it contains the business
+logic but it is invoked by passing message.</li>
+<li><strong>Entity Bean:</strong> It summarizes the state that can be remained in the
+database. It is deprecated. Now, it is replaced with JPA (Java Persistent
+API). There are two types of entity bean:
+<ol>
+<li>Bean Managed Persistence : In a bean managed persistence type of
+entity bean, the programmer has to write the code for database calls. It
+persists across multiple sessions and multiple clients.</li>
+<li>Container Managed Persistence : Container managed persistence are
+enterprise bean that persists across database. In container managed
+persistence the container take care of database calls.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/enterprise-java-beans-ejb/">Please also
+refer</a></p>
+</li>
+</ul>
 
                     </main>
 

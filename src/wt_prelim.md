@@ -45,10 +45,9 @@ record in MySQL database.**
         database.
 
     *   Syntax:
-
-    <!---->
-
+        ```php
         mysqli_query($con, query)
+        ```
 
 **2. What is the use of the XmlHttpRequest object? Explain its use with the help
 of simple javascript code.**

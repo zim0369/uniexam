@@ -11,7 +11,7 @@ be incomplete._
   - [ ] Unit III **Adversarial Search and Games**
   - [ ] Unit IV **Knowledge**
   - [ ] Unit V **Reasoning**
-  - [ ] Unit VI **Planning**
+  - [x] Unit VI **Planning**
   - [ ] Prelim Questions
 - [x] Cloud Computing
   - [x] Unit III **Virtualization in Cloud Computing**
@@ -19,18 +19,18 @@ be incomplete._
   - [x] Unit V **Security in Cloud Computing**
   - [x] Unit VI **Advanced Techniques in Cloud Computing**
   - [x] Prelim Questions
-- [ ] Data Science and Big Data
+- [x] Data Science and Big Data
   - [x] Unit III **Big Data Analytics Life Cycle**
-  - [ ] Unit IV **Predictive Big Data Analytics with Python**
+  - [x] Unit IV **Predictive Big Data Analytics with Python**
   - [x] Unit V **Big Data Analytics and Model Evaluation**
   - [x] Unit VI **Data Visualization and Hadoop**
-  - [ ] Prelim Questions
+  - [x] Prelim Questions
 - [ ] Web technologies
   - [ ] Unit III **Java Servlets and XML**
   - [ ] Unit IV **JSP and Web Services**
   - [ ] Unit V **Server Side Scripting Languages**
-  - [ ] Unit VI **Ruby and Rails**
-  - [ ] Prelim Questions
+  - [x] Unit VI **Ruby and Rails**
+  - [x] Prelim Questions
 
 ## BTW,
 
@@ -49,6 +49,9 @@ be incomplete._
 
 - To read more information about a topic, look for "More Details" whenever
   necessary. They are a link to the topic's resource.
+
+- You might find dropdowns in some places. They were added for unnecessary
+sections but quick reference just in case.
 
 - Improvements are welcome. Email me at: <zim@onionmail.org>
 
