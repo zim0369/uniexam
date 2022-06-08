@@ -25,10 +25,10 @@ be incomplete._
   - [x] Unit V **Big Data Analytics and Model Evaluation**
   - [x] Unit VI **Data Visualization and Hadoop**
   - [x] Prelim Questions
-- [ ] Web technologies
+- [x] Web technologies
   - [x] Unit III **Java Servlets and XML**
   - [x] Unit IV **JSP and Web Services**
-  - [ ] Unit V **Server Side Scripting Languages**
+  - [x] Unit V **Server Side Scripting Languages**
   - [x] Unit VI **Ruby and Rails**
   - [x] Prelim Questions
 
