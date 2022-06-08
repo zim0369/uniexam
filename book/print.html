@@ -150,7 +150,7 @@ Unit III <strong>Adversarial Search and Games</strong></li>
 Unit IV <strong>Knowledge</strong></li>
 <li><input disabled="" type="checkbox"/>
 Unit V <strong>Reasoning</strong></li>
-<li><input disabled="" type="checkbox" checked=""/>
+<li><input disabled="" type="checkbox"/>
 Unit VI <strong>Planning</strong></li>
 <li><input disabled="" type="checkbox"/>
 Prelim Questions</li>
@@ -189,9 +189,9 @@ Prelim Questions</li>
 <li><input disabled="" type="checkbox"/>
 Web technologies
 <ul>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit III <strong>Java Servlets and XML</strong></li>
-<li><input disabled="" type="checkbox"/>
+<li><input disabled="" type="checkbox" checked=""/>
 Unit IV <strong>JSP and Web Services</strong></li>
 <li><input disabled="" type="checkbox"/>
 Unit V <strong>Server Side Scripting Languages</strong></li>
@@ -510,19 +510,37 @@ AI, AI Components, AI Architectures.</p>
 <h2 id="automated-planning"><a class="header" href="#automated-planning">Automated Planning</a></h2>
 <ul>
 <li>
-<p>Automated planning and scheduling, sometimes denoted as simply AI planning, is a branch of artificial intelligence that concerns the realization of strategies or action sequences, typically for execution by intelligent agents, autonomous robots and unmanned vehicles. Unlike classical control and classification problems, the solutions are complex and must be discovered and optimized in multidimensional space. Planning is also related to decision theory.</p>
+<p>Automated planning and scheduling, sometimes denoted as simply AI planning,
+is a branch of artificial intelligence that concerns the realization of
+strategies or action sequences, typically for execution by intelligent
+agents, autonomous robots and unmanned vehicles. Unlike classical control
+and classification problems, the solutions are complex and must be
+discovered and optimized in multidimensional space. Planning is also related
+to decision theory.</p>
 </li>
 <li>
-<p>In known environments with available models, planning can be done offline. Solutions can be found and evaluated prior to execution. In dynamically unknown environments, the strategy often needs to be revised online. Models and policies must be adapted. Solutions usually resort to iterative trial and error processes commonly seen in artificial intelligence. These include dynamic programming, reinforcement learning and combinatorial optimization. Languages used to describe planning and scheduling are often called action languages.</p>
+<p>In known environments with available models, planning can be done offline.
+Solutions can be found and evaluated prior to execution. In dynamically
+unknown environments, the strategy often needs to be revised online. Models
+and policies must be adapted. Solutions usually resort to iterative trial
+and error processes commonly seen in artificial intelligence. These include
+dynamic programming, reinforcement learning and combinatorial optimization.
+Languages used to describe planning and scheduling are often called action
+languages.</p>
 </li>
 <li>
-<p><a href="https://en.wikipedia.org/wiki/Automated_planning_and_scheduling">More Details</a></p>
+<p><a href="https://people.eng.unimelb.edu.au/sjimenez/publications/sergio-ker11/sergio-ker11.pdf">More
+Details</a>
+or <a href="https://en.wikipedia.org/wiki/Automated_planning_and_scheduling">at
+Wikipedia</a></p>
 </li>
 </ul>
 <h2 id="classical-planning"><a class="header" href="#classical-planning">Classical Planning</a></h2>
 <ul>
 <li>
-<p>Classical Planning is the planning where an agent takes advantage of the problem structure to construct complex plans of an action. The agent performs three tasks in classical planning:</p>
+<p>Classical Planning is the planning where an agent takes advantage of the
+problem structure to construct complex plans of an action. The agent
+performs three tasks in classical planning:</p>
 <ul>
 <li>Planning: The agent plans after knowing what is the problem.</li>
 <li>Acting: It decides what action it has to take.</li>
@@ -532,16 +550,79 @@ AI, AI Components, AI Architectures.</p>
 <li>
 <p><a href="https://www.tutorialandexample.com/classical-planning">More Details</a></p>
 </li>
-<li>
-<p>NEEDS REFACTORING</p>
-</li>
 </ul>
-<!-- TODO - Refactoring -->
 <h3 id="algorithms-for-classical-planning"><a class="header" href="#algorithms-for-classical-planning">Algorithms for Classical Planning</a></h3>
 <ul>
 <li>NEEDS REFACTORING</li>
 </ul>
 <!-- TODO - Refactoring -->
+<ul>
+<li>
+<p>Before we begin with planning classical algorithm, we discuss the complexity
+of classical planning.</p>
+</li>
+<li>
+<p>In theoretical complexity of problem, we distinguish two decision problems:</p>
+<ol>
+<li>Plan SAT is the question of whether there exists any plan that solves a
+planning problem.</li>
+<li>Bounded plan SAT is whether there is a solution of length k or less that
+can be used to find an optimal plan.</li>
+</ol>
+</li>
+<li>
+<p>We observe that both decision problems are decidable for classical planning.</p>
+</li>
+<li>
+<p>Now we turn our attention to planning algorithms. We see that the description
+of a planning problem defines a search problem:</p>
+<ul>
+<li>
+<p>Forward searches(<strong>progression</strong>):
+Computing the successor state s|<em>o</em>|
+of a state <em>s</em> with respect to an operator <em>o</em>.</p>
+<ul>
+<li>Progression planners find solutions by forward search:</li>
+<li>start from initial state</li>
+<li>iteratively pick a previously generated state and progress it through
+an operator, generating a new state</li>
+<li>solution found when a goal state generated</li>
+<li>pro: very easy and efficient to implement</li>
+</ul>
+</li>
+<li>
+<p>Backward searches(<strong>regression</strong>):
+Computing the possible predecessor states regr(S′, o) of a set of
+states S′ (“subgoal”) given the last operator o that was applied.</p>
+<ul>
+<li>Regression planners find solutions by backward search:</li>
+<li>start from set of goal states</li>
+<li>iteratively pick a previously generated subgoal (state set) and
+regress it through an operator, generating a new subgoal</li>
+<li>solution found when a generated subgoal includes initial state</li>
+<li>pro: can handle many states simultaneously</li>
+<li>con: basic operations complicated and expensive</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Forward Search vs. Backward Search:</strong> Searching planning tasks in forward vs.
+backward direction is not symmetric:</p>
+<ul>
+<li>forward search starts from a single initial state; backward search starts
+from a set of goal states</li>
+<li>when applying an operator o in a state s in forward direction, there is a
+unique successor state <em>s′</em>; if we just applied operator o and ended up in
+state <em>s′</em>, there can be several possible predecessor states <em>s</em></li>
+<li>in most natural representation for backward search in planning, each
+search state corresponds to a set of world states</li>
+</ul>
+</li>
+<li>
+<p><a href="https://ai.dmi.unibas.ch/_files/teaching/hs18/po/slides/po-b02.pdf">More Details</a></p>
+</li>
+</ul>
 <h2 id="heuristics-for-planning"><a class="header" href="#heuristics-for-planning">Heuristics for Planning</a></h2>
 <h2 id="hierarchical-planning"><a class="header" href="#hierarchical-planning">Hierarchical Planning</a></h2>
 <h2 id="planning-and-acting-in-nondeterministic-domains"><a class="header" href="#planning-and-acting-in-nondeterministic-domains">Planning and Acting in Nondeterministic Domains</a></h2>
@@ -5123,8 +5204,1348 @@ Processing Forms, Rails Applications and Databases, Layouts, Rails with Ajax. In
 EJB.</p>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="java-servlets-and-xml"><a class="header" href="#java-servlets-and-xml">Java Servlets and XML</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="jsp-and-web-services"><a class="header" href="#jsp-and-web-services">JSP and Web Services</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-java-servlets-and-xml"><a class="header" href="#unit-iii-java-servlets-and-xml">Unit III: <strong>Java Servlets and XML</strong></a></h1>
+<h2 id="servlet"><a class="header" href="#servlet">Servlet</a></h2>
+<ul>
+<li>
+<p>A servlet is a small Java program that runs within a Web server. Servlets
+receive and respond to requests from Web clients, usually across HTTP, the
+HyperText Transfer Protocol. To implement this interface, you can write a
+generic servlet that extends javax. servlet.</p>
+</li>
+<li>
+<p>Servlets are grouped under the Advanced Java tree that are used to create
+dynamic web applications. Servlets are robust in nature, well scalable and
+are primarily used in developing server-side applications. If we go a little
+back in time, we would be able to witness that before the introduction of
+servlets, CGI (Common Gateway Interface) were used. Amid several indigenous
+tasks that a servlet is capable of doing, dynamically performing client
+requests and responses are most common. Other tasks that a servlet can do
+effectively are:</p>
+<ul>
+<li>Can easily manage/control the application flow.</li>
+<li>Suitable to implement business logic.</li>
+<li>Can effectively balance the load at the server-side.</li>
+<li>Easily generate dynamic web content.</li>
+</ul>
+</li>
+<li>
+<p>Talking about the types of servlets, there are primarily two types, namely:</p>
+<ol>
+<li>Generic Servlets</li>
+<li>HTTP Servlets</li>
+</ol>
+</li>
+<li>
+<p>There are three potential ways in which we can employ to create a servlet:</p>
+<ol>
+<li>Implementing Servlet Interface</li>
+<li>Extending Generic Servlet</li>
+<li>Extending HTTP Servlet</li>
+</ol>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Prime functionality of a servlet is that they are independent of server
+configuration and they are pretty much compatible with any of the web
+servers</li>
+<li>Servlets are also protocol-independent supporting FTP, HTTP, SMTP, etc.
+protocols to the fullest.</li>
+<li>Until destroyed manually, servlets can be retained in the memory helping
+process several requests over time. Also, once a database connection is
+established, it can facilitate process several requests for a database in
+the very same database session.</li>
+<li>Servlets inherit Java’s property of portability and hence are compatible
+with nearly any web server.</li>
+<li>Servlets are first converted into byte codes and then executed, which
+helps in increasing the processing time.</li>
+</ul>
+</li>
+<li>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Designing a servlet can be pretty laborious.</li>
+<li>Exceptions need to be handled while designing a servlet since they are not
+thread-safe.</li>
+<li>Developers may need additional skills to program a servlet.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/Servlet.html">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="servlet-architecture-overview"><a class="header" href="#servlet-architecture-overview">Servlet architecture overview</a></h3>
+<p><img src="pictures/servlet_arch.png" alt="Components of servlet architecture" /></p>
+<ol>
+<li>
+<p><strong>Client:</strong> The client shown in the architecture above is primarily working
+as a medium who is sending out HTTP requests over to the web server and again
+processing the response it gets back from the server. As we can see in the
+diagram, our client here is the web browser.</p>
+</li>
+<li>
+<p><strong>Web Server:</strong> Primary job of a web server is to process the requests and
+responses that a user sends over time and maintain how a web user would be able
+to access the files that has been hosted over the server. The server we are
+talking about here is a software which manages access to a centralized resource
+or service in a network.. There are precisely two types of webservers:</p>
+<ol>
+<li>Static web server</li>
+<li>Dynamic web server</li>
+</ol>
+</li>
+<li>
+<p><strong>Web Container:</strong> Web container is another typical component in servlet
+architecture which is responsible for communicating with the servlets. Two prime
+tasks of a web container are:</p>
+<ul>
+<li>Managing the servlet lifecycle</li>
+<li>URL mapping</li>
+</ul>
+<p>Web container sits at the server-side managing and handling all the requests
+that are coming in either from the servlets or from some JSP pages or
+potentially any other file system.</p>
+</li>
+</ol>
+<h3 id="a-hello-world-servlet"><a class="header" href="#a-hello-world-servlet">A “Hello World” servlet</a></h3>
+<!-- CODE -->
+<ul>
+<li>
+<p>Sample source code for &quot;Hello world&quot; servlet:</p>
+<pre><code class="language-java">// Import required java libraries
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+// Extend HttpServlet class
+public class HelloWorld extends HttpServlet {
+ 
+   private String message;
+
+   public void init() throws ServletException {
+      // Do required initialization
+      message = &quot;Hello World&quot;;
+   }
+
+   public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws ServletException, IOException {
+      
+      // Set response content type
+      response.setContentType(&quot;text/html&quot;);
+
+      // Actual logic goes here.
+      PrintWriter out = response.getWriter();
+      out.println(&quot;&lt;h1&gt;&quot; + message + &quot;&lt;/h1&gt;&quot;);
+   }
+
+   public void destroy() {
+      // do nothing.
+   }
+}
+</code></pre>
+</li>
+<li>
+<p>Save the above file with any name say &quot;hello.java&quot;</p>
+</li>
+<li>
+<p>Compile the servlet with <code>$ javac hello.java</code></p>
+</li>
+<li>
+<p>Create following entries in web.xml file located in
+&quot;<Tomcat-installation-directory>/webapps/ROOT/WEB-INF/&quot;</p>
+<pre><code class="language-java">&lt;servlet&gt;
+   &lt;servlet-name&gt;HelloWorld&lt;/servlet-name&gt;
+   &lt;servlet-class&gt;HelloWorld&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+   &lt;servlet-name&gt;HelloWorld&lt;/servlet-name&gt;
+   &lt;url-pattern&gt;/HelloWorld&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt; 
+</code></pre>
+</li>
+<li>
+<p>Start tomcat server using &quot;<Tomcat-installationdirectory>\bin\startup.bat&quot;
+(on Windows) or &quot;<Tomcat-installationdirectory>/bin/startup.sh&quot; (on
+Linux/Solaris etc.) and finally type http://localhost:8080/HelloWorld in the
+browser's address box. If everything goes fine, you would get the following
+result</p>
+<p><img src="pictures/servlet-example.jpg" alt="Servlet Example" /></p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/servlets/servlets-first-example.htm">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="servlets-generating-dynamic-content"><a class="header" href="#servlets-generating-dynamic-content">Servlets generating dynamic content</a></h3>
+<!-- TODO -->
+<p><strong>NEEDS REFACTORING</strong></p>
+<h3 id="servlet-life-cycle"><a class="header" href="#servlet-life-cycle">Servlet life cycle</a></h3>
+<ul>
+<li>
+<p>The entire life cycle of a Servlet is managed by the Servlet container which
+uses the javax.servlet.Servlet interface to understand the Servlet object
+and manage it. So, before creating a Servlet object, let’s first understand
+the life cycle of the Servlet object which is actually understanding how the
+Servlet container manages the Servlet object.</p>
+</li>
+<li>
+<p>Stages of the Servlet Life Cycle: The Servlet life cycle mainly goes through
+four stages,</p>
+<ol>
+<li>Loading a Servlet.</li>
+<li>Initializing the Servlet.</li>
+<li>Request handling.</li>
+<li>Destroying the Servlet.</li>
+</ol>
+</li>
+<li>
+<p>Let’s look at each of these stages in details:</p>
+<ol>
+<li>
+<p><strong>Loading a Servlet:</strong> The first stage of the Servlet lifecycle involves
+loading and initializing the Servlet by the Servlet container. The Web
+container or Servlet Container can load the Servlet at either of the
+following two stages :</p>
+<ul>
+<li>Initializing the context, on configuring the Servlet with a zero or
+positive integer value.</li>
+<li>If the Servlet is not preceding stage, it may delay the loading
+process until the Web container determines that this Servlet is
+needed to service a request.</li>
+</ul>
+</li>
+<li>
+<p><strong>Initializing a Servlet:</strong> After the Servlet is instantiated
+successfully, the Servlet container initializes the instantiated Servlet
+object. The container initializes the Servlet object by invoking the
+Servlet.init(ServletConfig) method which accepts ServletConfig object
+reference as parameter.</p>
+</li>
+<li>
+<p><strong>Handling request:</strong> After initialization, the Servlet instance is
+ready to serve the client requests. The Servlet container performs the
+following operations when the Servlet instance is located to service a
+request :</p>
+<ul>
+<li>It creates the ServletRequest and ServletResponse objects. In this
+case, if this is a HTTP request, then the Web container creates
+HttpServletRequest and HttpServletResponse objects which are
+subtypes of the ServletRequest and ServletResponse objects
+respectively.</li>
+<li>After creating the request and response objects it invokes the
+Servlet.service(ServletRequest, ServletResponse) method by passing
+the request and response objects.</li>
+</ul>
+</li>
+<li>
+<p><strong>Destroying a Servlet:</strong> When a Servlet container decides to destroy
+the Servlet, it performs the following operations,</p>
+<ul>
+<li>It allows all the threads currently running in the service method of
+the Servlet instance to complete their jobs and get released.</li>
+<li>After currently running threads have completed their jobs, the
+Servlet container calls the destroy() method on the Servlet
+instance.</li>
+</ul>
+</li>
+</ol>
+<p>After the destroy() method is executed, the Servlet container releases all
+the references of this Servlet instance so that it becomes eligible for
+garbage collection.</p>
+</li>
+<li>
+<p><strong>Servlet Life Cycle Methods:</strong></p>
+<ul>
+<li>There are three life cycle methods of a Servlet :
+<ul>
+<li>init()</li>
+<li>service()</li>
+<li>destroy()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/life-cycle-of-a-servlet/">More Details</a></p>
+</li>
+</ul>
+<h3 id="parameter-data"><a class="header" href="#parameter-data">Parameter data</a></h3>
+<ul>
+<li>
+<p>Parameters may come into our application from the client request, or may be
+configured through deployment descriptor (web.xml) elements or their
+corresponding annotations. When you submit a form, form values are sent as
+request parameters to a web application. In case of a GET request, these
+parameters are exposed in the URL as name value pairs and in case of POST,
+parameters are sent within the body of the request.</p>
+</li>
+<li>
+<p>Servlet init parameters and context init parameters are set through the
+deployment descriptor (web.xml) or their corresponding annotations. All
+parameters are read-only from the application code. We have methods in the
+Servlet API to retrieve various parameters.</p>
+</li>
+<li>
+<p>Attributes are objects that are attached to various scopes and can be
+modified, retrieved or removed. Attributes can be read, created, updated and
+deleted by the web container as well as our application code. We have methods
+in the Servlet API to add, modif, retrieve and remove attributes. When an
+object is added to an attribute in any scope, it is called binding as the
+object is bound into a scoped attribute with a given name.</p>
+</li>
+<li>
+<p>Important differences between attributes and parameters in JSP/servlets are:
+* Parameters are read only, attributes are read/write objects.
+* Parameters are String objects, attributes can be objects of any type.</p>
+</li>
+<li>
+<p><a href="https://www.javajee.com/parameters-and-attributes-in-servlet">More Details</a></p>
+</li>
+</ul>
+<h3 id="sessions"><a class="header" href="#sessions">Sessions</a></h3>
+<ul>
+<li>
+<p>Session simply means a particular interval of time.</p>
+</li>
+<li>
+<p>Session Tracking is a way to maintain state (data) of an user. It is also
+known as session management in servlet.</p>
+</li>
+<li>
+<p>Http protocol is a stateless so we need to maintain state using session
+tracking techniques. Each time user requests to the server, server treats
+the request as the new request. So we need to maintain the state of an user
+to recognize to particular user.</p>
+</li>
+<li>
+<p>HTTP is stateless that means each request is considered as the new request.
+It is shown in the figure given below:</p>
+</li>
+<li>
+<p>There are four techniques used in Session tracking:</p>
+<ol>
+<li>Cookies</li>
+<li>Hidden Form Field</li>
+<li>URL Rewriting</li>
+<li>HttpSession</li>
+</ol>
+</li>
+</ul>
+<h3 id="cookies"><a class="header" href="#cookies">Cookies</a></h3>
+<ul>
+<li>
+<p>A cookie is a small piece of information that is persisted between the
+multiple client requests.</p>
+</li>
+<li>
+<p>A cookie has a name, a single value, and optional attributes such as a
+comment, path and domain qualifiers, a maximum age, and a version number.</p>
+</li>
+<li>
+<p>How Cookie works:</p>
+<ul>
+<li>By default, each request is considered as a new request. In cookies
+technique, we add cookie with response from the servlet. So cookie is
+stored in the cache of the browser. After that if request is sent by the
+user, cookie is added with request by default. Thus, we recognize the
+user as the old user.</li>
+</ul>
+<p><img src="pictures/cookie.png" alt="Cookie" /></p>
+</li>
+<li>
+<p>There are 2 types of cookies in servlets:</p>
+<ol>
+<li>
+<p><strong>Non-persistent cookie:</strong></p>
+<ul>
+<li>It is valid for single session only. It is removed each time when
+user closes the browser.</li>
+</ul>
+</li>
+<li>
+<p><strong>Persistent cookie:</strong></p>
+<ul>
+<li>It is valid for multiple session . It is not removed each time when
+user closes the browser. It is removed only if user logout or
+signout.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Advantage of Cookies:</p>
+<ul>
+<li>Simplest technique of maintaining the state.</li>
+<li>Cookies are maintained at client side.</li>
+</ul>
+</li>
+<li>
+<p>Disadvantage of Cookies</p>
+<ul>
+<li>It will not work if cookie is disabled from the browser.</li>
+<li>Only textual information can be set in Cookie object.</li>
+</ul>
+</li>
+</ul>
+<h3 id="url-rewriting"><a class="header" href="#url-rewriting">URL rewriting</a></h3>
+<ul>
+<li>
+<p>In URL rewriting, we append a token or identifier to the URL of the next
+Servlet or the next resource. We can send parameter name/value pairs using
+the following format:</p>
+</li>
+<li>
+<p><code>url?name1=value1&amp;name2=value2&amp;??</code></p>
+</li>
+<li>
+<p>A name and a value is separated using an equal = sign, a parameter
+name/value pair is separated from another parameter using the ampersand(&amp;).
+When the user clicks the hyperlink, the parameter name/value pairs will be
+passed to the server. From a Servlet, we can use getParameter() method to
+obtain a parameter value.</p>
+</li>
+<li>
+<p>Advantage of URL Rewriting</p>
+<ul>
+<li>It will always work whether cookie is disabled or not (browser
+independent).</li>
+<li>Extra form submission is not required on each pages.</li>
+</ul>
+</li>
+<li>
+<p>Disadvantage of URL Rewriting</p>
+<ul>
+<li>It will work only with links.</li>
+<li>It can send Only textual information.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/url-rewriting-in-session-tracking">Refer for
+example</a></p>
+</li>
+</ul>
+<h3 id="other-servlet-capabilities"><a class="header" href="#other-servlet-capabilities">Other servlet capabilities</a></h3>
+<ul>
+<li>
+<p><a href="u4.1.html#servlet">Refer Advantages in the Servlet section</a></p>
+</li>
+<li>
+<p><a href="https://ecomputernotes.com/servlet/intro/http-servlets">More Details</a></p>
+</li>
+</ul>
+<h3 id="data-storage"><a class="header" href="#data-storage">Data storage</a></h3>
+<!-- TODO -->
+<p><strong>NEEDS REFACTORING</strong></p>
+<h3 id="servlets-concurrency"><a class="header" href="#servlets-concurrency">Servlets concurrency</a></h3>
+<ul>
+<li>
+<p>A Java servlet container or web server is multithreaded and multiple requests
+to the same servlet may be executed at the same time. Therefore, we need to
+take concurrency into consideration while writing servlet.</p>
+</li>
+<li>
+<p>As we discussed earlier that one and only one instance of Servlet gets created
+and for every new request , Servlet Container spawn a new thread to execute
+doGet() or doPost() methof of a servlet.</p>
+</li>
+<li>
+<p>By default servlets are not thread safe and it is a responsibility of  a
+servlet developer to take care of it.</p>
+</li>
+<li>
+<p>In this chapter we will discuss about concurrency in servlets and this is very
+important concept so your attention is required.</p>
+</li>
+<li>
+<p>There are certain points which we should consider while writing servlets.</p>
+<ul>
+<li>Service() , doGet(), doPost() or to be more generic doXXX()  methods
+should not update or modify instance variables as instance variables are
+shared by all threads of same instance.</li>
+<li>If you have a requirement which requires modification of instance variable
+then do it in a synchronized block.</li>
+<li>Above two rules are applicable for static variables also because they are
+also shared.</li>
+<li>Local variables are always thread safe.</li>
+<li>The request and response objects are thread safe to use because new
+instance of these are created for every request into your servlet, and
+thus for every thread executing in your servlet.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.wideskills.com/servlets/concurrency-in-servlets">More Details</a></p>
+</li>
+</ul>
+<h3 id="databases-mysql-and-java-servlets"><a class="header" href="#databases-mysql-and-java-servlets">Databases (MySQL) and Java Servlets.</a></h3>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/java-servlet-and-jdbc-example-insert-data-in-mysql/">Read at
+geeksforgeeks</a></li>
+</ul>
+<h2 id="xml"><a class="header" href="#xml">XML</a></h2>
+<ul>
+<li>
+<p>XML (Extensible Markup Language) is a markup language similar to HTML, but
+without predefined tags to use. Instead, you define your own tags designed
+specifically for your needs. This is a powerful way to store data in a format
+that can be stored, searched, and shared.</p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction">Read more</a></p>
+</li>
+</ul>
+<h3 id="xml-documents-and-vocabularies"><a class="header" href="#xml-documents-and-vocabularies">XML documents and vocabularies</a></h3>
+<ul>
+<li>
+<p>XML documents are strictly text files. In the context of data transport, the
+phrase &quot;XML document&quot; refers to a file or data stream containing any form of
+structured data. Examples include e-commerce transactions, server APIs,
+mathematical equations, customer information, and inventory status.</p>
+</li>
+<li>
+<p>XML documents contain only markup and content. All of the rules and semantics
+of the document are defined by the applications that process them. Like HTML
+documents, XML documents can be displayed in a Web browser. In this case, the
+semantics are usually derived from style sheets or Resource Description
+Framework (RDF) files.</p>
+</li>
+<li>
+<p>XML documents are said to be either &quot;well-formed&quot; or &quot;valid.&quot; Well-formed
+documents follow all of the XML rules for a document–for example, for every
+start tag, there is a corresponding end tag. Valid XML documents are
+well-formed, but they also contain a document type definition (DTD), and they
+obey the constraints of that definition. ### XML declaration</p>
+</li>
+<li>
+<p><a href="https://www.microfocus.com/documentation/extend-acucobol/925/BKITITNONVS004.html">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="xml-namespaces"><a class="header" href="#xml-namespaces">XML Namespaces</a></h3>
+<ul>
+<li>
+<p>XML namespaces are used for providing uniquely named elements and attributes
+in an XML document. They are defined in a W3C recommendation.[1][2] An XML
+instance may contain element or attribute names from more than one XML
+vocabulary. If each vocabulary is given a namespace, the ambiguity between
+identically named elements or attributes can be resolved.</p>
+</li>
+<li>
+<p>A simple example would be to consider an XML instance that contained
+references to a customer and an ordered product. Both the customer element and
+the product element could have a child element named id. References to the id
+element would therefore be ambiguous; placing them in different namespaces
+would remove the ambiguity.</p>
+</li>
+<li>
+<p>XML Namespaces provide a method to avoid element name conflicts.</p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_namespaces.asp">More Details</a></p>
+</li>
+</ul>
+<h3 id="dom-based-xml-processing"><a class="header" href="#dom-based-xml-processing">DOM based XML processing</a></h3>
+<ul>
+<li>
+<p>The XML Document Object Model (DOM) treats XML data as a standard set of
+objects and is used to process XML data in memory. The System.Xml namespace
+provides a programmatic representation of XML documents, fragments, nodes, or
+node-sets. It is based on the World Wide Web Consortium (W3C) DOM Level 1 Core
+and the DOM Level 2 Core recommendations.</p>
+</li>
+<li>
+<p>The XmlDocument class represents an XML document. It includes members for
+retrieving and creating all other XML objects. Using the XmlDocument, and its
+related classes, you can construct XML documents, load and access data, modify
+data, and save changes.</p>
+</li>
+<li>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/data/xml/xml-document-object-model-dom">More
+Details</a></p>
+</li>
+</ul>
+<h3 id="transforming-xml-documents"><a class="header" href="#transforming-xml-documents">Transforming XML documents</a></h3>
+<ul>
+<li>
+<p>Now that we've covered parsing, generating, and searching an XML document, we
+get into another very important part of XML processing—XML transformation. You
+can transform, or in other words convert, an XML document to another format by
+applying various transformation techniques. You can transform the XML document
+to either another XML document, which might be a subset of the original
+document by filtering certain info, or you can transform to a whole different
+data format, like HTML, eXtensible HyperText Markup Language (XHTML), Wireless
+Markup Language (WML), CSV, and so forth.</p>
+</li>
+<li>
+<p>Why would you want to convert our neatly formatted XML document to another
+format? We can read and understand the data as-is. Well the answer is,
+although as a technically savvy individual you took the time to learn XML and
+are now able to read it, most people would prefer their data represented in a
+user-friendly format.</p>
+</li>
+<li>
+<p>One of the most popular methods of transforming XML to another format is to
+use the eXtensible Stylesheet Language for Transformations (XSLT) standard. An
+XSLT processor provides the interface needed to transform XML data. One of the
+processor's components is the XML parser itself, which is needed for the XSLT
+processor to understand and interact with XML. This makes sense if you think
+about it—the XSLT processor needs to parse the document to extract the
+information contained in the XML before it can format the contents. The
+processor requires an XSLT stylesheet to perform the transformation. An XSLT
+stylesheet is itself an XML document that contains embedded rules used to
+perform the transformation. An XSLT processor uses XPath and the rules
+contained in the XSLT stylesheet to transform the document. It searches
+through the XML data using XPath and tries to find the desired elements.</p>
+</li>
+<li>
+<p><a href="https://www.informit.com/articles/article.aspx?p=30010&amp;seqNum=7">More
+Details</a></p>
+</li>
+</ul>
+<h2 id="dtd"><a class="header" href="#dtd">DTD</a></h2>
+<ul>
+<li>
+<p>A DTD is a Document Type Definition.</p>
+</li>
+<li>
+<p>A DTD defines the structure and the legal elements and attributes of an XML document.</p>
+</li>
+<li>
+<p>With a DTD, independent groups of people can agree on a standard DTD for interchanging data.</p>
+</li>
+<li>
+<p>An application can use a DTD to verify that XML data is valid.</p>
+</li>
+<li>
+<p>An XML document with correct syntax is called &quot;Well Formed&quot;.</p>
+</li>
+<li>
+<p>An XML document validated against a DTD is both &quot;Well Formed&quot; and &quot;Valid&quot;.</p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_dtd.asp">More Details</a></p>
+</li>
+</ul>
+<h3 id="schema"><a class="header" href="#schema">Schema</a></h3>
+<ul>
+<li>
+<p>The purpose of an XML Schema is to define the legal building blocks of an XML
+document:</p>
+<ul>
+<li>the elements and attributes that can appear in a document</li>
+<li>the number of (and order of) child elements</li>
+<li>data types for elements and attributes</li>
+<li>default and fixed values for elements and attributes</li>
+</ul>
+</li>
+<li>
+<p>In the XML world, hundreds of standardized XML formats are in daily use.</p>
+</li>
+<li>
+<p>Many of these XML standards are defined by XML Schemas.</p>
+</li>
+<li>
+<p>XML Schema is an XML-based (and more powerful) alternative to DTD.</p>
+</li>
+<li>
+<p>One of the greatest strength of XML Schemas is the support for data types.</p>
+<ul>
+<li>It is easier to describe allowable document content</li>
+<li>It is easier to validate the correctness of data</li>
+<li>It is easier to define data facets (restrictions on data)</li>
+<li>It is easier to define data patterns (data formats)</li>
+<li>It is easier to convert data between different data types</li>
+</ul>
+</li>
+<li>
+<p>XML Schemas use XML Syntax</p>
+<ul>
+<li>You don't have to learn a new language</li>
+<li>You can use your XML editor to edit your Schema files</li>
+<li>You can use your XML parser to parse your Schema files</li>
+<li>You can manipulate your Schema with the XML DOM</li>
+<li>You can transform your Schema with XSLT</li>
+</ul>
+</li>
+<li>
+<p>XML Schemas are extensible, because they are written in XML.</p>
+</li>
+<li>
+<p>With an extensible Schema definition you can:</p>
+<ul>
+<li>Reuse your Schema in other Schemas</li>
+<li>Create your own data types derived from the standard types</li>
+<li>Reference multiple schemas in the same document</li>
+</ul>
+</li>
+<li>
+<p>Differences between an XML Schema Definition (XSD) and Document Type
+Definition (DTD) include:</p>
+<ul>
+<li>
+<p>XML schemas are written in XML while DTD are derived from SGML syntax.</p>
+</li>
+<li>
+<p>XML schemas define datatypes for elements and attributes while DTD doesn't
+support datatypes.</p>
+</li>
+<li>
+<p>XML schemas allow support for namespaces while DTD does not.</p>
+</li>
+<li>
+<p>XML schemas define number and order of child elements, while DTD does not.</p>
+</li>
+<li>
+<p>XML schemas can be manipulated on your own with XML DOM but it is not
+possible in case of DTD.</p>
+</li>
+<li>
+<p>using XML schema user need not to learn a new language but working with
+DTD is difficult for a user.</p>
+</li>
+<li>
+<p>XML schema provides secure data communication i.e sender can describe the
+data in a way that receiver will understand, but in case of DTD data can
+be misunderstood by the receiver.</p>
+</li>
+<li>
+<p>XML schemas are extensible while DTD is not extensible.</p>
+</li>
+<li>
+<p>On the other hand:</p>
+<ul>
+<li>DTD lets you define new ENTITY values for use in your XML file.</li>
+<li>DTD lets you extend it local to an individual XML file.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="elements"><a class="header" href="#elements">Elements</a></h3>
+<ul>
+<li>
+<p>XML elements can be defined as building blocks of an XML document. Elements can behave as a container to hold text, elements, attributes, media objects or mix of all.</p>
+</li>
+<li>
+<p>In a DTD, elements are declared with an ELEMENT declaration.</p>
+</li>
+<li>
+<p>In a DTD, XML elements are declared with the following syntax:</p>
+</li>
+<li>
+<p>A DTD element is declared with an ELEMENT declaration. When an XML file is validated by DTD, parser initially checks for the root element and then the child elements are validated.</p>
+</li>
+<li>
+<p>Syntax:</p>
+<pre><code class="language-xml">&lt;!ELEMENT elementname (content)&gt;
+</code></pre>
+<ul>
+<li><em>elementname</em> is the element name (also called the generic identifier) that you are defining.</li>
+<li><em>ELEMENT</em> declaration is used to indicate the parser that you are about to define an element.</li>
+<li><em>content</em> defines what content (if any) can go within the element.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_dtd_elements.asp">Read more here</a></p>
+</li>
+</ul>
+<h3 id="attributes"><a class="header" href="#attributes">Attributes</a></h3>
+<ul>
+<li>
+<p>In a DTD, attributes are declared with an ATTLIST declaration.</p>
+</li>
+<li>
+<p>Attribute declaration is very much similar to element declarations in many
+ways except one; instead of declaring allowable content for elements, you
+declare a list of allowable attributes for each element. These lists are
+called ATTLIST declaration.</p>
+</li>
+<li>
+<p>Syntax: <code>xml &lt;!ATTLIST element-name attribute-name attribute-type attribute-value&gt; </code></p>
+<ul>
+<li>In the above syntax −
+<ul>
+<li>The DTD attributes start with &lt;!ATTLIST keyword if the element
+contains the attribute.</li>
+<li><strong>element-name</strong> specifies the name of the element to which the
+attribute applies.</li>
+<li><strong>attribute-name</strong> specifies the name of the attribute which is
+included with the element-name.</li>
+<li><strong>attribute-type</strong> defines the type of attributes. We will discuss
+more on this in the following sections.</li>
+<li><strong>attribute-value</strong> takes a fixed value that the attributes must
+define. We will discuss more on this in the following sections.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_dtd_attributes.asp">More Details</a></p>
+</li>
+</ul>
+<h2 id="ajax"><a class="header" href="#ajax">AJAX</a></h2>
+<ul>
+<li>
+<p>Ajax is a set of web development techniques that uses various web technologies
+on the client-side to create asynchronous web applications. With Ajax, web
+applications can send and retrieve data from a server asynchronously (in the
+background) without interfering with the display and behaviour of the existing
+page. By decoupling the data interchange layer from the presentation layer,
+Ajax allows web pages and, by extension, web applications, to change content
+dynamically without the need to reload the entire page. In practice, modern
+implementations commonly utilize JSON instead of XML.</p>
+</li>
+<li>
+<p>Ajax is not a technology, but rather a programming concept. HTML and CSS can
+be used in combination to mark up and style information. The webpage can be
+modified by JavaScript to dynamically display—and allow the user to interact
+with the new information. The built-in XMLHttpRequest object is used to
+execute Ajax on webpages, allowing websites to load content onto the screen
+without refreshing the page. Ajax is not a new technology, nor is it a new
+language. Instead, it is existing technologies used in a new way.</p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/js/js_ajax_intro.asp">Read working of Ajax here</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iv-jsp-and-web-services"><a class="header" href="#unit-iv-jsp-and-web-services">Unit IV: <strong>JSP and Web Services</strong></a></h1>
+<h2 id="jsp"><a class="header" href="#jsp">JSP</a></h2>
+<p>Java Server Pages (JSP) is a server-side programming technology that enables the
+creation of dynamic, platform-independent method for building Web-based
+applications. JSP have access to the entire family of Java APIs, including the
+JDBC API to access enterprise databases. This tutorial will teach you how to use
+Java Server Pages to develop your web applications in simple and easy steps.</p>
+<h3 id="introduction-to-java-server-pages"><a class="header" href="#introduction-to-java-server-pages">Introduction to Java Server Pages</a></h3>
+<ul>
+<li>
+<p>It stands for Java Server Pages.</p>
+</li>
+<li>
+<p>It is a server side technology.</p>
+</li>
+<li>
+<p>It is used for creating web application.</p>
+</li>
+<li>
+<p>It is used to create dynamic web content.</p>
+</li>
+<li>
+<p>In this JSP tags are used to insert JAVA code into HTML pages.</p>
+</li>
+<li>
+<p>It is an advanced version of Servlet Technology.</p>
+</li>
+<li>
+<p>It is a Web based technology helps us to create dynamic and platform
+independent web pages.</p>
+</li>
+<li>
+<p>In this, Java code can be inserted in HTML/ XML pages or both.</p>
+</li>
+<li>
+<p>JSP is first converted into servlet by JSP container before processing the
+client’s request.</p>
+</li>
+<li>
+<p>JSP pages are more advantageous than Servlet:</p>
+<ul>
+<li>They are easy to maintain.</li>
+<li>No recompilation or redeployment is required.</li>
+<li>JSP has access to entire API of JAVA .</li>
+<li>JSP are extended version of Servlet.</li>
+</ul>
+</li>
+<li>
+<p>Applications of JSP</p>
+<ul>
+<li>
+<p><strong>JSP vs. Active Server Pages (ASP):</strong> The advantages of JSP are
+twofold. First, the dynamic part is written in Java, not Visual Basic or
+other MS specific language, so it is more powerful and easier to use.
+Second, it is portable to other operating systems and non-Microsoft Web
+servers.</p>
+</li>
+<li>
+<p><strong>JSP vs. Pure Servlets:</strong> It is more convenient to write (and to
+modify!) regular HTML than to have plenty of println statements that
+generate the HTML.</p>
+</li>
+<li>
+<p><strong>JSP vs. Server-Side Includes (SSI):</strong> SSI is really only intended for
+simple inclusions, not for &quot;real&quot; programs that use form data, make
+database connections, and the like.</p>
+</li>
+<li>
+<p><strong>JSP vs. JavaScript:</strong> JavaScript can generate HTML dynamically on the
+client but can hardly interact with the web server to perform complex
+tasks like database access and image processing etc.</p>
+</li>
+<li>
+<p><strong>JSP vs. Static HTML:</strong> Regular HTML, of course, cannot contain dynamic
+information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Features of JSP</p>
+<ul>
+<li>Coding in JSP is easy :- As it is just adding JAVA code to HTML/XML.</li>
+<li>Reduction in the length of Code :- In JSP we use action tags, custom
+tags etc.</li>
+<li>Connection to Database is easier :-It is easier to connect website to
+database and allows to read or write data easily to the database.</li>
+<li>Make Interactive websites :- In this we can create dynamic web pages
+which helps user to interact in real time environment.</li>
+<li>Portable, Powerful, flexible and easy to maintain :- as these are
+browser and server independent.</li>
+<li>No Redeployment and No Re-Compilation :- It is dynamic, secure and
+platform independent so no need to re-compilation.</li>
+<li>Extension to Servlet :- as it has all features of servlets, implicit
+objects and custom tags</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/introduction-to-jsp/">More Details</a></p>
+</li>
+</ul>
+<h3 id="jsp-and-servlets"><a class="header" href="#jsp-and-servlets">JSP and Servlets</a></h3>
+<!-- TABLE -->
+<table><thead><tr><th>Servlet</th><th>JSP</th></tr></thead><tbody>
+<tr><td>Servlet is a java code</td><td>JSP is a HTML based code</td></tr>
+<tr><td>Writing code for servlet is harder than JSP as it is HTML in java</td><td>JSP is easy to code as it is java in HTML</td></tr>
+<tr><td>Servlet plays a controller role in the hasMVC approach</td><td>JSP is the view in the MVC approach for showing output</td></tr>
+<tr><td>Servlet is faster than JSP</td><td>JSP is slower than Servlet because the first step in JSP lifecycle is the translation of JSP to java code and then compile</td></tr>
+<tr><td>Servlet can accept all protocol requests</td><td>JSP only accepts HTTP requests</td></tr>
+<tr><td>In Servlet, we can override the service() method</td><td>In JSP, we cannot override its service() method</td></tr>
+<tr><td>In Servlet by default session management is not enabled, user have to enable it explicitly</td><td>In JSP session management is automatically enabled</td></tr>
+<tr><td>In Servlet we have to implement everything like business logic and presentation logic in just one servlet file</td><td>In JSP business logic is separated from presentation logic by using javaBeans</td></tr>
+<tr><td>Modification in Servlet is a time consuming task because it includes reloading, recompiling, JavaBeans the and restarting the server</td><td>JSP modification is fast, just need to click the refresh button</td></tr>
+<tr><td>It does not have inbuilt implicit objects</td><td>In JSP , there are inbuilt implicit objects</td></tr>
+<tr><td>There is no method for running JavaScript on the client side in Servlet</td><td>While running the JavaScript at the client side in JSP , the client-side validation is used</td></tr>
+<tr><td>Packages are to be imported on the top of the program</td><td>Packages can be imported into the JSP program(i                                                                            .e bottom , middle , or top )</td></tr>
+</tbody></table>
+<h3 id="running-jsp-applications"><a class="header" href="#running-jsp-applications">running JSP applications</a></h3>
+<ul>
+<li>
+<p>A Java Server Page, or JSP, program is a crucial part of a Java web
+application because the JSP will send a response back to the server in the
+form of a web page. For example, a JSP might display the line items of an
+order to the browser user. In this topic, you will create a very simple JSP
+and learn how to run the program at the Tomcat server.</p>
+</li>
+<li>
+<p>Creating a JSP application in 7 steps:</p>
+<ol>
+<li>
+<p>In your text editor, you will develop a simple JSP that creates a web page to
+display the current date. Type in the following statements in a new file:</p>
+<!-- CODE -->
+<pre><code class="language-html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html&quot;%&gt;
+&lt;%@ page import=&quot;java.text.*,java.util.*&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Date JSP&lt;/title&gt;
+&lt;/head&gt;
+&lt;% SimpleDateFormat sdf=new SimpleDateFormat(&quot;MM/dd/yyyy&quot;); %&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to Tomcat! Today is &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>The program contains <code>&lt;%@</code> tags that provide metadata about the JSP and
+import directives. The JSP also contains HTML tags that will be rendered by
+the browser in the usual way. Note the <code>&lt;%</code> tags that encapsulate Java code.
+The snippets of Java code are referred to as &quot;scriplets.&quot; When the JSP is
+requested by the browser, the program will be converted into a servlet by a
+program in the Tomcat container (<code>Jasper</code>) and the HTML output will be sent
+to the browser.</p>
+</li>
+<li>
+<p>Save your file as <code>DateJSP.jsp</code></p>
+</li>
+<li>
+<p>Copy your file to <code>CATALINA_HOME/webapps/ROOT</code>, e.g.,
+<code>c:/Tomcat8/webapps/ROOT</code></p>
+</li>
+<li>
+<p>Start the Tomcat server.</p>
+</li>
+<li>
+<p>Start your browser if it is not already running.</p>
+</li>
+<li>
+<p>In the address area of the browser, type <code>http://localhost:8080/DateJSP.jsp</code>
+and submit that address to the browser.</p>
+</li>
+<li>
+<p>The output of your JSP page will be displayed:</p>
+<p><img src="pictures/jsp_example.png" alt="JSP example" /></p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="basic-jsp"><a class="header" href="#basic-jsp">Basic JSP</a></h3>
+<ul>
+<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html">Learn here</a></li>
+</ul>
+<h3 id="javabeans-classes-and-jsp"><a class="header" href="#javabeans-classes-and-jsp">JavaBeans classes and JSP</a></h3>
+<ul>
+<li>
+<p>JavaBeans are classes that encapsulate many objects into a single object (the bean). It is a java class that should follow following conventions:</p>
+<ol>
+<li>Must implement Serializable.</li>
+<li>It should have a public no-arg constructor.</li>
+<li>All properties in java bean must be private with public getters and setter methods.</li>
+</ol>
+</li>
+<li>
+<p>Syntax:</p>
+<pre><code class="language-java">  // Java program to illustrate the
+  // structure of JavaBean class
+  public class TestBean {
+  private String name;
+  public void setName(String name)
+      {
+          this.name = name;
+      }
+  public String getName()
+      {
+          return name;
+      }
+  }
+</code></pre>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/javabean-class-java/">More Details</a></p>
+</li>
+</ul>
+<h3 id="support-for-the-model-view-controller-paradigm"><a class="header" href="#support-for-the-model-view-controller-paradigm">Support for the Model-View-Controller paradigm</a></h3>
+<ul>
+<li>
+<p>MVC stands for Model View and Controller. It is a design pattern that separates the business logic, presentation logic and data.</p>
+</li>
+<li>
+<p>Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.</p>
+</li>
+<li>
+<p>Model represents the state of the application i.e. data. It can also have business logic.</p>
+</li>
+<li>
+<p>View represents the presentaion i.e. UI(User Interface).</p>
+</li>
+<li>
+<p>Advantage of MVC (Model 2) Architecture</p>
+<ul>
+<li>Navigation Control is centralized</li>
+<li>Easy to maintain the large application</li>
+</ul>
+<p><img src="pictures/mvc.jpg" alt="MVC" /></p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/MVC-in-jsp">Refer for example</a></p>
+</li>
+</ul>
+<h3 id="jsp-related-technologies"><a class="header" href="#jsp-related-technologies">JSP related technologies</a></h3>
+<ul>
+<li><a href="https://flylib.com/books/en/1.94.1.95/1/">More Details</a></li>
+</ul>
+<h2 id="web-services"><a class="header" href="#web-services">Web Services</a></h2>
+<ul>
+<li>
+<p>A Web service is a method of communication between two electronic devices
+over a network. It is a software function provided at a network address over
+the Web with the service always-on as in the concept of utility computing.
+Many organizations use multiple software systems for management.</p>
+</li>
+<li>
+<p>Web services are self-contained, modular, distributed, dynamic applications
+that can be described, published, located, or invoked over the network to
+create products, processes, and supply chains. These applications can be
+local, distributed, or web-based. Web services are built on top of open
+standards such as TCP/IP, HTTP, Java, HTML, and XML.</p>
+</li>
+<li>
+<p>Web services are XML-based information exchange systems that use the Internet
+for direct application-to-application interaction. These systems can include
+programs, objects, messages, or documents.</p>
+</li>
+<li>
+<p>A web service is a collection of open protocols and standards used for
+exchanging data between applications or systems. Software applications written
+in various programming languages and running on various platforms can use web
+services to exchange data over computer networks like the Internet in a manner
+similar to inter-process communication on a single computer. This
+interoperability (e.g., between Java and Python, or Windows and Linux
+applications) is due to the use of open standards.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/webservices/what_are_web_services.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="web-service-concepts"><a class="header" href="#web-service-concepts">Web Service concepts</a></h3>
+<ul>
+<li>
+<p>Components(Types) of Web Services</p>
+<ul>
+<li>
+<p><strong>SOAP (Simple Object Access Protocol):</strong> SOAP stands for “Simple Object
+Access Protocol.” It is a transport-independent messaging protocol. SOAP
+is built on sending XML data in the form of SOAP Messages.</p>
+</li>
+<li>
+<p><strong>UDDI (Universal Description, Discovery, and Integration):</strong> UDDI is a
+standard for specifying, publishing and discovering a service provider’s
+online services.</p>
+</li>
+<li>
+<p><strong>WSDL (Web Services Description Language):</strong> If a web service can’t be
+found, it can’t be used. The client invoking the web service should be
+aware of the location of the web service.</p>
+</li>
+<li>
+<p><strong>REST(Representational State Transfer):</strong>
+Is an architectural style, meaning each unique URL represents an individual
+object of some sort. A REST web service uses HTTP and supports/repurposes
+several HTTP methods: GET, POST, PUT or DELETE. It also offers simple
+CRUD-oriented services. Fun fact: The original RESTful architecture was
+designed by one of the leading authors of HTTP, Roy Fielding.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.cleo.com/blog/knowledge-base-web-services">More Details</a></p>
+</li>
+</ul>
+<h3 id="writing-a-java-web-service"><a class="header" href="#writing-a-java-web-service">Writing a Java Web Service</a></h3>
+<ul>
+<li><a href="https://blog.idrsolutions.com/2013/08/creating-and-deploying-a-java-web-service/">Read here</a></li>
+</ul>
+<h3 id="writing-a-java-web-service-client"><a class="header" href="#writing-a-java-web-service-client">Writing a Java web service client</a></h3>
+<ul>
+<li><a href="https://docs.oracle.com/javaee/5/tutorial/doc/bnayn.html">Read here</a></li>
+</ul>
+<h2 id="describing-web-services"><a class="header" href="#describing-web-services">Describing Web Services</a></h2>
+<h3 id="wsdl"><a class="header" href="#wsdl">WSDL</a></h3>
+<ul>
+<li>
+<p>WSDL is an XML notation for describing a web service. A WSDL definition tells a
+client how to compose a web service request and describes the interface that is
+provided by the web service provider.</p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_wsdl.asp">More Details</a></p>
+</li>
+</ul>
+<h3 id="communicating-object-data"><a class="header" href="#communicating-object-data">Communicating Object data</a></h3>
+<p><strong>NEEDS REFACTORING</strong></p>
+<!-- TODO -->
+<h3 id="soap"><a class="header" href="#soap">SOAP</a></h3>
+<ul>
+<li>
+<p>SOAP is an XML-based protocol for accessing web services over HTTP. It has
+some specification which could be used across all applications.</p>
+</li>
+<li>
+<p>SOAP is known as the Simple Object Access Protocol, but in later times was
+just shortened to SOAP v1.2. SOAP is a protocol or in other words is a
+definition of how web services talk to each other or talk to client
+applications that invoke them.</p>
+</li>
+<li>
+<p>SOAP was developed as an intermediate language so that applications built on
+various programming languages could talk easily to each other and avoid the
+extreme development effort.</p>
+</li>
+<li>
+<p><a href="https://www.guru99.com/soap-simple-object-access-protocol.html">More Details</a></p>
+</li>
+</ul>
+<h2 id="struts"><a class="header" href="#struts">Struts</a></h2>
+<ul>
+<li>Apache Struts 2 is an open-source web application framework for developing
+Java EE web applications. It uses and extends the Java Servlet API to
+encourage developers to adopt a model–view–controller (MVC) architecture. The
+WebWork framework spun off from Apache Struts 1 aiming to offer enhancements
+and refinements while retaining the same general architecture of the original
+Struts framework. In December 2005, it was announced that WebWork 2.2 was
+adopted as Apache Struts 2, which reached its first full release in February
+2007.</li>
+</ul>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<ul>
+<li><a href="https://www.javatpoint.com/struts-2-tutorial">Overview</a></li>
+</ul>
+<h3 id="architecture"><a class="header" href="#architecture">Architecture</a></h3>
+<ul>
+<li>
+<p>Struts 2 is slightly different from a traditional MVC framework, where the
+action takes the role of the model rather than the controller, although there
+is some overlap.</p>
+<p><img src="pictures/struts_2_architecture.gif" alt="Struts 2 Architecture" /></p>
+</li>
+<li>
+<p>The above diagram depicts the Model, View and Controller to the Struts2 high
+level architecture. The controller is implemented with a Struts2 dispatch
+servlet filter as well as interceptors, this model is implemented with
+actions, and the view is a combination of result types and results. The value
+stack and OGNL provides common thread, linking and enabling integration
+between the other components.</p>
+</li>
+<li>
+<p>Request Life Cycle Based on the above diagram, you can understand the work
+flow through user's request life cycle in Struts 2 as follows:</p>
+<ul>
+<li>
+<p>User sends a request to the server for requesting for some resource (i.e.
+pages).</p>
+</li>
+<li>
+<p>The Filter Dispatcher looks at the request and then determines the
+appropriate Action.</p>
+</li>
+<li>
+<p>Configured interceptor functionalities applies such as validation, file
+upload etc.</p>
+</li>
+<li>
+<p>Selected action is performed based on the requested operation.</p>
+</li>
+<li>
+<p>Again, configured interceptors are applied to do any post-processing if
+required.</p>
+</li>
+<li>
+<p>Finally, the result is prepared by the view and returns the result to the
+user.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<ul>
+<li>
+<p>Configuration files like web.xml, struts.xml, strutsconfig.xml and
+struts.properties are used to configure a Struts 2 application.</p>
+<ul>
+<li>
+<p>The <strong>web.xml</strong> File: The web.xml configuration file is a J2EE
+configuration file that determines how elements of the HTTP request are
+processed by the servlet container. It is not strictly a Struts2
+configuration file, but it is a file that needs to be configured for
+Struts2 to work.</p>
+</li>
+<li>
+<p>The <strong>Struts.xml</strong> File: The struts.xml file contains the configuration
+information that you will be modifying as actions are developed. This
+file can be used to override default settings for an application, for
+example struts.devMode = false and other settings which are defined in
+property file. This file can be created under the folder
+WEB-INF/classes.</p>
+</li>
+<li>
+<p>The <strong>Struts-config.xml</strong> File: The struts-config.xml configuration file
+is a link between the View and Model components in the Web Client but
+you would not have to touch these settings for 99.99% of your projects.</p>
+</li>
+<li>
+<p>The <strong>Struts.properties</strong> File: This configuration file provides a
+mechanism to change the default behavior of the framework. Actually, all
+the properties contained within the struts.properties configuration file
+can also be configured in the web.xml using the init-param, as well
+using the constant tag in the struts.xml configuration file. But, if you
+like to keep the things separate and more struts specific, then you can
+create this file under the folder WEB-INF/classes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_configuration.htm">See how the files
+look</a></p>
+</li>
+</ul>
+<h3 id="actions"><a class="header" href="#actions">Actions</a></h3>
+<ul>
+<li>
+<p>Actions are the core of the Struts2 framework, as they are for any MVC (Model
+View Controller) framework. Each URL is mapped to a specific action, which
+provides the processing logic which is necessary to service the request from
+the user.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_actions.htm">Read More</a></p>
+</li>
+</ul>
+<h3 id="interceptors"><a class="header" href="#interceptors">Interceptors</a></h3>
+<ul>
+<li>
+<p>Interceptors are conceptually the same as servlet filters or the JDKs Proxy
+class. Interceptors allow for crosscutting functionality to be implemented
+separately from the action as well as the framework. You can achieve the
+following using interceptors −</p>
+<ul>
+<li>Providing preprocessing logic before the action is called.</li>
+<li>Providing postprocessing logic after the action is called.</li>
+<li>Catching exceptions so that alternate processing can be performed.</li>
+</ul>
+<!-- TABLE -->
+</li>
+</ul>
+<table><thead><tr><th>Sr.No</th><th>Interceptor &amp; Description</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>alias</strong> Allows parameters to have different name aliases across requests.</td></tr>
+<tr><td>2</td><td><strong>checkbox</strong> Assists in managing check boxes by adding a parameter value of false for check boxes that are not checked.</td></tr>
+<tr><td>3</td><td><strong>conversionError</strong> Places error information from converting strings to parameter types into the action's field errors.</td></tr>
+<tr><td>4</td><td><strong>createSession</strong> Automatically creates an HTTP session if one does not already exist.</td></tr>
+<tr><td>5</td><td><strong>debugging</strong> Provides several different debugging screens to the developer.</td></tr>
+<tr><td>6</td><td><strong>execAndWait</strong> Sends the user to an intermediary waiting page while the action executes in the background.</td></tr>
+</tbody></table>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_interceptors.htm">Read More</a></li>
+</ul>
+<h3 id="result-types"><a class="header" href="#result-types">Result types</a></h3>
+<ul>
+<li>
+<p>Most use cases can be divided into two phases. First, we need to change or
+query the application’s state, and then we need to present an updated view of
+the application. The Action class manages the application’s state, and the
+Result Type manages the view.</p>
+</li>
+<li>
+<p>Some predefined result types:</p>
+<!-- TABLE -->
+</li>
+</ul>
+<table><thead><tr><th>Result Types</th><th>Use</th></tr></thead><tbody>
+<tr><td>Chain Result</td><td>Used for Action Chaining</td></tr>
+<tr><td>Dispatcher Result</td><td>Used for web resource integration, including JSP integration</td></tr>
+<tr><td>FreeMarker Result</td><td>Used for FreeMarker integration</td></tr>
+<tr><td>HttpHeader Result</td><td>Used to control special HTTP behaviors</td></tr>
+<tr><td>Redirect Result</td><td>Used to redirect to another URL (web resource)</td></tr>
+<tr><td>Redirect Action Result</td><td>Used to redirect to another action mapping</td></tr>
+<tr><td>Stream Result</td><td>Used to stream an InputStream back to the browser (usually for file downloads)</td></tr>
+</tbody></table>
+<ul>
+<li><a href="https://struts.apache.org/core-developers/result-types">Read More</a></li>
+</ul>
+<h3 id="validations"><a class="header" href="#validations">Validations</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_validations.htm">Read here</a></li>
+</ul>
+<h3 id="localization"><a class="header" href="#localization">Localization</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_localization.htm">Read here</a></li>
+</ul>
+<h3 id="exception-handling"><a class="header" href="#exception-handling">Exception handling</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_exception_handling.htm">Read here</a></li>
+</ul>
+<h3 id="annotations"><a class="header" href="#annotations">Annotations</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_annotations.htm">Read here</a></li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="server-side-scripting-languages"><a class="header" href="#server-side-scripting-languages">Server Side Scripting Languages</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unit-vi-ruby-and-rails"><a class="header" href="#unit-vi-ruby-and-rails">Unit VI: <strong>Ruby and Rails</strong></a></h1>
 <h2 id="introduction-to-ruby"><a class="header" href="#introduction-to-ruby">Introduction to Ruby</a></h2>

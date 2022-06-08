@@ -134,7 +134,542 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="jsp-and-web-services"><a class="header" href="#jsp-and-web-services">JSP and Web Services</a></h1>
+                        <h1 id="unit-iv-jsp-and-web-services"><a class="header" href="#unit-iv-jsp-and-web-services">Unit IV: <strong>JSP and Web Services</strong></a></h1>
+<h2 id="jsp"><a class="header" href="#jsp">JSP</a></h2>
+<p>Java Server Pages (JSP) is a server-side programming technology that enables the
+creation of dynamic, platform-independent method for building Web-based
+applications. JSP have access to the entire family of Java APIs, including the
+JDBC API to access enterprise databases. This tutorial will teach you how to use
+Java Server Pages to develop your web applications in simple and easy steps.</p>
+<h3 id="introduction-to-java-server-pages"><a class="header" href="#introduction-to-java-server-pages">Introduction to Java Server Pages</a></h3>
+<ul>
+<li>
+<p>It stands for Java Server Pages.</p>
+</li>
+<li>
+<p>It is a server side technology.</p>
+</li>
+<li>
+<p>It is used for creating web application.</p>
+</li>
+<li>
+<p>It is used to create dynamic web content.</p>
+</li>
+<li>
+<p>In this JSP tags are used to insert JAVA code into HTML pages.</p>
+</li>
+<li>
+<p>It is an advanced version of Servlet Technology.</p>
+</li>
+<li>
+<p>It is a Web based technology helps us to create dynamic and platform
+independent web pages.</p>
+</li>
+<li>
+<p>In this, Java code can be inserted in HTML/ XML pages or both.</p>
+</li>
+<li>
+<p>JSP is first converted into servlet by JSP container before processing the
+client’s request.</p>
+</li>
+<li>
+<p>JSP pages are more advantageous than Servlet:</p>
+<ul>
+<li>They are easy to maintain.</li>
+<li>No recompilation or redeployment is required.</li>
+<li>JSP has access to entire API of JAVA .</li>
+<li>JSP are extended version of Servlet.</li>
+</ul>
+</li>
+<li>
+<p>Applications of JSP</p>
+<ul>
+<li>
+<p><strong>JSP vs. Active Server Pages (ASP):</strong> The advantages of JSP are
+twofold. First, the dynamic part is written in Java, not Visual Basic or
+other MS specific language, so it is more powerful and easier to use.
+Second, it is portable to other operating systems and non-Microsoft Web
+servers.</p>
+</li>
+<li>
+<p><strong>JSP vs. Pure Servlets:</strong> It is more convenient to write (and to
+modify!) regular HTML than to have plenty of println statements that
+generate the HTML.</p>
+</li>
+<li>
+<p><strong>JSP vs. Server-Side Includes (SSI):</strong> SSI is really only intended for
+simple inclusions, not for &quot;real&quot; programs that use form data, make
+database connections, and the like.</p>
+</li>
+<li>
+<p><strong>JSP vs. JavaScript:</strong> JavaScript can generate HTML dynamically on the
+client but can hardly interact with the web server to perform complex
+tasks like database access and image processing etc.</p>
+</li>
+<li>
+<p><strong>JSP vs. Static HTML:</strong> Regular HTML, of course, cannot contain dynamic
+information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Features of JSP</p>
+<ul>
+<li>Coding in JSP is easy :- As it is just adding JAVA code to HTML/XML.</li>
+<li>Reduction in the length of Code :- In JSP we use action tags, custom
+tags etc.</li>
+<li>Connection to Database is easier :-It is easier to connect website to
+database and allows to read or write data easily to the database.</li>
+<li>Make Interactive websites :- In this we can create dynamic web pages
+which helps user to interact in real time environment.</li>
+<li>Portable, Powerful, flexible and easy to maintain :- as these are
+browser and server independent.</li>
+<li>No Redeployment and No Re-Compilation :- It is dynamic, secure and
+platform independent so no need to re-compilation.</li>
+<li>Extension to Servlet :- as it has all features of servlets, implicit
+objects and custom tags</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/introduction-to-jsp/">More Details</a></p>
+</li>
+</ul>
+<h3 id="jsp-and-servlets"><a class="header" href="#jsp-and-servlets">JSP and Servlets</a></h3>
+<!-- TABLE -->
+<table><thead><tr><th>Servlet</th><th>JSP</th></tr></thead><tbody>
+<tr><td>Servlet is a java code</td><td>JSP is a HTML based code</td></tr>
+<tr><td>Writing code for servlet is harder than JSP as it is HTML in java</td><td>JSP is easy to code as it is java in HTML</td></tr>
+<tr><td>Servlet plays a controller role in the hasMVC approach</td><td>JSP is the view in the MVC approach for showing output</td></tr>
+<tr><td>Servlet is faster than JSP</td><td>JSP is slower than Servlet because the first step in JSP lifecycle is the translation of JSP to java code and then compile</td></tr>
+<tr><td>Servlet can accept all protocol requests</td><td>JSP only accepts HTTP requests</td></tr>
+<tr><td>In Servlet, we can override the service() method</td><td>In JSP, we cannot override its service() method</td></tr>
+<tr><td>In Servlet by default session management is not enabled, user have to enable it explicitly</td><td>In JSP session management is automatically enabled</td></tr>
+<tr><td>In Servlet we have to implement everything like business logic and presentation logic in just one servlet file</td><td>In JSP business logic is separated from presentation logic by using javaBeans</td></tr>
+<tr><td>Modification in Servlet is a time consuming task because it includes reloading, recompiling, JavaBeans the and restarting the server</td><td>JSP modification is fast, just need to click the refresh button</td></tr>
+<tr><td>It does not have inbuilt implicit objects</td><td>In JSP , there are inbuilt implicit objects</td></tr>
+<tr><td>There is no method for running JavaScript on the client side in Servlet</td><td>While running the JavaScript at the client side in JSP , the client-side validation is used</td></tr>
+<tr><td>Packages are to be imported on the top of the program</td><td>Packages can be imported into the JSP program(i                                                                            .e bottom , middle , or top )</td></tr>
+</tbody></table>
+<h3 id="running-jsp-applications"><a class="header" href="#running-jsp-applications">running JSP applications</a></h3>
+<ul>
+<li>
+<p>A Java Server Page, or JSP, program is a crucial part of a Java web
+application because the JSP will send a response back to the server in the
+form of a web page. For example, a JSP might display the line items of an
+order to the browser user. In this topic, you will create a very simple JSP
+and learn how to run the program at the Tomcat server.</p>
+</li>
+<li>
+<p>Creating a JSP application in 7 steps:</p>
+<ol>
+<li>
+<p>In your text editor, you will develop a simple JSP that creates a web page to
+display the current date. Type in the following statements in a new file:</p>
+<!-- CODE -->
+<pre><code class="language-html">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html&quot;%&gt;
+&lt;%@ page import=&quot;java.text.*,java.util.*&quot; %&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Date JSP&lt;/title&gt;
+&lt;/head&gt;
+&lt;% SimpleDateFormat sdf=new SimpleDateFormat(&quot;MM/dd/yyyy&quot;); %&gt;
+&lt;body&gt;
+&lt;h1&gt;Welcome to Tomcat! Today is &lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</li>
+<li>
+<p>The program contains <code>&lt;%@</code> tags that provide metadata about the JSP and
+import directives. The JSP also contains HTML tags that will be rendered by
+the browser in the usual way. Note the <code>&lt;%</code> tags that encapsulate Java code.
+The snippets of Java code are referred to as &quot;scriplets.&quot; When the JSP is
+requested by the browser, the program will be converted into a servlet by a
+program in the Tomcat container (<code>Jasper</code>) and the HTML output will be sent
+to the browser.</p>
+</li>
+<li>
+<p>Save your file as <code>DateJSP.jsp</code></p>
+</li>
+<li>
+<p>Copy your file to <code>CATALINA_HOME/webapps/ROOT</code>, e.g.,
+<code>c:/Tomcat8/webapps/ROOT</code></p>
+</li>
+<li>
+<p>Start the Tomcat server.</p>
+</li>
+<li>
+<p>Start your browser if it is not already running.</p>
+</li>
+<li>
+<p>In the address area of the browser, type <code>http://localhost:8080/DateJSP.jsp</code>
+and submit that address to the browser.</p>
+</li>
+<li>
+<p>The output of your JSP page will be displayed:</p>
+<p><img src="pictures/jsp_example.png" alt="JSP example" /></p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="basic-jsp"><a class="header" href="#basic-jsp">Basic JSP</a></h3>
+<ul>
+<li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/JSPByExample.html">Learn here</a></li>
+</ul>
+<h3 id="javabeans-classes-and-jsp"><a class="header" href="#javabeans-classes-and-jsp">JavaBeans classes and JSP</a></h3>
+<ul>
+<li>
+<p>JavaBeans are classes that encapsulate many objects into a single object (the bean). It is a java class that should follow following conventions:</p>
+<ol>
+<li>Must implement Serializable.</li>
+<li>It should have a public no-arg constructor.</li>
+<li>All properties in java bean must be private with public getters and setter methods.</li>
+</ol>
+</li>
+<li>
+<p>Syntax:</p>
+<pre><code class="language-java">  // Java program to illustrate the
+  // structure of JavaBean class
+  public class TestBean {
+  private String name;
+  public void setName(String name)
+      {
+          this.name = name;
+      }
+  public String getName()
+      {
+          return name;
+      }
+  }
+</code></pre>
+</li>
+<li>
+<p><a href="https://www.geeksforgeeks.org/javabean-class-java/">More Details</a></p>
+</li>
+</ul>
+<h3 id="support-for-the-model-view-controller-paradigm"><a class="header" href="#support-for-the-model-view-controller-paradigm">Support for the Model-View-Controller paradigm</a></h3>
+<ul>
+<li>
+<p>MVC stands for Model View and Controller. It is a design pattern that separates the business logic, presentation logic and data.</p>
+</li>
+<li>
+<p>Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.</p>
+</li>
+<li>
+<p>Model represents the state of the application i.e. data. It can also have business logic.</p>
+</li>
+<li>
+<p>View represents the presentaion i.e. UI(User Interface).</p>
+</li>
+<li>
+<p>Advantage of MVC (Model 2) Architecture</p>
+<ul>
+<li>Navigation Control is centralized</li>
+<li>Easy to maintain the large application</li>
+</ul>
+<p><img src="pictures/mvc.jpg" alt="MVC" /></p>
+</li>
+<li>
+<p><a href="https://www.javatpoint.com/MVC-in-jsp">Refer for example</a></p>
+</li>
+</ul>
+<h3 id="jsp-related-technologies"><a class="header" href="#jsp-related-technologies">JSP related technologies</a></h3>
+<ul>
+<li><a href="https://flylib.com/books/en/1.94.1.95/1/">More Details</a></li>
+</ul>
+<h2 id="web-services"><a class="header" href="#web-services">Web Services</a></h2>
+<ul>
+<li>
+<p>A Web service is a method of communication between two electronic devices
+over a network. It is a software function provided at a network address over
+the Web with the service always-on as in the concept of utility computing.
+Many organizations use multiple software systems for management.</p>
+</li>
+<li>
+<p>Web services are self-contained, modular, distributed, dynamic applications
+that can be described, published, located, or invoked over the network to
+create products, processes, and supply chains. These applications can be
+local, distributed, or web-based. Web services are built on top of open
+standards such as TCP/IP, HTTP, Java, HTML, and XML.</p>
+</li>
+<li>
+<p>Web services are XML-based information exchange systems that use the Internet
+for direct application-to-application interaction. These systems can include
+programs, objects, messages, or documents.</p>
+</li>
+<li>
+<p>A web service is a collection of open protocols and standards used for
+exchanging data between applications or systems. Software applications written
+in various programming languages and running on various platforms can use web
+services to exchange data over computer networks like the Internet in a manner
+similar to inter-process communication on a single computer. This
+interoperability (e.g., between Java and Python, or Windows and Linux
+applications) is due to the use of open standards.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/webservices/what_are_web_services.htm">More Details</a></p>
+</li>
+</ul>
+<h3 id="web-service-concepts"><a class="header" href="#web-service-concepts">Web Service concepts</a></h3>
+<ul>
+<li>
+<p>Components(Types) of Web Services</p>
+<ul>
+<li>
+<p><strong>SOAP (Simple Object Access Protocol):</strong> SOAP stands for “Simple Object
+Access Protocol.” It is a transport-independent messaging protocol. SOAP
+is built on sending XML data in the form of SOAP Messages.</p>
+</li>
+<li>
+<p><strong>UDDI (Universal Description, Discovery, and Integration):</strong> UDDI is a
+standard for specifying, publishing and discovering a service provider’s
+online services.</p>
+</li>
+<li>
+<p><strong>WSDL (Web Services Description Language):</strong> If a web service can’t be
+found, it can’t be used. The client invoking the web service should be
+aware of the location of the web service.</p>
+</li>
+<li>
+<p><strong>REST(Representational State Transfer):</strong>
+Is an architectural style, meaning each unique URL represents an individual
+object of some sort. A REST web service uses HTTP and supports/repurposes
+several HTTP methods: GET, POST, PUT or DELETE. It also offers simple
+CRUD-oriented services. Fun fact: The original RESTful architecture was
+designed by one of the leading authors of HTTP, Roy Fielding.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.cleo.com/blog/knowledge-base-web-services">More Details</a></p>
+</li>
+</ul>
+<h3 id="writing-a-java-web-service"><a class="header" href="#writing-a-java-web-service">Writing a Java Web Service</a></h3>
+<ul>
+<li><a href="https://blog.idrsolutions.com/2013/08/creating-and-deploying-a-java-web-service/">Read here</a></li>
+</ul>
+<h3 id="writing-a-java-web-service-client"><a class="header" href="#writing-a-java-web-service-client">Writing a Java web service client</a></h3>
+<ul>
+<li><a href="https://docs.oracle.com/javaee/5/tutorial/doc/bnayn.html">Read here</a></li>
+</ul>
+<h2 id="describing-web-services"><a class="header" href="#describing-web-services">Describing Web Services</a></h2>
+<h3 id="wsdl"><a class="header" href="#wsdl">WSDL</a></h3>
+<ul>
+<li>
+<p>WSDL is an XML notation for describing a web service. A WSDL definition tells a
+client how to compose a web service request and describes the interface that is
+provided by the web service provider.</p>
+</li>
+<li>
+<p><a href="https://www.w3schools.com/xml/xml_wsdl.asp">More Details</a></p>
+</li>
+</ul>
+<h3 id="communicating-object-data"><a class="header" href="#communicating-object-data">Communicating Object data</a></h3>
+<p><strong>NEEDS REFACTORING</strong></p>
+<!-- TODO -->
+<h3 id="soap"><a class="header" href="#soap">SOAP</a></h3>
+<ul>
+<li>
+<p>SOAP is an XML-based protocol for accessing web services over HTTP. It has
+some specification which could be used across all applications.</p>
+</li>
+<li>
+<p>SOAP is known as the Simple Object Access Protocol, but in later times was
+just shortened to SOAP v1.2. SOAP is a protocol or in other words is a
+definition of how web services talk to each other or talk to client
+applications that invoke them.</p>
+</li>
+<li>
+<p>SOAP was developed as an intermediate language so that applications built on
+various programming languages could talk easily to each other and avoid the
+extreme development effort.</p>
+</li>
+<li>
+<p><a href="https://www.guru99.com/soap-simple-object-access-protocol.html">More Details</a></p>
+</li>
+</ul>
+<h2 id="struts"><a class="header" href="#struts">Struts</a></h2>
+<ul>
+<li>Apache Struts 2 is an open-source web application framework for developing
+Java EE web applications. It uses and extends the Java Servlet API to
+encourage developers to adopt a model–view–controller (MVC) architecture. The
+WebWork framework spun off from Apache Struts 1 aiming to offer enhancements
+and refinements while retaining the same general architecture of the original
+Struts framework. In December 2005, it was announced that WebWork 2.2 was
+adopted as Apache Struts 2, which reached its first full release in February
+2007.</li>
+</ul>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<ul>
+<li><a href="https://www.javatpoint.com/struts-2-tutorial">Overview</a></li>
+</ul>
+<h3 id="architecture"><a class="header" href="#architecture">Architecture</a></h3>
+<ul>
+<li>
+<p>Struts 2 is slightly different from a traditional MVC framework, where the
+action takes the role of the model rather than the controller, although there
+is some overlap.</p>
+<p><img src="pictures/struts_2_architecture.gif" alt="Struts 2 Architecture" /></p>
+</li>
+<li>
+<p>The above diagram depicts the Model, View and Controller to the Struts2 high
+level architecture. The controller is implemented with a Struts2 dispatch
+servlet filter as well as interceptors, this model is implemented with
+actions, and the view is a combination of result types and results. The value
+stack and OGNL provides common thread, linking and enabling integration
+between the other components.</p>
+</li>
+<li>
+<p>Request Life Cycle Based on the above diagram, you can understand the work
+flow through user's request life cycle in Struts 2 as follows:</p>
+<ul>
+<li>
+<p>User sends a request to the server for requesting for some resource (i.e.
+pages).</p>
+</li>
+<li>
+<p>The Filter Dispatcher looks at the request and then determines the
+appropriate Action.</p>
+</li>
+<li>
+<p>Configured interceptor functionalities applies such as validation, file
+upload etc.</p>
+</li>
+<li>
+<p>Selected action is performed based on the requested operation.</p>
+</li>
+<li>
+<p>Again, configured interceptors are applied to do any post-processing if
+required.</p>
+</li>
+<li>
+<p>Finally, the result is prepared by the view and returns the result to the
+user.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="configuration"><a class="header" href="#configuration">Configuration</a></h3>
+<ul>
+<li>
+<p>Configuration files like web.xml, struts.xml, strutsconfig.xml and
+struts.properties are used to configure a Struts 2 application.</p>
+<ul>
+<li>
+<p>The <strong>web.xml</strong> File: The web.xml configuration file is a J2EE
+configuration file that determines how elements of the HTTP request are
+processed by the servlet container. It is not strictly a Struts2
+configuration file, but it is a file that needs to be configured for
+Struts2 to work.</p>
+</li>
+<li>
+<p>The <strong>Struts.xml</strong> File: The struts.xml file contains the configuration
+information that you will be modifying as actions are developed. This
+file can be used to override default settings for an application, for
+example struts.devMode = false and other settings which are defined in
+property file. This file can be created under the folder
+WEB-INF/classes.</p>
+</li>
+<li>
+<p>The <strong>Struts-config.xml</strong> File: The struts-config.xml configuration file
+is a link between the View and Model components in the Web Client but
+you would not have to touch these settings for 99.99% of your projects.</p>
+</li>
+<li>
+<p>The <strong>Struts.properties</strong> File: This configuration file provides a
+mechanism to change the default behavior of the framework. Actually, all
+the properties contained within the struts.properties configuration file
+can also be configured in the web.xml using the init-param, as well
+using the constant tag in the struts.xml configuration file. But, if you
+like to keep the things separate and more struts specific, then you can
+create this file under the folder WEB-INF/classes.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_configuration.htm">See how the files
+look</a></p>
+</li>
+</ul>
+<h3 id="actions"><a class="header" href="#actions">Actions</a></h3>
+<ul>
+<li>
+<p>Actions are the core of the Struts2 framework, as they are for any MVC (Model
+View Controller) framework. Each URL is mapped to a specific action, which
+provides the processing logic which is necessary to service the request from
+the user.</p>
+</li>
+<li>
+<p><a href="https://www.tutorialspoint.com/struts_2/struts_actions.htm">Read More</a></p>
+</li>
+</ul>
+<h3 id="interceptors"><a class="header" href="#interceptors">Interceptors</a></h3>
+<ul>
+<li>
+<p>Interceptors are conceptually the same as servlet filters or the JDKs Proxy
+class. Interceptors allow for crosscutting functionality to be implemented
+separately from the action as well as the framework. You can achieve the
+following using interceptors −</p>
+<ul>
+<li>Providing preprocessing logic before the action is called.</li>
+<li>Providing postprocessing logic after the action is called.</li>
+<li>Catching exceptions so that alternate processing can be performed.</li>
+</ul>
+<!-- TABLE -->
+</li>
+</ul>
+<table><thead><tr><th>Sr.No</th><th>Interceptor &amp; Description</th></tr></thead><tbody>
+<tr><td>1</td><td><strong>alias</strong> Allows parameters to have different name aliases across requests.</td></tr>
+<tr><td>2</td><td><strong>checkbox</strong> Assists in managing check boxes by adding a parameter value of false for check boxes that are not checked.</td></tr>
+<tr><td>3</td><td><strong>conversionError</strong> Places error information from converting strings to parameter types into the action's field errors.</td></tr>
+<tr><td>4</td><td><strong>createSession</strong> Automatically creates an HTTP session if one does not already exist.</td></tr>
+<tr><td>5</td><td><strong>debugging</strong> Provides several different debugging screens to the developer.</td></tr>
+<tr><td>6</td><td><strong>execAndWait</strong> Sends the user to an intermediary waiting page while the action executes in the background.</td></tr>
+</tbody></table>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_interceptors.htm">Read More</a></li>
+</ul>
+<h3 id="result-types"><a class="header" href="#result-types">Result types</a></h3>
+<ul>
+<li>
+<p>Most use cases can be divided into two phases. First, we need to change or
+query the application’s state, and then we need to present an updated view of
+the application. The Action class manages the application’s state, and the
+Result Type manages the view.</p>
+</li>
+<li>
+<p>Some predefined result types:</p>
+<!-- TABLE -->
+</li>
+</ul>
+<table><thead><tr><th>Result Types</th><th>Use</th></tr></thead><tbody>
+<tr><td>Chain Result</td><td>Used for Action Chaining</td></tr>
+<tr><td>Dispatcher Result</td><td>Used for web resource integration, including JSP integration</td></tr>
+<tr><td>FreeMarker Result</td><td>Used for FreeMarker integration</td></tr>
+<tr><td>HttpHeader Result</td><td>Used to control special HTTP behaviors</td></tr>
+<tr><td>Redirect Result</td><td>Used to redirect to another URL (web resource)</td></tr>
+<tr><td>Redirect Action Result</td><td>Used to redirect to another action mapping</td></tr>
+<tr><td>Stream Result</td><td>Used to stream an InputStream back to the browser (usually for file downloads)</td></tr>
+</tbody></table>
+<ul>
+<li><a href="https://struts.apache.org/core-developers/result-types">Read More</a></li>
+</ul>
+<h3 id="validations"><a class="header" href="#validations">Validations</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_validations.htm">Read here</a></li>
+</ul>
+<h3 id="localization"><a class="header" href="#localization">Localization</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_localization.htm">Read here</a></li>
+</ul>
+<h3 id="exception-handling"><a class="header" href="#exception-handling">Exception handling</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_exception_handling.htm">Read here</a></li>
+</ul>
+<h3 id="annotations"><a class="header" href="#annotations">Annotations</a></h3>
+<ul>
+<li><a href="https://www.tutorialspoint.com/struts_2/struts_annotations.htm">Read here</a></li>
+</ul>
 
                     </main>
 

@@ -11,7 +11,7 @@ be incomplete._
   - [ ] Unit III **Adversarial Search and Games**
   - [ ] Unit IV **Knowledge**
   - [ ] Unit V **Reasoning**
-  - [x] Unit VI **Planning**
+  - [ ] Unit VI **Planning**
   - [ ] Prelim Questions
 - [x] Cloud Computing
   - [x] Unit III **Virtualization in Cloud Computing**
@@ -26,8 +26,8 @@ be incomplete._
   - [x] Unit VI **Data Visualization and Hadoop**
   - [x] Prelim Questions
 - [ ] Web technologies
-  - [ ] Unit III **Java Servlets and XML**
-  - [ ] Unit IV **JSP and Web Services**
+  - [x] Unit III **Java Servlets and XML**
+  - [x] Unit IV **JSP and Web Services**
   - [ ] Unit V **Server Side Scripting Languages**
   - [x] Unit VI **Ruby and Rails**
   - [x] Prelim Questions
