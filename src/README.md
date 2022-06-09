@@ -11,7 +11,7 @@ be incomplete._
   - [ ] Unit III **Adversarial Search and Games**
   - [ ] Unit IV **Knowledge**
   - [ ] Unit V **Reasoning**
-  - [ ] Unit VI **Planning**
+  - [x] Unit VI **Planning**
   - [ ] Prelim Questions
 - [x] Cloud Computing
   - [x] Unit III **Virtualization in Cloud Computing**
