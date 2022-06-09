@@ -135,42 +135,78 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="unit-vi-planning"><a class="header" href="#unit-vi-planning">Unit VI: <strong>Planning</strong></a></h1>
-<ol>
-<li><strong>Automated Planning</strong></li>
-</ol>
-<p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning investigates this discussion process computationally. Its goal is to aid planning by reasoning on conceptual models, which are abstract and formal representations of the domain, the effects and combinations of activities, and the requirements to be met and objectives to be met. The planning domain is the conceptual model of the domain in which activities are carried out, plans are combinations of actions, and goals are the needs to be met. Intuitively, a planning problem entails determining a plan that satisfies the goal in a specific domain, given a planning domain and a goal. For Automated Planning, we give a broad formal framework.</p>
-<p>Domains, plans, and goals are the three fundamental components of the planning problem that the framework is built upon.</p>
-<p><strong>Domain</strong> - We allow for nondeterministic domains, which are domains in which actions may have varied effects and it is impossible to predict which of the various possible outcomes will actually occur at the time of planning. We also take partial observability into account. It represents the  reality  that  the  state  of  the  domain  cannot  always  be  observed completely, and so cannot be determined uniquely in some instances. The special circumstances of full observability, where the state may be totally observed and hence uniquely determined, and null observability, where no observation is ever feasible at run time, are both included in a model with partial observability.</p>
-<p><strong>Plans</strong> -  We  define  plans  in  which  the  action  to  be  performed  in  a particular state may be influenced by information about prior execution phases. Sequential plans, i.e., plans that are just sequences of activities, conditional plans, i.e., plans that can pick a different action depending on the current circumstance at execution time, and iterative plans that can run actions until a situation happens are all covered by the definition. There are plans that rely on a finite number of execution steps (finite- memory plans) and plans that do not rely on prior execution steps (non- memory plans) (memory-less plans). Plan executions, in general, result in  trees  (called  execution  trees)  whose  nodes  correspond  to  domain states.</p>
-<p><strong>Goals</strong> - Goals are defined as sets of acceptable trees that correspond to intended planning domain evolutions. They can be used to represent traditional reachability goals, which are requirements expressed on the leaves of execution trees that specify the end states to be achieved once a plan is performed. They can also represent more complicated types of &quot;extended objectives,&quot; such as temporally extended goals, that convey conditions across the entire execution tree.</p>
-<p>Our framework is broad enough to encompass a wide range of relevant and  important  planning  issues.  Deterministic  domains,  plans  that  are sequences of actions, and reachability goals can all be used to mimic traditional planning. Furthermore, our framework is ideally adapted for modeling  specific  types  of  planning  under  uncertainty  and  imperfect knowledge, which has recently been addressed in the scientific literature and is relevant to a number of real-world applications. Nondeterministic domains do, in fact, model uncertainty in action effects, whereas partial observability does so for observations.</p>
-<p>Nondeterministic  domains,  null  observability,  sequential  plans,  and reachability  goals,  for  example,  can  be  used  to  model  conformant</p>
-<p>planning. Nondeterministic domains, conditional plans, and reachability goals can all be used to model contingent planning.</p>
-<p>Nondeterministic domains, history-dependent plans, and objectives that describe  desirable  domain  evolutions  can  all  be  used  to  simulate planning for temporally extended goals.</p>
-<p>For practical reasons, the framework cannot be too broad to encompass all of the various planning issues that have been discussed in the literature thus  far.  For  example,  we  do  not  represent  probabilities  of  action outcomes  in  action  domains,  and  goals  are  represented  as  utility functions, which is a difference from planning based on Markov Decision Processes (MDP).</p>
+<h2 id="automated-planning"><a class="header" href="#automated-planning">Automated Planning</a></h2>
+<p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning
+investigates this discussion process computationally. Its goal is to aid
+planning by reasoning on conceptual models, which are abstract and formal
+representations of the domain, the effects and combinations of activities, and
+the requirements to be met and objectives to be met. The planning domain is the
+conceptual model of the domain in which activities are carried out, plans are
+combinations of actions, and goals are the needs to be met. Intuitively, a
+planning problem entails determining a plan that satisfies the goal in a
+specific domain, given a planning domain and a goal. For Automated Planning, we
+give a broad formal framework.</p>
+<p>Domains, plans, and goals are the three fundamental components of the planning
+problem that the framework is built upon.</p>
+<p><strong>Domain</strong> - We allow for nondeterministic domains, which are domains in which
+actions may have varied effects and it is impossible to predict which of the
+various possible outcomes will actually occur at the time of planning. We also
+take partial observability into account.</p>
+<p><strong>Plans</strong> -  We  define  plans  in  which  the  action  to  be  performed  in  a
+particular state may be influenced by information about prior execution phases.
+There are plans that rely on a finite number of execution steps (finite- memory
+plans) and plans that do not rely on prior execution steps (non- memory plans)
+(memory-less plans). Plan executions, in general, result in  trees  (called
+execution  trees)  whose nodes  correspond  to  domain states.</p>
+<p><strong>Goals</strong> - Goals are defined as sets of acceptable trees that correspond to
+intended planning domain evolutions. They can be used to represent traditional
+reachability goals, which are requirements expressed on the leaves of execution
+trees that specify the end states to be achieved once a plan is performed.</p>
+<p>Deterministic  domains,  plans  that  are sequences of actions, and reachability
+goals can all be used to mimic traditional planning.</p>
+<p>Nondeterministic domains do, in fact, model uncertainty in action effects,
+whereas partial observability does so for observations.</p>
 <p><strong>Key takeaway</strong></p>
-<p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning investigates this discussion process computationally. Its goal is to aid planning by reasoning on conceptual models, which are abstract and formal representations of the domain, the effects and combinations of activities, and the requirements to be met and objectives to be met.</p>
-<ol start="2">
-<li><strong>Classical Planning</strong></li>
-</ol>
-<p>Classical planning is the process of constructing complicated plans of action using the issue structure as a guide.</p>
-<p>Invariants  are  used  in  optimum  planning  (graph  theory,  complexity theory).</p>
-<p>Domain-specific  solvers  are  integrated  to  improve  the  efficiency  of classical planning on certain domains (puzzles, logistics, video games). Machine  learning  approaches  are  being  used  in  the  planning  and extraction of structural data (machine learning, deep learning, neural networks).</p>
+<p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning
+investigates this discussion process computationally. Its goal is to aid
+planning by reasoning on conceptual models, which are abstract and formal
+representations of the domain, the effects and combinations of activities, and
+the requirements to be met and objectives to be met.</p>
+<h2 id="classical-planning"><a class="header" href="#classical-planning">Classical Planning</a></h2>
+<p>Classical planning is the process of constructing complicated plans of action
+using the issue structure as a guide.</p>
+<p>Invariants  are  used  in  optimum  planning  (graph  theory,  complexity
+theory).</p>
+<p>Domain-specific  solvers  are  integrated  to  improve  the  efficiency  of
+classical planning on certain domains (puzzles, logistics, video games). Machine
+learning  approaches  are  being  used  in  the  planning  and extraction of
+structural data (machine learning, deep learning, neural networks).</p>
 <p>Optimize your strategy.</p>
 <p>In traditional planning, the agent performs three tasks:</p>
 <ul>
-<li>planning: After determining the problem, the agent makes a plan.</li>
-<li>Acting: It chooses the course of action to adopt.</li>
-<li>Learning: The agent's actions cause him to learn new things.</li>
+<li>
+<p>planning: After determining the problem, the agent makes a plan.</p>
+</li>
+<li>
+<p>Acting: It chooses the course of action to adopt.</p>
+</li>
+<li>
+<p>Learning: The agent's actions cause him to learn new things.</p>
+<p><img src="sam/040.png" alt="" /></p>
+</li>
 </ul>
-<p>Fig 1: Agent task <img src="sam/040.png" alt="" /></p>
-<p>PDDL  (Planning  Domain Definition  Language)  is  a language  that  is  used  to represent  all  actions  in  a single action schema.</p>
+<p>PDDL  (Planning  Domain Definition  Language)  is  a language  that  is  used to
+represent  all  actions  in  a single action schema.</p>
 <p>The four basic things required in  a  search  problem  are described by PDLL:</p>
 <ul>
-<li>Initial state - Each state is represented  as  the  union  of the  ground  and  functionless atoms in its initial state.</li>
-<li>Action - It is defined by a series of action schemas that define the ACTION() and RESULT() functions implicitly.</li>
-<li>Result - The collection of activities taken by the agent yielded this result.</li>
-<li>Goal  -  The  goal  is  the  same  as  a  precondition,  which  is  a  literal conjunction (whose value is either positive or negative).</li>
+<li>Initial state - Each state is represented  as  the  union  of the  ground
+and  functionless atoms in its initial state.</li>
+<li>Action - It is defined by a series of action schemas that define the
+ACTION() and RESULT() functions implicitly.</li>
+<li>Result - The collection of activities taken by the agent yielded this
+result.</li>
+<li>Goal  -  The  goal  is  the  same  as  a  precondition,  which  is  a
+literal conjunction (whose value is either positive or negative).</li>
 </ul>
 <p>There are various examples which will make PDLL understandable:</p>
 <ul>
@@ -178,95 +214,177 @@
 <li>The spare tire problem</li>
 <li>The blocks world and many more.</li>
 </ul>
-<p><strong>Advantages of Classical Planning</strong> Classical planning has the following benefits:</p>
+<p><strong>Advantages of Classical Planning</strong> Classical planning has the following
+benefits:</p>
 <ul>
-<li>It  has  enabled  the  development  of  precise  domain-independent heuristics.</li>
+<li>It  has  enabled  the  development  of  precise  domain-independent
+heuristics.</li>
 <li>The systems are simple to use and operate efficiently.</li>
 </ul>
 <p><strong>Complexity of the classical planning</strong></p>
 <p>There are two decision difficulties that arise in traditional planning:</p>
 <ul>
-<li>PlanSAT: is a query that asks if any plan exists that solves a planning difficulty.</li>
-<li>Bounded PlanSAT: It's a question that asks if there's a solution with a length of k or less.</li>
+<li>PlanSAT: is a query that asks if any plan exists that solves a planning
+difficulty.</li>
+<li>Bounded PlanSAT: It's a question that asks if there's a solution with a
+length of k or less.</li>
 </ul>
 <p><strong>Key takeaway</strong></p>
-<p>Classical planning is the process of constructing complicated plans of action using the issue structure as a guide.</p>
-<ol start="3">
-<li><strong>Algorithms for Classical Planning</strong></li>
-</ol>
-<p>Now we'll take a look at planning algorithms. We saw how the description of a planning problem defines a search problem: we can search through the space of states,  looking for  a  goal, starting from  the initial state. One of the wonderful features of the declarative representation of action schemas is that we can search for the initial state backwards from the objective.</p>
+<p>Classical planning is the process of constructing complicated plans of action
+using the issue structure as a guide.</p>
+<h2 id="algorithms-for-classical-planning"><a class="header" href="#algorithms-for-classical-planning"><strong>Algorithms for Classical Planning</strong></a></h2>
+<p>Now we'll take a look at planning algorithms. We saw how the description of a
+planning problem defines a search problem: we can search through the space of
+states,  looking for  a  goal, starting from  the initial state. One of the
+wonderful features of the declarative representation of action schemas is that
+we can search for the initial state backwards from the objective.</p>
 <p><strong>Forward (progression) state-space search</strong></p>
-<p>Now that we've seen how a planning problem maps to a search problem, we may utilize any of the heuristic search algorithms or a local search algorithm to solve planning problems (provided we keep track of the actions used to reach the goal). Forward state-space search was thought to be too inefficient to be feasible from the beginning of planning research (about 1961) until roughly 1998. It's not difficult to think of reasons for this.</p>
-<p>For starters, forward search is prone to looking into behaviors that aren't relevant. Take, for example, the heroic undertaking of purchasing a copy of AI: A Modern Approach from an internet bookseller. Assume there is a Buy(isbn) action schema with  the  effect  Own  (isbn).  Because  ISBNs  have  ten  digits,  this  action  schema corresponds to ten billion ground actions. To locate one that leads to the goal, an uninformed forward-search algorithm would have to start enumerating these 10 billion activities.</p>
-<p>Second, state spaces in planning issues are frequently huge. Consider a cargo scenario with ten airports, each having five planes and 20 items of goods. The objective is to transport all of the cargo from airport A to airport B. The problem has a straightforward solution: load the cargo into one of the planes at A, fly the plane to B, and discharge the cargo.</p>
-<p>Fig 2: Two approaches to searching for a plan. (a) forward search  (b) backward search<img src="sam/041.jpeg" alt="" /></p>
-<p>The objective is to transport all of the cargo from airport A to airport B. The problem has a straightforward solution: load the cargo into one of the planes at A, fly the plane  to  B,  and  discharge  the  cargo.  The  average  branching  factor  is  high, therefore finding the answer can be difficult: each of the 50 planes can travel to 9 different airports, and each of the 200 packages can be unloaded (if loaded) or loaded into any plane at its airport (if it is unloaded). So there are a minimum of 450 activities (when all the packages are at airports with no planes) and a maximum of 10,450 actions in any situation (when all packages and planes are at the same airport).</p>
-<p>Let's say there are roughly 2000 potential actions per state on average, therefore the search graph has about 200041 nodes up to the depth of the obvious solution.</p>
+<p>Now that we've seen how a planning problem maps to a search problem, we may
+utilize any of the heuristic search algorithms or a local search algorithm to
+solve planning problems (provided we keep track of the actions used to reach the
+goal). Forward state-space search was thought to be too inefficient to be
+feasible from the beginning of planning research (about 1961) until roughly
+1998. It's not difficult to think of reasons for this.</p>
+<p>Second, state spaces in planning issues are frequently huge. Consider a cargo
+scenario with ten airports, each having five planes and 20 items of goods. The
+objective is to transport all of the cargo from airport A to airport B. The
+problem has a straightforward solution: load the cargo into one of the planes at
+A, fly the plane to B, and discharge the cargo.</p>
+<p><img src="sam/041.jpeg" alt="" /></p>
+<p>The objective is to transport all of the cargo from airport A to airport B. The
+problem has a straightforward solution: load the cargo into one of the planes at
+A, fly the plane  to  B,  and  discharge  the  cargo.  The  average  branching
+factor  is  high, therefore finding the answer can be difficult: each of the 50
+planes can travel to 9 different airports, and each of the 200 packages can be
+unloaded (if loaded) or loaded into any plane at its airport (if it is
+unloaded). So there are a minimum of 450 activities (when all the packages are
+at airports with no planes) and a maximum of 10,450 actions in any situation
+(when all packages and planes are at the same airport).</p>
+<p>Let's say there are roughly 2000 potential actions per state on average,
+therefore the search graph has about 200041 nodes up to the depth of the obvious
+solution.</p>
 <p><strong>Backward (regression) relevant-states search</strong></p>
-<p>In regression search, we begin at the goal and work backwards until we identify a set of steps that leads to the original state. Because we only evaluate activities that are related to the objective, it's termed relevant-states search (or current state). At each phase, just like in belief-state search, there are a number of relevant states to consider, not just one.</p>
-<p>We begin with the goal, which is a set of literals that describes a set of states—for example, the goal PoorFamous describes states in which Poor is false, Famous is true, and any other fluent can have any value. There are 2n ground states (each fluent might be true or false) but 3n descriptions of sets of target states in a domain with n ground fluents (each fluent can be positive, negative, or not mentioned).</p>
-<ol start="4">
-<li><strong>Heuristics for Planning</strong></li>
-</ol>
-<p>Without a good heuristic function, neither forward nor backward search is efficient. Remember that a heuristic function h(s) measures the distance between a state s and the goal, and that we may utilize A search to identify optimal solutions if we can  construct  an  admissible  heuristic  for  this  distance—one  that  does  not overestimate. By establishing a relaxed issue that is easier to solve, an admissible heuristic can be generated. The heuristic for the original problem is then the exact cost of a solution to this easier problem.</p>
-<p>Because there is no mechanism to analyze an atomic state by definition, it takes some ingenuity on the part of a human analyst to come up with suitable domain- specific heuristics for atomic state search problems. For states and action schemas, planning employs a factored representation. This allows for the definition of good domain-independent  heuristics  and  the  automatic  use  of  a  good  domain  - independent heuristic for a given problem by programmes.</p>
-<p>Consider a search issue as a network with nodes representing states and edges representing operations. The goal is to find a path from the original state to the desired state. We may make this problem easier in two ways: by adding more edges to the graph, making it stricter to identify a path, or by grouping several nodes together, generating an abstraction of the state space with fewer states, making it easier to search.</p>
-<p>First,  we'll  look  at  heuristics  for  adding  edges  to  the  graph.  The  disregard preconditions  heuristic,  for  example,  removes  all  preconditions  from  actions. Every  action  becomes  relevant  in  every  stage,  and  any  single  goal  can  be accomplished in a single step (assuming an applicable action exists—if not, the problem is impossible to solve). This almost indicates that the number of steps required to solve the relaxed problem is equal to the number of unmet goals— almost, but not quite, because some acts may accomplish several goals and others may negate the results of others. Consider and ignore is a good way to get an accurate heuristic for many problems.</p>
-<p>First, we loosen up the actions by removing all preconditions and consequences that aren't literals in the goal. Then we count the least number of activities required to achieve the goal when the impacts of those actions are added together. This is a case of the set-cover problem in action. One small annoyance is that the set-cover problem is NP-hard. Thankfully, a basic greedy algorithm will always provide a set covering that is within a factor of log n of the true lowest covering, where n is the number  of  literals  in  the  target.  Unfortunately,  the  greedy  algorithm  loses  its admissibility guarantee.</p>
-<p>It's also feasible to ignore only some action preconditions. Consider the puzzle of sliding blocks (8-puzzle or 15-puzzle). This might be expressed as a tile-based planning problem with a single schema. Slide:</p>
-<p>Action(Slide(t,s1,s2),</p>
-<p>PRECOND:On(t,s1) ∧ Tile(t) ∧ Blank (s2) ∧ Adjacent(s1,s2) EFFECT:On(t,s2) ∧ Blank(s1) ∧ ¬On(t,s1) ∧ ¬Blank(s2))</p>
-<p>When the preconditions Blank (s2) ^ Adjacent(s1,s2) are removed, every tile can move to any space in one action, yielding the number-of-misplaced-tiles heuristic. The  Manhattan-distance  heuristic  is  obtained  by  removing  Blank(s2).  These heuristics  might  easily  be  deduced  automatically  from  the  action  schema description.</p>
-<p>The factored form of planning issues has a significant advantage over the atomic representation of search problems in terms of ease of manipulation of the schemas.</p>
-<p>The ignore remove listings heuristic is another option. Assume that all objectives and preconditions include only positive literals3 for a moment. We want to make a more relaxed version of the original issue that is easier to solve and uses the length of the solution as a heuristic. This can be accomplished by deleting delete lists from all  actions  (i.e.,  removing  all  negative  literals  from  effects).  This  allows  for consistent  progress  toward  the  goal,  as  no  action  will  ever  negate  progress achieved by another. The optimal solution to this relaxed problem is still NP - hard to  discover,  but  an  approximate  solution  can  be  achieved  in  polynomial  time through hill-climbing.</p>
-<p>Decomposition is an essential concept in defining heuristics: breaking a problem into parts, solving each portion separately, and then merging the parts. The cost of achieving a conjunction of subgoals is approximated by the total of the costs of solving  each  subgoal  independently,  according  to  the  subgoal  independence assumption. The assumption of subgoal independence might be either optimistic or pessimistic. When there are negative interactions between the sub plans for each subgoal, such as when an action in one sub plan deletes a goal reached by another sub plan, it is optimistic. When sub plans contain redundant actions—for example, two actions that might be replaced by a single action in the merged plan—it is gloomy, and thus inadmissible.</p>
+<p>In regression search, we begin at the goal and work backwards until we identify
+a set of steps that leads to the original state. Because we only evaluate
+activities that are related to the objective, it's termed relevant-states search
+(or current state). At each phase, just like in belief-state search, there are a
+number of relevant states to consider, not just one.</p>
+<p>We begin with the goal, which is a set of literals that describes a set of
+states—for example, the goal PoorFamous describes states in which Poor is false,
+Famous is true, and any other fluent can have any value. There are 2n ground
+states (each fluent might be true or false) but 3n descriptions of sets of
+target states in a domain with n ground fluents (each fluent can be positive,
+negative, or not mentioned).</p>
+<h2 id="heuristics-for-planning"><a class="header" href="#heuristics-for-planning">Heuristics for Planning</a></h2>
+<p>Without a good heuristic function, neither forward nor backward search is
+efficient. Remember that a heuristic function h(s) measures the distance between
+a state s and the goal, and that we may utilize A search to identify optimal
+solutions if we can  construct  an  admissible  heuristic  for  this
+distance—one  that  does  not overestimate. By establishing a relaxed issue that
+is easier to solve, an admissible heuristic can be generated. The heuristic for
+the original problem is then the exact cost of a solution to this easier
+problem.</p>
+<p>Consider a search issue as a network with nodes representing states and edges
+representing operations. The goal is to find a path from the original state to
+the desired state. We may make this problem easier in two ways: by adding more
+edges to the graph, making it stricter to identify a path, or by grouping
+several nodes together, generating an abstraction of the state space with fewer
+states, making it easier to search.</p>
+<p>First,  we'll  look  at  heuristics  for  adding  edges  to  the  graph.  The
+disregard preconditions  heuristic,  for  example,  removes  all  preconditions
+from  actions. Every  action  becomes  relevant  in  every  stage,  and  any
+single  goal  can  be accomplished in a single step (assuming an applicable
+action exists—if not, the problem is impossible to solve). This almost indicates
+that the number of steps required to solve the relaxed problem is equal to the
+number of unmet goals— almost, but not quite, because some acts may accomplish
+several goals and others may negate the results of others. Consider and ignore
+is a good way to get an accurate heuristic for many problems.</p>
+<p>First, we loosen up the actions by removing all preconditions and consequences
+that aren't literals in the goal. Then we count the least number of activities
+required to achieve the goal when the impacts of those actions are added
+together. This is a case of the set-cover problem in action. One small annoyance
+is that the set-cover problem is NP-hard. Thankfully, a basic greedy algorithm
+will always provide a set covering that is within a factor of log n of the true
+lowest covering, where n is the number  of  literals  in  the  target.
+Unfortunately,  the  greedy  algorithm  loses  its admissibility guarantee.</p>
 <p><strong>Key takeaway</strong></p>
-<p>Without a good heuristic function, neither forward nor backward search is efficient. Remember that a heuristic function h(s) measures the distance between a state s and the goal, and that we may utilize A search to identify optimal solutions if we can  construct  an  admissible  heuristic  for  this  distance—one  that  does  not overestimate. By establishing a relaxed issue that is easier to solve, an admissible heuristic can be generated. The heuristic for the original problem is then the exact cost of a solution to this easier problem.</p>
-<ol start="5">
-<li><strong>Hierarchical Planning</strong></li>
-</ol>
-<p>When planning, it's common to have hierarchical information on the actions, or a description of how complex actions are broken down. For instance, a complicated activity such as &quot;serving coffee&quot; can be broken down into two complex actions: &quot;making coffee&quot; and &quot;bringing coffee.&quot; As a result, there exist planners, such as ABSTRIPS, that take as input the hierarchical description of the activities in addition to the description of the actions. For example, one can start planning at a general level  and  then  drill  down  into  the  details  if  necessary  (as  does  ABSTRIPS  for example). A hierarchical task network is then used to express the goal (HTN).</p>
+<p>Without a good heuristic function, neither forward nor backward search is
+efficient. Remember that a heuristic function h(s) measures the distance between
+a state s and the goal, and that we may utilize A search to identify optimal
+solutions if we can  construct  an  admissible  heuristic  for  this
+distance—one  that  does  not overestimate.</p>
+<h2 id="hierarchical-planning"><a class="header" href="#hierarchical-planning">Hierarchical Planning</a></h2>
+<p>When planning, it's common to have hierarchical information on the actions, or a
+description of how complex actions are broken down. For instance, a complicated
+activity such as &quot;serving coffee&quot; can be broken down into two complex actions:
+&quot;making coffee&quot; and &quot;bringing coffee.&quot; As a result, there exist planners, such
+as ABSTRIPS, that take as input the hierarchical description of the activities
+in addition to the description of the actions. For example, one can start
+planning at a general level  and  then  drill  down  into  the  details  if
+necessary  (as  does  ABSTRIPS  for example). A hierarchical task network is
+then used to express the goal (HTN).</p>
 <ul>
 <li>
-<p>Hierarchical planning, often known as HTN planning, is a planning system based on the Hierarchical Task Network (HTN).</p>
+<p>Hierarchical planning, often known as HTN planning, is a planning system
+based on the Hierarchical Task Network (HTN).</p>
 </li>
 <li>
 <p>It combines Partial Order Planning and HTN Planning concepts.</p>
 </li>
 <li>
-<p>HTN planning is frequently organized around a single &quot;top-level&quot; action termed Act, with the purpose of finding an Act execution that meets the goal.</p>
+<p>HTN planning is frequently organized around a single &quot;top-level&quot; action
+termed Act, with the purpose of finding an Act execution that meets the
+goal.</p>
 </li>
 <li>
-<p>The first plan is considered as a high-level statement of what needs to be done in HTN planning.</p>
+<p>The first plan is considered as a high-level statement of what needs to be
+done in HTN planning.</p>
 </li>
 <li>
 <p>Decomposition actions are used to refine this strategy.</p>
 </li>
 <li>
-<p>Each action decomposition breaks down a higher-level activity into a jumble of lower-level actions.</p>
+<p>Each action decomposition breaks down a higher-level activity into a jumble
+of lower-level actions.</p>
 </li>
 <li>
-<p>This deconstruction continues until the plan is reduced to its most basic actions.</p>
+<p>This deconstruction continues until the plan is reduced to its most basic
+actions.</p>
 </li>
 <li>
-<p>Consider  a  hierarchical  travel  plan  from  a  specific  source  to  a  specific destination.</p>
+<p>Consider  a  hierarchical  travel  plan  from  a  specific  source  to  a
+specific destination.</p>
 </li>
 </ul>
 <p><img src="sam/042.png" alt="" /></p>
 <ul>
-<li>Assume we're traveling from source &quot;Mumbai&quot; to destination &quot;Goa&quot; in the above hierarchical planner diagram.</li>
-<li>Then you can decide how you want to travel: by plane, bus, or car. Assume you decide to travel by &quot;Bus.&quot;</li>
-<li>The &quot;Take-Bus&quot; strategy can then be broken down into a series of tasks, such as going  to  Mumbai  –  Bus  stop,  purchasing  a  bus  ticket,  boarding  the  bus,  and departing for Goa.</li>
-<li>The four acts in the previous point can now be split down into their component parts. Take, for example, &quot;By-Ticket for Bus.&quot;</li>
-<li>It may be broken down into three steps: go to the bus stop counter, request a ticket, and pay for the ticket.</li>
-<li>As a result, each of these actions can be further deconstructed until we reach the level of actions that can be performed without thought in order to generate the needed motor control sequences.</li>
+<li>Assume we're traveling from source &quot;Mumbai&quot; to destination &quot;Goa&quot; in the
+above hierarchical planner diagram.</li>
+<li>Then you can decide how you want to travel: by plane, bus, or car. Assume
+you decide to travel by &quot;Bus.&quot;</li>
+<li>The &quot;Take-Bus&quot; strategy can then be broken down into a series of tasks, such
+as going  to  Mumbai  –  Bus  stop,  purchasing  a  bus  ticket,  boarding
+the  bus,  and departing for Goa.</li>
+<li>The four acts in the previous point can now be split down into their
+component parts. Take, for example, &quot;By-Ticket for Bus.&quot;</li>
+<li>It may be broken down into three steps: go to the bus stop counter, request
+a ticket, and pay for the ticket.</li>
+<li>As a result, each of these actions can be further deconstructed until we
+reach the level of actions that can be performed without thought in order to
+generate the needed motor control sequences.</li>
 </ul>
 <p><strong>Advantages of Hierarchical Planning:</strong></p>
 <ul>
-<li>The main advantage of a hierarchical structure is that it reduces the plan at each level  of  the  hierarchy  to  a  small  number  of  activities  at  the  next  lower  level, lowering the computing cost of determining the best method to organise those activities for the current challenge.</li>
-<li>Many real-world applications demand very big plans, which HTN algorithms may generate.</li>
-<li>In the event that something goes wrong, the hierarchical structure makes it simple to rectify the problem.</li>
-<li>Hierarchical  planning  is  far  more  efficient  than  single-level  planning  for complex issues.</li>
+<li>The main advantage of a hierarchical structure is that it reduces the plan
+at each level  of  the  hierarchy  to  a  small  number  of  activities  at
+the  next  lower  level, lowering the computing cost of determining the best
+method to organise those activities for the current challenge.</li>
+<li>Many real-world applications demand very big plans, which HTN algorithms may
+generate.</li>
+<li>In the event that something goes wrong, the hierarchical structure makes it
+simple to rectify the problem.</li>
+<li>Hierarchical  planning  is  far  more  efficient  than  single-level
+planning  for complex issues.</li>
 </ul>
 <p><strong>Disadvantages of Hierarchical Planning:</strong></p>
 <ul>
@@ -274,23 +392,37 @@
 <li>Many HTN planners are unable to deal with unpredictable results of actions.</li>
 </ul>
 <p><strong>Key takeaway</strong></p>
-<p>When planning, it's common to have hierarchical information on the actions, or a description of how complex actions are broken down.</p>
-<ol start="6">
-<li><strong>Planning  and  Acting  in  Nondeterministic  Domains,  Time, Schedules, and Resources</strong></li>
-</ol>
+<p>When planning, it's common to have hierarchical information on the actions, or a
+description of how complex actions are broken down.</p>
+<h2 id="planning--and--acting--in--nondeterministic--domains--time-schedules-and"><a class="header" href="#planning--and--acting--in--nondeterministic--domains--time-schedules-and">Planning  and  Acting  in  Nondeterministic  Domains,  Time, Schedules, and</a></h2>
+<p>Resources</p>
 <p><strong>Domain</strong></p>
-<p>We allow for nondeterministic domains, which are domains in which actions may have varied effects and it is impossible to predict which of the various possible outcomes  will  actually  occur  at  the  time  of  planning.  We  also  take  partial observability into account. It represents the reality that the state of the domain cannot always be observed completely, and so cannot be determined uniquely in some instances. The special circumstances of full observability, where the state may be totally observed and hence uniquely determined, and null observability, where no observation is ever feasible at run time, are both included in a model with partial observability.</p>
+<p>We allow for nondeterministic domains, which are domains in which actions may
+have varied effects and it is impossible to predict which of the various
+possible outcomes  will  actually  occur  at  the  time  of  planning.  We  also
+take  partial observability into account. It represents the reality that the
+state of the domain cannot always be observed completely, and so cannot be
+determined uniquely in some instances. The special circumstances of full
+observability, where the state may be totally observed and hence uniquely
+determined, and null observability, where no observation is ever feasible at run
+time, are both included in a model with partial observability.</p>
 <p><strong>Time, Schedule and Resources</strong></p>
-<p>The standard planning representation can communicate about what to do and in what order, but it can't talk about how to execute it.</p>
+<p>The standard planning representation can communicate about what to do and in
+what order, but it can't talk about how to execute it.</p>
 <ul>
-<li><strong>Temporal ordering constraint</strong> - When an activity should occur (before and/or after  a  particular  time  and/or  specific  action(s)),  there  are  temporal  ordering constraints.</li>
-<li><strong>Resource constraints</strong> - outlines the resources required to carry out a task.</li>
+<li><strong>Temporal ordering constraint</strong> - When an activity should occur (before
+and/or after  a  particular  time  and/or  specific  action(s)),  there  are
+temporal  ordering constraints.</li>
+<li><strong>Resource constraints</strong> - outlines the resources required to carry out a
+task.</li>
 </ul>
-<p><strong>Representing Temporal Constraints, Resource Constraints, and the Available Resources</strong></p>
+<p><strong>Representing Temporal Constraints, Resource Constraints, and the Available
+Resources</strong></p>
 <p>Each action is represented by:</p>
 <ul>
 <li>A period of time</li>
-<li>A collection of temporal ordering constraints (actions that must be performed before this action may be carried out)</li>
+<li>A collection of temporal ordering constraints (actions that must be
+performed before this action may be carried out)</li>
 <li>A set of limits on resources</li>
 </ul>
 <p>Each resource is represented by 3 things:</p>
@@ -299,16 +431,20 @@
 <li>The quantity of that resource at the start.</li>
 <li>Whether or not that resource:</li>
 <li>Consumable - e.g. The bolts are no longer available for use</li>
-<li>Reusable - e.g. a pilot is occupied during a flight but is available again when the flight is over</li>
+<li>Reusable - e.g. a pilot is occupied during a flight but is available again
+when the flight is over</li>
 <li>Sharable</li>
 </ul>
 <p>Actions have the ability to generate resources.</p>
-<p>A  solution  must  meet  all  of  the  activities'  and  resources'  temporal  ordering constraints.</p>
+<p>A  solution  must  meet  all  of  the  activities'  and  resources'  temporal
+ordering constraints.</p>
 <p>Example of a Scheduling Issue (Assembly of 2 Cars).</p>
 <p>The problem of assembling two cars consists of the following steps:</p>
 <ul>
-<li>Resources: There are four different sorts of resources, with a certain number of each type available at the start: <img src="sam/043.png" alt="" /></li>
+<li>Resources: There are four different sorts of resources, with a certain
+number of each type available at the start: <img src="sam/043.png" alt="" /></li>
 </ul>
+<!-- TABLE -->
 <table><thead><tr><th>Resource type</th><th>Number available</th><th>Consumable or reusable</th></tr></thead><tbody>
 <tr><td>Engine hoist</td><td>1</td><td>Reusable</td></tr>
 <tr><td>Wheel station</td><td>1</td><td>Reusable</td></tr>
@@ -325,134 +461,217 @@
 <tr><td>AddWheels2</td><td>15</td><td>1 wheel station and 40 lug nuts</td></tr>
 <tr><td>Inspect1</td><td>10</td><td>1 inspector</td></tr>
 <tr><td>Inspect2</td><td>10</td><td>1 inspector</td></tr>
-<tr><td><strong>Key takeaway</strong></td><td></td><td></td></tr>
 </tbody></table>
-<p>We allow for nondeterministic domains, which are domains in which actions may have varied effects and it is impossible to predict which of the various possible outcomes  will  actually  occur  at  the  time  of  planning.  We  also  take  partial observability into account.</p>
-<ol start="7">
-<li><strong>Analysis of Planning Approaches</strong></li>
-</ol>
-<p>Planning brings together the two key AI disciplines we've discussed so far: search and logic. A planner can be thought of as either a programme that looks for a solution or one that (constructively) argues that one exists. The cross-fertilization of ideas from the two fields has resulted in performance gains of several orders of magnitude over the last decade, as well as a rise in the usage of planners in industrial applications. Regrettably, we do not yet have a firm grasp of which strategies  are  most  effective  in  particular  situations.  It's  possible  that  new procedures will arise that will supplant old ones.</p>
-<p>Controlling combinatorial explosion is at the heart of planning. There are 2n states in  a  domain  if  there  are  n  propositions.  As  we've  seen,  planning  is  difficult. Identifying  independent  subproblems  can  be  a  powerful  tool  against  such pessimism.  We  gain  an  exponential  speedup  in  the  best  case—full decomposability of the problem. Negative interactions between acts, on the other hand, destroy decomposability. GRAPHPLAN keeps track of mutexes to help you figure out where the tricky interactions occur.</p>
-<p>SATPLAN represents mutex relations in a similar way, but instead of employing a specialized data structure, it uses the universal CNF form. Forward search tries to uncover  patterns  (subsets  of  propositions)  that  cover  all  of  the  independent subproblems heuristically. Because this is a heuristic approach, it can be used even if the subproblems are not totally independent.</p>
-<p>It  is  sometimes  possible  to  efficiently  address  an  issue  by  understanding  that unfavorable interactions can be ruled out. If there is a SERIALIZABLE SUBGOAL an order of subgoals such that the planner can achieve them in that order without having to reverse any of the previously achieved subgoals, we say the problem has serializable subgoals. If the goal is to build a tower (e.g., A on B, which is on C, which is on Table), then the subgoals are serializable bottom to top: if we first achieve  C  on  Table,  we  will  never  have  to  undo  it  while  achieving  the  other subgoals.  A  planner  who  employs  the  bottom-to-top  strategy  can  solve  any problem in the world of blocks without having to go backwards (although it might not always find the shortest plan).</p>
-<p>For a more complex example, it was determined that the propositions involved in commanding NASA's Deep Space One spacecraft are serializable for the Remote Agent  planner  that  commanded  NASA's  Deep  Space  One  spacecraft.  This  is perhaps unsurprising, given that engineers construct spaceships to be as simple to manage as possible (subject to other constraints). The Remote Agent planner was able to eliminate the majority of the search by taking use of the serialized ordering of goals. This meant it could control the spacecraft in real time, which had previously been thought impossible.</p>
-<p>GRAPHPLAN, SATPLAN, and FF are examples of planners who have advanced the science of planning by improving the performance of planning systems, explaining the  representational  and  combinatorial  challenges  involved,  and  developing useful heuristics. However, it is unclear how far these procedures can be scaled. Further progress on larger issues is likely to require some type of synthesis of first- order and hierarchical representations with the efficient techniques already in use, rather than relying solely on factored and propositional representations.</p>
 <p><strong>Key takeaway</strong></p>
-<p>Planning brings together the two key AI disciplines we've discussed so far: search and logic. A planner can be thought of as either a programme that looks for a solution or one that (constructively) argues that one exists.</p>
-<ol start="8">
-<li><strong>Limits of AI</strong></li>
-</ol>
-<p>The  availability  of  data  is  one  of  the  most  significant  obstacles  to  AI implementation. Data is frequently fragmented, inconsistent, and of low quality, posing hurdles for firms attempting to leverage AI at scale. To avoid this, you should have a defined approach for obtaining the data that your AI will require from the start.</p>
-<p>Another major impediment to AI adoption is a skills scarcity and a lack of technical professionals with the appropriate knowledge and training to deploy and run AI technologies. According to research, experienced data scientists, as well as other specialized data professionals competent in machine learning, training effective models, and so on, are in short supply.</p>
-<p>Another important factor to consider when purchasing AI technology is the price. Businesses that lack in-house capabilities or are unfamiliar with AI are frequently forced to outsource, posing cost and maintenance issues. Smart technologies can be costly due to their complexity, and you may pay additional fees for repair and continuous  maintenance.  Computational  costs  for  training  data  models,  for example, can be an added cost.</p>
-<p>Software programmes must be updated on a regular basis to keep up with the changing business environment, and if they fail, there is a risk of losing code or essential data. It can take a long time and be expensive to restore this. This danger, however, is no higher with AI than with any other software development. These dangers can be reduced if the system is well-designed and people purchasing AI are aware of their needs and options.</p>
-<p>Cost and maintenance - Purchase costs can be high, and there may be a need for ongoing maintenance and repair, as with any new technology. In order to react to the ever-changing business environment, your AI software will need to be updated on  a  regular  basis.  Before  you  go  forward  and  adopt  any  AI  system,  your organization should thoroughly analyze the return on investment.</p>
-<p>Lack of creativity - A good marketing effort requires a high level of creativity. Machines just do not possess the ability to think creatively. Humans, unlike robots, have the ability to think and feel, which influences their decision-making when it comes to creativity. Yes, AI can help estimate what type of picture, for example, a consumer is likely to click on - everything from colour preferences to style and price. A machine, on the other hand, cannot compete with the human brain when it comes to originality and creative thinking. Both humans and machines are still required.</p>
+<p>We allow for nondeterministic domains, which are domains in which actions may
+have varied effects and it is impossible to predict which of the various
+possible outcomes  will  actually  occur  at  the  time  of  planning.  We  also
+take  partial observability into account.</p>
+<h2 id="analysis-of-planning-approaches"><a class="header" href="#analysis-of-planning-approaches">Analysis of Planning Approaches</a></h2>
+<p>Planning brings together the two key AI disciplines we've discussed so far:
+search and logic. A planner can be thought of as either a programme that looks
+for a solution or one that (constructively) argues that one exists. The
+cross-fertilization of ideas from the two fields has resulted in performance
+gains of several orders of magnitude over the last decade, as well as a rise
+in the usage of planners in industrial applications. Regrettably, we do not
+yet have a firm grasp of which strategies  are  most  effective  in particular
+situations.  It's  possible  that  new procedures will arise that will
+supplant old ones.</p>
+<p>For a more complex example, it was determined that the propositions involved in
+commanding NASA's Deep Space One spacecraft are serializable for the Remote
+Agent  planner  that  commanded  NASA's  Deep  Space  One  spacecraft.  This  is
+perhaps unsurprising, given that engineers construct spaceships to be as simple
+to manage as possible (subject to other constraints). The Remote Agent planner
+was able to eliminate the majority of the search by taking use of the serialized
+ordering of goals. This meant it could control the spacecraft in real time,
+which had previously been thought impossible.</p>
+<p>GRAPHPLAN, SATPLAN, and FF are examples of planners who have advanced the
+science of planning by improving the performance of planning systems, explaining
+the  representational  and  combinatorial  challenges  involved,  and developing
+useful heuristics. However, it is unclear how far these procedures can be
+scaled. Further progress on larger issues is likely to require some type of
+synthesis of first- order and hierarchical representations with the efficient
+techniques already in use, rather than relying solely on factored and
+propositional representations.</p>
+<p><strong>Key takeaway</strong></p>
+<p>Planning brings together the two key AI disciplines we've discussed so far:
+search and logic. A planner can be thought of as either a programme that looks
+for a solution or one that (constructively) argues that one exists.</p>
+<h2 id="limits-of-ai"><a class="header" href="#limits-of-ai">Limits of AI</a></h2>
+<p>The  availability  of  data  is  one  of  the  most  significant  obstacles  to
+AI implementation. Data is frequently fragmented, inconsistent, and of low
+quality, posing hurdles for firms attempting to leverage AI at scale. To avoid
+this, you should have a defined approach for obtaining the data that your AI
+will require from the start.</p>
+<p>Another major impediment to AI adoption is a skills scarcity and a lack of
+technical professionals.</p>
+<p>Another important factor to consider when purchasing AI technology is the price.</p>
+<p>Cost and maintenance - Purchase costs can be high, and there may be a need for
+ongoing maintenance and repair, as with any new technology.</p>
+<p>Lack of creativity - A good marketing effort requires a high level of
+creativity. Machines just do not possess the ability to think creatively.
+Humans, unlike robots, have the ability to think and feel, which influences
+their decision-making when it comes to creativity.</p>
 <p>Other AI limitations include:</p>
 <ul>
-<li>Implementation  times,  which  can  vary  based  on  what  you're  trying  to accomplish.</li>
+<li>Implementation  times,  which  can  vary  based  on  what  you're  trying to
+accomplish.</li>
 <li>Integration issues and a lack of knowledge about cutting-edge technology.</li>
 <li>Interoperability with various systems and platforms, as well as usability.</li>
 </ul>
 <p><strong>Key takeaway</strong></p>
-<p>The  availability  of  data  is  one  of  the  most  significant  obstacles  to  AI implementation. Data is frequently fragmented, inconsistent, and of low quality, posing hurdles for firms attempting to leverage AI at scale.</p>
-<ol start="9">
-<li><strong>Ethics of AI</strong></li>
-</ol>
-<p>Artificial Intelligence ethics, often known as AI ethics, is a set of beliefs, ideas, and methodologies that use commonly accepted criteria of right and wrong to govern moral behavior in the development and deployment of AI systems.</p>
-<p>In recent years, the ethics of AI and robotics have gotten a lot of press attention, which helps support related research but also risks  undermining it: the press frequently talks as if the issues under discussion are just predictions of what future technology will bring, and as if we already know what would be most ethical and how to get there.</p>
-<p>The ethics of AI and robotics are frequently centered on various &quot;concerns,&quot; which is a common reaction to new technologies. Many of these concerns turn out to be rather quaint (trains are too fast for souls); some are predictably wrong when they claim that technology will fundamentally change humans (telephones will destroy personal communication, writing will destroy memory, video cassettes will render going out obsolete); some are broadly correct but moderately relevant (digital technology will destroy industries that make photographic film, cassette tapes, or vinyl records); and some are egregiously wrong when they claim that technology will fundamentally change humans (telephones will destroy personal (cars will kill children and fundamentally change the landscape). The purpose of a piece like this is to dissect the concerns and deflate the non-issues.</p>
-<p>Some  technologies,  such  as  nuclear  power,  automobiles,  and  plastics,  have sparked ethical and political debate as well as considerable regulatory initiatives to  limit  their  trajectory,  usually  after  some  damage  has  been  done.  New technologies,  in  addition  to  &quot;ethical  issues,&quot;  challenge  present  norms  and conceptual frameworks, which is of particular interest to philosophy. Finally, once we've grasped the context of a technology, we must shape our societal reaction, which  includes  regulation  and  law.  All  of  these  characteristics  are  present  in modern AI and robotics technologies, as well as the more fundamental worry that they will usher in the end of the period of human control on Earth.</p>
-<p>Though there is a promising outline (European Group on Ethics in Science and New Technologies 2018) and there are beginnings on societal impact (Floridi et al. 2018; Taddeo and Floridi 2018; S. Taylor et al. 2018; Walsh 2018; Bryson 2019; Gibert 2019; Whittlestone et al. 2019), and policy recommendations, the ethics of AI and robotics is a very young field within applied ethics, with significant dynamics but few well-established issues (AI HLEG 2019 [OIR]; IEEE 2019). As a result, this page must not only repeat what the community has already accomplished, but also offer an order where none exists.</p>
-<p>A variety of ethical challenges have arisen as a result of AI's rapid growth. These are some of them:</p>
+<p>The  availability  of  data  is  one  of  the  most  significant  obstacles  to
+AI implementation. Data is frequently fragmented, inconsistent, and of low
+quality, posing hurdles for firms attempting to leverage AI at scale.</p>
+<h2 id="ethics-of-ai"><a class="header" href="#ethics-of-ai">Ethics of AI</a></h2>
+<p>Artificial Intelligence ethics, often known as AI ethics, is a set of beliefs,
+ideas, and methodologies that use commonly accepted criteria of right and wrong
+to govern moral behavior in the development and deployment of AI systems.</p>
+<p>In recent years, the ethics of AI and robotics have gotten a lot of press
+attention, which helps support related research but also risks  undermining it:
+the press frequently talks as if the issues under discussion are just
+predictions of what future technology will bring, and as if we already know what
+would be most ethical and how to get there.</p>
+<p>Some  technologies,  such  as  nuclear  power,  automobiles,  and  plastics,
+have sparked ethical and political debate as well as considerable regulatory
+initiatives to  limit  their  trajectory,  usually  after  some  damage  has
+been  done.  New technologies,  in  addition  to  &quot;ethical  issues,&quot;  challenge
+present  norms  and conceptual frameworks, which is of particular interest to
+philosophy.</p>
+<p>A variety of ethical challenges have arisen as a result of AI's rapid growth.
+These are some of them:</p>
 <ul>
 <li>The potential for employment loss as a result of automation technologies</li>
 <li>Employees must be redeployed or retrained in order to keep their positions.</li>
 <li>Machine-created wealth should be distributed fairly.</li>
 <li>The impact of human-machine interaction on human attention and behaviour</li>
 <li>The necessity to address algorithmic bias in data resulting from human bias</li>
-<li>The safety of AI systems that have the capacity to cause harm (e.g. Autonomous weapons).</li>
-<li>Because smart machines are considered to learn and develop independently, there is a need to guard against unforeseen outcomes.</li>
+<li>The safety of AI systems that have the capacity to cause harm (e.g.
+Autonomous weapons).</li>
+<li>Because smart machines are considered to learn and develop independently,
+there is a need to guard against unforeseen outcomes.</li>
 </ul>
-<ol start="10">
-<li><strong>Future of AI</strong></li>
-</ol>
-<p>Artificial Intelligence (AI) is a breakthrough discipline of computer science that is poised to become a key component of several future technologies such as big data, robotics, and the Internet of Things (IoT). In the coming years, it will continue to be a technical trailblazer. AI has gone from science fiction to reality in a few of years. Machines that assist people with intelligence can be found in the real world as well as in science fiction films. We now live in a world of Artificial Intelligence, which was only a story a few years ago.</p>
-<p>We use AI technology in our daily lives, whether consciously or unconsciously, and it has become a part of our lives. Everyone uses AI in their day-to-day lives, from Alexa/Siri  to  Chatbots.  The  advancement  and  evolution  of  this  technology  is occurring at a breakneck speed. It was not, however, as smooth and simple as it appeared to us. It has taken several years, as well as a lot of hard effort and contributions from a variety of people, to get AI to this point.</p>
-<p>Because  AI  is  such  a  revolutionary  technology,  there  are  numerous  questions concerning its  future and impact on humans. It's risky, but it's  also a fantastic opportunity. Artificial intelligence will be used to improve both defensive and offensive  cyber  operations.  In  addition,  new  cyber-attack  methods  will  be developed to exploit AI technology's specific vulnerabilities.</p>
+<h2 id="future-of-ai"><a class="header" href="#future-of-ai">Future of AI</a></h2>
+<p>Artificial Intelligence (AI) is a breakthrough discipline of computer science
+that is poised to become a key component of several future technologies such as
+big data, robotics, and the Internet of Things (IoT). In the coming years, it
+will continue to be a technical trailblazer. AI has gone from science fiction to
+reality in a few of years. Machines that assist people with intelligence can be
+found in the real world as well as in science fiction films. We now live in a
+world of Artificial Intelligence, which was only a story a few years ago.</p>
+<p>Because  AI  is  such  a  revolutionary  technology,  there  are  numerous
+questions concerning its  future and impact on humans. It's risky, but it's also
+a fantastic opportunity. Artificial intelligence will be used to improve both
+defensive and offensive  cyber  operations.  In  addition,  new cyber-attack
+methods  will  be developed to exploit AI technology's specific vulnerabilities.</p>
 <p><strong>Future impact of AI in different sectors</strong> <img src="sam/046.png" alt="" /></p>
-<p>Fig 3: Future of AI</p>
-<p><strong>Healthcare:</strong> In  the  healthcare  industry,  AI  will  be  critical  in  promptly  and effectively diagnosing ailments. With the help of AI, new drug discovery will be speedier and more cost-effective. It will also improve patient engagement in their care by making appointment booking and bill payment easier and with fewer errors. Apart from these helpful applications, one of AI's greatest challenges in healthcare is ensuring its acceptance in daily clinical operations.</p>
-<p><strong>Cyber security:</strong> Without a question, ensuring data security is a top responsibility for every company. The following are some predictions about how cyber security will alter as a result of AI:</p>
+<p><strong>Healthcare:</strong> In  the  healthcare  industry,  AI  will  be  critical  in
+promptly  and effectively diagnosing ailments. With the help of AI, new drug
+discovery will be speedier and more cost-effective. It will also improve patient
+engagement in their care by making appointment booking and bill payment easier
+and with fewer errors. Apart from these helpful applications, one of AI's
+greatest challenges in healthcare is ensuring its acceptance in daily clinical
+operations.</p>
+<p><strong>Cyber security:</strong> Without a question, ensuring data security is a top
+responsibility for every company. The following are some predictions about how
+cyber security will alter as a result of AI:</p>
 <ul>
 <li>Security incidents will be tracked using AI techniques.</li>
 <li>NLP is used to identify the source of cyber-attacks.</li>
 <li>RPA bots are used to automate rule-based operations and procedures.</li>
 </ul>
-<p>As a brilliant technology, however, it can also be used by attackers as a threat. They can employ AI in an unethical manner by automating attacks that are difficult to defend.</p>
-<p><strong>Transportation:</strong> In the transportation industry, a fully autonomous vehicle has not yet been produced, but researchers are working on it. In the cockpit, artificial intelligence and machine learning are being used to help minimise workload, manage pilot stress and fatigue, and increase on-time performance. There are a number of barriers to AI adoption in transportation, particularly in public transit. There is a significant risk of becoming overly reliant on automated and autonomous technologies.</p>
-<p><strong>E-commerce:</strong> In the near future, Artificial Intelligence will play a critical role in the e-commerce industry. It will have a favorable impact on every part of the e- commerce industry, from user experience to product marketing and delivery. In the  future,  we  can  expect  e-commerce  to  include  automated  warehouse  and inventory management, shopper personalisation, and the employment of chatbots.</p>
-<p><strong>Employment:</strong> Because of the usage of Artificial Intelligence, finding work has become easier for both job seekers and companies. In the job market, AI is already being employed with stringent regulations and algorithms that automatically reject an employee's résumé if it does not meet the company's requirements. Most AI- enabled  applications,  spanning  from  marking  written  interviews  to  telephonic rounds, are expected to drive the job process in the future.</p>
-<p>Various AI programmes, such as Rezi, Jobseeker, and others, are assisting job searchers in creating great resumes and finding the perfect position for their skills.</p>
-<p>Apart from the aforementioned industries, AI has a bright future in manufacturing, finance and banking, entertainment, and other fields.</p>
+<p><strong>Transportation:</strong> In the transportation industry, a fully autonomous vehicle
+has not yet been produced, but researchers are working on it.</p>
+<p><strong>E-commerce:</strong> In the near future, Artificial Intelligence will play a critical
+role in the e-commerce industry. In the  future,  we  can  expect  e-commerce to
+include  automated warehouse  and inventory management, shopper personalisation,
+and the employment of chatbots.</p>
+<p><strong>Employment:</strong> In the job market, AI is already being employed with stringent
+regulations and algorithms that automatically reject an employee's résumé if it
+does not meet the company's requirements.</p>
+<p>Apart from the aforementioned industries, AI has a bright future in
+manufacturing, finance and banking, entertainment, and other fields.</p>
 <p><strong>Key takeaway</strong></p>
-<p>Artificial Intelligence (AI) is a breakthrough discipline of computer science that is poised to become a key component of several future technologies such as big data, robotics, and the Internet of Things (IoT). In the coming years, it will continue to be a technical trailblazer.</p>
-<ol start="11">
-<li><strong>AI Components</strong></li>
-</ol>
-<p>Learning, thinking, problem solving, perception, and language use are all aspects of intelligence.</p>
-<p>Fig 4: Components of AI <img src="sam/047.jpeg" alt="" /><strong>Learning</strong></p>
-<p>Computer programmes, like humans, learn in a variety of ways. When it comes to AI, this platform's learning is divided into a variety of categories. Learning for AI comprises the trial-and-error approach, which is one of the most important aspects of AI. The solution continues to solve problems until it obtains the desired results. As a consequence, the programme keeps track of all the movements that resulted in positive outcomes and stores them in its database for use the next time the computer is presented with the same problem.</p>
-<p>Individual  things,  such  as  multiple  solutions  to  problems,  vocabulary,  foreign languages, and so on, are memorized as part of AI's learning component, often known as rote learning. The generalization method is then used to put this learning process into practice.</p>
-<p>When  it  comes  to  artificial  intelligence,  there  are  several  different  types  of learning. The most basic method is to learn through trial and error. A rudimentary computer programme for solving mate-in-one chess situations, for example, might try  moves  at  random  until  it  finds  mate.  The  programme  could  then  save  the solution along with the position so that it could  be recalled the next time the computer  came  across  the  same  situation.  On  a  computer,  rote  learning—the simple  memorizing  of  individual  items  and  procedures—is  relatively straightforward to accomplish. The difficulty of implementing what is known as generalization is more difficult. Generalization is the process of adapting previous experience to similar new situations.</p>
+<p>Artificial Intelligence (AI) is a breakthrough discipline of computer science
+that is poised to become a key component of several future technologies such as
+big data, robotics, and the Internet of Things (IoT). In the coming years, it
+will continue to be a technical trailblazer.</p>
+<h2 id="ai-components"><a class="header" href="#ai-components">AI Components</a></h2>
+<p>Learning, thinking, problem solving, perception, and language use are all
+aspects of intelligence.</p>
+<p><img src="sam/047.jpeg" alt="" /><strong>Learning</strong></p>
+<p>Computer programmes, like humans, learn in a variety of ways. When it comes to
+AI, this platform's learning is divided into a variety of categories. Learning
+for AI comprises the trial-and-error approach, which is one of the most
+important aspects of AI. The solution continues to solve problems until it
+obtains the desired results. As a consequence, the programme keeps track of
+all the movements that resulted in positive outcomes and stores them in its
+database for use the next time the computer is presented with the same
+problem.</p>
+<p>Individual  things,  such  as  multiple  solutions  to  problems,  vocabulary,
+foreign languages, and so on, are memorized as part of AI's learning component,
+often known as rote learning. The generalization method is then used to put this
+learning process into practice.</p>
 <p><strong>Reasoning</strong></p>
-<p>Until about five decades ago, the art of reasoning was solely available to humans. Reasoning  is  one  of  the  most  important  components  of  artificial  intelligence because of its ability to differentiate. To reason is to allow the platform to make inferences  that  are  appropriate  for  the  situation  at  hand.  In  addition,  these inferences are classified as inductive or deductive. The difference is that in an inferential scenario, a problem's solution assures a conclusion. In the inductive example, however, the mishap is always caused by instrument failure.</p>
-<p>Programming computers have had a lot of success with deductive interferences. Reasoning, on the other hand, always entails drawing meaningful inferences from the circumstance at hand.</p>
-<p>To  reason  is  to  make  inferences  that  are  appropriate  for  the  circumstances. Deductive and inductive inferences are the two types of inferences. &quot;Fred must be in either  the museum or  the café,&quot;  for  example, is an example of the former. &quot;Previous accidents of this nature were caused by instrument failure; thus, this accident was caused by instrument failure,&quot; and &quot;Previous accidents of this nature were  caused  by  instrument  failure;  therefore,  this  accident  was  caused  by instrument failure.&quot; The most important distinction between these two types of reasoning is that in deductive reasoning, the validity of the premises assures the truth  of  the  conclusion,  whereas  inductive  reasoning  offers  support  to  the conclusion without providing total assurance.</p>
+<p>Reasoning  is  one  of  the  most  important  components  of  artificial
+intelligence because of its ability to differentiate. To reason is to allow the
+platform to make inferences  that  are  appropriate  for  the  situation  at
+hand.</p>
 <p><strong>Problem-solving</strong></p>
-<p>In its most basic form, AI's problem-solving ability consists of data, with the answer requiring the discovery of x. The AI platform sees a wide range of problems being handled.  The  various  'Problem-solving'  approaches  are  artificial  intelligence components that split questions into special and general categories.</p>
-<p>A solution to a given problem is tailor-made in the case of a special-purpose method, which often takes advantage of some of the unique features supplied in the  instance  where  a  suggested  problem  is  incorporated.  A  general-purpose approach, on the other hand, entails a wide range of interesting challenges. In addition, AI's problem-solving component allows programmes to include a step- by-step reduction of the distance between any target state and the current state.</p>
-<p>Problem  solving,  especially  in  artificial  intelligence,  can  be  defined  as  a methodical search through a set of options in order to arrive at a predetermined goal or solution. There are two types of problem-solving methods: special purpose and general purpose. A special-purpose approach is designed specifically for a problem  and  typically  takes  advantage  of  extremely  specific  aspects  of  the scenario in which the problem exists. A general-purpose method, on the other hand, can be used to solve a wide range of issues.</p>
+<p>Problem  solving,  especially  in  artificial  intelligence,  can  be  defined
+as  a methodical search through a set of options in order to arrive at a
+predetermined goal or solution. There are two types of problem-solving methods:
+special purpose and general purpose. A special-purpose approach is designed
+specifically for a problem  and  typically  takes  advantage  of  extremely
+specific  aspects  of  the scenario in which the problem exists. A
+general-purpose method, on the other hand, can be used to solve a wide range of
+issues.</p>
 <p><strong>Perception</strong></p>
-<p>When the 'perception' component of Artificial Intelligence is used, it scans any given environment utilizing various artificial or actual sense organs. Furthermore, the  processes  are  maintained  internally,  allowing  the  perceiver  to  examine different scenes in suggested objects and comprehend their relationships and characteristics. This analysis is frequently problematic as a result of the fact that similar products might have a wide range of looks depending on the viewpoint of the indicated angle.</p>
-<p>Perception is one of the components of artificial intelligence that, in its current condition, can propel self-driving cars at low speeds. FREDDY was one of the first robots  that  use  perception  to  detect  distinct  things  and  put  together  various artifacts.</p>
-<p>Perception involves scanning the surroundings with numerous sense organs, both real  and  artificial,  and  decomposing  the  view  into  discrete  objects  in  various spatial relationships. The fact that an object can seem differently depending on the angle from which it is viewed, the direction and intensity of illumination in the scene,  and  how  much  the  object  contrasts  with  the  surrounding  field,  makes analysis more difficult.</p>
-<p>Artificial perception has progressed to the point that optical sensors can identify humans, autonomous vehicles can drive at highway speeds, and robots can roam through buildings collecting empty drink cans.</p>
+<p>The fact that an object can seem differently depending on the angle from which
+it is viewed, the direction and intensity of illumination in the scene,  and how
+much  the  object  contrasts  with  the surrounding  field,  makes analysis more
+difficult.</p>
+<p>Artificial perception has progressed to the point that optical sensors can
+identify humans, autonomous vehicles can drive at highway speeds, and robots can
+roam through buildings collecting empty drink cans.</p>
 <p><strong>Language - understanding</strong></p>
-<p>Language can be defined as a collection of diverse system indications that use convention to justify their means. Language understanding, which is one of the most extensively used artificial intelligence components, employs distinct types of language across various forms of natural meaning, as shown by overstatements.</p>
-<p>Human English is one of the most important qualities of languages since it allows us to distinguish between distinct items. Similarly, AI is designed in such a way that it can grasp English, the most widely spoken human language. In this way, the platform  enables  computers  to  quickly  comprehend  the  many  computer programmes that are run on them.</p>
-<p>A language is a set of signs with predetermined meaning. Language does not have to be limited to the spoken word in this sense. For example, traffic signs form a mini language, with &quot;danger ahead&quot; being a matter of convention in some nations. The fact that linguistic units have meaning by convention distinguishes languages from other languages, and linguistic meaning differs significantly from natural meaning, as seen by expressions like &quot;Those clouds signify rain&quot; and &quot;The drop in pressure shows the valve is malfunctioning.&quot;</p>
+<p>Language can be defined as a collection of diverse system indications that use
+convention to justify their means.</p>
+<p>Similarly, AI is designed in such a way that it can grasp English, the most
+widely spoken human language. In this way, the platform  enables  computers  to
+quickly  comprehend  the  many computer programmes that are run on them.</p>
+<p>A language is a set of signs with predetermined meaning. Language does not have
+to be limited to the spoken word in this sense. For example, traffic signs form
+a mini language, with &quot;danger ahead&quot; being a matter of convention in some
+nations.</p>
 <p><strong>Key takeaway</strong></p>
-<p>Learning, thinking, problem solving, perception, and language use are all aspects of intelligence.</p>
-<ol start="12">
-<li><strong>AI Architectures</strong></li>
-</ol>
-<p>Today's  architecture  is  a  multi-skilled  profession  that  draws  on  a  variety  of disciplines, including structural and environmental engineering, as well as social and  material  sciences.  We  have  a  long  history  of  studying,  adapting,  and leveraging  available  technology  to  broaden  and  strengthen  our  design capabilities at Foster + Partners. The Applied Research and Development (ARD) team is at the forefront of this, having recently investigated the possibilities of employing artificial intelligence (AI) in the creative process.</p>
-<p>AI was created as an area of academic research in the 1950s, and it can be roughly characterized as the development of machines that exhibit human intelligence and behaviors. It has been a hot issue of discussion since its inception, frequently making headlines – both good and negative – and being ingrained in popular culture  and  science  fiction.  Thankfully,  AI  has  progressed  with  primarily benevolent innovations: it can assist us in understanding and responding to human speech, screening for breast cancer, developing robots and self-driving cars, or simply recommending films to watch.</p>
-<p>Many systems  and processes  must be perfected in order  to  accurately mimic human intelligence; one example is the AI subset known as machine learning, which  is  defined  as  &quot;the  study  of  computer  algorithms  that  allow  computer programmes to automatically improve through experience&quot; by computer scientist Tom Mitchell.</p>
-<p><img src="sam/048.jpeg" alt="" /></p>
-<p>English mathematician and pioneer of computer science, Alan Turing, standing at the Ferranti Mark 1 computer at the University of Manchester in 1951. The earliest successful AI program was written by Christopher Strachey to play checkers, or draughts, and ran on the Ferranti Mark I</p>
-<p>Machine learning has the ability to analyze our designs more rapidly and at a lower cost  in  the  context  of  architecture  and  design.  The  ARD  team  has  been experimenting with two methods for incorporating it into the design process, as well as some potentially innovative applications.</p>
-<p>The first is surrogate modeling, which is a direct alternative for time-consuming analytical engineering simulations (such as structural deformation, solar radiation, and pedestrian movement) that might take hours or even days to complete.</p>
-<p>Many  architectural  projects  today  are  of  immense  scale  and  complexity, characterized by a diverse array of overlapping talent and technologies. Machine learning may be able to assist us in this diverse subject by allowing us to solve</p>
-<p>problems and find patterns that were previously dependant on complex analytical simulations  and  programmes.  Due  to  the  time  and  effort  required,  design optimization based on their findings has been almost difficult, weakening the value of these tools.</p>
-<p>We need to give designers with results in near real-time to tackle this problem. As a result, the ARD team looked into surrogate models, in which a computationally 'cheaper' predictive model is built based on a set of carefully selected simulation results. The surrogate model's approximation of a simulation in real-time can then provide the designer with results that are good enough for them to make a swift decision.</p>
-<p>We call the second – and more cutting-edge – field of ARD's machine learning research 'design aid' modeling, and these systems have the ability to function alongside designers' intuition in the creative process.</p>
-<p>This is referred to as design-assistance modeling because it aids architectural processes for which we do not always have an analytical solution – one that can be determined from simulations. This could include optimizing the spatial layout of furniture within a space or providing designers with real-time document control support while they work.</p>
-<ol start="13">
-<li><strong>Case Study: The Amazing Ways Samsung Is Using Big Data, Artificial Intelligence And Robots To Drive Performance</strong></li>
-</ol>
-<p>Until recently, Samsung was considered to be lagging behind its competitors in terms of artificial intelligence (AI) research and development, but the company's current  strategy  implies  that  it  is  devoted  to  narrowing  the  gap  and  even contending for first place. Samsung is the world's biggest provider of data storage products, with its equipment producing and storing 70 percent of the world's data. Samsung is the world's largest consumer electronics manufacturer by revenue, having  surpassed  Apple  and  selling  500  million  connected  devices  per  year. Samsung  appears  to  have  gone  all  out  in  preparing  for  the  fourth  industrial revolution, from industry gatherings to setting goals with AI at the forefront to updating products to use artificial intelligence.</p>
-<p><strong>Bringing innovators together</strong></p>
-<p>Samsung began 2018 with the goal of becoming a leader in artificial intelligence by  hosting  the  Artificial  Intelligence  (AI)  Summit,  which  brought  together  300 university students, technical experts, and leading academics to discuss ways to accelerate AI research and develop the best commercial AI applications.</p>
-<p>On Samsung's AI research team is Dr. Larry Heck, a world-renowned AI and voice recognition expert. Dr. Heck stressed the importance of collaboration within the AI sector at the summit in order for customers to have more confidence and adoption of AI and for AI to develop. Samsung announced intentions to hold additional AI- related events as well as the establishment of a new AI Research Center dedicated to AI development and research. Samsung's artificial intelligence expertise will be bolstered by the research facility.</p>
-<p><strong>Bixby: Samsung’s AI Assistant</strong></p>
-<p>With  the  Samsung  Galaxy  S8,  Bixby,  Samsung's  artificial  intelligence  system designed to make device interaction easier, made its debut. 2.0 is a &quot;major leap forward for digital assistants,&quot; according to the current edition. Bixby 2.0 expands the AI system's reach to include TVs, refrigerators, washers, smartphones, and other connected devices. It's also open to developers, increasing the chances of it integrating with other products and services.</p>
-<p>Bixby is aware of its surroundings and understands spoken language in order to assist users in interacting with increasingly complicated equipment. To compete with Google Home and Amazon Alexa, Samsung plans to release a Bixby speaker.</p>
-<p><strong>Samsung to add AI to all devices by 2020</strong></p>
-<p>Samsung said at CES 2018 that artificial intelligence capabilities would be included in every product company produces by 2020. It merged all smart programmes into a new Smart Things app as part of this plan, making it easy to connect and control all devices. By 2020, all Samsung gadgets will not only be Internet of Things ready, but they will also feature AI. &quot;Samsung's primary strategic initiatives are AI and machine  learning,&quot;  said  Young  Sohn,  President  and  Chief  Strategy  Officer  at Samsung Electronics.</p>
-<p><strong>AI technology based on machine learning to upscale images</strong></p>
-<p>Samsung  Electronics  was  the  first  company  to  show  off  8K  AI  technology  for televisions. The system analyses content and upscales low-resolution photos to 8K visual quality automatically. This innovation addresses the current issue of high- resolution  content  being  available  for  usage  on  screens  with  super-high resolutions. All images can now be converted to 8K, which is the greatest resolution currently available in digital television.</p>
+<p>Learning, thinking, problem solving, perception, and language use are all
+aspects of intelligence.</p>
+<h2 id="ai-architectures"><a class="header" href="#ai-architectures">AI Architectures</a></h2>
+<p>Today's  architecture  is  a  multi-skilled  profession  that  draws  on  a
+variety  of disciplines, including structural and environmental engineering, as
+well as social and  material  sciences.  We  have  a  long  history  of
+studying,  adapting,  and leveraging  available  technology  to  broaden  and
+strengthen  our  design capabilities at Foster + Partners. The Applied Research
+and Development (ARD) team is at the forefront of this, having recently
+investigated the possibilities of employing artificial intelligence (AI) in the
+creative process.</p>
+<p>Many systems  and processes  must be perfected in order  to  accurately mimic
+human intelligence; one example is the AI subset known as machine learning,
+which  is  defined  as  &quot;the  study  of  computer  algorithms  that  allow
+computer programmes to automatically improve through experience&quot; by computer
+scientist Tom Mitchell.</p>
+<p>Machine learning has the ability to analyze our designs more rapidly and at a
+lower cost  in  the  context  of  architecture  and  design.  The  ARD  team has
+been experimenting with two methods for incorporating it into the design
+process, as well as some potentially innovative applications.</p>
+<p>Many  architectural  projects  today  are  of  immense  scale  and  complexity,
+characterized by a diverse array of overlapping talent and technologies. Machine
+learning may be able to assist us in this diverse subject by allowing us to
+solve problems and find patterns that were previously dependant on complex
+analytical simulations  and  programmes.  Due  to  the  time  and  effort
+required, design optimization based on their findings has been almost difficult,
+weakening the value of these tools.</p>
 
                     </main>
 
