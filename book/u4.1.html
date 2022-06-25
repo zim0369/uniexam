@@ -280,7 +280,7 @@ public class HelloWorld extends HttpServlet {
 <p>Save the above file with any name say &quot;hello.java&quot;</p>
 </li>
 <li>
-<p>Compile the servlet with <code>$ javac hello.java</code></p>
+<p>Compile the servlet with <code>$ javac HelloWorld.java</code></p>
 </li>
 <li>
 <p>Create following entries in web.xml file located in
@@ -427,9 +427,11 @@ object is added to an attribute in any scope, it is called binding as the
 object is bound into a scoped attribute with a given name.</p>
 </li>
 <li>
-<p>Important differences between attributes and parameters in JSP/servlets are:
-* Parameters are read only, attributes are read/write objects.
-* Parameters are String objects, attributes can be objects of any type.</p>
+<p>Important differences between attributes and parameters in JSP/servlets are:</p>
+<ul>
+<li>Parameters are read only, attributes are read/write objects.</li>
+<li>Parameters are String objects, attributes can be objects of any type.</li>
+</ul>
 </li>
 <li>
 <p><a href="https://www.javajee.com/parameters-and-attributes-in-servlet">More Details</a></p>
@@ -967,6 +969,22 @@ language. Instead, it is existing technologies used in a new way.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

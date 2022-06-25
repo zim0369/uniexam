@@ -414,8 +414,7 @@ Schedules, and Resources, Analysis of Planning Approaches, Limits of AI, Ethics 
 AI, AI Components, AI Architectures.</p>
 </li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-adversarial-search-and-games"><a class="header" href="#unit-iii-adversarial-search-and-games">Unit III: <strong>Adversarial Search and Games</strong></a></h1>
-<!-- Stochastic Games -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iii-adversarial-search-and-games"><a class="header" href="#unit-iii-adversarial-search-and-games">Unit III: Adversarial Search and Games</a></h1>
 <h2 id="game-theory"><a class="header" href="#game-theory">Game Theory</a></h2>
 <p>For MCQs:</p>
 <p>States where the game has ended are called <strong>terminal states.</strong></p>
@@ -626,7 +625,62 @@ run.</li>
 decide the most efficient path. So, there is a bit of a speed issue there.</li>
 </ol>
 <h2 id="stochastic-games"><a class="header" href="#stochastic-games">Stochastic Games</a></h2>
-<p>Can be skipped</p>
+<p>Stochastic games are simulations of dynamic interactions in which the
+environment changes in response to the activities of the participants. &quot;In a
+stochastic game, the play progresses by steps from position to position,
+according to transition probabilities determined jointly by the two players,&quot;
+Shapley writes.</p>
+<p>A group of participants participates in a stochastic game. At each stage of the
+game, the action takes place in a specific state (or position, in Shapley's
+terminology), and each player selects an action from a list of options. The
+stage payoff that each player receives is determined by the collection of
+actions that the players choose, as well as the current state, as well as a
+probability distribution for the subsequent state that the game will visit.</p>
+<p>Stochastic games apply von Neumann's model of strategic-form games to dynamic
+settings in which the environment varies in response to the players' decisions.
+They also use the Markov decision problem model, which was created by numerous
+RAND Corporation researchers in 1949–1952, to competitive scenarios with
+multiple decision makers.</p>
+<p>The complexity of stochastic games arises from the fact that the players'
+decisions have two, sometimes opposing, consequences. First, the players'
+actions, in combination with the present state, determine the immediate payment
+that each player receives. Second, the present state and the players' activities
+influence the next state selection, which influences future reward
+possibilities. Each player, in particular, must balance these factors when
+deciding on his actions, which might be a difficult decision. Although this
+dichotomy is also present in one-player sequential decision problems, the
+presence of additional players who maximize their own goals adds complexity to
+the analysis of the situation.</p>
+<ul>
+<li>
+<p><strong>Two player Games:</strong> For modelling and analysis of discrete systems
+functioning in an uncertain (adversarial) environment, stochastic two-player
+games on directed graphs are commonly employed. As vertices, a system's and
+its environment's possible configurations are represented, and transitions
+correspond to the system's, its environment's, or &quot;nature's&quot; actions. An
+infinite path in the graph corresponds to a run of the system. As a result,
+a system and its environment can be viewed as two hostile players, with one
+player (the system) aiming to maximise the probability of &quot;good&quot; runs and
+the other player (the environment) aiming to maximise the chance of &quot;bad&quot;
+runs. Although there may be an equilibrium value for this probability in
+many circumstances, there may not be optimal solutions for both parties. We
+go over some of the fundamental notions and algorithmic concerns that have
+been studied in this field, as well as some long-standing outstanding
+difficulties. Then we'll go through a few recent findings.</p>
+</li>
+<li>
+<p><strong>Application:</strong> Economic theory, evolutionary biology, and computer
+networks all use stochastic games. They are generalisations of repeated
+games that correspond to the unique case of a single state.</p>
+</li>
+<li>
+<p><strong>Key takeaway:</strong> Stochastic games are simulations of dynamic interactions
+in which the environment changes in response to the activities of the
+participants. &quot;In a stochastic game, the play progresses by steps from
+position to position, according to transition probabilities determined
+jointly by the two players,&quot; Shapley writes.</p>
+</li>
+</ul>
 <h2 id="partially-observable-games"><a class="header" href="#partially-observable-games">Partially Observable Games</a></h2>
 <p>In deterministic partially observable games, uncertainty about the state of the
 board arises entirely from lack of access to the choices made by the opponent.</p>
@@ -759,9 +813,6 @@ constraint</p>
 quite efficient (requiring only linear</p>
 <p>memory) if a small cutset can be found.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="unit-iv-knowledge"><a class="header" href="#unit-iv-knowledge">Unit IV: <strong>Knowledge</strong></a></h1>
-<!-- Logical Agents,  Logic, Propositional Logic: A Very Simple Logic, -->
-<!-- Representation Revisited, Syntax and Knowledge Engineering in First-Order -->
-<!-- Logic. -->
 <h2 id="knowledge-based-agents"><a class="header" href="#knowledge-based-agents">Knowledge Based Agents</a></h2>
 <p>knowledge-based agents use a process of reasoning over an internal
 representation of</p>
@@ -898,7 +949,52 @@ which can be heard/perceived from anywhere in the cave.</p>
 <p>in each case for which the agent draws a conclusion from the available</p>
 <p>information, that conclusion is guaranteed to be correct if the available
 information is correct. This is a fundamental property of logical reasoning</p>
-<h2 id="propositional-logic"><a class="header" href="#propositional-logic">Propositional Logic</a></h2>
+<h2 id="logic"><a class="header" href="#logic">Logic</a></h2>
+<p>A logic is a formal language that allows sound inference and has well defined
+syntax and semantics. There are various logics that allow you to represent
+various types of things and allow for more or less efficient inference.
+Different varieties of logic exist, such as propositional logic, predicate
+logic, temporal logic, and description logic. However, expressing something in
+logic may not be natural, and conclusions may be ineffective.</p>
+<ul>
+<li>
+<p>Example of logic Language of numerical constraints:</p>
+</li>
+<li>
+<p>A sentence: x + 3 ≤ z x, z - variable symbols (primitives in the language)</p>
+</li>
+<li>
+<p>An interpretation: I: x = 5, z = 2</p>
+</li>
+</ul>
+<p>Variables mapped to specific real numbers</p>
+<ul>
+<li>
+<p>Valuation (meaning) function V: V (x + 3 ≤ z, I) is False for I: x = 5, z =
+2 Is True for I: x = 5, z = 10</p>
+</li>
+<li>
+<p>Types of logic:</p>
+<ul>
+<li>Different types of logics possible</li>
+<li>Propositional logic</li>
+<li>First-order logic</li>
+<li>Temporal logic</li>
+<li>Numerical constraints logic</li>
+<li>Map-coloring logic</li>
+</ul>
+</li>
+<li>
+<p><strong>Key takeaway:</strong></p>
+<ul>
+<li>A logic is a formal language, with precisely defined syntax and
+semantics, which supports sound inference.</li>
+<li>The logic may be different types like propositional logic, predicate
+logic, temporal logic, description logic etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="propositional-logic-a-very-simple-logic"><a class="header" href="#propositional-logic-a-very-simple-logic">Propositional Logic: A Very Simple Logic,</a></h2>
 <p><strong>Syntax:</strong> The statements given in a problem are represented via propositional
 symbols. Each sentence consists of a single propositional symbol. The
 propositional symbol begins with an uppercase letter and may be followed by some
@@ -944,10 +1040,10 @@ true or false in the given model m.</p>
 <p><strong>Note:</strong> Here, iff means if and only if.</p>
 <p><img src="pics/013.jpeg" alt="" /></p>
 <h2 id="propositional-theorem-proving"><a class="header" href="#propositional-theorem-proving">Propositional Theorem Proving</a></h2>
-<p>theorem proving—applying rules of inference directly to the</p>
-<p>sentences in our knowledge base to construct a proof of the desired sentence
-without consulting models.</p>
-<p>logical equivalence means two sentences and are logically equivalent if they are
+<p>Theorem proving—applying rules of inference directly to the sentences in our
+knowledge base to construct a proof of the desired sentence without consulting
+models.</p>
+<p>Logical equivalence means two sentences and are logically equivalent if they are
 true in the same set of models.</p>
 <p><img src="pics/014.jpeg" alt="" /></p>
 <p>A sentence is valid if it is true in all models. For</p>
@@ -958,8 +1054,7 @@ tautologies—they are necessarily true.</p>
 <h2 id="effective-propositional-model-checking"><a class="header" href="#effective-propositional-model-checking">Effective Propositional Model Checking</a></h2>
 <p>Not so important topic according to me. Choosing to ignore this one.</p>
 <h2 id="agents-based-on-propositional-logic"><a class="header" href="#agents-based-on-propositional-logic">Agents Based on Propositional Logic</a></h2>
-<p>Even this can be skipped. Wont ask in exam. Cuz in this section the wumpus world
-is explained again in detail with use of propositional logic.</p>
+<p><em>skipped</em></p>
 <h2 id="first-order-logic"><a class="header" href="#first-order-logic">First Order Logic</a></h2>
 <p>First-order logic is also called first-order predicate calculus; it may be
 abbreviated as FOL or FOPC.</p>
@@ -999,6 +1094,72 @@ be in one of two states—true or false—and each model assigns true or false t
 each proposition symbol. First-order logic assumes more; namely, that the world
 consists of</p>
 <p>objects with certain relations among them that do or do not hold.</p>
+<h2 id="representation-revisited"><a class="header" href="#representation-revisited">Representation Revisited</a></h2>
+<p>Programming languages (such as C++, Java, and Lisp) are by far the most widely
+used formal languages.</p>
+<p>This procedural method contrasts with propositional logic's declarative
+character, in which knowledge and inference are separated and inference is
+domain- independent.</p>
+<p>They lack the expressiveness required to deal with incomplete data.</p>
+<ul>
+<li>Using disjunction and negation, propositional logic has enough expressive
+capability to deal with partial knowledge.</li>
+<li>Compositionality is a third characteristic of propositional logic that is
+useful in representation languages.</li>
+</ul>
+<p>The meaning of a sentence in a compositional language is determined by the
+meaning of its constituent elements.</p>
+<p>For example, ―S1,4 ^ S1,2‖ is related to the meanings of ―S1,4‖ and ―S1,2‖.</p>
+<p>Propositional logic lacks the expressive power to succinctly explain a complex
+environment with numerous items.</p>
+<p>For example, we were compelled to establish a distinct regulation for each
+square regarding breezes and pits, such as: <code>B 1,1⇔(P 1,2 or P 2,1)</code></p>
+<p>In English, though, it seems simple enough to state unequivocally that squares
+near to pits are airy.</p>
+<p>Natural languages are also non-compositional, in the sense that the meaning of a
+statement like &quot;Then she saw it&quot; might be influenced by the context created by
+numerous preceding and following sentences.</p>
+<p>Finally, natural languages contain ambiguity, which can make thinking harder.</p>
+<p>The following are the most obvious features of natural language syntax:</p>
+<ul>
+<li>Object-referential nouns and noun phrases ( squares , pits, wumpuses ).</li>
+<li>Verbs and verb phrases that allude to object relationships (is breezy, is
+adjacent to, shoots).</li>
+<li>Some of these relationships are functions, meaning they have only one value
+for each input. It's simple to start a list of objects, relations, and
+functions:</li>
+</ul>
+<p>Objects: People, houses, numbers, theories, Ronald McDonald, colors, baseball
+games, wars, centuries….</p>
+<p>Relation: These can be unary relations or properties like red, round, bogus,
+prime, multi-storied............, or more general n-ary relations like brother
+of, bigger than, within, part of, has colour, happened after, owns, comes
+between, etc.</p>
+<p>Functions: father of, closest friend, third inning of, more than, and the start
+of.</p>
+<ul>
+<li>The first-order logic language has a syntax and semantics based on objects
+and relations.</li>
+<li>First-order logic can also be used to convey facts about some or all of the
+universe's items.</li>
+<li>This allows generic laws or norms to be represented, such as the sentence
+&quot;Squares adjacent to the Wumpus are stinky.&quot;</li>
+</ul>
+<p>The ontological commitment made by each language—that is, what it assumes about
+the nature of reality—is the basic difference between propositional and first-
+order logic.</p>
+<ul>
+<li>Propositional logic, for example, assumes that there are facts in the world
+that either hold or do not hold. There are two possible states for each
+fact: true or untrue.</li>
+<li>Temporal logic assumes that facts are true at specific moments and that
+those times (which can be points or intervals) are in chronological
+sequence. Higher-order logic considers the first-order logic's relations and
+functions to be objects in and of themselves. This enables claims to be made
+about all object relations. A talent for dealing with logical notation is
+required of an AI student.</li>
+</ul>
+<p><img src="pics/representation_revisited.png" alt="Representation Revisited" /></p>
 <h2 id="syntax-and-semantics-of-first-order"><a class="header" href="#syntax-and-semantics-of-first-order">Syntax and Semantics of First Order</a></h2>
 <p><strong>Syntax:</strong> It defines the way of representing the given predicates. As these
 predicates are represented via quantifiers, there are different types of
@@ -1112,12 +1273,124 @@ engineering process where the knowledge engineer debugs all the errors.</li>
 to propositional logic and use propositional inference. first step is
 eliminating universal quantifiers.</p>
 <p><img src="pics/017.png" alt="" /></p>
-<p>Can be skipped i feel.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: <strong>Reasoning</strong></a></h1>
-<!-- Inference in First-Order Logic, Propositional vs. First-Order Inference, -->
-<!-- Knowledge Representation, Ontological Engineering, Categories and Objects, -->
-<!-- Events, Mental Objects, and Modal Logic, Reasoning Systems for Categories, -->
-<!-- Reasoning with Default Information -->
+<p><img src="pics/pro_vs_fo.png" alt="Propositional vs First order Inference" /></p>
+<h2 id="knowledge-engineering-in-first-order-logic-inference-is-used-in-first-order"><a class="header" href="#knowledge-engineering-in-first-order-logic-inference-is-used-in-first-order">Knowledge Engineering in First-Order Logic Inference is used in First-Order</a></h2>
+<p>Logic to generate new facts or sentences from current ones. It's crucial to
+understand some basic FOL terms before diving into the FOL inference rule.</p>
+<ul>
+<li>
+<p><strong>Substitution:</strong> Substitution is a fundamental approach for modifying
+phrases and formulations. All first-order logic inference systems contain
+it. The substitution becomes more difficult when there are quantifiers in
+FOL. We refer to the replacement of a constant &quot;a&quot; for the variable &quot;x&quot; when
+we write F[a/x].</p>
+</li>
+<li>
+<p><strong>Equality:</strong> Atomic sentences are generated in First-Order Logic not only
+through the employment of predicate and words, but also through the
+application of equality. We can do this by using equality symbols, which
+indicate that the two terms relate to the same thing.</p>
+</li>
+<li>
+<p><strong>FOL inference rules for quantifier:</strong> Because inference rules in
+first-order logic are comparable to those in propositional logic, below are
+some basic inference rules in FOL:</p>
+<ul>
+<li>Universal Generalization</li>
+<li>Universal Instantiation</li>
+<li>Existential Instantiation</li>
+<li>Existential introduction</li>
+</ul>
+</li>
+<li>
+<p><strong>Universal Generalization:</strong></p>
+<ul>
+<li>
+<p>Universal generalization is a valid inference rule that states that if
+premise P(c) is true for any arbitrary element c in the universe of
+discourse, we can arrive at the conclusion x P. (x).</p>
+</li>
+<li>
+<p>It can be represented as: <em>formula not visible</em></p>
+</li>
+<li>
+<p>If we want to prove that every element has a similar property, we can
+apply this rule.</p>
+</li>
+<li>
+<p>x must not be used as a free variable in this rule.</p>
+</li>
+<li>
+<p><strong>Example:</strong> Let's represent, P(c): &quot;A byte contains 8 bits&quot;, so for ∀ x
+P(x) &quot;All bytes contain 8 bits.&quot;, it will also be true.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Universal Instantiation:</strong></p>
+<ul>
+<li>Universal instantiation, often known as universal elimination or UI, is
+a valid inference rule. It can be used numerous times to add more
+sentences.</li>
+<li>The new knowledge base is logically equivalent to the previous one.</li>
+<li>We can infer any phrase by replacing a ground word for the variable,
+according to the UI.</li>
+<li>According to the UI rule, any phrase P(c) can be inferred by
+substituting a ground term c (a constant inside domain x) for any object
+in the universe of discourse in x P(x).</li>
+<li>It can be represented as: <em>formula not visible</em></li>
+<li><strong>Example:</strong> IF &quot;Every person like ice-cream&quot;=&gt; ∀x P(x) so we can infer
+that &quot;John likes ice-cream&quot; =&gt; P(c)</li>
+</ul>
+</li>
+<li>
+<p><strong>Existential Instantiation:</strong></p>
+<ul>
+<li>Existential Elimination, also known as Existential Instantiation, is a
+valid first- order logic inference rule.</li>
+<li>It can only be used once to substitute for the existential sentence.</li>
+<li>Despite the fact that the new KB is not conceptually identical to the
+previous KB, it will suffice if the old KB was.</li>
+<li>This rule states that one can infer P(c) from the formula given in the
+form of ∃x P(x) for a new constant symbol c.</li>
+<li>The only constraint with this rule is that c must be a new word for
+which P(c) is true.</li>
+<li>It can be represented as:  <em>formula not visible</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Existential introduction:</strong></p>
+<ul>
+<li>An existential generalization, also known as an existential
+introduction, is a valid inference rule in first-order logic.</li>
+<li>If some element c in the world of discourse has the characteristic P, we
+can infer that something else in the universe has the attribute P,
+according to this rule.</li>
+<li>It can be represented as:  <em>formula not visible</em></li>
+<li><strong>Example:</strong> Let's say that, &quot;Pritisha got good marks in English.&quot;
+&quot;Therefore, someone got good marks in English.&quot;</li>
+</ul>
+</li>
+<li>
+<p><strong>Propositional vs. First-Order Inference:</strong> Previously, inference in first
+order logic was checked via propositionalization, which is the act of
+turning the Knowledge Base included in first order logic into propositional
+logic and then utilizing any of the propositional logic inference mechanisms
+to check inference.</p>
+</li>
+<li>
+<p><strong>Key takeaway:</strong></p>
+<ul>
+<li>In First-Order Logic, inference is used to derive new facts or sentences
+from existing ones.</li>
+<li>In First-Order Logic, atomic sentences are formed not only via the use
+of predicate and words, but also via the application of equality.</li>
+<li>There are some Inference rules that can be applied to sentences with
+quantifiers to obtain sentences without quantifiers.</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: Reasoning</a></h1>
 <h2 id="unification-and-first-order-inference"><a class="header" href="#unification-and-first-order-inference">Unification and first order inference</a></h2>
 <ul>
 <li>
@@ -1242,10 +1515,124 @@ clause should be dis-junction of literals.</li>
 <li>Unlike propositional logic, FOPL literals are complementary if one unifies
 with the negation of other literal.</li>
 </ul>
-<p>Note:</p>
-<p>Skolemization is the process of removing existential quantifiers by elimination.</p>
+<p><strong>Note:</strong> Skolemization is the process of removing existential quantifiers by
+elimination.</p>
+<h2 id="knowledge-representation"><a class="header" href="#knowledge-representation">Knowledge Representation</a></h2>
+<p><img src="pictures/knowledge_types.png" alt="Knowledge Types" /></p>
+<p>Humans are best at understanding, reasoning, and interpreting knowledge. Humans
+know things, which is that of the knowledge and as per that of their knowledge
+they perform several of the actions in that of the real world. But how machines
+do all of these things come under the knowledge representation and the
+reasoning. Hence we can describe that of the Knowledge representation as
+follows they are:</p>
+<ul>
+<li>Knowledge representation and the reasoning (KR, KRR) is the part of
+Artificial intelligence which concerned with AI agents thinking and how
+thinking contributes to intelligent behaviour of agents.</li>
+<li>It is responsible for representing information about the real world so that
+a computer can understand and then can utilize that of the knowledge to
+solve that of the complex real world problems for instance diagnosis a
+medical condition or communicating with humans in natural language.</li>
+<li>It is also a way which describes that how we can represent that of the
+knowledge in that of the artificial intelligence. Knowledge representation
+is not just that of the storing data into some of the database, but it also
+enables of an intelligent machine to learn from that of the knowledge and
+experiences so that of the it can behave intelligently like that of a human.
+What to Represent: Following are the kind of knowledge which needs to be
+represented in that of the AI systems:</li>
+<li><strong>Object:</strong> All the facts about that of the objects in our world domain.
+Example Guitars contains strings, trumpets are brass instruments.</li>
+<li><strong>Events:</strong> Events are the actions which occur in our world.</li>
+<li><strong>Performance:</strong> It describes that of the behaviour which involves the
+knowledge about how to do things.</li>
+<li><strong>Meta-knowledge:</strong> It is knowledge about what we know.</li>
+<li><strong>Facts:</strong> Facts are the truths about the real world and what we represent.</li>
+<li><strong>Knowledge-Base:</strong> The central component of the knowledge-based agents is
+the knowledge base. It is represented as KB. The Knowledgebase is a group of
+the Sentences (Here, sentences are used as a technical term and not
+identical with the English language). <strong>Knowledge:</strong> Knowledge is the
+awareness or familiarity gained by that of the experiences of facts, data,
+and situations. Following are the types of knowledge in artificial
+intelligence:</li>
+</ul>
 <h2 id="ontological-engineering"><a class="header" href="#ontological-engineering">Ontological Engineering</a></h2>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-vi-planning"><a class="header" href="#unit-vi-planning">Unit VI: <strong>Planning</strong></a></h1>
+<p><img src="pictures/upper_onto.png" alt="Ontological Upper" /></p>
+<ul>
+<li>This field of engineering describes:
+<ul>
+<li>How to make representations that are more broad and adaptable</li>
+<li>Actions, time, physical objects, and beliefs are examples of concepts.</li>
+<li>Works on a far larger scale than K.E.</li>
+</ul>
+</li>
+<li>Define general framework of concepts
+<ul>
+<li>Upper ontology</li>
+</ul>
+</li>
+<li>Limitations of logic representation
+<ul>
+<li>Red, green and yellow tomatoes: exceptions and uncertainty.</li>
+</ul>
+</li>
+<li>Ontological engineering is a term used to describe the process of
+representing abstract concepts.</li>
+</ul>
+<h2 id="categories-and-objects"><a class="header" href="#categories-and-objects">Categories and Objects</a></h2>
+<ul>
+<li>Sorting the items into categories.</li>
+<li>At the level of categories, some reasoning takes happen.</li>
+<li>&quot;I'd like to eat an apple,&quot; says the narrator.</li>
+<li>Member(x, Apple) and Subset(x, Apple) are Apple(x) and Member(x, Apple)
+respectively (Apple, Food).</li>
+<li>The categories create a hierarchy, or simply a network, in which each class
+inherits the properties of the parent (apples are both food and fruit).</li>
+<li>A taxonomy is made up of the categories of a class.</li>
+<li>The organisation of items into categories is required by KR.</li>
+<li>Interaction at the object level;</li>
+<li>Reasoning at the category level</li>
+<li>Categories play a role in predictions about objects</li>
+<li>Based on perceived properties</li>
+<li>FOL can represent categories in two ways (First Order Logic)
+<ul>
+<li>Predicates: apple(x)</li>
+<li>Reification of categories into objects: apples
+<ul>
+<li>Category = set of its members</li>
+<li>Category organization</li>
+<li>Relation = inheritance:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Food is edible in all forms; fruit is a subclass of food, and apples are a
+subclass of fruit, hence an apple is edible.</li>
+</ul>
+<p><img src="pictures/cat_and_ob.png" alt="fol_and_categories" /></p>
+<h2 id="events"><a class="header" href="#events">Events</a></h2>
+<p>The usefulness of situation calculus is limited: it was created to represent a
+world in which activities are discrete, instantaneous, and occur one at a time.
+Consider filling a bathtub, which is a continual action. Situation calculus can
+claim that the tub is empty before the action and filled after the action, but
+it can't describe what happens in the middle of the activity. It also can't
+depict two simultaneous actions, as cleaning one's teeth while waiting for the
+tub to fill. We present an alternative formalism known as event calculus to
+address such circumstances, which is based on points of time rather than
+situations.</p>
+<p>Instances of event categories are used to describe events.4 Shankar's flight
+from San Francisco to Washington, D.C. Is described as follows:</p>
+<ul>
+<li>E1 ∈ Flyings ∧ Flyer (E1, Shankar ) ∧ Origin(E1, SF) ∧ Destination(E1,DC)</li>
+</ul>
+<p>Then we use Happens(E1, I to indicate that the event E1 occurred at the time
+interval i. A (start, finish) pair of times is used to express time intervals.</p>
+<h2 id="mental-objects--modal-logic"><a class="header" href="#mental-objects--modal-logic">Mental Objects &amp; Modal Logic</a></h2>
+<p><img src="pictures/modal_a.png" alt="" /> <img src="pictures/modal_b.png" alt="" /> <img src="pictures/modal_c.png" alt="" /></p>
+<h2 id="reasoning-systems-for-categories"><a class="header" href="#reasoning-systems-for-categories">Reasoning Systems for Categories</a></h2>
+<p><em>skipped</em></p>
+<h2 id="reasoning-with-default-information"><a class="header" href="#reasoning-with-default-information">Reasoning with Default Information</a></h2>
+<p><em>skipped</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="unit-vi-planning"><a class="header" href="#unit-vi-planning">Unit VI: Planning</a></h1>
 <h2 id="automated-planning"><a class="header" href="#automated-planning">Automated Planning</a></h2>
 <p>The  field  of  Artificial  Intelligence  known  as  Automated  Planning
 investigates this discussion process computationally. Its goal is to aid
@@ -1785,6 +2172,83 @@ required, design optimization based on their findings has been almost difficult,
 weakening the value of these tools.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="questions"><a class="header" href="#questions">Questions</a></h1>
 <p><strong>Questions from SKN's recent(May 2022) prelim examinations</strong></p>
+<h2 id="unit-iii--adversarial-search-and-games"><a class="header" href="#unit-iii--adversarial-search-and-games">Unit III : Adversarial Search and Games</a></h2>
+<ol>
+<li><strong>Give and explain Game Theory.</strong></li>
+<li><strong>Explain Optimal Decisions in Games.</strong></li>
+<li><strong>Explain Heuristic Alpha–Beta Tree Search with example.</strong></li>
+<li><strong>Explain Monte Carlo Tree Search with example.</strong></li>
+<li><strong>Explain Stochastic Games with example.</strong></li>
+<li><strong>Give and explain Partially Observable Games with example.</strong></li>
+<li><strong>Give and explain Limitations of Game Search Algorithms.</strong></li>
+<li><strong>Explain Constraint Satisfaction Problems (CSP) with example.</strong></li>
+<li><strong>Explain Constraint Propagation: Inference in CSPs,Backtracking Search for
+CSPs.</strong></li>
+<li><strong>What is best first search process?What are its advantages.</strong></li>
+<li><strong>How does the ALPHA-BETA pruning algorithm influence overall task
+Complexity. Add ALPHA-BETA values to the problem tree and mark out
+pruned(unnecessary) nodes. One digit values of static evaluation function of
+leaf nodes are given in sequence:</strong>
+<ul>
+<li><strong>8-7-2, 9-1-6, 2-4-1 || 1-3-5, 3-9-2, 6-5-2 || 1-2-3, 9-7-2, 8-6-4</strong></li>
+</ul>
+</li>
+<li><strong>Explain MINIMAX procedure in detail</strong></li>
+<li><strong>Write MINIMAX algorithm and explain with suitable example the concept of
+ALPHA-Beta cut-offs.</strong></li>
+</ol>
+<h2 id="unit-iv--knowledge"><a class="header" href="#unit-iv--knowledge">Unit IV : Knowledge</a></h2>
+<ol>
+<li><strong>What is Logical Agents.</strong></li>
+<li><strong>Explain Knowledge-Based Agents.</strong></li>
+<li><strong>What is The Wumpus World.</strong></li>
+<li><strong>Explain Logic and Propositional Logic.</strong></li>
+<li><strong>Explain A Very Simple Logic &amp; Propositional Theorem Proving.</strong></li>
+<li><strong>What is mean by Effective Propositional Model Checking.</strong></li>
+<li><strong>What is Agents Based on Propositional Logic.</strong></li>
+<li><strong>Explain First-Order Logic.</strong></li>
+<li><strong>Explain Representation Revisited.</strong></li>
+<li><strong>Give and Explain Syntax and Semantics of First-Order Logic Using
+First-Order Logic.</strong></li>
+<li><strong>Explain in details Knowledge Engineering in First-Order Logic.</strong></li>
+<li><strong>Difference between propositional and FOL logic.</strong></li>
+<li><strong>How will you represent facts in propositional logic with an example?</strong></li>
+</ol>
+<h2 id="unit-v--reasoning"><a class="header" href="#unit-v--reasoning">Unit V : Reasoning</a></h2>
+<ol>
+<li><strong>Explain Inference in First-Order Logic.</strong></li>
+<li><strong>Give difference between Propositional vs. First-Order Inference.</strong></li>
+<li><strong>Explain Unification and First-Order Inference.</strong></li>
+<li><strong>Explain Forward Chaining.</strong></li>
+<li><strong>Explain in details Backward Chaining.</strong></li>
+<li><strong>Explain in details Resolution and Knowledge Representation.</strong></li>
+<li><strong>Write a short notes on</strong>
+<ol>
+<li><strong>Ontological Engineering</strong></li>
+<li><strong>Categories and Objects</strong></li>
+<li><strong>Events</strong></li>
+<li><strong>Mental Objects and Modal Logic.</strong></li>
+</ol>
+</li>
+<li><strong>Explain in details Reasoning Systems for Categories &amp; Reasoning with
+Default Information.</strong></li>
+<li><strong>Give Difference between propositional and FOL logic.</strong></li>
+<li><strong>Give Difference between forward chaining and backward chaining.</strong></li>
+</ol>
+<h2 id="unit-vi--planning"><a class="header" href="#unit-vi--planning">Unit VI : Planning</a></h2>
+<ol>
+<li><strong>Explain in details Automated Planning &amp; Classical Planning.</strong></li>
+<li><strong>Give and explain Algorithms for Classical Planning.</strong></li>
+<li><strong>Explain in details Heuristics for Planning.</strong></li>
+<li><strong>Explain Hierarchical Planning.</strong></li>
+<li><strong>Explain in details Planning and Acting in Nondeterministic Domains, Time,
+Schedules, and Resources.</strong></li>
+<li><strong>Give and explain Analysis of Planning Approaches, Limits of AI.</strong></li>
+<li><strong>Explain in details Ethics of AI, Future of AI.</strong></li>
+<li><strong>Explain in details Components and AI Architectures.</strong></li>
+<li><strong>What is planning? How planning is different from programming?</strong></li>
+<li><strong>Explain various components of a planning systems</strong></li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="cloud-computing-1"><a class="header" href="#cloud-computing-1">Cloud Computing</a></h1>
 <ul>
 <li>
@@ -4998,9 +5462,7 @@ decide what is the best “route” or action to take.</p>
 </li>
 </ul>
 </details>
-<ul>
-<li><img src="pictures/data_anal_diff.jpeg" alt="differences between different analytics techniques" /></li>
-</ul>
+<p><img src="pictures/data_anal_diff.jpeg" alt="differences between different analytics techniques" /></p>
 <h2 id="association-rules"><a class="header" href="#association-rules">Association Rules</a></h2>
 <p>Association rule learning is a rule-based machine learning method for
 discovering interesting relations between variables in large databases. It is
@@ -5154,13 +5616,13 @@ Matplotlib.</p>
 <h3 id="installations"><a class="header" href="#installations">Installations</a></h3>
 <p>Install the 64bit version of Python 3, for instance from
 <a href="https://www.python.org">https://www.python.org</a> Then run:</p>
-<pre><code>pip install -U scikit-learn
+<!-- CODE  -->
+<pre><code class="language-python">pip install -U scikit-learn
 </code></pre>
 <p>In order to check your installation you can use</p>
-<pre><code>python -m pip show scikit-learn  # to see which version and where
-scikit-learn is installed python -m pip freeze  # to see all packages
-installed in the active virtualenv python -c &quot;import sklearn;
-sklearn.show_versions()&quot;
+<pre><code class="language-python">python -m pip show scikit-learn  # to see which version and where scikit-learn is installed
+python -m pip freeze  # to see all packages installed in the active virtualenv
+python -c &quot;import sklearn; sklearn.show_versions()&quot;
 </code></pre>
 <h3 id="dataset"><a class="header" href="#dataset">Dataset</a></h3>
 <ul>
@@ -6359,7 +6821,7 @@ public class HelloWorld extends HttpServlet {
 <p>Save the above file with any name say &quot;hello.java&quot;</p>
 </li>
 <li>
-<p>Compile the servlet with <code>$ javac hello.java</code></p>
+<p>Compile the servlet with <code>$ javac HelloWorld.java</code></p>
 </li>
 <li>
 <p>Create following entries in web.xml file located in
@@ -6506,9 +6968,11 @@ object is added to an attribute in any scope, it is called binding as the
 object is bound into a scoped attribute with a given name.</p>
 </li>
 <li>
-<p>Important differences between attributes and parameters in JSP/servlets are:
-* Parameters are read only, attributes are read/write objects.
-* Parameters are String objects, attributes can be objects of any type.</p>
+<p>Important differences between attributes and parameters in JSP/servlets are:</p>
+<ul>
+<li>Parameters are read only, attributes are read/write objects.</li>
+<li>Parameters are String objects, attributes can be objects of any type.</li>
+</ul>
 </li>
 <li>
 <p><a href="https://www.javajee.com/parameters-and-attributes-in-servlet">More Details</a></p>
@@ -9579,6 +10043,22 @@ $global_variable = 10
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

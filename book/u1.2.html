@@ -135,9 +135,6 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="unit-iv-knowledge"><a class="header" href="#unit-iv-knowledge">Unit IV: <strong>Knowledge</strong></a></h1>
-<!-- Logical Agents,  Logic, Propositional Logic: A Very Simple Logic, -->
-<!-- Representation Revisited, Syntax and Knowledge Engineering in First-Order -->
-<!-- Logic. -->
 <h2 id="knowledge-based-agents"><a class="header" href="#knowledge-based-agents">Knowledge Based Agents</a></h2>
 <p>knowledge-based agents use a process of reasoning over an internal
 representation of</p>
@@ -274,7 +271,52 @@ which can be heard/perceived from anywhere in the cave.</p>
 <p>in each case for which the agent draws a conclusion from the available</p>
 <p>information, that conclusion is guaranteed to be correct if the available
 information is correct. This is a fundamental property of logical reasoning</p>
-<h2 id="propositional-logic"><a class="header" href="#propositional-logic">Propositional Logic</a></h2>
+<h2 id="logic"><a class="header" href="#logic">Logic</a></h2>
+<p>A logic is a formal language that allows sound inference and has well defined
+syntax and semantics. There are various logics that allow you to represent
+various types of things and allow for more or less efficient inference.
+Different varieties of logic exist, such as propositional logic, predicate
+logic, temporal logic, and description logic. However, expressing something in
+logic may not be natural, and conclusions may be ineffective.</p>
+<ul>
+<li>
+<p>Example of logic Language of numerical constraints:</p>
+</li>
+<li>
+<p>A sentence: x + 3 ≤ z x, z - variable symbols (primitives in the language)</p>
+</li>
+<li>
+<p>An interpretation: I: x = 5, z = 2</p>
+</li>
+</ul>
+<p>Variables mapped to specific real numbers</p>
+<ul>
+<li>
+<p>Valuation (meaning) function V: V (x + 3 ≤ z, I) is False for I: x = 5, z =
+2 Is True for I: x = 5, z = 10</p>
+</li>
+<li>
+<p>Types of logic:</p>
+<ul>
+<li>Different types of logics possible</li>
+<li>Propositional logic</li>
+<li>First-order logic</li>
+<li>Temporal logic</li>
+<li>Numerical constraints logic</li>
+<li>Map-coloring logic</li>
+</ul>
+</li>
+<li>
+<p><strong>Key takeaway:</strong></p>
+<ul>
+<li>A logic is a formal language, with precisely defined syntax and
+semantics, which supports sound inference.</li>
+<li>The logic may be different types like propositional logic, predicate
+logic, temporal logic, description logic etc.</li>
+</ul>
+</li>
+</ul>
+<h2 id="propositional-logic-a-very-simple-logic"><a class="header" href="#propositional-logic-a-very-simple-logic">Propositional Logic: A Very Simple Logic,</a></h2>
 <p><strong>Syntax:</strong> The statements given in a problem are represented via propositional
 symbols. Each sentence consists of a single propositional symbol. The
 propositional symbol begins with an uppercase letter and may be followed by some
@@ -320,10 +362,10 @@ true or false in the given model m.</p>
 <p><strong>Note:</strong> Here, iff means if and only if.</p>
 <p><img src="pics/013.jpeg" alt="" /></p>
 <h2 id="propositional-theorem-proving"><a class="header" href="#propositional-theorem-proving">Propositional Theorem Proving</a></h2>
-<p>theorem proving—applying rules of inference directly to the</p>
-<p>sentences in our knowledge base to construct a proof of the desired sentence
-without consulting models.</p>
-<p>logical equivalence means two sentences and are logically equivalent if they are
+<p>Theorem proving—applying rules of inference directly to the sentences in our
+knowledge base to construct a proof of the desired sentence without consulting
+models.</p>
+<p>Logical equivalence means two sentences and are logically equivalent if they are
 true in the same set of models.</p>
 <p><img src="pics/014.jpeg" alt="" /></p>
 <p>A sentence is valid if it is true in all models. For</p>
@@ -334,8 +376,7 @@ tautologies—they are necessarily true.</p>
 <h2 id="effective-propositional-model-checking"><a class="header" href="#effective-propositional-model-checking">Effective Propositional Model Checking</a></h2>
 <p>Not so important topic according to me. Choosing to ignore this one.</p>
 <h2 id="agents-based-on-propositional-logic"><a class="header" href="#agents-based-on-propositional-logic">Agents Based on Propositional Logic</a></h2>
-<p>Even this can be skipped. Wont ask in exam. Cuz in this section the wumpus world
-is explained again in detail with use of propositional logic.</p>
+<p><em>skipped</em></p>
 <h2 id="first-order-logic"><a class="header" href="#first-order-logic">First Order Logic</a></h2>
 <p>First-order logic is also called first-order predicate calculus; it may be
 abbreviated as FOL or FOPC.</p>
@@ -375,6 +416,72 @@ be in one of two states—true or false—and each model assigns true or false t
 each proposition symbol. First-order logic assumes more; namely, that the world
 consists of</p>
 <p>objects with certain relations among them that do or do not hold.</p>
+<h2 id="representation-revisited"><a class="header" href="#representation-revisited">Representation Revisited</a></h2>
+<p>Programming languages (such as C++, Java, and Lisp) are by far the most widely
+used formal languages.</p>
+<p>This procedural method contrasts with propositional logic's declarative
+character, in which knowledge and inference are separated and inference is
+domain- independent.</p>
+<p>They lack the expressiveness required to deal with incomplete data.</p>
+<ul>
+<li>Using disjunction and negation, propositional logic has enough expressive
+capability to deal with partial knowledge.</li>
+<li>Compositionality is a third characteristic of propositional logic that is
+useful in representation languages.</li>
+</ul>
+<p>The meaning of a sentence in a compositional language is determined by the
+meaning of its constituent elements.</p>
+<p>For example, ―S1,4 ^ S1,2‖ is related to the meanings of ―S1,4‖ and ―S1,2‖.</p>
+<p>Propositional logic lacks the expressive power to succinctly explain a complex
+environment with numerous items.</p>
+<p>For example, we were compelled to establish a distinct regulation for each
+square regarding breezes and pits, such as: <code>B 1,1⇔(P 1,2 or P 2,1)</code></p>
+<p>In English, though, it seems simple enough to state unequivocally that squares
+near to pits are airy.</p>
+<p>Natural languages are also non-compositional, in the sense that the meaning of a
+statement like &quot;Then she saw it&quot; might be influenced by the context created by
+numerous preceding and following sentences.</p>
+<p>Finally, natural languages contain ambiguity, which can make thinking harder.</p>
+<p>The following are the most obvious features of natural language syntax:</p>
+<ul>
+<li>Object-referential nouns and noun phrases ( squares , pits, wumpuses ).</li>
+<li>Verbs and verb phrases that allude to object relationships (is breezy, is
+adjacent to, shoots).</li>
+<li>Some of these relationships are functions, meaning they have only one value
+for each input. It's simple to start a list of objects, relations, and
+functions:</li>
+</ul>
+<p>Objects: People, houses, numbers, theories, Ronald McDonald, colors, baseball
+games, wars, centuries….</p>
+<p>Relation: These can be unary relations or properties like red, round, bogus,
+prime, multi-storied............, or more general n-ary relations like brother
+of, bigger than, within, part of, has colour, happened after, owns, comes
+between, etc.</p>
+<p>Functions: father of, closest friend, third inning of, more than, and the start
+of.</p>
+<ul>
+<li>The first-order logic language has a syntax and semantics based on objects
+and relations.</li>
+<li>First-order logic can also be used to convey facts about some or all of the
+universe's items.</li>
+<li>This allows generic laws or norms to be represented, such as the sentence
+&quot;Squares adjacent to the Wumpus are stinky.&quot;</li>
+</ul>
+<p>The ontological commitment made by each language—that is, what it assumes about
+the nature of reality—is the basic difference between propositional and first-
+order logic.</p>
+<ul>
+<li>Propositional logic, for example, assumes that there are facts in the world
+that either hold or do not hold. There are two possible states for each
+fact: true or untrue.</li>
+<li>Temporal logic assumes that facts are true at specific moments and that
+those times (which can be points or intervals) are in chronological
+sequence. Higher-order logic considers the first-order logic's relations and
+functions to be objects in and of themselves. This enables claims to be made
+about all object relations. A talent for dealing with logical notation is
+required of an AI student.</li>
+</ul>
+<p><img src="pics/representation_revisited.png" alt="Representation Revisited" /></p>
 <h2 id="syntax-and-semantics-of-first-order"><a class="header" href="#syntax-and-semantics-of-first-order">Syntax and Semantics of First Order</a></h2>
 <p><strong>Syntax:</strong> It defines the way of representing the given predicates. As these
 predicates are represented via quantifiers, there are different types of
@@ -488,7 +595,123 @@ engineering process where the knowledge engineer debugs all the errors.</li>
 to propositional logic and use propositional inference. first step is
 eliminating universal quantifiers.</p>
 <p><img src="pics/017.png" alt="" /></p>
-<p>Can be skipped i feel.</p>
+<p><img src="pics/pro_vs_fo.png" alt="Propositional vs First order Inference" /></p>
+<h2 id="knowledge-engineering-in-first-order-logic-inference-is-used-in-first-order"><a class="header" href="#knowledge-engineering-in-first-order-logic-inference-is-used-in-first-order">Knowledge Engineering in First-Order Logic Inference is used in First-Order</a></h2>
+<p>Logic to generate new facts or sentences from current ones. It's crucial to
+understand some basic FOL terms before diving into the FOL inference rule.</p>
+<ul>
+<li>
+<p><strong>Substitution:</strong> Substitution is a fundamental approach for modifying
+phrases and formulations. All first-order logic inference systems contain
+it. The substitution becomes more difficult when there are quantifiers in
+FOL. We refer to the replacement of a constant &quot;a&quot; for the variable &quot;x&quot; when
+we write F[a/x].</p>
+</li>
+<li>
+<p><strong>Equality:</strong> Atomic sentences are generated in First-Order Logic not only
+through the employment of predicate and words, but also through the
+application of equality. We can do this by using equality symbols, which
+indicate that the two terms relate to the same thing.</p>
+</li>
+<li>
+<p><strong>FOL inference rules for quantifier:</strong> Because inference rules in
+first-order logic are comparable to those in propositional logic, below are
+some basic inference rules in FOL:</p>
+<ul>
+<li>Universal Generalization</li>
+<li>Universal Instantiation</li>
+<li>Existential Instantiation</li>
+<li>Existential introduction</li>
+</ul>
+</li>
+<li>
+<p><strong>Universal Generalization:</strong></p>
+<ul>
+<li>
+<p>Universal generalization is a valid inference rule that states that if
+premise P(c) is true for any arbitrary element c in the universe of
+discourse, we can arrive at the conclusion x P. (x).</p>
+</li>
+<li>
+<p>It can be represented as: <em>formula not visible</em></p>
+</li>
+<li>
+<p>If we want to prove that every element has a similar property, we can
+apply this rule.</p>
+</li>
+<li>
+<p>x must not be used as a free variable in this rule.</p>
+</li>
+<li>
+<p><strong>Example:</strong> Let's represent, P(c): &quot;A byte contains 8 bits&quot;, so for ∀ x
+P(x) &quot;All bytes contain 8 bits.&quot;, it will also be true.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Universal Instantiation:</strong></p>
+<ul>
+<li>Universal instantiation, often known as universal elimination or UI, is
+a valid inference rule. It can be used numerous times to add more
+sentences.</li>
+<li>The new knowledge base is logically equivalent to the previous one.</li>
+<li>We can infer any phrase by replacing a ground word for the variable,
+according to the UI.</li>
+<li>According to the UI rule, any phrase P(c) can be inferred by
+substituting a ground term c (a constant inside domain x) for any object
+in the universe of discourse in x P(x).</li>
+<li>It can be represented as: <em>formula not visible</em></li>
+<li><strong>Example:</strong> IF &quot;Every person like ice-cream&quot;=&gt; ∀x P(x) so we can infer
+that &quot;John likes ice-cream&quot; =&gt; P(c)</li>
+</ul>
+</li>
+<li>
+<p><strong>Existential Instantiation:</strong></p>
+<ul>
+<li>Existential Elimination, also known as Existential Instantiation, is a
+valid first- order logic inference rule.</li>
+<li>It can only be used once to substitute for the existential sentence.</li>
+<li>Despite the fact that the new KB is not conceptually identical to the
+previous KB, it will suffice if the old KB was.</li>
+<li>This rule states that one can infer P(c) from the formula given in the
+form of ∃x P(x) for a new constant symbol c.</li>
+<li>The only constraint with this rule is that c must be a new word for
+which P(c) is true.</li>
+<li>It can be represented as:  <em>formula not visible</em></li>
+</ul>
+</li>
+<li>
+<p><strong>Existential introduction:</strong></p>
+<ul>
+<li>An existential generalization, also known as an existential
+introduction, is a valid inference rule in first-order logic.</li>
+<li>If some element c in the world of discourse has the characteristic P, we
+can infer that something else in the universe has the attribute P,
+according to this rule.</li>
+<li>It can be represented as:  <em>formula not visible</em></li>
+<li><strong>Example:</strong> Let's say that, &quot;Pritisha got good marks in English.&quot;
+&quot;Therefore, someone got good marks in English.&quot;</li>
+</ul>
+</li>
+<li>
+<p><strong>Propositional vs. First-Order Inference:</strong> Previously, inference in first
+order logic was checked via propositionalization, which is the act of
+turning the Knowledge Base included in first order logic into propositional
+logic and then utilizing any of the propositional logic inference mechanisms
+to check inference.</p>
+</li>
+<li>
+<p><strong>Key takeaway:</strong></p>
+<ul>
+<li>In First-Order Logic, inference is used to derive new facts or sentences
+from existing ones.</li>
+<li>In First-Order Logic, atomic sentences are formed not only via the use
+of predicate and words, but also via the application of equality.</li>
+<li>There are some Inference rules that can be applied to sentences with
+quantifiers to obtain sentences without quantifiers.</li>
+</ul>
+</li>
+</ul>
 
                     </main>
 
@@ -516,6 +739,22 @@ eliminating universal quantifiers.</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

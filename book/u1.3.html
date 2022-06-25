@@ -134,11 +134,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: <strong>Reasoning</strong></a></h1>
-<!-- Inference in First-Order Logic, Propositional vs. First-Order Inference, -->
-<!-- Knowledge Representation, Ontological Engineering, Categories and Objects, -->
-<!-- Events, Mental Objects, and Modal Logic, Reasoning Systems for Categories, -->
-<!-- Reasoning with Default Information -->
+                        <h1 id="unit-v-reasoning"><a class="header" href="#unit-v-reasoning">Unit V: Reasoning</a></h1>
 <h2 id="unification-and-first-order-inference"><a class="header" href="#unification-and-first-order-inference">Unification and first order inference</a></h2>
 <ul>
 <li>
@@ -263,9 +259,123 @@ clause should be dis-junction of literals.</li>
 <li>Unlike propositional logic, FOPL literals are complementary if one unifies
 with the negation of other literal.</li>
 </ul>
-<p>Note:</p>
-<p>Skolemization is the process of removing existential quantifiers by elimination.</p>
+<p><strong>Note:</strong> Skolemization is the process of removing existential quantifiers by
+elimination.</p>
+<h2 id="knowledge-representation"><a class="header" href="#knowledge-representation">Knowledge Representation</a></h2>
+<p><img src="pictures/knowledge_types.png" alt="Knowledge Types" /></p>
+<p>Humans are best at understanding, reasoning, and interpreting knowledge. Humans
+know things, which is that of the knowledge and as per that of their knowledge
+they perform several of the actions in that of the real world. But how machines
+do all of these things come under the knowledge representation and the
+reasoning. Hence we can describe that of the Knowledge representation as
+follows they are:</p>
+<ul>
+<li>Knowledge representation and the reasoning (KR, KRR) is the part of
+Artificial intelligence which concerned with AI agents thinking and how
+thinking contributes to intelligent behaviour of agents.</li>
+<li>It is responsible for representing information about the real world so that
+a computer can understand and then can utilize that of the knowledge to
+solve that of the complex real world problems for instance diagnosis a
+medical condition or communicating with humans in natural language.</li>
+<li>It is also a way which describes that how we can represent that of the
+knowledge in that of the artificial intelligence. Knowledge representation
+is not just that of the storing data into some of the database, but it also
+enables of an intelligent machine to learn from that of the knowledge and
+experiences so that of the it can behave intelligently like that of a human.
+What to Represent: Following are the kind of knowledge which needs to be
+represented in that of the AI systems:</li>
+<li><strong>Object:</strong> All the facts about that of the objects in our world domain.
+Example Guitars contains strings, trumpets are brass instruments.</li>
+<li><strong>Events:</strong> Events are the actions which occur in our world.</li>
+<li><strong>Performance:</strong> It describes that of the behaviour which involves the
+knowledge about how to do things.</li>
+<li><strong>Meta-knowledge:</strong> It is knowledge about what we know.</li>
+<li><strong>Facts:</strong> Facts are the truths about the real world and what we represent.</li>
+<li><strong>Knowledge-Base:</strong> The central component of the knowledge-based agents is
+the knowledge base. It is represented as KB. The Knowledgebase is a group of
+the Sentences (Here, sentences are used as a technical term and not
+identical with the English language). <strong>Knowledge:</strong> Knowledge is the
+awareness or familiarity gained by that of the experiences of facts, data,
+and situations. Following are the types of knowledge in artificial
+intelligence:</li>
+</ul>
 <h2 id="ontological-engineering"><a class="header" href="#ontological-engineering">Ontological Engineering</a></h2>
+<p><img src="pictures/upper_onto.png" alt="Ontological Upper" /></p>
+<ul>
+<li>This field of engineering describes:
+<ul>
+<li>How to make representations that are more broad and adaptable</li>
+<li>Actions, time, physical objects, and beliefs are examples of concepts.</li>
+<li>Works on a far larger scale than K.E.</li>
+</ul>
+</li>
+<li>Define general framework of concepts
+<ul>
+<li>Upper ontology</li>
+</ul>
+</li>
+<li>Limitations of logic representation
+<ul>
+<li>Red, green and yellow tomatoes: exceptions and uncertainty.</li>
+</ul>
+</li>
+<li>Ontological engineering is a term used to describe the process of
+representing abstract concepts.</li>
+</ul>
+<h2 id="categories-and-objects"><a class="header" href="#categories-and-objects">Categories and Objects</a></h2>
+<ul>
+<li>Sorting the items into categories.</li>
+<li>At the level of categories, some reasoning takes happen.</li>
+<li>&quot;I'd like to eat an apple,&quot; says the narrator.</li>
+<li>Member(x, Apple) and Subset(x, Apple) are Apple(x) and Member(x, Apple)
+respectively (Apple, Food).</li>
+<li>The categories create a hierarchy, or simply a network, in which each class
+inherits the properties of the parent (apples are both food and fruit).</li>
+<li>A taxonomy is made up of the categories of a class.</li>
+<li>The organisation of items into categories is required by KR.</li>
+<li>Interaction at the object level;</li>
+<li>Reasoning at the category level</li>
+<li>Categories play a role in predictions about objects</li>
+<li>Based on perceived properties</li>
+<li>FOL can represent categories in two ways (First Order Logic)
+<ul>
+<li>Predicates: apple(x)</li>
+<li>Reification of categories into objects: apples
+<ul>
+<li>Category = set of its members</li>
+<li>Category organization</li>
+<li>Relation = inheritance:</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Food is edible in all forms; fruit is a subclass of food, and apples are a
+subclass of fruit, hence an apple is edible.</li>
+</ul>
+<p><img src="pictures/cat_and_ob.png" alt="fol_and_categories" /></p>
+<h2 id="events"><a class="header" href="#events">Events</a></h2>
+<p>The usefulness of situation calculus is limited: it was created to represent a
+world in which activities are discrete, instantaneous, and occur one at a time.
+Consider filling a bathtub, which is a continual action. Situation calculus can
+claim that the tub is empty before the action and filled after the action, but
+it can't describe what happens in the middle of the activity. It also can't
+depict two simultaneous actions, as cleaning one's teeth while waiting for the
+tub to fill. We present an alternative formalism known as event calculus to
+address such circumstances, which is based on points of time rather than
+situations.</p>
+<p>Instances of event categories are used to describe events.4 Shankar's flight
+from San Francisco to Washington, D.C. Is described as follows:</p>
+<ul>
+<li>E1 ∈ Flyings ∧ Flyer (E1, Shankar ) ∧ Origin(E1, SF) ∧ Destination(E1,DC)</li>
+</ul>
+<p>Then we use Happens(E1, I to indicate that the event E1 occurred at the time
+interval i. A (start, finish) pair of times is used to express time intervals.</p>
+<h2 id="mental-objects--modal-logic"><a class="header" href="#mental-objects--modal-logic">Mental Objects &amp; Modal Logic</a></h2>
+<p><img src="pictures/modal_a.png" alt="" /> <img src="pictures/modal_b.png" alt="" /> <img src="pictures/modal_c.png" alt="" /></p>
+<h2 id="reasoning-systems-for-categories"><a class="header" href="#reasoning-systems-for-categories">Reasoning Systems for Categories</a></h2>
+<p><em>skipped</em></p>
+<h2 id="reasoning-with-default-information"><a class="header" href="#reasoning-with-default-information">Reasoning with Default Information</a></h2>
+<p><em>skipped</em></p>
 
                     </main>
 
@@ -293,6 +403,22 @@ with the negation of other literal.</li>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

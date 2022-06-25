@@ -323,9 +323,7 @@ decide what is the best “route” or action to take.</p>
 </li>
 </ul>
 </details>
-<ul>
-<li><img src="pictures/data_anal_diff.jpeg" alt="differences between different analytics techniques" /></li>
-</ul>
+<p><img src="pictures/data_anal_diff.jpeg" alt="differences between different analytics techniques" /></p>
 <h2 id="association-rules"><a class="header" href="#association-rules">Association Rules</a></h2>
 <p>Association rule learning is a rule-based machine learning method for
 discovering interesting relations between variables in large databases. It is
@@ -479,13 +477,13 @@ Matplotlib.</p>
 <h3 id="installations"><a class="header" href="#installations">Installations</a></h3>
 <p>Install the 64bit version of Python 3, for instance from
 <a href="https://www.python.org">https://www.python.org</a> Then run:</p>
-<pre><code>pip install -U scikit-learn
+<!-- CODE  -->
+<pre><code class="language-python">pip install -U scikit-learn
 </code></pre>
 <p>In order to check your installation you can use</p>
-<pre><code>python -m pip show scikit-learn  # to see which version and where
-scikit-learn is installed python -m pip freeze  # to see all packages
-installed in the active virtualenv python -c &quot;import sklearn;
-sklearn.show_versions()&quot;
+<pre><code class="language-python">python -m pip show scikit-learn  # to see which version and where scikit-learn is installed
+python -m pip freeze  # to see all packages installed in the active virtualenv
+python -c &quot;import sklearn; sklearn.show_versions()&quot;
 </code></pre>
 <h3 id="dataset"><a class="header" href="#dataset">Dataset</a></h3>
 <ul>
@@ -573,6 +571,22 @@ Details</a></p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>

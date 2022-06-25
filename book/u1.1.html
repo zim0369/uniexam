@@ -134,8 +134,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="unit-iii-adversarial-search-and-games"><a class="header" href="#unit-iii-adversarial-search-and-games">Unit III: <strong>Adversarial Search and Games</strong></a></h1>
-<!-- Stochastic Games -->
+                        <h1 id="unit-iii-adversarial-search-and-games"><a class="header" href="#unit-iii-adversarial-search-and-games">Unit III: Adversarial Search and Games</a></h1>
 <h2 id="game-theory"><a class="header" href="#game-theory">Game Theory</a></h2>
 <p>For MCQs:</p>
 <p>States where the game has ended are called <strong>terminal states.</strong></p>
@@ -346,7 +345,62 @@ run.</li>
 decide the most efficient path. So, there is a bit of a speed issue there.</li>
 </ol>
 <h2 id="stochastic-games"><a class="header" href="#stochastic-games">Stochastic Games</a></h2>
-<p>Can be skipped</p>
+<p>Stochastic games are simulations of dynamic interactions in which the
+environment changes in response to the activities of the participants. &quot;In a
+stochastic game, the play progresses by steps from position to position,
+according to transition probabilities determined jointly by the two players,&quot;
+Shapley writes.</p>
+<p>A group of participants participates in a stochastic game. At each stage of the
+game, the action takes place in a specific state (or position, in Shapley's
+terminology), and each player selects an action from a list of options. The
+stage payoff that each player receives is determined by the collection of
+actions that the players choose, as well as the current state, as well as a
+probability distribution for the subsequent state that the game will visit.</p>
+<p>Stochastic games apply von Neumann's model of strategic-form games to dynamic
+settings in which the environment varies in response to the players' decisions.
+They also use the Markov decision problem model, which was created by numerous
+RAND Corporation researchers in 1949–1952, to competitive scenarios with
+multiple decision makers.</p>
+<p>The complexity of stochastic games arises from the fact that the players'
+decisions have two, sometimes opposing, consequences. First, the players'
+actions, in combination with the present state, determine the immediate payment
+that each player receives. Second, the present state and the players' activities
+influence the next state selection, which influences future reward
+possibilities. Each player, in particular, must balance these factors when
+deciding on his actions, which might be a difficult decision. Although this
+dichotomy is also present in one-player sequential decision problems, the
+presence of additional players who maximize their own goals adds complexity to
+the analysis of the situation.</p>
+<ul>
+<li>
+<p><strong>Two player Games:</strong> For modelling and analysis of discrete systems
+functioning in an uncertain (adversarial) environment, stochastic two-player
+games on directed graphs are commonly employed. As vertices, a system's and
+its environment's possible configurations are represented, and transitions
+correspond to the system's, its environment's, or &quot;nature's&quot; actions. An
+infinite path in the graph corresponds to a run of the system. As a result,
+a system and its environment can be viewed as two hostile players, with one
+player (the system) aiming to maximise the probability of &quot;good&quot; runs and
+the other player (the environment) aiming to maximise the chance of &quot;bad&quot;
+runs. Although there may be an equilibrium value for this probability in
+many circumstances, there may not be optimal solutions for both parties. We
+go over some of the fundamental notions and algorithmic concerns that have
+been studied in this field, as well as some long-standing outstanding
+difficulties. Then we'll go through a few recent findings.</p>
+</li>
+<li>
+<p><strong>Application:</strong> Economic theory, evolutionary biology, and computer
+networks all use stochastic games. They are generalisations of repeated
+games that correspond to the unique case of a single state.</p>
+</li>
+<li>
+<p><strong>Key takeaway:</strong> Stochastic games are simulations of dynamic interactions
+in which the environment changes in response to the activities of the
+participants. &quot;In a stochastic game, the play progresses by steps from
+position to position, according to transition probabilities determined
+jointly by the two players,&quot; Shapley writes.</p>
+</li>
+</ul>
 <h2 id="partially-observable-games"><a class="header" href="#partially-observable-games">Partially Observable Games</a></h2>
 <p>In deterministic partially observable games, uncertainty about the state of the
 board arises entirely from lack of access to the choices made by the opponent.</p>
@@ -505,6 +559,22 @@ quite efficient (requiring only linear</p>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         <script type="text/javascript">
             window.playground_copyable = true;
         </script>
